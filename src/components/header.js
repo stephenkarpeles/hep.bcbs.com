@@ -11,10 +11,6 @@ const searchClient = algoliasearch(
   "156ba268a0517559cd6a89921ae9cb5f"
 )
 
-const Hit = ({ hit }) => {
-  return <p>{hit.name}</p>
-}
-
 const Header = ({ siteTitle }) => (
   <header
     style={{
