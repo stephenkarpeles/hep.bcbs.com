@@ -1,13 +1,56 @@
-import * as React from "react"
-import { connectAutoComplete } from 'react-instantsearch-dom';
+import React, { Component } from 'react';
+import { Highlight, connectAutoComplete } from 'react-instantsearch-dom';
+import AutoSuggest from 'react-autosuggest';
 
-const Autocomplete = ({ hits }) => (
-  <div>
-    {hits.map(hit => (
-      <li key={hit.objectID}>{hit.name}</li>
-    ))}
-  </div>
-);
+// Algolia Autocomplete
+// @see https://www.algolia.com/doc/guides/building-search-ui/ui-and-ux-patterns/autocomplete/react/
 
-const CustomAutocomplete = connectAutoComplete(Autocomplete);
-export default CustomAutocomplete
+class Autocomplete extends Component {
+  state = {
+    value: this.props.currentRefinement,
+  };
+
+  onChange = (event, { newValue }) => {
+    this.setState({ value: newValue });
+  };
+
+  onSuggestionsFetchRequested = ({ value }) => {
+    this.props.refine(value);
+  };
+
+  onSuggestionsClearRequested = () => {
+    this.props.refine();
+  };
+
+  getSuggestionValue(hit) {
+    return hit.name;
+  }
+
+  renderSuggestion(hit) {
+    return <Highlight attribute="name" hit={hit} tagName="mark" />;
+  }
+
+  render() {
+    const { hits } = this.props;
+    const { value } = this.state;
+
+    const inputProps = {
+      placeholder: 'Search for a product...',
+      onChange: this.onChange,
+      value,
+    };
+
+    return (
+      <AutoSuggest
+        suggestions={hits}
+        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        getSuggestionValue={this.getSuggestionValue}
+        renderSuggestion={this.renderSuggestion}
+        inputProps={inputProps}
+      />
+    );
+  }
+}
+
+export default connectAutoComplete(Autocomplete);
