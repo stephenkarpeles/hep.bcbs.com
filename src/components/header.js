@@ -14,32 +14,18 @@ const searchClient = algoliasearch(
 
 const Header = ({ siteTitle }) => (
   <>
-    <header
-      id="top"
-      style={{
-        background: `rebeccapurple`,
-        marginBottom: `1.45rem`,
-      }}
-    >
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
-        <div className="logo">
-          <Link to="/">{siteTitle}</Link>
-        </div>
-
-        <AlgoliaSiteSearch />
-
-        <select name="translator" className="translator">
-          <option value="">Change Language</option>
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-        </select>
+    <header id="top">
+      <div className="logo">
+        <Link to="/">{siteTitle}</Link>
       </div>
+
+      <AlgoliaSiteSearch />
+
+      <select name="translator" className="translator">
+        <option value="">Change Language</option>
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+      </select>
     </header>
 
     <Navigation />
