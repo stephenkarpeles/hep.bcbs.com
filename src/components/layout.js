@@ -8,6 +8,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import NavigationFooter from "../components/NavigationFooter"
 
 import Header from "./header"
 import "./layout.css"
@@ -39,10 +41,14 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <NavigationFooter />© {new Date().getFullYear()} Blue Cross Blue
+          Shield Association - All Rights Reserved. The Blue Cross Blue Shield
+          Association is an association of independant, locally operated Blue
+          Cross and Blue Shield Companies.
         </footer>
+        <AnchorLink to="/#top" title="Back to Top">
+          <span>Back to Top</span>
+        </AnchorLink>
       </div>
     </>
   )
