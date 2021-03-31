@@ -27,7 +27,8 @@ const Hit = ({ hit }) => {
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Mission Statement</h1>
+    <h1 id="what-is-health-equity">Mission Statement</h1>
+
     <section className="intro" id="intro">
       <div className="intro--video">
         <iframe
@@ -44,7 +45,8 @@ const IndexPage = () => (
         Position Statement or Video alternatve text
       </div>
     </section>
-    <section className="statistics" id="statistics">
+
+    <section className="statistics" id="our-commitment">
       <h2>Statistics</h2>
       <div className="stat">
         <div className="stat--number">$100 million</div>
@@ -59,7 +61,13 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
-    <section className="profiles" id="profiles">
+
+    <section className="community" id="what-were-doing-in-your-community">
+      <h2>What we're doing in your community</h2>
+      <p>lorem text</p>
+    </section>
+
+    <section className="profiles">
       <InstantSearch searchClient={searchClient} indexName="test_index">
         <Configure hitsPerPage={5} distinct />
         <SearchBox />
@@ -71,8 +79,10 @@ const IndexPage = () => (
         />
       </InstantSearch>
     </section>
-    <section className="presskit" id="presskit"></section>
-    <section className="advisory-board" id="advisory-board">
+
+    <section className="presskit" id="press-kit"></section>
+
+    <section className="advisory-board" id="meet-our-advisory-panel">
       <h2>Advisory Board</h2>
       <div class="advisory-board-member">
         <div class="advisory-board-member--image">
@@ -103,7 +113,9 @@ const IndexPage = () => (
         <div class="advisory-board-member--title">Happy Tree Designer</div>
       </div>
     </section>
+
     <section className="videos" id="videos"></section>
+
     <section className="news" id="news">
       <h2>Plan News</h2>
       <div className="news-item">
@@ -127,6 +139,10 @@ const IndexPage = () => (
         </div>
         <div className="news-item--plan-date">March 15th, 2021</div>
       </div>
+    </section>
+
+    <section className="newsletter" id="newsletter">
+      Newsletter Form
     </section>
   </Layout>
 )
