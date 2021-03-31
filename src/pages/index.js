@@ -2,10 +2,18 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
-import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
+import {
+  InstantSearch,
+  SearchBox,
+  InfiniteHits,
+  Configure,
+} from "react-instantsearch-dom"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+// TODO: Possibly add clean browser urls
+// @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
 
 const searchClient = algoliasearch(
   "B604WWKJH0",
@@ -53,8 +61,14 @@ const IndexPage = () => (
     </section>
     <section className="profiles" id="profiles">
       <InstantSearch searchClient={searchClient} indexName="test_index">
+        <Configure hitsPerPage={5} distinct />
         <SearchBox />
-        <Hits hitComponent={Hit} />
+        <InfiniteHits
+          hitComponent={Hit}
+          translations={{
+            loadMore: "Load more",
+          }}
+        />
       </InstantSearch>
     </section>
     <section className="presskit" id="presskit"></section>
