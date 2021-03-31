@@ -673,3 +673,13 @@ footer {
     justify-content: space-between;
   }
 }
+
+/* React Autosuggest */
+.react-autosuggest__suggestions-container--open {
+  position: absolute;
+  background-color: #fff;
+
+  .ais-Highlight {
+    display: block;
+  }
+}
