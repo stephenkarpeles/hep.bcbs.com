@@ -25,13 +25,20 @@ class Autocomplete extends Component {
     return hit.name
   }
 
-  // testing here getting two elements to render with highlights
+  // testing here getting multiple elements to render with highlights
   // TODO: needs image rendering
   renderSuggestion(hit) {
     return (
       <>
-        <Highlight attribute="name" hit={hit} tagName="mark" />
-        <Highlight attribute="company" hit={hit} tagName="mark" />
+        <div class="result">
+          <div class="result-image">
+            <Highlight attribute="name" hit={hit} tagName="span" />
+          </div>
+          <div class="result-content">
+            <Highlight attribute="company" hit={hit} tagName="span" />
+            <Highlight attribute="city" hit={hit} tagName="span" />
+          </div>
+        </div>
       </>
     )
   }
