@@ -114,8 +114,6 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className="videos" id="videos"></section>
-
     <section className="news" id="news">
       <h2>Plan News</h2>
       <div className="news-item">
@@ -142,7 +140,22 @@ const IndexPage = () => (
     </section>
 
     <section className="newsletter" id="newsletter">
-      Newsletter Form
+      <div className="eyebrow">Newsletter</div>
+      <h2>Stay Connected</h2>
+      <form>
+        <div>
+          <label>Email Address</label>
+          <input type="text"></input>
+          <button>Sign Up</button>
+        </div>
+        <div>
+          <input type="checkbox" />
+          <label>
+            I agree to the <a href="#">BCBS.com Terms & Conditions</a> and{" "}
+            <a href="#">Privacy Policy</a>
+          </label>
+        </div>
+      </form>
     </section>
   </Layout>
 )
