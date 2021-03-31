@@ -597,3 +597,79 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.min-content {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.inner-content {
+  margin: 0 auto;
+  max-width: 1160px;
+}
+
+.max-content {
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+/* Header */
+header {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+
+  .max-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Navigation */
+.navigation {
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Intro */
+.intro {
+  background-color: #0072a7;
+
+  h1 {
+    width: 100%;
+  }
+
+  .max-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: #0072a7;
+}
+
+/* Footer */
+footer {
+  .max-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
