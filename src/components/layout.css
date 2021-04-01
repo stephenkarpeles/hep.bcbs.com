@@ -4,7 +4,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 1rem / var(--line-height-base) georgia, serif, sans-serif;
+  font: 1rem / var(--line-height-base) var(--roman), var(--fallback);
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -13,7 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: var(--roman), var(--fallback);
+  font-family: var(--font-roman), var(--font-fallback);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -84,7 +84,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: var(--condensed-light), var(--fallback);
+  font-family: var(--font-condensed-light), var(--font-fallback);
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: var(--font-size-h1);
@@ -262,7 +262,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: var(--condensed-light), var(--fallback);
+  font-family: var(--font-condensed-light), var(--font-fallback);
   font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: var(--font-size-h2);
@@ -278,7 +278,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: var(--condensed-regular), var(--fallback);
+  font-family: var(--font-condensed-regular), var(--font-fallback);
   font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: var(--font-size-h3);
@@ -294,7 +294,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: var(--condensed-regular), var(--fallback);
+  font-family: var(--font-condensed-regular), var(--font-fallback);
   font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: var(--font-size-h4);
@@ -310,7 +310,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: var(--condensed-regular), var(--fallback);
+  font-family: var(--font-condensed-regular), var(--font-fallback);
   font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: var(--font-size-h5);
@@ -327,7 +327,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: var(--condensed-bold), var(--fallback);
+  font-family: var(--font-condensed-bold), var(--font-fallback);
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: var(--font-size-h6);
@@ -434,7 +434,7 @@ blockquote {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-family: var(--condensed-regular), var(--fallback);
+  font-family: var(--font-condensed-regular), var(--font-fallback);
   font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: var(--font-size-quote);
@@ -602,17 +602,17 @@ pre tt:after {
 
 .min-content {
   margin: 0 auto;
-  max-width: var(--min-content);
+  max-width: var(--width-min-content);
 }
 
 .inner-content {
   margin: 0 auto;
-  max-width: var(--max-content);
+  max-width: var(--width-max-content);
 }
 
 .max-container {
   margin: 0 auto;
-  max-width: var(--max-container);
+  max-width: var(--width-max-container);
 }
 
 /* Header */
@@ -620,7 +620,7 @@ header {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
 
-  .max-content {
+  .max-container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -641,13 +641,13 @@ header {
 
 /* Intro */
 .intro {
-  background-color: var(--dark-blue);
+  background-color: var(--color-dark-blue);
 
   h1 {
     width: 100%;
   }
 
-  .max-content {
+  .max-container {
     display: flex;
     flex-flow: row wrap;
     align-items: center;

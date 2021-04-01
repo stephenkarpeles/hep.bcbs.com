@@ -1,23 +1,23 @@
 :root {
   /* Layout */
-  --min-content: 800px;
-  --max-content: 1160px;
-  --max-container: 1320px;
+  --width-min-content: 800px;
+  --width-max-content: 1160px;
+  --width-max-container: 1320px;
 
   /* Colors */
-  --blue: #0072a7;
-  --dark-blue: #005172;
-  --medium-blue: #d2e8f3;
-  --light-blue: #e8f6fd;
-  --light-gray: #f7f9fa;
-  --gray: #3f3f3f;
+  --color-blue: #0072a7;
+  --color-dark-blue: #005172;
+  --color-medium-blue: #d2e8f3;
+  --color-light-blue: #e8f6fd;
+  --color-light-gray: #f7f9fa;
+  --color-gray: #3f3f3f;
 
   /* Typography */
-  --condensed-light: "Condensed Light";
-  --condensed-regular: "Condensed Regular";
-  --condensed-bold: "Condensed Bold";
-  --roman: Roman;
-  --fallback: Arial, Helvetica, sans-serif;
+  --font-condensed-light: "Condensed Light";
+  --font-condensed-regular: "Condensed Regular";
+  --font-condensed-bold: "Condensed Bold";
+  --font-roman: Roman;
+  --font-fallback: Arial, Helvetica, sans-serif;
 
   --font-size-h1: 80px;
   --font-size-h2: 64px;
