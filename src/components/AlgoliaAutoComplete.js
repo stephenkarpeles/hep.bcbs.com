@@ -43,6 +43,16 @@ class Autocomplete extends Component {
     )
   }
 
+  // onSuggestionSelected = (event, { suggestion, method }) => {
+  //   if (method === "enter" || method === "click") {
+  //     navigate(`${typeSlug}${suggestion.slug}`)
+  //   }
+
+  //   this.setState({
+  //     value: "",
+  //   })
+  // }
+
   render() {
     const { hits } = this.props
     const { value } = this.state
@@ -58,6 +68,7 @@ class Autocomplete extends Component {
         suggestions={hits}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        // onSuggestionSelected={this.onSuggestionSelected}
         getSuggestionValue={this.getSuggestionValue}
         renderSuggestion={this.renderSuggestion}
         inputProps={inputProps}
