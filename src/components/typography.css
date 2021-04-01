@@ -1,6 +1,14 @@
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=1d3990b6-087e-4eb1-8bb3-e284ab4e7325");
 
 @font-face {
+  font-family: "Roman";
+  src: url("../fonts/8a6b09f4-d0d5-488e-8f4e-4aae2c1567fb.woff2")
+      format("woff2"),
+    url("../fonts/20e9f687-a6c7-4276-bf9c-49c4971d1829.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: "Ultra Condensed Thin";
   src: url("../fonts/c35e96f0-d524-4a2d-aba0-d8cf389d5426.woff2")
       format("woff2"),

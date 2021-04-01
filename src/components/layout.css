@@ -1,9 +1,10 @@
+@import "variables.css";
 @import "typography.css";
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 1rem / var(--line-height-base) georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -12,7 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: var(--roman), var(--fallback);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -83,12 +84,11 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: var(--condensed-light), var(--fallback);
+  font-weight: 300;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
-  line-height: 1.1;
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
 }
 mark {
   background-color: #ff0;
@@ -262,12 +262,11 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: var(--condensed-light), var(--fallback);
+  font-weight: 300;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
-  line-height: 1.1;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
 }
 h3 {
   margin-left: 0;
@@ -279,12 +278,11 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: var(--condensed-regular), var(--fallback);
+  font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
-  line-height: 1.1;
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
 }
 h4 {
   margin-left: 0;
@@ -296,12 +294,11 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: var(--condensed-regular), var(--fallback);
+  font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
-  line-height: 1.1;
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
 }
 h5 {
   margin-left: 0;
@@ -313,12 +310,12 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: var(--condensed-regular), var(--fallback);
+  font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
-  line-height: 1.1;
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+  letter-spacing: 0.8px;
 }
 h6 {
   margin-left: 0;
@@ -330,12 +327,12 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--condensed-bold), var(--fallback);
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
-  line-height: 1.1;
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
+  letter-spacing: 0.52px;
 }
 hgroup {
   margin-left: 0;
@@ -437,6 +434,11 @@ blockquote {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-family: var(--condensed-regular), var(--fallback);
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  font-size: var(--font-size-quote);
+  line-height: var(--line-height-quote);
 }
 form {
   margin-left: 0;
@@ -600,17 +602,17 @@ pre tt:after {
 
 .min-content {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: var(--min-content);
 }
 
 .inner-content {
   margin: 0 auto;
-  max-width: 1160px;
+  max-width: var(--max-content);
 }
 
-.max-content {
+.max-container {
   margin: 0 auto;
-  max-width: 1320px;
+  max-width: var(--max-container);
 }
 
 /* Header */
@@ -639,7 +641,7 @@ header {
 
 /* Intro */
 .intro {
-  background-color: #0072a7;
+  background-color: var(--dark-blue);
 
   h1 {
     width: 100%;

@@ -15,7 +15,7 @@ const searchClient = algoliasearch(
 const Header = ({ siteTitle }) => (
   <>
     <header id="top">
-      <div className="max-content">
+      <div className="max-container">
         <div className="logo">
           <Link to="/">{siteTitle}</Link>
         </div>
