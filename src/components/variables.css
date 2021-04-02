@@ -2,7 +2,7 @@
   /* Layout */
   --width-min-content: 800px;
   --width-max-content: 1160px;
-  --width-max-container: 1320px;
+  --width-max-container: 1352px;
 
   /* Colors */
   --color-blue: #0072a7;
@@ -17,6 +17,7 @@
   --font-condensed-regular: "Condensed Regular";
   --font-condensed-bold: "Condensed Bold";
   --font-roman: Roman;
+  --font-light: "Basic Light";
   --font-fallback: Arial, Helvetica, sans-serif;
 
   --font-size-h1: 80px;

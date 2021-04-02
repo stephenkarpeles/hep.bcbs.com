@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import logo from "../images/hoa-primary-logo.svg"
 import Navigation from "../components/Navigation"
 import { useTranslation } from "react-i18next"
 
