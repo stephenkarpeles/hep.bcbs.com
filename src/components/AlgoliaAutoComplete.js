@@ -22,7 +22,7 @@ class Autocomplete extends Component {
   }
 
   getSuggestionValue(hit) {
-    return hit.name
+    return hit.title
   }
 
   // testing here getting multiple elements to render with highlights
@@ -32,26 +32,16 @@ class Autocomplete extends Component {
       <>
         <div class="result">
           <div class="result-image">
-            <Highlight attribute="name" hit={hit} tagName="span" />
+            <img src={hit.img_url} />
           </div>
           <div class="result-content">
-            <Highlight attribute="company" hit={hit} tagName="span" />
-            <Highlight attribute="city" hit={hit} tagName="span" />
+            <Highlight attribute="title" hit={hit} tagName="span" />
+            <Highlight attribute="excerpt" hit={hit} tagName="span" />
           </div>
         </div>
       </>
     )
   }
-
-  // onSuggestionSelected = (event, { suggestion, method }) => {
-  //   if (method === "enter" || method === "click") {
-  //     navigate(`${typeSlug}${suggestion.slug}`)
-  //   }
-
-  //   this.setState({
-  //     value: "",
-  //   })
-  // }
 
   render() {
     const { hits } = this.props
@@ -68,7 +58,6 @@ class Autocomplete extends Component {
         suggestions={hits}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        // onSuggestionSelected={this.onSuggestionSelected}
         getSuggestionValue={this.getSuggestionValue}
         renderSuggestion={this.renderSuggestion}
         inputProps={inputProps}
