@@ -29,11 +29,13 @@ const Header = ({ siteTitle }) => (
 
         <AlgoliaSiteSearch />
 
-        <select name="translator" className="translator">
-          <option value="">Change Language</option>
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-        </select>
+        <div className="translator">
+          <select name="translator">
+            <option value="">Change Language</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+          </select>
+        </div>
       </div>
     </header>
 

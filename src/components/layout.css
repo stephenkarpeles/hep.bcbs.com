@@ -778,11 +778,45 @@ footer {
   }
 }
 
+/* Voice Search */
+.ais-VoiceSearch {
+  background-color: var(--color-light-gray);
+  height: 100%;
+
+  &-button {
+    color: var(--color-gray);
+    background: none;
+    border: none;
+    height: inherit;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      content: "Search by Voice";
+      color: inherit;
+      font-size: var(--font-size-base-small);
+      display: block;
+    }
+  }
+}
+
+/* Logo */
 .logo {
   width: 100%;
-  max-width: 280px;
+  max-width: 220px;
 
   a {
     display: block;
   }
+}
+
+/* Translator Selector */
+.translator {
+  background-color: var(--color-dark-blue);
+  height: 100%;
 }
