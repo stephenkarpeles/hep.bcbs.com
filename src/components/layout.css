@@ -820,3 +820,9 @@ footer {
   background-color: var(--color-dark-blue);
   height: 100%;
 }
+
+/* plan search filters */
+.inner-content-filters {
+  display: flex;
+  flex-direction: row-reverse;
+}
