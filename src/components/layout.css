@@ -4,7 +4,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 1rem / var(--line-height-base) var(--roman), var(--fallback);
+  font: 1rem / var(--line-height-base) var(--font-roman), var(--font-fallback);
   box-sizing: border-box;
   overflow-y: scroll;
 }
