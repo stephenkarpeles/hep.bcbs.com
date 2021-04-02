@@ -10,11 +10,12 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import NavigationFooter from "../components/NavigationFooter"
+import { withTrans } from '../i18n/withTrans'
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, t, i18n }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -46,4 +47,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default withTrans(Layout)

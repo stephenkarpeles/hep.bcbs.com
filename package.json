@@ -10,6 +10,7 @@
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.1.0",
     "gatsby-plugin-image": "^1.1.1",
+    "gatsby-plugin-layout": "^2.2.0",
     "gatsby-plugin-manifest": "^3.1.0",
     "gatsby-plugin-offline": "^4.1.0",
     "gatsby-plugin-postcss": "^4.1.0",
@@ -18,12 +19,14 @@
     "gatsby-plugin-translate": "^1.1.5",
     "gatsby-source-filesystem": "^3.1.0",
     "gatsby-transformer-sharp": "^3.1.0",
+    "i18next": "^20.1.0",
     "instantsearch.js": "^4.17.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-autosuggest": "^10.1.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-i18next": "^11.8.12",
     "react-instantsearch-dom": "^6.10.3"
   },
   "devDependencies": {
