@@ -3,7 +3,7 @@ import * as React from "react"
 function NavigationFooter() {
   return (
     <>
-      <div className="max-content">
+      <div className="max-container">
         <div>Cross Logo</div>
         <nav>
           <a href="https://www.bcbs.com/the-health-of-america/about">About</a>

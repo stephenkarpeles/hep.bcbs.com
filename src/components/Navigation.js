@@ -4,7 +4,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 function Navigation() {
   return (
     <div className="navigation">
-      <div className="max-content">
+      <div className="max-container">
         <nav>
           <AnchorLink
             to="/#what-is-health-equity"

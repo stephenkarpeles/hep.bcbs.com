@@ -29,7 +29,7 @@ const IndexPage = () => (
     <SEO title="Home" />
 
     <section className="intro" id="intro">
-      <div className="max-content">
+      <div className="max-container">
         <h1 id="what-is-health-equity">Mission Statement</h1>
         <div className="intro--video">
           <iframe
