@@ -29,7 +29,7 @@ const IndexPage = (props) => {
   const { t } = useTranslation()
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
 
       <h1>{t('home.title')}</h1>
@@ -177,7 +177,7 @@ const IndexPage = (props) => {
           </form>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

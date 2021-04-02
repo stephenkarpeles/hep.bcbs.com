@@ -17,7 +17,7 @@ const Header = ({ props, siteTitle }) => {
   const { t, i18n } = useTranslation()
   
   const [values, setValues] = useState({
-    language: 'en'
+    value: ''
   });
 
   function handleChange(event) {
