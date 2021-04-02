@@ -825,4 +825,62 @@ footer {
 .inner-content-filters {
   display: flex;
   flex-direction: row-reverse;
+
+  .search-filters {
+    width: 232px;
+    flex-grow: 1;
+    flex: 1 0 232px;
+  }
+}
+
+/* Infinte Hits */
+.ais-InfiniteHits {
+  flex: 1 1 auto;
+  margin-right: 1rem;
+  margin-left: -10px;
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &-item {
+    border: 1px solid transparent;
+    width: calc(50% - 20px);
+    margin: 0 10px 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #0000001a;
+
+    &:hover {
+      border-color: #008bcc;
+    }
+  }
+}
+
+/* Plan cards */
+.plan-result-card {
+  &-category {
+    color: var(--color-blue);
+    text-transform: uppercase;
+    font-family: var(--font-condensed-bold);
+    font-size: var(--font-size-h6);
+    letter-spacing: 0.52px;
+  }
+
+  &-title {
+    color: var(--color-gray);
+    font-family: var(--font-condensed-regular);
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+  }
+
+  &-excerpt {
+    color: #767676;
+    font-family: var(--font-roman);
+    font-size: var(--font-size-base-small);
+    line-height: var(--line-height-base-small);
+  }
 }
