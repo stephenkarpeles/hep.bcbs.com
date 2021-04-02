@@ -44,10 +44,6 @@ const Header = ({ props, siteTitle }) => {
             className="translator"
             value={values.language}
             onChange={(e) => handleChange(e)}
-            // disableUnderline
-            // inputProps={{
-            //   name: 'language'
-            // }}
           >
             <option value="">Change Language</option>
             <option value={'en'}>English</option>
