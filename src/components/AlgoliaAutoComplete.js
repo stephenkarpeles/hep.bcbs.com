@@ -30,13 +30,17 @@ class Autocomplete extends Component {
   renderSuggestion(hit) {
     return (
       <>
-        <div class="result">
-          <div class="result-image">
+        <div class="site-search-result">
+          <div class="site-search-result-image">
             <img src={hit.img_url} />
           </div>
-          <div class="result-content">
-            <Highlight attribute="title" hit={hit} tagName="span" />
-            <Highlight attribute="excerpt" hit={hit} tagName="span" />
+          <div class="site-search-result-content">
+            <div class="site-search-result-content-header">
+              <Highlight attribute="title" hit={hit} tagName="span" />
+            </div>
+            <div class="site-search-result-content-excerpt">
+              <Highlight attribute="excerpt" hit={hit} tagName="span" />
+            </div>
           </div>
         </div>
       </>

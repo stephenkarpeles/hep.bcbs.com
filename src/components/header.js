@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import logo from "../images/hoa-primary-logo.svg"
 import Navigation from "../components/Navigation"
 
 import algoliasearch from "algoliasearch/lite"
@@ -17,7 +18,13 @@ const Header = ({ siteTitle }) => (
     <header id="top">
       <div className="max-container">
         <div className="logo">
-          <Link to="/">{siteTitle}</Link>
+          <Link to="/">
+            <img
+              style={{ maxWidth: 160, marginBottom: 0 }}
+              src={logo}
+              alt={siteTitle}
+            />
+          </Link>
         </div>
 
         <AlgoliaSiteSearch />
