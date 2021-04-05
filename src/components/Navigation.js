@@ -16,7 +16,7 @@ function Navigation() {
             <span>Our Commitment</span>
           </AnchorLink>
           <AnchorLink
-            to="/#what-were-doing-in-your-community"
+            to="/#profiles"
             title="What we're doing in your community"
           >
             <span>What we're doing in your community</span>

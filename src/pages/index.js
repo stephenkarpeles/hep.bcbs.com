@@ -83,32 +83,48 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="community" id="what-were-doing-in-your-community">
-        <div className="inner-content">
-          <h2>What we're doing in your community</h2>
-          <p>lorem text</p>
+      <section className="profiles" id="profiles">
+        <div className="inner-content community">
+          <h2 style={{ color: "#0072A7" }}>
+            What we're doing in your community
+          </h2>
+          <p style={{ maxWidth: 818, margin: "0 auto 1.45rem" }}>
+            Discover how BCBS companies are measuring disparities, addressing
+            unconscious bias and improving health outcomes in the communities
+            where you live and work.
+          </p>
         </div>
-      </section>
-
-      <section className="profiles">
         <div className="inner-content inner-content-filters">
           <InstantSearch searchClient={searchClient} indexName="test_index">
             <Configure hitsPerPage={5} distinct />
             <div className="search-filters">
               <SearchBox />
               <div className="search-filters-refinement">
-                <div className="search-filters-label">State</div>
-                <MenuSelect attribute="state" />
+                <MenuSelect
+                  attribute="state"
+                  translations={{
+                    seeAllOption: "State",
+                  }}
+                />
               </div>
               <div className="search-filters-refinement">
-                <div className="search-filters-label">Plan</div>
-                <MenuSelect attribute="plan" />
+                <MenuSelect
+                  attribute="plan"
+                  translations={{
+                    seeAllOption: "Plan",
+                  }}
+                />
               </div>
               <div className="search-filters-refinement">
                 <div className="search-filters-label">Topics</div>
                 <RefinementList attribute="category" />
               </div>
-              <ClearRefinements clearsQuery />
+              <ClearRefinements
+                clearsQuery
+                translations={{
+                  reset: "Clear Filters",
+                }}
+              />
             </div>
             <InfiniteHits
               hitComponent={planResult}
