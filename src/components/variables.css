@@ -1,7 +1,7 @@
 :root {
   /* Layout */
   --width-min-content: 800px;
-  --width-max-content: 1160px;
+  --width-max-content: 1238px;
   --width-max-container: 1352px;
 
   /* Colors */
@@ -11,13 +11,15 @@
   --color-light-blue: #e8f6fd;
   --color-light-gray: #f7f9fa;
   --color-gray: #3f3f3f;
+  --color-disabled: #cfd0d1;
 
   /* Typography */
   --font-condensed-light: "Condensed Light";
   --font-condensed-regular: "Condensed Regular";
   --font-condensed-bold: "Condensed Bold";
   --font-roman: Roman;
-  --font-light: "Basic Light";
+  --font-regaular-light: "Basic Light";
+  --font-regular-bold: "Basic Bold";
   --font-fallback: Arial, Helvetica, sans-serif;
 
   --font-size-h1: 80px;

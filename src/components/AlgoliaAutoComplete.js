@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Highlight, connectAutoComplete } from "react-instantsearch-dom"
 import AutoSuggest from "react-autosuggest"
+import { navigate } from "gatsby"
 
 // Algolia Autocomplete
 // @see https://www.algolia.com/doc/guides/building-search-ui/ui-and-ux-patterns/autocomplete/react/
@@ -47,6 +48,17 @@ class Autocomplete extends Component {
     )
   }
 
+  // TODO: needs close on esc, navigate on enter
+  onSuggestionSelected = (event, { suggestion, method }) => {
+    if (method === "enter" || method === "click") {
+      navigate()
+    }
+
+    this.setState({
+      value: "",
+    })
+  }
+
   render() {
     const { hits } = this.props
     const { value } = this.state
@@ -62,6 +74,7 @@ class Autocomplete extends Component {
         suggestions={hits}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        onSuggestionSelected={this.onSuggestionSelected}
         getSuggestionValue={this.getSuggestionValue}
         renderSuggestion={this.renderSuggestion}
         inputProps={inputProps}

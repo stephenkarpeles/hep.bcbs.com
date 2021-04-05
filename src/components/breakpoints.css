@@ -1,0 +1,16 @@
+/* Viewport Specific */
+@custom-media --extra-small-breakpoint (max-width: 440px);
+@custom-media --small-breakpoint (min-width: 441px) and (max-width: 760px);
+@custom-media --medium-breakpoint (min-width: 761px) and (max-width: 960px);
+@custom-media --large-breakpoint (min-width: 961px) and (max-width: 1200px);
+@custom-media --extra-large-breakpoint (min-width: 1201px);
+
+/* Up and down */
+@custom-media --small-breakpoint-down (max-width: 760px);
+@custom-media --small-breakpoint-up (min-width: 441px);
+
+@custom-media --medium-breakpoint-down (max-width: 960px);
+@custom-media --medium-breakpoint-up (min-width: 761px);
+
+@custom-media --large-breakpoint-down (max-width: 1200px);
+@custom-media --large-breakpoint-up (min-width: 961px);

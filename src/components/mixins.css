@@ -1,0 +1,50 @@
+/* containers */
+@define-mixin min-content {
+  margin: 0 auto;
+  max-width: var(--width-min-content);
+}
+
+@define-mixin inner-content {
+  margin: 0 auto;
+  max-width: var(--width-max-content);
+}
+
+@define-mixin max-container {
+  margin: 0 auto;
+  max-width: var(--width-max-container);
+  padding: 0 1rem;
+}
+
+/* flexible gutters */
+@define-mixin flex-gutter {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  @media (--medium-breakpoint-up) {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  @media (--large-breakpoint-up) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* buttons */
+
+/* list reset */
+@define-mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* eyebrow */
+@define-mixin eyebrow {
+  color: var(--color-blue);
+  text-transform: uppercase;
+  font-family: var(--font-condensed-bold);
+  font-size: var(--font-size-h6);
+  letter-spacing: 0.52px;
+}

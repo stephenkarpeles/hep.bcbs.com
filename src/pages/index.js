@@ -8,6 +8,9 @@ import {
   SearchBox,
   InfiniteHits,
   Configure,
+  RefinementList,
+  MenuSelect,
+  ClearRefinements,
 } from "react-instantsearch-dom"
 
 import Layout from "../components/layout"
@@ -21,22 +24,36 @@ const searchClient = algoliasearch(
   "156ba268a0517559cd6a89921ae9cb5f"
 )
 
-const Hit = ({ hit }) => {
-  return <p>{hit.name}</p>
+const planResult = ({ hit }) => {
+  const { title, category, plan, url, excerpt, img_url } = hit
+
+  return (
+    <div className="plan-result-card">
+      <Link to={url}>
+        <div className="plan-result-card-plan">
+          <div className="plan-result-card-image">
+            <img src={img_url} />
+          </div>
+          {plan}
+        </div>
+        <div className="plan-result-card-category">{category}</div>
+        <div className="plan-result-card-title">{title}</div>
+        <div className="plan-result-card-excerpt">{excerpt}</div>
+      </Link>
+    </div>
+  )
 }
 
-const IndexPage = (props) => {
+const IndexPage = props => {
   const { t } = useTranslation()
 
   return (
     <>
       <SEO title="Home" />
 
-      <h1>{t('home.title')}</h1>
-
       <section className="intro" id="intro">
         <div className="max-container">
-          <h1 id="what-is-health-equity">Mission Statement</h1>
+          <h1 id="what-is-health-equity">{t("home.title")}</h1>
           <div className="intro--video">
             <iframe
               width="560"
@@ -63,29 +80,54 @@ const IndexPage = (props) => {
               followup description of what this number means
             </div>
           </div>
-          <div className="stat">
-            <div className="stat--number">$100 million</div>
-            <div className="stat--text">
-              followup description of what this number means
-            </div>
-          </div>
         </div>
       </section>
 
-      <section className="community" id="what-were-doing-in-your-community">
-        <div className="inner-content">
-          <h2>What we're doing in your community</h2>
-          <p>lorem text</p>
+      <section className="profiles" id="profiles">
+        <div className="inner-content community">
+          <h2 style={{ color: "#0072A7" }}>
+            What we're doing in your community
+          </h2>
+          <p style={{ maxWidth: 818, margin: "0 auto 1.45rem" }}>
+            Discover how BCBS companies are measuring disparities, addressing
+            unconscious bias and improving health outcomes in the communities
+            where you live and work.
+          </p>
         </div>
-      </section>
-
-      <section className="profiles">
-        <div className="inner-content">
+        <div className="inner-content inner-content-filters">
           <InstantSearch searchClient={searchClient} indexName="test_index">
             <Configure hitsPerPage={5} distinct />
-            <SearchBox />
+            <div className="search-filters">
+              <SearchBox />
+              <div className="search-filters-refinement">
+                <MenuSelect
+                  attribute="state"
+                  translations={{
+                    seeAllOption: "State",
+                  }}
+                />
+              </div>
+              <div className="search-filters-refinement">
+                <MenuSelect
+                  attribute="plan"
+                  translations={{
+                    seeAllOption: "Plan",
+                  }}
+                />
+              </div>
+              <div className="search-filters-refinement">
+                <div className="search-filters-label">Topics</div>
+                <RefinementList attribute="category" />
+              </div>
+              <ClearRefinements
+                clearsQuery
+                translations={{
+                  reset: "Clear Filters",
+                }}
+              />
+            </div>
             <InfiniteHits
-              hitComponent={Hit}
+              hitComponent={planResult}
               translations={{
                 loadMore: "Load more",
               }}

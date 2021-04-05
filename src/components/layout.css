@@ -1,5 +1,7 @@
 @import "variables.css";
+@import "mixins.css";
 @import "typography.css";
+@import "breakpoints.css";
 
 html {
   -ms-text-size-adjust: 100%;
@@ -12,7 +14,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--color-gray);
   font-family: var(--font-roman), var(--font-fallback);
   font-weight: normal;
   word-wrap: break-word;
@@ -228,8 +230,12 @@ textarea {
   height: auto;
 }
 [type="search"] {
+  color: var(--color-gray);
   -webkit-appearance: textfield;
   outline-offset: -2px;
+  border: 1px solid #7070704d;
+  padding: 0.75rem;
+  width: 100%;
 }
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
@@ -600,6 +606,7 @@ pre tt:after {
   }
 }
 
+/* Begin Custom */
 .min-content {
   margin: 0 auto;
   max-width: var(--width-min-content);
@@ -608,6 +615,7 @@ pre tt:after {
 .inner-content {
   margin: 0 auto;
   max-width: var(--width-max-content);
+  padding: 0px 1rem;
 }
 
 .max-container {
@@ -618,9 +626,6 @@ pre tt:after {
 
 /* Header */
 header {
-  /* border-top: 1px solid gray;
-  border-bottom: 1px solid gray; */
-
   .max-container {
     display: flex;
     flex-flow: row wrap;
@@ -683,7 +688,244 @@ footer {
   }
 }
 
-/* React Autosuggest */
+/* Logo */
+.logo {
+  width: 100%;
+  max-width: 220px;
+
+  a {
+    display: block;
+  }
+}
+
+/* Translator Selector */
+.translator {
+  background-color: var(--color-dark-blue);
+  height: 100%;
+}
+
+/* plan search filters */
+.inner-content-filters {
+  display: flex;
+  flex-direction: column;
+
+  @media (--medium-breakpoint-up) {
+    flex-direction: row-reverse;
+  }
+
+  .search-filters {
+    margin-bottom: 1.45rem;
+
+    @media (--medium-breakpoint-up) {
+      width: 232px;
+      flex-grow: 1;
+      flex: 1 0 232px;
+    }
+
+    &-label {
+      color: var(--color-gray);
+      font-family: var(--font-regular-light);
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &-refinement {
+      margin-bottom: 1.45rem;
+    }
+  }
+}
+
+/* Plan cards */
+.plan-result-card {
+  &-category {
+    color: var(--color-blue);
+    text-transform: uppercase;
+    font-family: var(--font-condensed-bold);
+    font-size: var(--font-size-h6);
+    letter-spacing: 0.52px;
+  }
+
+  &-title {
+    color: var(--color-gray);
+    font-family: var(--font-condensed-regular);
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+  }
+
+  &-excerpt {
+    color: #767676;
+    font-family: var(--font-roman);
+    font-size: var(--font-size-base-small);
+    line-height: var(--line-height-base-small);
+  }
+}
+
+/* Profiles Contanier */
+.profiles {
+  background-color: var(--color-light-gray);
+  padding: 120px 0;
+}
+
+/* Algolia - Searchbox */
+.ais-SearchBox {
+  &-submit,
+  &-reset {
+    display: none;
+  }
+}
+
+/* Algolia - Infinte Hits */
+.ais-InfiniteHits {
+  flex: 1 1 auto;
+  margin-left: -10px;
+  margin-right: -10px;
+
+  @media (--medium-breakpoint-up) {
+    margin-right: 1rem;
+    margin-left: -10px;
+  }
+
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &-item {
+    border: 1px solid transparent;
+    margin: 0 10px 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #0000001a;
+
+    @media (--medium-breakpoint-up) {
+      width: calc(50% - 20px);
+    }
+
+    &:hover {
+      border-color: #008bcc;
+    }
+  }
+
+  &-loadMore {
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    text-transform: uppercase;
+    font-family: var(--font-condensed-bold);
+    font-size: var(--font-size-h6);
+    letter-spacing: 0.52px;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+
+    &--disabled {
+      border: 1px solid var(--color-disabled);
+      color: var(--color-disabled);
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* Algolia - Voice Search */
+.ais-VoiceSearch {
+  background-color: var(--color-light-gray);
+  height: 100%;
+
+  &-button {
+    color: var(--color-gray);
+    background: none;
+    border: none;
+    height: inherit;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      content: "Search by Voice";
+      color: inherit;
+      font-size: var(--font-size-base-small);
+      display: block;
+    }
+  }
+}
+
+/* Algolia - Highlights */
+.ais-Highlight {
+  display: block;
+
+  &-highlighted {
+    color: var(--color-blue);
+    font-weight: bold;
+  }
+}
+
+/* Algolia - MenuSelect */
+.ais-MenuSelect-select {
+  color: var(--color-gray);
+  -webkit-appearance: listbox;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #7070704d;
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 0;
+}
+
+/* Algolia - RefinementList */
+.ais-RefinementList {
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &-item {
+  }
+  &-label {
+  }
+  &-checkbox {
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+    border-color: #7070704d;
+  }
+
+  &-labelText {
+    font-family: var(--font-roman);
+    font-size: var(--font-size-base-small);
+  }
+
+  &-count {
+    display: none;
+  }
+}
+
+.ais-ClearRefinements {
+  &-button {
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    text-transform: uppercase;
+    font-family: var(--font-condensed-bold);
+    font-size: var(--font-size-h6);
+    letter-spacing: 0.52px;
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    &--disabled {
+      border: 1px solid var(--color-disabled);
+      color: var(--color-disabled);
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* Algolia - React Autosuggest */
 .react-autosuggest {
   &__container {
     background-color: var(--color-light-gray);
@@ -698,7 +940,7 @@ footer {
     border: none;
     font-size: 18px;
     color: var(--color-gray);
-    font-family: var(--font-light);
+    font-family: var(--font-regular-light);
     height: 100%;
     width: 100%;
     padding: 1rem 2rem;
@@ -767,56 +1009,4 @@ footer {
       }
     }
   }
-}
-
-.ais-Highlight {
-  display: block;
-
-  &-highlighted {
-    color: var(--color-blue);
-    font-weight: bold;
-  }
-}
-
-/* Voice Search */
-.ais-VoiceSearch {
-  background-color: var(--color-light-gray);
-  height: 100%;
-
-  &-button {
-    color: var(--color-gray);
-    background: none;
-    border: none;
-    height: inherit;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    &::after {
-      content: "Search by Voice";
-      color: inherit;
-      font-size: var(--font-size-base-small);
-      display: block;
-    }
-  }
-}
-
-/* Logo */
-.logo {
-  width: 100%;
-  max-width: 220px;
-
-  a {
-    display: block;
-  }
-}
-
-/* Translator Selector */
-.translator {
-  background-color: var(--color-dark-blue);
-  height: 100%;
 }
