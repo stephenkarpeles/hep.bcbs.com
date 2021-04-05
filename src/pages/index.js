@@ -10,7 +10,6 @@ import {
   Configure,
   RefinementList,
   MenuSelect,
-  Hit,
   ClearRefinements,
 } from "react-instantsearch-dom"
 
@@ -49,13 +48,12 @@ const IndexPage = props => {
   const { t } = useTranslation()
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
-      <h1>{t("home.title")}</h1>
 
       <section className="intro" id="intro">
         <div className="max-container">
-          <h1 id="what-is-health-equity">Mission Statement</h1>
+          <h1 id="what-is-health-equity">{t("home.title")}</h1>
           <div className="intro--video">
             <iframe
               width="560"
@@ -114,45 +112,6 @@ const IndexPage = props => {
             </div>
             <InfiniteHits
               hitComponent={planResult}
-              translations={{
-                loadMore: "Load more",
-              }}
-            />
-          </InstantSearch>
-        </div>
-      </section>
-
-      <section className="advisory-board" id="meet-our-advisory-panel">
-        <div className="inner-content">
-          <h2>Advisory Board</h2>
-          <div class="advisory-board-member">
-            <div class="advisory-board-member--image">
-              <img src="https://via.placeholder.com/150" />
-            </div>
-            <div className="stat">
-              <div className="stat--number">$100 million</div>
-              <div className="stat--text">
-                followup description of what this number means
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="community" id="what-were-doing-in-your-community">
-        <div className="inner-content">
-          <h2>What we're doing in your community</h2>
-          <p>lorem text</p>
-        </div>
-      </section>
-
-      <section className="profiles">
-        <div className="inner-content">
-          <InstantSearch searchClient={searchClient} indexName="test_index">
-            <Configure hitsPerPage={5} distinct />
-            <SearchBox />
-            <InfiniteHits
-              hitComponent={Hit}
               translations={{
                 loadMore: "Load more",
               }}
@@ -244,7 +203,7 @@ const IndexPage = props => {
           </form>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

@@ -16,10 +16,10 @@ const searchClient = algoliasearch(
 
 const Header = ({ props, siteTitle }) => {
   const { t, i18n } = useTranslation()
-  
+
   const [values, setValues] = useState({
-    value: ''
-  });
+    value: "",
+  })
 
   function handleChange(event) {
     i18n.changeLanguage(event.target.value)
@@ -27,28 +27,34 @@ const Header = ({ props, siteTitle }) => {
     setValues(oldValues => ({
       ...oldValues,
       [event.target.name]: event.target.value,
-    }));
+    }))
   }
 
-  return(
+  return (
     <>
       <header id="top">
         <div className="max-container">
           <div className="logo">
-            <Link to="/">{siteTitle}</Link>
+            <Link to="/">
+              <img
+                style={{ maxWidth: 160, marginBottom: 0 }}
+                src={logo}
+                alt={siteTitle}
+              />
+            </Link>
           </div>
 
           <AlgoliaSiteSearch />
 
-          <select 
-            name="translator" 
+          <select
+            name="translator"
             className="translator"
             value={values.language}
-            onChange={(e) => handleChange(e)}
+            onChange={e => handleChange(e)}
           >
             <option value="">Change Language</option>
-            <option value={'en'}>English</option>
-            <option value={'zh-Hant'}>Taiwan</option>
+            <option value={"en"}>English</option>
+            <option value={"zh-Hant"}>Taiwan</option>
           </select>
         </div>
       </header>
