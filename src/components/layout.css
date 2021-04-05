@@ -1,4 +1,5 @@
 @import "variables.css";
+@import "mixins.css";
 @import "typography.css";
 
 html {
@@ -618,9 +619,6 @@ pre tt:after {
 
 /* Header */
 header {
-  /* border-top: 1px solid gray;
-  border-bottom: 1px solid gray; */
-
   .max-container {
     display: flex;
     flex-flow: row wrap;

@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import NavigationFooter from "../components/NavigationFooter"
-import { withTrans } from '../i18n/withTrans'
+import { withTrans } from "../i18n/withTrans"
 
 import Header from "./header"
 import "./layout.css"
