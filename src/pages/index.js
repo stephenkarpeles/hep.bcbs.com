@@ -10,7 +10,7 @@ import {
   Configure,
   RefinementList,
   MenuSelect,
-  ClearRefinements,
+  Hit,
 } from "react-instantsearch-dom"
 
 import Layout from "../components/layout"
@@ -44,14 +44,13 @@ const planResult = ({ hit }) => {
   )
 }
 
-const IndexPage = (props) => {
+const IndexPage = props => {
   const { t } = useTranslation()
 
   return (
-    <>
+    <Layout>
       <SEO title="Home" />
-
-      <h1>{t('home.title')}</h1>
+      <h1>{t("home.title")}</h1>
 
       <section className="intro" id="intro">
         <div className="max-container">
@@ -71,7 +70,6 @@ const IndexPage = (props) => {
             Position Statement or Video alternatve text
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       <section className="statistics" id="our-commitment">
@@ -82,59 +80,58 @@ const IndexPage = (props) => {
             <div className="stat--text">
               followup description of what this number means
             </div>
-=======
-      </div>
-    </section>
-
-    <section className="community" id="what-were-doing-in-your-community">
-      <div className="inner-content">
-        <h2>What we're doing in your community</h2>
-        <p>lorem text</p>
-      </div>
-    </section>
-
-    <section className="profiles">
-      <div className="inner-content inner-content-filters">
-        <InstantSearch searchClient={searchClient} indexName="test_index">
-          <Configure hitsPerPage={5} distinct />
-          <div className="search-filters">
-            <SearchBox />
-            <div className="search-filters-refinement">
-              <div className="search-filters-label">State</div>
-              <MenuSelect attribute="state" />
-            </div>
-            <div className="search-filters-refinement">
-              <div className="search-filters-label">Plan</div>
-              <MenuSelect attribute="plan" />
-            </div>
-            <div className="search-filters-refinement">
-              <div className="search-filters-label">Topics</div>
-              <RefinementList attribute="category" />
-            </div>
-            <ClearRefinements clearsQuery />
           </div>
-          <InfiniteHits
-            hitComponent={planResult}
-            translations={{
-              loadMore: "Load more",
-            }}
-          />
-        </InstantSearch>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section className="advisory-board" id="meet-our-advisory-panel">
-      <div className="inner-content">
-        <h2>Advisory Board</h2>
-        <div class="advisory-board-member">
-          <div class="advisory-board-member--image">
-            <img src="https://via.placeholder.com/150" />
->>>>>>> update plan search styles, add filters and algolia config
-          </div>
-          <div className="stat">
-            <div className="stat--number">$100 million</div>
-            <div className="stat--text">
-              followup description of what this number means
+      <section className="community" id="what-were-doing-in-your-community">
+        <div className="inner-content">
+          <h2>What we're doing in your community</h2>
+          <p>lorem text</p>
+        </div>
+      </section>
+
+      <section className="profiles">
+        <div className="inner-content inner-content-filters">
+          <InstantSearch searchClient={searchClient} indexName="test_index">
+            <Configure hitsPerPage={5} distinct />
+            <div className="search-filters">
+              <SearchBox />
+              <div className="search-filters-refinement">
+                <div className="search-filters-label">State</div>
+                <MenuSelect attribute="state" />
+              </div>
+              <div className="search-filters-refinement">
+                <div className="search-filters-label">Plan</div>
+                <MenuSelect attribute="plan" />
+              </div>
+              <div className="search-filters-refinement">
+                <div className="search-filters-label">Topics</div>
+                <RefinementList attribute="category" />
+              </div>
+            </div>
+            <InfiniteHits
+              hitComponent={planResult}
+              translations={{
+                loadMore: "Load more",
+              }}
+            />
+          </InstantSearch>
+        </div>
+      </section>
+
+      <section className="advisory-board" id="meet-our-advisory-panel">
+        <div className="inner-content">
+          <h2>Advisory Board</h2>
+          <div class="advisory-board-member">
+            <div class="advisory-board-member--image">
+              <img src="https://via.placeholder.com/150" />
+            </div>
+            <div className="stat">
+              <div className="stat--number">$100 million</div>
+              <div className="stat--text">
+                followup description of what this number means
+              </div>
             </div>
           </div>
         </div>
@@ -245,7 +242,7 @@ const IndexPage = (props) => {
           </form>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 
