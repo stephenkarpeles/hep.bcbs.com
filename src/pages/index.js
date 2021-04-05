@@ -10,6 +10,7 @@ import {
   Configure,
   RefinementList,
   MenuSelect,
+  ClearRefinements,
 } from "react-instantsearch-dom"
 
 import Layout from "../components/layout"
@@ -110,6 +111,7 @@ const IndexPage = (props) => {
               <div className="search-filters-label">Topics</div>
               <RefinementList attribute="category" />
             </div>
+            <ClearRefinements clearsQuery />
           </div>
           <InfiniteHits
             hitComponent={planResult}
