@@ -1,11 +1,14 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { Link } from "gatsby"
+import { useMediaQuery } from "react-responsive"
 
 function Navigation() {
   return (
     <div className="navigation">
       <div className="max-container">
         <nav>
+          <Link to="/">Health Equity</Link>
           <AnchorLink
             to="/#what-is-health-equity"
             title="What is Health Equity"
@@ -16,7 +19,7 @@ function Navigation() {
             <span>Our Commitment</span>
           </AnchorLink>
           <AnchorLink
-            to="/#profiles"
+            to="/#what-were-doing-in-your-community"
             title="What we're doing in your community"
           >
             <span>What we're doing in your community</span>
