@@ -13,6 +13,7 @@ import {
   ClearRefinements,
 } from "react-instantsearch-dom"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
+import Tabs from "../components/Tabs/Tabs"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -137,6 +138,7 @@ const IndexPage = props => {
         </div>
       </section>
 
+      <Tabs/>
       <AdvisoryBoard/>
 
       <section className="news" id="news">

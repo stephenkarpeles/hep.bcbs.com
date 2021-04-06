@@ -4,7 +4,7 @@
 @import "../breakpoints.css";
 
 .advisory-board-wrapper {
-  background: red;
+  padding: 80px 0;
 }
 
 .advisory-board {

@@ -1,0 +1,30 @@
+
+.tab-items {
+  width: 340px;
+}
+
+.tab-content {
+  width: calc(100% - 340px);
+}
+
+.tab-item {
+  padding: 20px;
+  cursor: pointer;
+  color: var(--color-gray);
+  background: var(--color-light-gray);
+
+  &.tab-item--inactive {
+    background: var(--color-dark-blue);
+    color: white;
+  }
+}
+
+.tabs-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tab-content-grid {
+  background: var(--color-light-gray);
+  padding: 40px;
+}
