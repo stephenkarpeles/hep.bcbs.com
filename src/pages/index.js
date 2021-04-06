@@ -54,6 +54,7 @@ const IndexPage = props => {
       <section className="intro" id="intro">
         <div className="max-container">
           <h1 id="what-is-health-equity">{t("home.title")}</h1>
+          <div className="subtitle">{t("home.subtitle")}</div>
           <div className="intro--video">
             <iframe
               width="560"
@@ -65,9 +66,8 @@ const IndexPage = props => {
               allowfullscreen
             ></iframe>
           </div>
-          <div className="intro--video-quote">
-            Position Statement or Video alternatve text
-          </div>
+          <div className="intro--video-quote">{t("home.quote")}</div>
+          <div className="intro--video-content">{t("home.content")}</div>
         </div>
       </section>
 
