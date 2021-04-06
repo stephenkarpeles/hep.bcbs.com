@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/the-health-of-america/blue-health-equity`,
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -10,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: `${__dirname}/src/components/layout.js`
-      }
+        component: `${__dirname}/src/components/layout.js`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
