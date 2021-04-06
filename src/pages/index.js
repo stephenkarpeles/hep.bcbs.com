@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
 import { useTranslation } from "react-i18next"
 import {
@@ -15,7 +15,7 @@ import {
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 import Tabs from "../components/Tabs/Tabs"
 
-import Layout from "../components/layout"
+// import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 // TODO: Possibly add clean browser urls
