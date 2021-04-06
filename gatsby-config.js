@@ -38,7 +38,20 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require('postcss-import'),
+          require('postcss-nested'),
+          require('postcss-calc'),
+          require('postcss-advanced-variables'),
+          require('postcss-pxtorem'),
+          require('postcss-mixins'),
+          require('postcss-custom-media'),
+        ]
+      }
+    },
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {

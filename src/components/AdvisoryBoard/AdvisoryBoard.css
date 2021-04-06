@@ -1,0 +1,16 @@
+@import "../variables.css";
+@import "../mixins.css";
+/*@import "../typography.css";*/
+@import "../breakpoints.css";
+
+.advisory-board-wrapper {
+  background: red;
+}
+
+.advisory-board {
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+  };
+}
+
