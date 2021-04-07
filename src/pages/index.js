@@ -12,7 +12,6 @@ import {
   MenuSelect,
   ClearRefinements,
 } from "react-instantsearch-dom"
-import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -35,7 +34,7 @@ const planResult = ({ hit }) => {
           <div className="plan-result-card-image">
             <img src={img_url} />
           </div>
-          {plan}
+          <div className="plan-result-card-company">{plan}</div>
         </div>
         <div className="plan-result-card-category">{category}</div>
         <div className="plan-result-card-title">{title}</div>
@@ -54,7 +53,8 @@ const IndexPage = props => {
 
       <section className="intro" id="intro">
         <div className="max-container">
-          <h1 id="what-is-health-equity">{t("home.title")}</h1>
+          <h1 id="healthequity">{t("home.title")}</h1>
+          <div className="subtitle">{t("home.subtitle")}</div>
           <div className="intro--video">
             <iframe
               width="560"
@@ -66,13 +66,12 @@ const IndexPage = props => {
               allowfullscreen
             ></iframe>
           </div>
-          <div className="intro--video-quote">
-            Position Statement or Video alternatve text
-          </div>
+          <div className="intro--video-quote">{t("home.quote")}</div>
+          <div className="intro--video-content">{t("home.content")}</div>
         </div>
       </section>
 
-      <section className="statistics" id="our-commitment">
+      <section className="statistics" id="commitment">
         <div className="min-content">
           <h2>Statistics</h2>
           <div className="stat">
@@ -84,7 +83,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="profiles" id="profiles">
+      <section className="profiles" id="community">
         <div className="inner-content community">
           <h2 style={{ color: "#0072A7" }}>
             What we're doing in your community
@@ -137,9 +136,41 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <AdvisoryBoard/>
+      <section className="advisory-board" id="advisory">
+        <div className="inner-content">
+          <h2>Advisory Board</h2>
+          <div class="advisory-board-member">
+            <div class="advisory-board-member--image">
+              <img src="https://via.placeholder.com/150" />
+            </div>
+            <div class="advisory-board-member--name">Bob Ross</div>
+            <div class="advisory-board-member--title">Happy Tree Designer</div>
+          </div>
+          <div class="advisory-board-member">
+            <div class="advisory-board-member--image">
+              <img src="https://via.placeholder.com/150" />
+            </div>
+            <div class="advisory-board-member--name">Bob Ross</div>
+            <div class="advisory-board-member--title">Happy Tree Designer</div>
+          </div>
+          <div class="advisory-board-member">
+            <div class="advisory-board-member--image">
+              <img src="https://via.placeholder.com/150" />
+            </div>
+            <div class="advisory-board-member--name">Bob Ross</div>
+            <div class="advisory-board-member--title">Happy Tree Designer</div>
+          </div>
+          <div class="advisory-board-member">
+            <div class="advisory-board-member--image">
+              <img src="https://via.placeholder.com/150" />
+            </div>
+            <div class="advisory-board-member--name">Bob Ross</div>
+            <div class="advisory-board-member--title">Happy Tree Designer</div>
+          </div>
+        </div>
+      </section>
 
-      <section className="news" id="news">
+      {/* <section className="news" id="news">
         <div className="inner-content">
           <h2>Plan News</h2>
           <div className="news-item">
@@ -164,9 +195,9 @@ const IndexPage = props => {
             <div className="news-item--plan-date">March 15th, 2021</div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="presskit" id="press-kit"></section>
+      <section className="presskit" id="presskit"></section>
 
       <section className="newsletter" id="newsletter">
         <div className="inner-content">

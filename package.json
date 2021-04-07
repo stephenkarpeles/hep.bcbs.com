@@ -9,6 +9,7 @@
     "gatsby": "^3.1.1",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.1.0",
+    "gatsby-plugin-google-tagmanager": "^3.2.0",
     "gatsby-plugin-image": "^1.1.1",
     "gatsby-plugin-layout": "^2.2.0",
     "gatsby-plugin-manifest": "^3.1.0",
@@ -27,7 +28,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.8.12",
-    "react-instantsearch-dom": "^6.10.3"
+    "react-instantsearch-dom": "^6.10.3",
+    "react-responsive": "^8.2.0"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
