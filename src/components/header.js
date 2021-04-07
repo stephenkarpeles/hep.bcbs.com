@@ -52,7 +52,7 @@ const Header = ({ props, siteTitle }) => {
 
           <Desktop>
             <AlgoliaSiteSearch />
-            <Translator />
+            {/* <Translator /> */}
           </Desktop>
 
           <MobileTablet>
@@ -69,7 +69,7 @@ const Header = ({ props, siteTitle }) => {
         <AlgoliaSiteSearch />
         <div className="mobile-navigation">
           <Navigation />
-          <Translator />
+          {/* <Translator /> */}
         </div>
       </MobileTablet>
     </>
