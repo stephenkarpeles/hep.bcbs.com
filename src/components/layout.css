@@ -708,6 +708,7 @@ header {
 /* Intro */
 .intro {
   background-color: var(--color-dark-blue);
+  padding: 7.5rem 0;
 
   h1 {
     width: 100%;
@@ -1105,4 +1106,10 @@ footer {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.backtotop {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
 }
