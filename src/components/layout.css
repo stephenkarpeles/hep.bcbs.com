@@ -637,14 +637,20 @@ header {
 
 /* Navigation */
 .navigation {
-  border-top: 1px solid #d3d3d3;
-  background-color: var(--color-light-gray);
+  @media (--large-breakpoint-up) {
+    background-color: var(--color-light-gray);
+    border-top: 1px solid #d3d3d3;
+  }
 
   nav {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
     justify-content: flex-end;
+
+    .mobile-navigation & {
+      flex-flow: column wrap;
+    }
 
     a {
       color: var(--color-gray);
@@ -654,19 +660,48 @@ header {
       margin-left: 2rem;
       padding: 1rem 0;
 
+      .mobile-navigation & {
+        font-size: var(--font-size-base);
+        color: #fff;
+        margin-left: 0;
+        border-bottom: 1px solid #dedede;
+        width: 100%;
+      }
+
       &:hover {
         text-decoration: underline;
       }
-
-      &.he-landing {
-        color: var(--color-blue);
-        text-transform: uppercase;
-        font-family: var(--font-condensed-bold);
-        letter-spacing: 0.52px;
-        margin-right: auto;
-        margin-left: 0;
-      }
     }
+  }
+}
+
+.he-landing {
+  .navigation & {
+    color: var(--color-blue);
+    text-transform: uppercase;
+    font-family: var(--font-condensed-bold);
+    letter-spacing: 0.52px;
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  &.mobile {
+    background-color: var(--color-blue);
+    color: #fff;
+    text-transform: uppercase;
+    font-family: var(--font-condensed-bold);
+    letter-spacing: 0.52px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .mobile-navigation & {
+    display: none;
   }
 }
 
@@ -855,6 +890,10 @@ footer {
   background-color: var(--color-light-gray);
   height: 100%;
 
+  .mobile-search & {
+    height: 56px;
+  }
+
   &-button {
     color: var(--color-gray);
     background: none;
@@ -868,11 +907,13 @@ footer {
       height: 24px;
     }
 
-    &::after {
-      content: "Search by Voice";
-      color: inherit;
-      font-size: var(--font-size-base-small);
-      display: block;
+    @media (--large-breakpoint-up) {
+      &::after {
+        content: "Search by Voice";
+        color: inherit;
+        font-size: var(--font-size-base-small);
+        display: block;
+      }
     }
   }
 }
@@ -951,10 +992,13 @@ footer {
 .react-autosuggest {
   &__container {
     background-color: var(--color-light-gray);
-    border-left: 1px solid #d3d3d3;
     flex-grow: 1;
     height: 100%;
     position: relative;
+
+    @media (--large-breakpoint-up) {
+      border-left: 1px solid #d3d3d3;
+    }
   }
 
   &__input {
@@ -982,9 +1026,13 @@ footer {
     &--open {
       position: absolute;
       background-color: #fff;
-      width: 100%;
+      width: 100vw;
       border: 1px solid #dedede;
       background-color: #f7f9fa;
+
+      @media (--large-breakpoint-up) {
+        width: 100%;
+      }
     }
   }
 
@@ -1031,4 +1079,30 @@ footer {
       }
     }
   }
+}
+
+.mobile-navigation {
+  position: absolute;
+  left: calc(-100% - 1rem);
+  transition: left 0.5s ease;
+
+  .navigation {
+    padding-top: 56px;
+    margin-top: -56px;
+    background-color: var(--color-blue);
+    height: 100vh;
+  }
+}
+
+.navigation-mobile ~ .mobile-navigation {
+  left: 0;
+  width: 100%;
+  transition: left 0.5s ease;
+}
+
+.mobile-search {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
 }

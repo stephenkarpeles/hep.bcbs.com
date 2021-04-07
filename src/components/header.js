@@ -66,7 +66,12 @@ const Header = ({ props, siteTitle }) => {
         <Navigation />
       </Desktop>
       <MobileTablet>
-        <AlgoliaSiteSearch />
+        <Link className="he-landing mobile" to="/">
+          Health Equity
+        </Link>
+        <div className="mobile-search">
+          <AlgoliaSiteSearch />
+        </div>
         <div className="mobile-navigation">
           <Navigation />
           {/* <Translator /> */}
