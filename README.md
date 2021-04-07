@@ -1,4 +1,4 @@
-This repository holds the static content for the BCBS.com Blue Health Equity initiative.
+**This repository holds the static content for the BCBS.com Blue Health Equity initiative.**
 
 ## 🚀 Tech Stack
 
@@ -20,5 +20,5 @@ gatsby build --prefix-paths
 
 2. Move the Build files
 
-- Copy/Overwrite the contents of the `public` folder into a new feature branch in the main BCBS.com repo] (https://github.com/oomphinc/bcbs.com) `bluehealthequity` directory.
-- Follow normal BCBS.com release procedure.
+- Copy/Overwrite the contents of the `public` folder into a new feature branch in the main [BCBS.com repo](https://github.com/oomphinc/bcbs.com) `bluehealthequity` directory.
+- Follow the BCBS.com GitHub release procedure.
