@@ -34,7 +34,7 @@ const planResult = ({ hit }) => {
           <div className="plan-result-card-image">
             <img src={img_url} />
           </div>
-          {plan}
+          <div className="plan-result-card-company">{plan}</div>
         </div>
         <div className="plan-result-card-category">{category}</div>
         <div className="plan-result-card-title">{title}</div>
