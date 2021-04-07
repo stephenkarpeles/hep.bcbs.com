@@ -3,10 +3,9 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import logo from "../images/hoa-primary-logo.svg"
 import Navigation from "../components/Navigation"
-import { useTranslation } from "react-i18next"
-
+import Translator from "../components/Translator"
+import { useMediaQuery } from "react-responsive"
 import algoliasearch from "algoliasearch/lite"
-import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom"
 import AlgoliaSiteSearch from "../components/AlgoliaSiteSearch"
 
 const searchClient = algoliasearch(
@@ -14,25 +13,32 @@ const searchClient = algoliasearch(
   "156ba268a0517559cd6a89921ae9cb5f"
 )
 
+// match breakpoints to the breakpoints.css file
+const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 961 })
+  return isDesktop ? children : null
+}
+const MobileTablet = ({ children }) => {
+  const isMobileTablet = useMediaQuery({ maxWidth: 960 })
+  return isMobileTablet ? children : null
+}
+
+const Tablet = ({ children }) => {
+  const isTablet = useMediaQuery({ minWidth: 761, maxWidth: 960 })
+  return isTablet ? children : null
+}
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 760 })
+  return isMobile ? children : null
+}
+
 const Header = ({ props, siteTitle }) => {
-  const { t, i18n } = useTranslation()
-
-  const [values, setValues] = useState({
-    value: "",
-  })
-
-  function handleChange(event) {
-    i18n.changeLanguage(event.target.value)
-
-    setValues(oldValues => ({
-      ...oldValues,
-      [event.target.name]: event.target.value,
-    }))
-  }
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
 
   return (
     <>
-      <header id="top">
+      <header id="top" className={click ? "navigation-mobile" : "navigation"}>
         <div className="max-container">
           <div className="logo">
             <Link to="/">
@@ -44,22 +50,33 @@ const Header = ({ props, siteTitle }) => {
             </Link>
           </div>
 
-          <AlgoliaSiteSearch />
+          <Desktop>
+            <AlgoliaSiteSearch />
+            {/* <Translator /> */}
+          </Desktop>
 
-          <select
-            name="translator"
-            className="translator"
-            value={values.language}
-            onChange={e => handleChange(e)}
-          >
-            <option value="">Change Language</option>
-            <option value={"en"}>English</option>
-            <option value={"zh-Hant"}>Taiwan</option>
-          </select>
+          <MobileTablet>
+            <div className="mobile-toggle" onClick={handleClick}>
+              {click ? <button>Close</button> : <button>Open</button>}
+            </div>
+          </MobileTablet>
         </div>
       </header>
-
-      <Navigation />
+      <Desktop>
+        <Navigation />
+      </Desktop>
+      <MobileTablet>
+        <Link className="he-landing mobile" to="/">
+          Health Equity
+        </Link>
+        <div className="mobile-search">
+          <AlgoliaSiteSearch />
+        </div>
+        <div className="mobile-navigation">
+          <Navigation />
+          {/* <Translator /> */}
+        </div>
+      </MobileTablet>
     </>
   )
 }
