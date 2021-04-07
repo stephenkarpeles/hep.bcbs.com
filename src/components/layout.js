@@ -36,7 +36,7 @@ const Layout = ({ children, t, i18n }) => {
         Association is an association of independant, locally operated Blue
         Cross and Blue Shield Companies.
       </footer>
-      <AnchorLink to="/#top" title="Back to Top">
+      <AnchorLink className="backtotop" to="/#top" title="Back to Top">
         <span>Back to Top</span>
       </AnchorLink>
     </>
