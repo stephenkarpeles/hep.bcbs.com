@@ -13,6 +13,7 @@
 
 ```
 cd hep.bcbs.com
+git pull master
 gatsby build --prefix-paths
 ```
 
