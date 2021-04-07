@@ -53,7 +53,7 @@ const IndexPage = props => {
 
       <section className="intro" id="intro">
         <div className="max-container">
-          <h1 id="what-is-health-equity">{t("home.title")}</h1>
+          <h1 id="healthequity">{t("home.title")}</h1>
           <div className="subtitle">{t("home.subtitle")}</div>
           <div className="intro--video">
             <iframe
@@ -71,7 +71,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="statistics" id="our-commitment">
+      <section className="statistics" id="commitment">
         <div className="min-content">
           <h2>Statistics</h2>
           <div className="stat">
@@ -83,7 +83,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="profiles" id="profiles">
+      <section className="profiles" id="community">
         <div className="inner-content community">
           <h2 style={{ color: "#0072A7" }}>
             What we're doing in your community
@@ -136,7 +136,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="advisory-board" id="meet-our-advisory-panel">
+      <section className="advisory-board" id="advisory">
         <div className="inner-content">
           <h2>Advisory Board</h2>
           <div class="advisory-board-member">
@@ -170,7 +170,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="news" id="news">
+      {/* <section className="news" id="news">
         <div className="inner-content">
           <h2>Plan News</h2>
           <div className="news-item">
@@ -195,9 +195,9 @@ const IndexPage = props => {
             <div className="news-item--plan-date">March 15th, 2021</div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="presskit" id="press-kit"></section>
+      <section className="presskit" id="presskit"></section>
 
       <section className="newsletter" id="newsletter">
         <div className="inner-content">

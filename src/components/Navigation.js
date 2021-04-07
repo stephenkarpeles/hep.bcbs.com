@@ -10,36 +10,30 @@ function Navigation() {
           <Link className="he-landing" to="/">
             Health Equity
           </Link>
-          <AnchorLink
-            to="/#what-is-health-equity"
-            title="What is Health Equity"
-          >
+          <AnchorLink to="/#healthequity" title="What is Health Equity">
             <span>What is Health Equity</span>
           </AnchorLink>
-          <AnchorLink to="/#our-commitment" title="Our Commitment">
+          <AnchorLink to="/#commitment" title="Our Commitment">
             <span>Our Commitment</span>
           </AnchorLink>
           <AnchorLink
-            to="/#what-were-doing-in-your-community"
+            to="/#community"
             title="What we're doing in your community"
           >
             <span>What we're doing in your community</span>
           </AnchorLink>
-          <AnchorLink
-            to="/#meet-our-advisory-panel"
-            title="Meet our Advisory Panel"
-          >
-            <span>Meet our Advisory Panel</span>
+          <AnchorLink to="/#advisory" title="Meet our Advisory Panel">
+            <span>Advisory Board</span>
           </AnchorLink>
-          <AnchorLink to="/#news" title="News">
+          {/* <AnchorLink to="/#news" title="News">
             <span>News</span>
-          </AnchorLink>
-          <AnchorLink to="/#press-kit" title="Press Kit">
+          </AnchorLink> */}
+          <AnchorLink to="/#presskit" title="Press Kit">
             <span>Press Kit</span>
           </AnchorLink>
-          <AnchorLink to="/#newsletter" title="Newsletter">
+          {/* <AnchorLink to="/#newsletter" title="Newsletter">
             <span>Newsletter</span>
-          </AnchorLink>
+          </AnchorLink> */}
         </nav>
       </div>
     </div>
