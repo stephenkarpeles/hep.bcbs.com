@@ -12,6 +12,7 @@
   --color-light-gray: #f7f9fa;
   --color-gray: #3f3f3f;
   --color-disabled: #cfd0d1;
+  --color-white: #ffffff;
 
   /* Typography */
   --font-condensed-light: "Condensed Light";
@@ -31,6 +32,7 @@
   --font-size-base: 16px;
   --font-size-base-small: 14px;
   --font-size-quote: 24px;
+  --font-size-40: 40px;
 
   --line-height-h1: 88px;
   --line-height-h2: 72px;
@@ -41,4 +43,9 @@
   --line-height-base: 22px;
   --line-height-base-small: 20px;
   --line-height-quote: 30px;
+
+  /* Spacers */
+  --spacer: 1rem;
+  --spacer-2: 2rem;
+  --spacer-3: 3rem;
 }
