@@ -1164,6 +1164,15 @@ header {
     height: 100%;
     position: relative;
 
+    &::before {
+      content: url("../images/icon-search.svg");
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: 32px;
+      left: 32px;
+    }
+
     @media (--large-breakpoint-up) {
       border-left: 1px solid #d3d3d3;
     }
@@ -1177,11 +1186,7 @@ header {
     font-family: var(--font-regular-light);
     height: 100%;
     width: 100%;
-    padding: 1rem 2rem;
-
-    /* needs icon */
-    &::before {
-    }
+    padding: 1rem 2rem 1rem 5rem;
 
     &--open {
       outline: 1px solid blue;
