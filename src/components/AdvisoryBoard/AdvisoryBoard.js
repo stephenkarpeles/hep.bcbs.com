@@ -77,6 +77,25 @@ const tabItems = [
       </>
     ],
   },
+  {
+    id: 5,
+    title: 'Maria S. Gomez, RN, MPH',
+    company: 'Mary’s Center',
+    image: [
+      <>
+        <StaticImage src="../../images/headshot-1.png"/>
+      </>
+    ],
+    content: [
+      <>          
+        <h3>Maria Gomez most recently served as the President of IMPAQ, a policy research and implementation company focused on health, workforce, and advanced analytics.</h3>
+        <p>In that role, she provided strategic oversight of all research, technical assistance, and technology services across all policy and program areas at IMPAQ. She also led the organization’s work on health equity, advancing ideas for how policymakers, payers, and providers can engage for meaningful, measurable change in quality, costs, and outcomes.</p>
+        <p>She served as the Associate Director for Health Programs at the White House Office of Management and Budget under President Obama, where she provided policy, management, and regulatory oversight for over $1 trillion in spending on a range of programs across all federal health agencies. These agencies and oversight areas included the Centers for Medicare & Medicaid Services, the Centers for Disease Control and Prevention, the National Institutes of Health, the Food and Drug Administration, and policy and spending negotiations for Medicaid, the Zika virus, and other public health funding requests.</p> 
+        <p>Dr. Enekwechi completed a BA at the University of Iowa, an MPP at the American University, and a PhD in Health Services and Policy from the University of Iowa. She completed postdoctoral training at the University of Chicago. Her research area covers the aging population and Medicare, health equity for vulnerable populations, and evidence-based policymaking.</p> 
+        <p>Dr. Enekwechi is a Research Associate Professor of Health Policy and Management at the Milken Institute School of Public Health at the George Washington University. Her teaching focuses on federal health policy, the US health care infrastructure, health equity, and evidence-based policymaking. She also serves on the boards of directors and advisors for a number of health care organizations.</p>
+      </>
+    ],
+  },
 ];
 
 const TabItem = ({
