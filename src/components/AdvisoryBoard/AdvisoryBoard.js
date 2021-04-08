@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { StaticImage } from "gatsby-plugin-image"
+import Fade from 'react-reveal/Fade';
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import "./AdvisoryBoard.css"
 
 const tabItems = [
@@ -134,35 +136,39 @@ const tabItems = [
   },
   {
     id: 8,
-    title: "Maria S. Gomez, RN, MPH",
-    company: "Mary's Center",
+    title: "Richard Taylor",
+    company: "ImbuTec",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/maria-gomez.jpg"/>
+        <StaticImage src="../../images/advisory-board/richard-taylor.jpg"/>
       </>
     ],
     content: [
       <>          
-        <h3>Maria Gomez most recently served as the President of IMPAQ, a policy research and implementation company focused on health, workforce, and advanced analytics.</h3>
-        <p>In that role, she provided strategic oversight of all research, technical assistance, and technology services across all policy and program areas at IMPAQ. She also led the organization’s work on health equity, advancing ideas for how policymakers, payers, and providers can engage for meaningful, measurable change in quality, costs, and outcomes.</p>
-        
+        <h3>With over 25 years of business and professional experience, Richard Taylor is responsible for the overall strategic direction of the company.</h3>
+        <p>Mr. Taylor also serves as the primary point of contact for customers, and is responsible for estimating, contracting and project management for all projects.</p>
+        <p>Taylor graduated <em>cum laude</em> with a B.S. in Business Administration from Georgetown University. During his tenure in the nation’s capital, he worked on Capitol Hill as a government relations representative for a Fortune 500 energy company, and was also actively involved in Congressional and Presidential campaigns across the country. He later attended Tulane University School of Law where he earned his Juris Doctor, <em>cum laude</em>, and then served as a law clerk to Judge James L. Dennis on the U.S. 5th Circuit Court of Appeals.</p>
+        <p></p>
+        <p>Prior to joining ImbuTec, Mr. Taylor served in various legal and senior corporate management roles in the energy industry, and he also organized and led a non-profit community development corporation affiliated with his church to help revitalize the community in which it sits.</p>
+        <p>Mr. Taylor is an active civic leader, and currently serves on the Board of Directors of the Pittsburgh Foundation.  He also serves on the Board of Fellows for the University of Pittsburgh’s Institute of Politics as Co-Chair of the Economic Development Committee, the Power of 32 Implementation Committee, and the Board of Directors for Macedonia Development Corporation. He previously served on the Boards of the Port Authority of Allegheny County, the August Wilson African American Cultural Center, the Urban League of Greater Pittsburgh, the Local Government Academy, and as Secretary of the Homer S. Brown Law Association.</p>        
       </>
     ],
   },
   {
     id: 9,
-    title: "Maria S. Gomez, RN, MPH",
-    company: "Mary's Center",
+    title: "Kevin Washington",
+    company: "YMCA",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/maria-gomez.jpg"/>
+        <StaticImage src="../../images/advisory-board/kevin-washington.jpg"/>
       </>
     ],
     content: [
       <>          
-        <h3>Maria Gomez most recently served as the President of IMPAQ, a policy research and implementation company focused on health, workforce, and advanced analytics.</h3>
-        <p>In that role, she provided strategic oversight of all research, technical assistance, and technology services across all policy and program areas at IMPAQ. She also led the organization’s work on health equity, advancing ideas for how policymakers, payers, and providers can engage for meaningful, measurable change in quality, costs, and outcomes.</p>
-        
+        <h3>A 40-year YMCA professional, Kevin Washington is the 14th person and first African American to lead the Y in the United States.</h3>
+        <p>He came to YMCA of the USA (Y-USA) in February 2015 from the YMCA of Greater Boston, where as President and CEO from 2010 to 2014 he expanded membership and access by reducing rates, increased diversity and engagement among the Board of Directors to better reflect the community and implemented a childhood-education quality initiative that benefits thousands of children and families throughout eastern Massachusetts.</p>
+        <p>Prior to Boston, Washington served as President and CEO of the YMCA of Greater Hartford from 2000 to 2010. Under his leadership the Hartford YMCA invested more than $60 million to develop or expand eight facilities and camps. He was Chief Operating Officer for the YMCA of Metropolitan Chicago from 1995 to 2000, and he previously held other executive roles with the Chicago YMCA and the Philadelphia Freedom Valley YMCA. He got his start in the Y as Youth Program Director at the Philadelphia YMCA's Christian Street branch in 1978.</p>
+        <p>Washington earned a bachelor’s degree in history from Temple University.</p>        
       </>
     ],
   },
@@ -206,9 +212,9 @@ const Tabs = () => {
   }
   
   return (
-    <section className="tabs-wrapper">
+    <section className="tabs-wrapper" id="advisory-board-top">
       <div className="inner-content">
-        <h2>Advisory Board</h2>
+        <h2>Advisory<br/>Board</h2>
       </div>
       <div className="tab-items">
         {tabItems.map(({ id, image, title, company }) =><TabItem
@@ -223,18 +229,22 @@ const Tabs = () => {
       )}
       </div>
       <div className="tab-content">
-        <div className="tab-content__close-btn" onClick={closeAdvisoryPanel} onKeyDown={closeAdvisoryPanel}>X</div>
+        <a onClick={closeAdvisoryPanel} onKeyDown={closeAdvisoryPanel} className="tab-content__close-btn" href="/#advisory-board-top" title="Back to Advisory Board">
+          X
+        </a>
         <div className="tab-content__grid">
-          <div className="tab-content__personal-info">
-            {tabItems.map(({ id, image }) => {
-              return active === id ? image : ''
-            })}
-          </div>
-          <div className="tab-content__copy">
-            {tabItems.map(({ id, content }) => {
-              return active === id ? content : ''
-            })}
-          </div>
+          <Fade>
+            <div className="tab-content__personal-info">
+              {tabItems.map(({ id, image }) => {
+                return active === id ? image : ''
+              })}
+            </div>
+            <div className="tab-content__copy">
+              {tabItems.map(({ id, content }) => {
+                return active === id ? content : ''
+              })}
+            </div>
+          </Fade>
         </div>
       </div>
     </section>
