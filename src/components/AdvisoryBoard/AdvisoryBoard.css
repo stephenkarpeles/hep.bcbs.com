@@ -100,6 +100,12 @@
 
     &__copy {
       width: calc(100% - 300px);
+
+      p {
+        &:last-of-type {
+          padding-bottom: 50px;
+        }
+      }
     }
 
     &__close-btn {

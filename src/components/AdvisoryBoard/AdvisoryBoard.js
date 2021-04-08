@@ -96,35 +96,39 @@ const tabItems = [
   },
   {
     id: 6,
-    title: "Maria S. Gomez, RN, MPH",
-    company: "Mary's Center",
+    title: "Rachel Hardeman, Ph.D",
+    company: "University of Minnesota",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/maria-gomez.jpg"/>
+        <StaticImage src="../../images/advisory-board/rachel-hardeman.jpg"/>
       </>
     ],
     content: [
       <>          
-        <h3>Maria Gomez most recently served as the President of IMPAQ, a policy research and implementation company focused on health, workforce, and advanced analytics.</h3>
-        <p>In that role, she provided strategic oversight of all research, technical assistance, and technology services across all policy and program areas at IMPAQ. She also led the organization’s work on health equity, advancing ideas for how policymakers, payers, and providers can engage for meaningful, measurable change in quality, costs, and outcomes.</p>
-        
+        <h3>Dr. Rachel R. Hardeman is a reproductive health equity researcher whose program of research applies the tools of population health science and health services research to elucidate a critical and complex determinant of health inequity—racism.</h3>
+        <p>Dr. Hardeman leverages the frameworks of critical race theory and reproductive justice to inform her equity-centered work which aims to build the empirical evidence of racism’s impact on health, particularly for Black birthing people and their babies. In 2020, she was named the first Blue Cross Endowed Professor of Health and Racial Equity.</p>
+        <p>Dr. Hardeman’s research includes a partnership with Roots Community Birth Center, in North Minneapolis, one of five Black-owned freestanding birth centers in the United States. Her work also examines the potential mental health impacts for Black birthing people when living in a community that has experienced the killing of an unarmed Black person by police.</p>
+        <p>Dr. Hardeman is principal investigator of MORhELab, which explores and defines ways to measure structural racism for the purposes of empirical, quantitative investigation.</p>
+        <p>Published in journals such as the New England Journal of Medicine and the American Journal of Public Health, Dr. Hardeman’s research has elicited important conversations on the topics of culturally-centered care, police brutality and structural racism as a fundamental cause of health inequities. Her overarching goal is to contribute to a body of knowledge that links structural racism to health in a tangible way, identifies opportunities for intervention, and dismantles the systems, structures, and institutions that allow inequities to persist.</p>
+        <p>Dr. Hardeman is active locally and nationally with organizations that seek to achieve health equity. She was recently appointed to the Minnesota Maternal Mortality Review Committee and the CDC Maternal Mortality Review Information Application (MMRIA) Bias work group where she is working to develop a measure of structural racism to be included when reviewing maternal deaths. Dr. Hardeman also serves on the Board of Directors for Planned Parenthood of the North Central States.</p>        
       </>
     ],
   },
   {
     id: 7,
-    title: "Maria S. Gomez, RN, MPH",
-    company: "Mary's Center",
+    title: "Stacey D. Stewart",
+    company: "March of Dimes",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/maria-gomez.jpg"/>
+        <StaticImage src="../../images/advisory-board/stacey-stewart.jpg"/>
       </>
     ],
     content: [
       <>          
-        <h3>Maria Gomez most recently served as the President of IMPAQ, a policy research and implementation company focused on health, workforce, and advanced analytics.</h3>
-        <p>In that role, she provided strategic oversight of all research, technical assistance, and technology services across all policy and program areas at IMPAQ. She also led the organization’s work on health equity, advancing ideas for how policymakers, payers, and providers can engage for meaningful, measurable change in quality, costs, and outcomes.</p>
-        
+        <h3>Stacey D. Stewart, our President and CEO, joined March of Dimes as its fifth President on January 1, 2017.</h3>
+        <p>In this role, Stewart heads the organization leading the fight for the health of all moms and babies. She is responsible for all aspects of the organization's strategy, vision and operations. Stewart came to March of Dimes from United Way Worldwide, where she held several positions, most recently serving as U.S. President of United Way, the nation's largest non-profit organization. There she provided strategic direction for more than 1,000 local United Ways. Stewart was also responsible for United Way's national efforts in education, financial stability, and health as well as guiding efforts to enhance the brand and grow revenue. Stewart spearheaded the transformation of United Way from a pass-through fundraiser to a leading organization for local community impact. Prior to becoming U.S. President, Stewart served as Executive Vice President, Community Impact Leadership and Learning. In this role, Stewart developed global partnerships to advance community impact in more than 40 countries.</p>
+        <p>A business veteran, Stewart has also held a number of senior roles, including Chief Diversity Officer and Senior Vice President for the Office of Community and Charitable Giving at Fannie Mae, as well as President and Chief Executive Officer for the Fannie Mae Foundation. Additionally, Stewart has an extensive background in finance and investment banking, having served as Vice President for Pryor, McClendon, Counts & Co., and as a senior associate for Merrill Lynch, specializing in financings for state and local governments.</p>
+        <p>Stewart has a master's of business administration in finance from the University of Michigan and a bachelor of arts in economics from Georgetown University. She also holds honorary degrees from Trinity University, Morgan State University, Texas Southern University, Lincoln University and Alabama A&M University.</p>        
       </>
     ],
   },
@@ -203,6 +207,9 @@ const Tabs = () => {
   
   return (
     <section className="tabs-wrapper">
+      <div className="inner-content">
+        <h2>Advisory Board</h2>
+      </div>
       <div className="tab-items">
         {tabItems.map(({ id, image, title, company }) =><TabItem
            key={title}
