@@ -99,8 +99,10 @@ const TabItem = ({
     <div id={id} className={isActive ? 'tab-item' : 'tab-item tab-item--inactive'} onClick={onItemClicked}>
       <i className={icon}></i>
       <div onClick={openAdvisoryPanel} onKeyDown={openAdvisoryPanel} className="tab-item__image">{image}</div>
-      <div className="tab-item__title">{title}</div>
-      <div className="tab-item__company">{company}</div>
+      <div className="tab-item__text">
+        <div className="tab-item__title">{title}</div>
+        <div className="tab-item__company">{company}</div>
+      </div>
     </div>
   )
 };
