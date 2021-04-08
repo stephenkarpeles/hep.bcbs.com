@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import Fade from 'react-reveal/Fade';
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 import "./AdvisoryBoard.css"
 
 const tabItems = [
   {
     id: 1,
-    title: 'Tracey Brown',
+    name: 'Tracey Brown',
     company: 'American Diabetes Association',
     image: [
       <>
@@ -27,7 +26,7 @@ const tabItems = [
   },
   {
     id: 2,
-    title: 'Marshall Chin, MD, MPH',
+    name: 'Marshall Chin, MD, MPH',
     company: 'University of Chicago',
     image: [
       <>
@@ -45,7 +44,7 @@ const tabItems = [
   },
   {
     id: 3,
-    title: 'Gilbert Darrington',
+    name: 'Gilbert Darrington',
     company: 'Health Services, Inc.',
     image: [
       <>
@@ -62,7 +61,7 @@ const tabItems = [
   },
   {
     id: 4,
-    title: 'Adaeze Enekwechi, Ph.D, MPP',
+    name: 'Adaeze Enekwechi, Ph.D, MPP',
     company: 'Milken Institute School of Public Health',
     image: [
       <>
@@ -81,7 +80,7 @@ const tabItems = [
   },
   {
     id: 5,
-    title: "Maria S. Gomez, RN, MPH",
+    name: "Maria S. Gomez, RN, MPH",
     company: "Mary's Center",
     image: [
       <>
@@ -98,7 +97,7 @@ const tabItems = [
   },
   {
     id: 6,
-    title: "Rachel Hardeman, Ph.D",
+    name: "Rachel Hardeman, Ph.D",
     company: "University of Minnesota",
     image: [
       <>
@@ -118,7 +117,7 @@ const tabItems = [
   },
   {
     id: 7,
-    title: "Stacey D. Stewart",
+    name: "Stacey D. Stewart",
     company: "March of Dimes",
     image: [
       <>
@@ -136,7 +135,7 @@ const tabItems = [
   },
   {
     id: 8,
-    title: "Richard Taylor",
+    name: "Richard Taylor",
     company: "ImbuTec",
     image: [
       <>
@@ -156,7 +155,7 @@ const tabItems = [
   },
   {
     id: 9,
-    title: "Kevin Washington",
+    name: "Kevin Washington",
     company: "YMCA",
     image: [
       <>
@@ -177,7 +176,7 @@ const tabItems = [
 const TabItem = ({
   icon = '',
   id= '',
-  title = '',
+  name = '',
   company = '',
   image = '',
   onItemClicked = () => console.error('You passed no action to the component'),
@@ -195,7 +194,7 @@ const TabItem = ({
       <i className={icon}></i>
       <div onClick={openAdvisoryPanel} onKeyDown={openAdvisoryPanel} className="tab-item__image">{image}</div>
       <div className="tab-item__text">
-        <div className="tab-item__title">{title}</div>
+        <div className="tab-item__name">{name}</div>
         <div className="tab-item__company">{company}</div>
       </div>
     </div>
@@ -217,11 +216,11 @@ const Tabs = () => {
         <h2>Advisory<br/>Board</h2>
       </div>
       <div className="tab-items">
-        {tabItems.map(({ id, image, title, company }) =><TabItem
-           key={title}
+        {tabItems.map(({ id, image, name, company }) =><TabItem
+           key={name}
            image={image}
            id={id}
-           title={title}
+           name={name}
            company={company}
            onItemClicked={() => setActive(id)}
            isActive={active === id}
@@ -235,9 +234,21 @@ const Tabs = () => {
         <div className="tab-content__grid">
           <Fade>
             <div className="tab-content__personal-info">
-              {tabItems.map(({ id, image }) => {
-                return active === id ? image : ''
-              })}
+              <div className="tab-content__personal-info-image">
+                {tabItems.map(({ id, image }) => {
+                  return active === id ? image : ''
+                })}
+              </div>
+              <div className="tab-content__personal-info-name">
+                {tabItems.map(({ id, name }) => {
+                  return active === id ? name : ''
+                })}
+              </div>
+              <div className="tab-content__personal-info-company">
+                {tabItems.map(({ id, company }) => {
+                  return active === id ? company : ''
+                })}
+              </div>
             </div>
             <div className="tab-content__copy">
               {tabItems.map(({ id, content }) => {

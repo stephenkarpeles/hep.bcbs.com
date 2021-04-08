@@ -78,12 +78,12 @@
     padding: 25px 16px 0;
   }
 
-  &__title {
+  &__name {
     text-transform: uppercase;
     font-weight: 300;
     color: var(--color-blue);
-    font-size: 20px;
-    line-height: 24px;
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
     letter-spacing: -.01em;
     padding: 0 0 8px;
   }
@@ -127,7 +127,7 @@
 
     &__grid {
       background: var(--color-light-gray);
-      padding: 40px;
+      padding: 80px 10vw 80px 60px;
       display: flex;
       justify-content: space-between;
       height: 100%;
@@ -135,12 +135,46 @@
 
     &__personal-info {
       width: 300px;
+
+      img {
+        height: 230px;
+        width: 230px;
+        object-fit: cover;
+      }
+    }
+
+    &__personal-info-image {
+      padding-bottom: 20px;
+    }
+
+    &__personal-info-name {
+      max-width: 230px;
+      text-transform: uppercase;
+      color: var(--color-blue);
+      font-size: var(--font-size-h5);
+      line-height: var(--line-height-h5);
+      padding-bottom: 20px;
+    }
+
+    &__personal-info-company {
+      max-width: 230px;
+      padding-bottom: 10px;
+      color: var(--color-blue);
+      border-bottom: 1px solid rgba(112, 112, 112, .3);
     }
 
     &__copy {
       width: calc(100% - 300px);
 
+      h3 {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
       p {
+        font-size: 14px;
+        line-height: 20px;
+
         &:last-of-type {
           padding-bottom: 50px;
         }
@@ -179,7 +213,7 @@
       padding: 0;
     }
 
-    &__title {
+    &__name {
       color: var(--color-blue);
       text-transform: none;
       font-size: var(--font-size-h5);
@@ -201,7 +235,7 @@
       background: var(--color-dark-blue);
       color: white;
 
-      .tab-item__title {
+      .tab-item__name {
         color: white;
       }
 
