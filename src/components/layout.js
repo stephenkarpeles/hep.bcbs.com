@@ -9,10 +9,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import NavigationFooter from "../components/NavigationFooter"
 import { withTrans } from "../i18n/withTrans"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children, t, i18n }) => {
@@ -30,15 +30,7 @@ const Layout = ({ children, t, i18n }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
-      <footer>
-        <NavigationFooter />© {new Date().getFullYear()} Blue Cross Blue Shield
-        Association - All Rights Reserved. The Blue Cross Blue Shield
-        Association is an association of independant, locally operated Blue
-        Cross and Blue Shield Companies.
-      </footer>
-      <AnchorLink className="backtotop" to="/#top" title="Back to Top">
-        <span>Back to Top</span>
-      </AnchorLink>
+      <Footer />
     </>
   )
 }
