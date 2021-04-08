@@ -11,10 +11,13 @@ function Navigation() {
             Health Equity
           </Link>
           <AnchorLink to="/#healthequity" title="What is Health Equity">
-            <span>What is Health Equity</span>
+            <span>National Health Equity Strategy</span>
+          </AnchorLink>
+          <AnchorLink to="/#disparities" title="Health Disparities">
+            <span>Health disparities: by the numbers</span>
           </AnchorLink>
           <AnchorLink to="/#commitment" title="Our Commitment">
-            <span>Our Commitment</span>
+            <span>Our Goal</span>
           </AnchorLink>
           <AnchorLink
             to="/#community"
@@ -23,7 +26,7 @@ function Navigation() {
             <span>What we're doing in your community</span>
           </AnchorLink>
           <AnchorLink to="/#advisory" title="Meet our Advisory Panel">
-            <span>Advisory Board</span>
+            <span>Meet our advisory panel</span>
           </AnchorLink>
           {/* <AnchorLink to="/#news" title="News">
             <span>News</span>
