@@ -655,7 +655,7 @@ header {
     a {
       color: var(--color-gray);
       font-family: var(--font-roman);
-      font-size: var(--font-size-base-small);
+      font-size: 12px;
       text-decoration: none;
       margin-left: 2rem;
       padding: 1rem 0;
@@ -725,24 +725,6 @@ header {
 /* Newsletter */
 .newsletter {
   background-color: #0072a7;
-}
-
-/* Footer */
-footer {
-  .max-content {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav {
-    flex-grow: 1;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
 }
 
 /* Logo */
@@ -819,7 +801,7 @@ footer {
     font-size: var(--font-size-h6);
     letter-spacing: 0.52px;
     margin: 0 1rem 1.25rem;
-    grid-column: 2/3;
+    /* grid-column: 2/3; */
   }
 
   &-title {
@@ -828,7 +810,7 @@ footer {
     font-size: var(--font-size-h4);
     line-height: var(--line-height-h4);
     margin: 0 1.5rem 3rem;
-    grid-column: 2/3;
+    /* grid-column: 2/3; */
   }
 
   &-excerpt {
@@ -838,10 +820,10 @@ footer {
     line-height: var(--line-height-base-small);
     margin: 0 1.5rem;
     padding-bottom: 2rem;
-    grid-column: 2/3;
+    /* grid-column: 2/3; */
   }
 
-  &-plan {
+  /* &-plan {
     grid-row: 1/3;
     grid-column: 1;
   }
@@ -851,7 +833,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
-  }
+  } */
 }
 
 /* Profiles Contanier */
@@ -941,8 +923,7 @@ footer {
     background: none;
     border: none;
     height: inherit;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 0;
 
     svg {
       width: 24px;
@@ -1149,6 +1130,47 @@ footer {
   justify-content: space-between;
 }
 
+/* Footer */
+.footer {
+  .max-container {
+    font-family: var(--font-regular-light);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .logo {
+    max-width: 96px;
+    margin-right: 1rem;
+  }
+
+  &-navigation {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    a {
+      color: var(--color-blue);
+      text-decoration: none;
+      margin-right: 2rem;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &-copyright {
+    color: var(--color-gray);
+    font-size: var(--font-size-h6);
+  }
+}
 .backtotop {
   position: fixed;
   bottom: 1rem;
