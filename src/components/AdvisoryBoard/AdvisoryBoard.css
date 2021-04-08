@@ -134,11 +134,13 @@
 
   .tab-content {
     width: calc(100% - 340px);
+    margin-left: 340px;
     display: block;
     position: relative;
 
     @media (--small-breakpoint-down) {
       width: 100%;
+      margin-left: 0;
     }
 
     &__grid {
@@ -247,6 +249,11 @@
     padding: 0;
     display: block;
     background: var(--color-dark-blue);
+    position: fixed;
+    overflow: scroll;
+    top: 0;
+    bottom: 0;
+    height: 100%;
 
     @media (--small-breakpoint-down) {
       display: none;
