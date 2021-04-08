@@ -107,6 +107,12 @@ const TabItem = ({
 
 const Tabs = () => {
  const [active, setActive] = useState(1);
+
+  const advisoryPanelIsOpen = "advisory-panel-is-open"
+
+  function closeAdvisoryPanel() {
+    document.body.classList.remove(advisoryPanelIsOpen);
+  }
   
   return (
     <section className="tabs-wrapper">
@@ -123,6 +129,7 @@ const Tabs = () => {
       )}
       </div>
       <div className="tab-content">
+        <div className="tab-content__close-btn" onClick={closeAdvisoryPanel} onKeyDown={closeAdvisoryPanel}>X</div>
         <div className="tab-content__grid">
           <div className="tab-content__personal-info">
             {tabItems.map(({ id, image }) => {
