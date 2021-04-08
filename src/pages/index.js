@@ -12,6 +12,7 @@ import {
   MenuSelect,
   ClearRefinements,
 } from "react-instantsearch-dom"
+import AdvisoryBoard from '../components/AdvisoryBoard/AdvisoryBoard'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -136,39 +137,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="advisory-board" id="advisory">
-        <div className="inner-content">
-          <h2>Advisory Board</h2>
-          <div class="advisory-board-member">
-            <div class="advisory-board-member--image">
-              <img src="https://via.placeholder.com/150" />
-            </div>
-            <div class="advisory-board-member--name">Bob Ross</div>
-            <div class="advisory-board-member--title">Happy Tree Designer</div>
-          </div>
-          <div class="advisory-board-member">
-            <div class="advisory-board-member--image">
-              <img src="https://via.placeholder.com/150" />
-            </div>
-            <div class="advisory-board-member--name">Bob Ross</div>
-            <div class="advisory-board-member--title">Happy Tree Designer</div>
-          </div>
-          <div class="advisory-board-member">
-            <div class="advisory-board-member--image">
-              <img src="https://via.placeholder.com/150" />
-            </div>
-            <div class="advisory-board-member--name">Bob Ross</div>
-            <div class="advisory-board-member--title">Happy Tree Designer</div>
-          </div>
-          <div class="advisory-board-member">
-            <div class="advisory-board-member--image">
-              <img src="https://via.placeholder.com/150" />
-            </div>
-            <div class="advisory-board-member--name">Bob Ross</div>
-            <div class="advisory-board-member--title">Happy Tree Designer</div>
-          </div>
-        </div>
-      </section>
+      <AdvisoryBoard/>
 
       {/* <section className="news" id="news">
         <div className="inner-content">
