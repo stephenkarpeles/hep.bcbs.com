@@ -37,9 +37,11 @@ const planResult = ({ hit }) => {
           </div>
           <div className="plan-result-card-company">{plan}</div>
         </div>
-        <div className="plan-result-card-category">{category}</div>
-        <div className="plan-result-card-title">{title}</div>
-        <div className="plan-result-card-excerpt">{excerpt}</div>
+        <div className="plan-result-card-meta">
+          <div className="plan-result-card-category">{category}</div>
+          <div className="plan-result-card-title">{title}</div>
+          <div className="plan-result-card-excerpt">{excerpt}</div>
+        </div>
       </Link>
     </div>
   )
@@ -89,7 +91,7 @@ const IndexPage = props => {
           <h2 style={{ color: "#0072A7" }}>
             What we're doing in your community
           </h2>
-          <p style={{ maxWidth: 818, margin: "0 auto 1.45rem" }}>
+          <p style={{ maxWidth: 800, marginBottom: "3rem" }}>
             Discover how BCBS companies are measuring disparities, addressing
             unconscious bias and improving health outcomes in the communities
             where you live and work.
@@ -99,25 +101,25 @@ const IndexPage = props => {
           <InstantSearch searchClient={searchClient} indexName="test_index">
             <Configure hitsPerPage={5} distinct />
             <div className="search-filters">
-              <SearchBox />
+              <div className="search-filters-label-main">Filter</div>
+              <SearchBox
+                translations={{
+                  placeholder: "Keyword",
+                }}
+              />
               <div className="search-filters-refinement">
+                <div className="search-filters-label">
+                  What's Happeining in my State
+                </div>
                 <MenuSelect
                   attribute="state"
                   translations={{
-                    seeAllOption: "State",
+                    seeAllOption: "All States",
                   }}
                 />
               </div>
               <div className="search-filters-refinement">
-                <MenuSelect
-                  attribute="plan"
-                  translations={{
-                    seeAllOption: "Plan",
-                  }}
-                />
-              </div>
-              <div className="search-filters-refinement">
-                <div className="search-filters-label">Topics</div>
+                <div className="search-filters-label">Plan Profile Topics</div>
                 <RefinementList attribute="category" />
               </div>
               <ClearRefinements
