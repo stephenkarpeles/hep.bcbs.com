@@ -1,16 +1,54 @@
-@import "../variables.css";
-@import "../mixins.css";
-/*@import "../typography.css";*/
-@import "../breakpoints.css";
 
-.advisory-board-wrapper {
-  padding: 80px 0;
+.tab-items {
+  width: 340px;
 }
 
-.advisory-board {
+.tab-content {
+  width: calc(100% - 340px);
+
   &__grid {
+    background: var(--color-light-gray);
+    padding: 40px;
     display: flex;
     justify-content: space-between;
-  };
+  }
+
+  &__personal-info {
+    width: 300px;
+  }
+
+  &__copy {
+    width: calc(100% - 300px);
+  }
 }
 
+.tab-item {
+  padding: 20px;
+  cursor: pointer;
+  color: var(--color-gray);
+  background: var(--color-light-gray);
+
+  &.tab-item--inactive {
+    background: var(--color-dark-blue);
+    color: white;
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.tabs-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Styles when the advisory panel is open */
+.advisory-panel-is-open {
+  .tab-item {
+    &__image {
+      display: none;
+    }
+  }
+}
