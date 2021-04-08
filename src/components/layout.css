@@ -1126,10 +1126,12 @@ header {
 }
 
 .mobile-search {
+  background-color: var(--color-light-gray);
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  padding: 0 1rem;
 }
 
 /* Footer */
