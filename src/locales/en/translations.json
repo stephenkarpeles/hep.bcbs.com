@@ -5,10 +5,13 @@
   },
   "home": {
     "test": "hello",
-    "title": "Committed to Ending Racial Disparities in Health",
-    "subtitle": "Blue Cross and Blue Shield Companies’ National Health Equity Strategy",
+    "title": "National Health Equity Strategy",
+    "subtitle": "Blue Cross and Blue Shield Companies Address the Nation’s Crisis in Racial Health Disparities",
     "quote": "Your health shouldn’t depend on the color of your skin or the neighbored you live in.",
-    "content": "The crisis in racial disparities in health is not new. Blue Cross and Blue Shield (BCBS) companies have been committed to advancing health equity in our communities for decades, and there is more work to be done. Our National Health Equity Strategy will tackle the crisis by setting unifying goals and standardizing national measures in critical areas. We will not do this work alone. We have an advisory panel of doctors, public health experts and community leaders to counsel us along the way. When we bring more people to the table, we can help create lasting change.",
+    "content": "The crisis in racial disparities in our country’s health care is unconscionable. While BCBS companies have made great strides in addressing racial health disparities in our local communities, there is so much more to be done.",
+    "quote-attr": "Kim Keck",
+    "quote-role": "President and CEO, Blue Cross and Blue Shield Association",
+    "lead": "Blue Cross and Blue Shield Associations’s (BCBSA) National Health Equity Strategy is comprehensive and relies on close collaboration with providers and local community organizations. The more people we bring to the table, the more we can create lasting change. The multi-year strategy will focus on four conditions that disproportionately affect communities of color: maternal health, behavioral health, diabetes and cardiovascular conditions. BCBSA will first focus on maternal health, then behavioral health in 2021.",
     "link": "Go to page 2"
   },
   "page2": {

@@ -59,18 +59,35 @@ const IndexPage = props => {
           <h1 id="healthequity">{t("home.title")}</h1>
           <div className="subtitle">{t("home.subtitle")}</div>
           <div className="intro--video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/nFEpn_Y_KZw"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <div className="intro--video-wrapper">
+              <iframe
+                loading="lazy"
+                width="780"
+                height="438"
+                src="https://www.youtube.com/embed/nFEpn_Y_KZw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
-          <div className="intro--video-quote">{t("home.quote")}</div>
-          <div className="intro--video-content">{t("home.content")}</div>
+          <div className="intro--video-details">
+            <div className="intro--video-quote">{t("home.quote")}</div>
+            <div className="intro--video-content">{t("home.content")}</div>
+            <div className="intro--video-quote-attr">&mdash; {t("home.quote-attr")}</div>
+            <div className="intro--video-quote-role">{t("home.quote-role")}</div>
+          </div>
+
+        </div>
+      </section>
+
+      <section className="lead" id="lead">
+        <div className="inner-content">
+          <p className="lead--reg">
+            {t("home.lead")}
+          </p>
+
         </div>
       </section>
 
