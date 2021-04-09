@@ -70,11 +70,21 @@ const IndexPage = props => {
             </div>
           </div>
           <div className="intro--video-details">
-            <div className="intro--video-quote">{t("home.quote")}
-              <div className="intro--video-quote-attr">Kim Keck</div>
-            </div>
+            <div className="intro--video-quote">{t("home.quote")}</div>
             <div className="intro--video-content">{t("home.content")}</div>
+            <div className="intro--video-quote-attr">&mdash; {t("home.quote-attr")}</div>
+            <div className="intro--video-quote-role">{t("home.quote-role")}</div>
           </div>
+
+        </div>
+      </section>
+
+      <section className="lead" id="lead">
+        <div className="inner-content">
+          <p className="lead--reg">
+            {t("home.lead")}
+          </p>
+
         </div>
       </section>
 
