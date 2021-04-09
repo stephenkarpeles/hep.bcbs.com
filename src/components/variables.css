@@ -34,6 +34,7 @@
   --font-size-base-small: 14px;
   --font-size-base-xsmall: 12px;
   --font-size-quote: 24px;
+  --font-size-52: 52px;
   --font-size-40: 40px;
   --font-size-22: 22px;
 
@@ -46,10 +47,13 @@
   --line-height-base: 22px;
   --line-height-base-small: 20px;
   --line-height-quote: 30px;
+  --line-height-56: 56px;
   --line-height-28: 28px;
 
   /* Spacers */
   --spacer: 1rem;
+  --spacer-15: 1.5rem;
   --spacer-2: 2rem;
   --spacer-3: 3rem;
+  --spacer-4: 4rem;
 }
