@@ -1383,6 +1383,7 @@ header {
     font-size: var(--font-size-h6);
   }
 }
+
 .backtotop {
   position: fixed;
   bottom: 1rem;
