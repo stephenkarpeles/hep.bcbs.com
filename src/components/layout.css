@@ -884,6 +884,7 @@ header {
 
       @media (--large-breakpoint-up) {
         width: 700px;
+        padding-left: var(--spacer-15);
       }
     }
   }
