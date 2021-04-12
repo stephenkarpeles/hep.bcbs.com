@@ -8,8 +8,8 @@ import algoliasearch from "algoliasearch/lite"
 import AlgoliaSiteSearch from "../components/AlgoliaSiteSearch"
 
 import logo from "../images/hoa-primary-logo.svg"
-import burger from "../images/icon-navigation-menu.svg"
-import close from "../images/icon-close.svg"
+import burger from "../images/icons/icon-menu.svg"
+import close from "../images/icons/icon-close.svg"
 
 const searchClient = algoliasearch(
   "B604WWKJH0",
