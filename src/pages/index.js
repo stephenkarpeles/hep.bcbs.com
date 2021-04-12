@@ -76,29 +76,28 @@ const IndexPage = props => {
           </div>
           <div className="intro--video-details">
             <div className="intro--video-quote">{t("home.quote")}</div>
-            <div className="intro--video-quote-attr">&mdash; {t("home.quote-attr")}</div>
-            <div className="intro--video-quote-role">{t("home.quote-role")}</div>
+            <div className="intro--video-quote-attr">
+              &mdash; {t("home.quote-attr")}
+            </div>
+            <div className="intro--video-quote-role">
+              {t("home.quote-role")}
+            </div>
           </div>
         </div>
       </section>
 
       <section className="lead" id="lead">
         <div className="inner-content">
-          <div className="lead--main">
-            {t("home.lead")}
-          </div>
+          <div className="lead--main">{t("home.lead")}</div>
           <div className="lead--details">
             <div className="lead--details-points">
               <ul>
+                <li>Collecting data to measure disparities</li>
                 <li>
-                  Collecting data to measure disparities
+                  Working with providers to improve outcomes and address
+                  unconscious bias
                 </li>
-                <li>
-                  Working with providers to improve outcomes and address unconscious bias
-                </li>
-                <li>
-                  Leaning into partnerships at the community level
-                </li>
+                <li>Leaning into partnerships at the community level</li>
                 <li>
                   Influencing policy decisions at the state and federal levels
                 </li>
@@ -111,13 +110,51 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="statistics" id="commitment">
+      <section className="disaprities" id="disaprities">
         <div className="min-content">
-          <h2>Statistics</h2>
-          <div className="stat">
-            <div className="stat--number">$100 million</div>
-            <div className="stat--text">
-              followup description of what this number means
+          <div className="disparities-heading">
+            Health Disparities: By the Numbers
+          </div>
+          <div className="disparities-cards">
+            <div className="disparities-card">
+              <div className="disparities-card-heading">
+                Cardiovascular Health
+              </div>
+              <div className="disparities-card-stat">70%</div>
+              <div className="disparities-card-text">
+                Black men are 70% more likely to die from a stroke as compared
+                to non-Hispanic white men.
+              </div>
+            </div>
+            <div className="disparities-card">
+              <div className="disparities-card-heading">
+                Cardiovascular Health
+              </div>
+              <div className="disparities-card-stat">70%</div>
+              <div className="disparities-card-text">
+                Black men are 70% more likely to die from a stroke as compared
+                to non-Hispanic white men.
+              </div>
+            </div>
+            <div className="disparities-card">
+              <div className="disparities-card-heading">
+                Cardiovascular Health
+              </div>
+              <div className="disparities-card-stat">70%</div>
+              <div className="disparities-card-text">
+                Black men are 70% more likely to die from a stroke as compared
+                to non-Hispanic white men.
+              </div>
+            </div>
+            <div className="disparities-card">
+              <div className="disparities-card-heading">
+                Cardiovascular Health
+              </div>
+              <div className="disparities-card-stat">70%</div>
+              <div className="disparities-card-text">
+                Black men are 70% more likely to die from a stroke as compared
+                to non-Hispanic white men.
+              </div>
             </div>
           </div>
         </div>
