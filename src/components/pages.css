@@ -1,0 +1,109 @@
+@import "variables.css";
+@import "mixins.css";
+@import "typography.css";
+@import "breakpoints.css";
+
+/* Plan Profiles */
+.pp-hero {
+  display: flex;
+
+  &__share {
+    background: var(--color-light-gray);
+    width: 17vw;
+    height: 340px;
+    position: relative;
+
+    &-content {
+      position: absolute;
+      right: 80px;
+      padding-top: 60px;
+      text-align: right;
+    }
+
+    h4 {
+      font-weight: 700;
+      color: var(--color-gray);
+      font-size: 16px;
+      line-height: 22px;
+      font-family: var(--font-regular-bold);
+    }
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  &__image {
+    background-size: cover;
+    height: 540px;
+    width: 83vw;
+    position: relative;
+  }
+
+  &__meta {
+    background: var(--color-light-blue);
+    padding: 40px 60px;
+    position: absolute;
+    bottom: -100px;
+    left: 140px;
+    right: 0;
+  }
+
+  &__meta-content {
+    max-width: 680px;
+  }
+
+  &__category {
+    background: var(--color-light-gray);
+    color: var(--color-gray);
+    font-size: var(--font-size-base-small);
+    line-height: var(--line-height-base-small);
+    display: inline-block;
+    position: absolute;
+    height: 32px;
+    padding: 4px 14px;
+    left: 0;
+    top: -32px;
+  }
+
+  &__date {
+    padding-bottom: 16px;
+  }
+
+  &__title {
+    h1 {
+      font-size: var(--font-size-h3);
+      line-height: var(--line-height-h3);
+      color: var(--color-blue);
+      font-weight: 700;
+    }
+  }
+
+  &__author {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;    
+    font-size: var(--font-size-base-small);
+    line-height: var(--line-height-base-small);
+    font-family: var(--font-condensed-bold);
+  }
+}
+
+.pp-main {
+  padding-top: 170px;  
+  display: flex;
+  justify-content: space-between;
+}
+
+.pp-related {
+  width: 210px;
+}
+
+.pp-content {
+  width: calc(83vw - 200px);
+  padding-right: 60px;
+
+  &__inner {
+    max-width: 680px;
+  }
+}

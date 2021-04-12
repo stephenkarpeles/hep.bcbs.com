@@ -487,7 +487,7 @@ const Tabs = () => {
   }
 
   return (
-    <section className="tabs-wrapper" id="advisory">
+    <section className="tabs-wrapper" id="advisory-top">
       <div className="inner-content">
         <h2>
           Advisory
@@ -513,7 +513,7 @@ const Tabs = () => {
           onClick={closeAdvisoryPanel}
           onKeyDown={closeAdvisoryPanel}
           className="tab-content__close-btn"
-          href="/#advisory"
+          href="/#advisory-top"
           title="Back to Advisory Board"
         >
           X
