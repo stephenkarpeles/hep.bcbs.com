@@ -5,7 +5,7 @@ function Newsletter() {
   return (
     <section className="newsletter" id="newsletter">
       <div className="inner-content">
-        <div class="newsletter-lead">
+        <div className="newsletter-lead">
           <div className="newsletter-lead-heading">Stay Connected</div>
           <div className="newsletter-lead-text">
             Sign up to receive updates on how BCBS companies are improving
@@ -19,18 +19,18 @@ function Newsletter() {
               method="post"
               id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form"
-              class="validate"
+              className="validate"
               target="_blank"
-              novalidate
+              noValidate
             >
               <div id="mc_embed_signup_scroll">
-                <div class="mc-field-group">
-                  <label for="mce-EMAIL">Email Address </label>
+                <div className="mc-field-group">
+                  <label htmlFor="mce-EMAIL">Email Address </label>
                   <input
                     type="email"
-                    value=""
+                    defaultValue=""
                     name="EMAIL"
-                    class="required email"
+                    className="required email"
                     id="mce-EMAIL"
                   />
                   <input
@@ -38,49 +38,49 @@ function Newsletter() {
                     value="Sign Up"
                     name="subscribe"
                     id="mc-embedded-subscribe"
-                    class="button"
+                    className="button"
                   />
                 </div>
                 <div
                   id="mergeRow-gdpr"
-                  class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group"
+                  className="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group"
                 >
-                  <div class="content__gdpr" style={{ display: "none" }}>
+                  <div className="content__gdpr" style={{ display: "none" }}>
                     <label>Marketing Permissions</label>
                     <p>
                       Please select all the ways you would like to hear from :
                     </p>
                     <fieldset
-                      class="mc_fieldset gdprRequired mc-field-group"
+                      className="mc_fieldset gdprRequired mc-field-group"
                       name="interestgroup_field"
                     >
-                      <label class="checkbox subfield" for="gdpr_31112">
+                      <label className="checkbox subfield" htmlFor="gdpr_31112">
                         <input
                           type="checkbox"
                           id="gdpr_31112"
                           name="gdpr[31112]"
                           value="Y"
-                          class="av-checkbox"
+                          className="av-checkbox"
                         />
                         <span>Email</span>
                       </label>
-                      <label class="checkbox subfield" for="gdpr_31116">
+                      <label className="checkbox subfield" htmlFor="gdpr_31116">
                         <input
                           type="checkbox"
                           id="gdpr_31116"
                           name="gdpr[31116]"
                           value="Y"
-                          class="av-checkbox"
+                          className="av-checkbox"
                         />
                         <span>Direct Mail</span>
                       </label>
-                      <label class="checkbox subfield" for="gdpr_31120">
+                      <label className="checkbox subfield" htmlFor="gdpr_31120">
                         <input
                           type="checkbox"
                           id="gdpr_31120"
                           name="gdpr[31120]"
                           value="Y"
-                          class="av-checkbox"
+                          className="av-checkbox"
                         />
                         <span>Customized Online Advertising</span>
                       </label>
@@ -91,7 +91,10 @@ function Newsletter() {
                       privacy practices, please visit our website.
                     </p>
                   </div>
-                  <div class="content__gdprLegal" style={{ display: "none" }}>
+                  <div
+                    className="content__gdprLegal"
+                    style={{ display: "none" }}
+                  >
                     <p>
                       We use Mailchimp as our marketing platform. By clicking
                       below to subscribe, you acknowledge that your information
@@ -102,14 +105,14 @@ function Newsletter() {
                     </p>
                   </div>
                 </div>
-                <div id="mce-responses" class="clear">
+                <div id="mce-responses" className="clear">
                   <div
-                    class="response"
+                    className="response"
                     id="mce-error-response"
                     style={{ display: "none" }}
                   ></div>
                   <div
-                    class="response"
+                    className="response"
                     id="mce-success-response"
                     style={{ display: "none" }}
                   ></div>
@@ -121,19 +124,10 @@ function Newsletter() {
                   <input
                     type="text"
                     name="b_a04cc8a921ecc4c362bddc44a_c474495012"
-                    tabindex="-1"
-                    value=""
+                    tabIndex="-1"
+                    defaultValue=""
                   />
                 </div>
-                {/* <div class="clear">
-                  <input
-                    type="submit"
-                    value="Sign Up"
-                    name="subscribe"
-                    id="mc-embedded-subscribe"
-                    class="button"
-                  />
-                </div> */}
               </div>
             </form>
           </div>
