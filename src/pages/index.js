@@ -12,7 +12,7 @@ import {
   MenuSelect,
   ClearRefinements,
 } from "react-instantsearch-dom"
-import AdvisoryBoard from '../components/AdvisoryBoard/AdvisoryBoard'
+import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -75,19 +75,19 @@ const IndexPage = props => {
           <div className="intro--video-details">
             <div className="intro--video-quote">{t("home.quote")}</div>
             <div className="intro--video-content">{t("home.content")}</div>
-            <div className="intro--video-quote-attr">&mdash; {t("home.quote-attr")}</div>
-            <div className="intro--video-quote-role">{t("home.quote-role")}</div>
+            <div className="intro--video-quote-attr">
+              &mdash; {t("home.quote-attr")}
+            </div>
+            <div className="intro--video-quote-role">
+              {t("home.quote-role")}
+            </div>
           </div>
-
         </div>
       </section>
 
       <section className="lead" id="lead">
         <div className="inner-content">
-          <p className="lead--reg">
-            {t("home.lead")}
-          </p>
-
+          <p className="lead--reg">{t("home.lead")}</p>
         </div>
       </section>
 
@@ -136,7 +136,9 @@ const IndexPage = props => {
                 />
               </div>
               <div className="search-filters-refinement">
-                <div className="search-filters-label">Plan Profile Topics</div>
+                <div className="search-filters-label">
+                  Maternal Health Topics
+                </div>
                 <RefinementList attribute="category" />
               </div>
               <ClearRefinements
@@ -156,7 +158,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <AdvisoryBoard/>
+      <AdvisoryBoard />
 
       {/* <section className="news" id="news">
         <div className="inner-content">
