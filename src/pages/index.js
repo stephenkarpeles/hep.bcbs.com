@@ -17,6 +17,7 @@ import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
+import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -206,7 +207,7 @@ const IndexPage = props => {
         </div>
       </section> */}
 
-      <section className="presskit" id="presskit"></section>
+      <PressKitBanner />
 
       <Newsletter />
     </>

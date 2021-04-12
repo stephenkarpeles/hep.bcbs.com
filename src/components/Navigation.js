@@ -31,7 +31,7 @@ function Navigation() {
           {/* <AnchorLink to="/#news" title="News">
             <span>News</span>
           </AnchorLink> */}
-          <AnchorLink to="/#presskit" title="Press Kit">
+          <AnchorLink to="/press-kit" title="Press Kit">
             <span>Press Kit</span>
           </AnchorLink>
           {/* <AnchorLink to="/#newsletter" title="Newsletter">
