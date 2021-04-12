@@ -16,6 +16,7 @@ import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Newsletter from "../components/Newsletter/Newsletter"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -189,26 +190,7 @@ const IndexPage = props => {
 
       <section className="presskit" id="presskit"></section>
 
-      <section className="newsletter" id="newsletter">
-        <div className="inner-content">
-          <div className="eyebrow">Newsletter</div>
-          <h2>Stay Connected</h2>
-          <form>
-            <div>
-              <label>Email Address</label>
-              <input type="text"></input>
-              <button>Sign Up</button>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label>
-                I agree to the <a href="#">BCBS.com Terms & Conditions</a> and{" "}
-                <a href="#">Privacy Policy</a>
-              </label>
-            </div>
-          </form>
-        </div>
-      </section>
+      <Newsletter />
     </>
   )
 }
