@@ -715,13 +715,7 @@ header {
   }
 
   @media (--extra-large-breakpoint) {
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 1) 12.5%,
-      rgba(0, 76, 109, 1) 12.5%,
-      rgba(0, 76, 109, 1) 100%
-    );
+    background: linear-gradient(to top, rgba(247,249,250,1) 0%,rgba(247,249,250,1) 12.5%,rgba(0,76,109,1) 12.5%,rgba(0,76,109,1) 100%);
   }
 
   h1 {
@@ -768,7 +762,7 @@ header {
 
     &-wrapper {
       position: relative;
-      padding-bottom: 56.25%;
+      padding-bottom: 75%;
       height: 0;
       overflow: hidden;
 
@@ -830,43 +824,59 @@ header {
         }
       }
     }
-
-    &-content {
-      color: var(--color-white);
-      font-size: var(--font-size-base);
-      line-height: var(--line-height-base);
-      font-family: var(--font-roman);
-      width: 100%;
-      padding-left: var(--spacer-15);
-
-      @media (--medium-breakpoint-up) {
-        padding-left: var(--spacer-2);
-      }
-
-      @media (--large-breakpoint-up) {
-        width: 500px;
-      }
-    }
   }
 }
 
 /* Lead */
 .lead {
-  &--reg {
-    margin: 4rem 0;
-    width: 100%;
+  background-color: var(--color-light-gray);
+  padding-top: var(--spacer-2);
+  padding-bottom: var(--spacer-2);
+
+  @media (--large-breakpoint-up) {
+    padding-top: var(--spacer-4);
+    padding-bottom: var(--spacer-4);
+  }
+
+  .inner-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &--main {
     color: var(--color-gray);
     font-family: var(--font-condensed-regular);
     font-size: var(--font-size-22);
     line-height: var(--line-height-28);
-    text-align: left;
     padding-bottom: var(--spacer-2);
-    border-bottom: 1px solid var(--color-disabled);
+    flex-basis: 100%;
 
-    @media (--medium-breakpoint-up) {
-      margin: 5rem auto;
-      text-align: center;
-      width: 75%;
+    @media (--large-breakpoint-up) {
+      flex-basis: 35%;
+    }
+  }
+
+  &--details {
+    &-points {
+      background-color: var(--color-white);
+      box-shadow: 0px 0px 5px #0000001A;
+      padding: var(--spacer);
+      width: 100%;
+
+      @media (--large-breakpoint-up) {
+        width: 700px;
+      }
+    }
+
+    &-summary {
+      width: 100%;
+      margin-top: var(--spacer-15);
+
+      @media (--large-breakpoint-up) {
+        width: 700px;
+      }
     }
   }
 }

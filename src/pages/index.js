@@ -74,20 +74,38 @@ const IndexPage = props => {
           </div>
           <div className="intro--video-details">
             <div className="intro--video-quote">{t("home.quote")}</div>
-            <div className="intro--video-content">{t("home.content")}</div>
-            <div className="intro--video-quote-attr">
-              &mdash; {t("home.quote-attr")}
-            </div>
-            <div className="intro--video-quote-role">
-              {t("home.quote-role")}
-            </div>
+            <div className="intro--video-quote-attr">&mdash; {t("home.quote-attr")}</div>
+            <div className="intro--video-quote-role">{t("home.quote-role")}</div>
           </div>
         </div>
       </section>
 
       <section className="lead" id="lead">
         <div className="inner-content">
-          <p className="lead--reg">{t("home.lead")}</p>
+          <div className="lead--main">
+            {t("home.lead")}
+          </div>
+          <div className="lead--details">
+            <div className="lead--details-points">
+              <ul>
+                <li>
+                  Collecting data to measure disparities
+                </li>
+                <li>
+                  Working with providers to improve outcomes and address unconscious bias
+                </li>
+                <li>
+                  Leaning into partnerships at the community level
+                </li>
+                <li>
+                  Influencing policy decisions at the state and federal levels
+                </li>
+              </ul>
+            </div>
+            <div className="lead--details-summary">
+              {t("home.lead-summary")}
+            </div>
+          </div>
         </div>
       </section>
 
