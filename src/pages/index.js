@@ -19,6 +19,11 @@ import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
 import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
 
+import cardio from "../images/illustrations/illustration-cardiovascular-health.png"
+import behavioral from "../images/illustrations/illustration-behavioral-health.png"
+import diabetes from "../images/illustrations/illustration-diabetes.png"
+import maternal from "../images/illustrations/illustration-maternal-health.png"
+
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
 
@@ -110,50 +115,66 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="disaprities" id="disaprities">
-        <div className="min-content">
+      <section className="disparities" id="disparities">
+        <div className="inner-content">
           <div className="disparities-heading">
             Health Disparities: By the Numbers
           </div>
           <div className="disparities-cards">
-            <div className="disparities-card">
+            <div className="disparities-card disparities-card-cardio">
               <div className="disparities-card-heading">
                 Cardiovascular Health
               </div>
-              <div className="disparities-card-stat">70%</div>
+              <div className="disparities-card-stat">
+                70<span>%</span>
+              </div>
               <div className="disparities-card-text">
                 Black men are 70% more likely to die from a stroke as compared
                 to non-Hispanic white men.
+              </div>
+              <div className="disparities-card-image">
+                <StaticImage
+                  src="../images/illustrations/illustration-cardiovascular-health.png"
+                  alt=""
+                />
               </div>
             </div>
-            <div className="disparities-card">
-              <div className="disparities-card-heading">
-                Cardiovascular Health
-              </div>
-              <div className="disparities-card-stat">70%</div>
+            <div className="disparities-card disparities-card-behavioral">
+              <div className="disparities-card-heading">Behavioral Health</div>
+              <div className="disparities-card-stat">IMG</div>
               <div className="disparities-card-text">
-                Black men are 70% more likely to die from a stroke as compared
-                to non-Hispanic white men.
+                Millennials from majority-Black and -Hispanic communities have
+                lower diagnosis rates of behavioral health conditions compared
+                to millennials from white communities.
+              </div>
+              <div className="disparities-card-image">
+                {/* <StaticImage src={behavioral} alt="" /> */}
               </div>
             </div>
-            <div className="disparities-card">
-              <div className="disparities-card-heading">
-                Cardiovascular Health
+            <div className="disparities-card disparities-card-diabetes">
+              <div className="disparities-card-heading">Diabetes</div>
+              <div className="disparities-card-stat">
+                60<span>%</span>
               </div>
-              <div className="disparities-card-stat">70%</div>
               <div className="disparities-card-text">
-                Black men are 70% more likely to die from a stroke as compared
-                to non-Hispanic white men.
+                African American adults are 60% more likely than non-Hispanic
+                white adults to be diagnosed with diabetes by a physician.
+              </div>
+              <div className="disparities-card-image">
+                {/* <StaticImage src={diabetes} alt="" /> */}
               </div>
             </div>
-            <div className="disparities-card">
-              <div className="disparities-card-heading">
-                Cardiovascular Health
+            <div className="disparities-card disparities-card-maternal">
+              <div className="disparities-card-heading">Maternal Health</div>
+              <div className="disparities-card-stat">
+                3<span>x</span>
               </div>
-              <div className="disparities-card-stat">70%</div>
               <div className="disparities-card-text">
-                Black men are 70% more likely to die from a stroke as compared
-                to non-Hispanic white men.
+                Black mothers have 3x higher maternal mortality and 2x higher
+                morbidity than white mothers.
+              </div>
+              <div className="disparities-card-image">
+                {/* <StaticImage src={maternal} alt="" /> */}
               </div>
             </div>
           </div>

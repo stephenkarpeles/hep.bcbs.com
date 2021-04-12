@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102.5" height="82.583" viewBox="0 0 102.5 82.583">
+  <g id="Chart" transform="translate(-453.75 -1647.667)">
+    <line id="Line" y1="80" transform="translate(455 1649)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-2" data-name="Line" x2="100" transform="translate(455 1729)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-3" data-name="Line" y2="4" transform="translate(463.5 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-4" data-name="Line" y2="4" transform="translate(472 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-5" data-name="Line" y2="4" transform="translate(481 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-6" data-name="Line" y2="4" transform="translate(490 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-7" data-name="Line" y2="4" transform="translate(499 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-8" data-name="Line" y2="4" transform="translate(508 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-9" data-name="Line" y2="4" transform="translate(517 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-10" data-name="Line" y2="4" transform="translate(526 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-11" data-name="Line" y2="4" transform="translate(535 1725)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-12" data-name="Line" y2="4" transform="translate(459 1666.5) rotate(90)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-13" data-name="Line" y2="4" transform="translate(459 1675) rotate(90)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-14" data-name="Line" y2="4" transform="translate(459 1684) rotate(90)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-15" data-name="Line" y2="4" transform="translate(459 1693) rotate(90)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-16" data-name="Line" y2="4" transform="translate(459 1702) rotate(90)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-17" data-name="Line" y2="4" transform="translate(459 1711) rotate(90)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <line id="Line-18" data-name="Line" y2="4" transform="translate(459 1720) rotate(90)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-width="2.5"/>
+    <g id="Arrow" transform="translate(474 1648)">
+      <path id="Path" d="M57,49.5c-.879.045-2.987,0-3.868,0A52.074,52.074,0,0,1,1,1" transform="translate(0 0)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+      <path id="Path-2" data-name="Path" d="M27,23l7.479,7.479L27,37.958" transform="translate(22.521 19.042)" fill="none" stroke="#0072a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    </g>
+  </g>
+</svg>
