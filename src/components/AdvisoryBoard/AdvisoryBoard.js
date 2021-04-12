@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { withPrefix } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import "./AdvisoryBoard.css"
@@ -513,7 +514,7 @@ const Tabs = () => {
           onClick={closeAdvisoryPanel}
           onKeyDown={closeAdvisoryPanel}
           className="tab-content__close-btn"
-          href="/#advisory"
+          href={withPrefix("#advisory")}
           title="Back to Advisory Board"
         >
           X
