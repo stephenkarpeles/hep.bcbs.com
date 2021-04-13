@@ -54,7 +54,7 @@ const PlanProfile2 = props => {
 
   return (
     <div>
-      <SEO title="How doulas can improve the safety of childbirth for BIPOC mothers" />
+      <SEO title="In New Jersey, addressing mood disorders in Black postpartum women" />
       <Fade>
         <div className="pp-hero">
           <div className="pp-hero__share">
