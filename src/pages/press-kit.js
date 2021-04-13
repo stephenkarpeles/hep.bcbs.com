@@ -5,6 +5,7 @@ import algoliasearch from "algoliasearch/lite"
 import { useTranslation } from "react-i18next"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import Newsletter from "../components/Newsletter/Newsletter"
 import "./press-kit.css"
 
 const searchClient = algoliasearch(
@@ -42,85 +43,98 @@ const PressKitPage = props => {
       <SEO title="Press Kit" />
 
       <section className="intro-press" id="intro">
-        <div className="max-container">
+        <div className="inner-content">
           <h1 id="press-kit">Press &amp; Media</h1>
-          <div className="subtitle">Access the latest press releases, media contacts, and press tools</div>
+          <div className="subtitle">Access the latest press release, press tools and media contacts</div>
           <div className="intro-press-download">
             <div className="intro-press-download-logo">
-              Logo goes here
+              <StaticImage src="../images/hoa-primary-logo.svg" />
             </div>
             <div className="intro-press-download-details">
-              <h4>Headline will go here</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit nunc odio risus, consectetur id nisi quis,
-                bibendum porttitor leo nullam vitae volutpat lorem. Aliquam eget massa faucibus, maximus nisi vitae mattis tortor.
+              <h4>Our National Health Equity Strategy</h4>
+              <p>Access our latest press resources to learn more about our National Health Equity Strategy and Maternal Health Program
               </p>
-              <span className="download-link">
-                Arrow
+              <div className="download-link">
                 <a href="">Download press kit</a>
-              </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section className="downloads" id="downloads">
-        <div className="max-container">
+        <div className="inner-content">
           <h3>What will I get in the press kit?</h3>
           <div className="downloads-cards">
             <div className="card">
-              <h4>National Strategy Factsheet</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit nunc odio risus.</p>
-              <span className="download-link">
-                Arrow
+              <h4 className="card-headline">Factsheet</h4>
+              <div className="card-copy">Review key components of the BCBSA National Health Equity Strategy</div>
+              <div className="download-link">
                 <a href="">Download</a>
-              </span>
+              </div>
             </div>
             <div className="card">
-              <h4>Advisory Panel Bios</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit nunc odio risus.</p>
-              <span className="download-link">
-                Arrow
+              <h4 className="card-headline">Advisory Panel Biographies</h4>
+              <div className="card-copy">Meet the members of our national advisory panel</div>
+              <div className="download-link">
                 <a href="">Download</a>
-              </span>
+              </div>
             </div>
             <div className="card">
-              <h4>Case Studies</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit nunc odio risus.</p>
-              <span className="download-link">
-                Arrow
+              <h4 className="card-headline">Community Highlights</h4>
+              <div className="card-copy">Read about maternal health programming from across the Blue Cross Blue Shield (BCBS) system</div>
+              <div className="download-link">
                 <a href="">Download</a>
-              </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section className="cta cta-latest" id="cta-latest">
-        <div className="max-container">
-          <h3 classname="cta-latest-title">Call to action to the latest press release</h3>
+        <div className="inner-content">
+          <h3 classname="cta-latest-title">Read our latest press release</h3>
           <div className="cta-latest-description">
-            Blue Cross Blue Shield Association Statement on Rise in Violence Against the Asian Community
+            Blue Cross Blue Shield Association Announces National Health Equity Strategy to Confront the Nation’s Crisis in Racial Health Disparities
           </div>
-          <Link to="/">
+          <a href="/" target="_blank">
             <button type="button" className="button button-basic">Read More</button>
-          </Link>
+          </a>
         </div>
       </section>
 
       <section className="faq" id="faq">
-        <div className="max-container">
+        <div className="inner-content">
           <h3>National Strategy FAQ</h3>
-          <p>Question</p>
-          <p>Answer</p>
-          <p>Question</p>
-          <p>Answer</p>
-          <p>Question</p>
-          <p>Answer</p>
+          <p>What is the National Health Equity Strategy?</p>
+          <p>BCBSA’s National Health Equity Strategyintends to change the trajectory of heath disparities and re-imagine a more equitable healthcare system
+          through close collaboration with providers and local community organizations. The multi-year strategy will focus on four conditions that disproportionately
+          affect communities of color: maternal health, behavioral health, diabetes and cardiovascular conditions.</p>
+          <p>What are the key elements of this approach?</p>
+          <p>The strategy includes collecting data to measure disparities, scaling effective programs, working with providers
+          to improve outcomes and address unconscious bias, leaning into partnerships at the community level, and influencing policy decisions at the state and federal levels</p>
+          <p>How long is this commitment for?</p>
+          <p>This is a multi-year strategy. To start, BCBSA has set a public goal to reduce racial disparities in maternal health by 50% in five years.</p>
+          <p>Why are you launching this now?</p>
+          <p>The crisis in racial disparities in U.S health care is unconscionable and unacceptable. BCBScompanies have made great strides in confronting racial health disparities,
+          but there is moreto be done.</p>
+          <p>Which conditions will the strategy focus on?</p>
+          <p>We’re focused on four conditions – maternal health, behavioral health, diabetes and cardiovascular conditions – starting with maternal health.</p>
+          <p>What maternal health disparities exist?</p>
+          <p>White women have fewer maternal health complications than women of color, and the gap isparticularly significant between Black and white women.</p>
+          <p>What is the maternal health goal?</p>
+          <p>We aim to reduce maternal health disparities by 50% in five years.</p>
+          <p>Is the maternal health program only focused on BCBS members?</p>
+          <p>No. We are focusing on all women who rely on our providers and community partners.</p>
+          <p>What makes you positioned to lead this effort?</p>
+          <p>Our deep roots in local communities, combined with the scale and scope of our national reach, will enable us to drive real change.</p>
+          <p>What is the BCBSA National Advisory Panel? </p>
+          <p>The panel of doctors, public health experts and community leaders that will provide guidance on the BCBSA National Health Equity Strategy.</p>
         </div>
       </section>
 
       <section className="cta cta-contact" id="cta-contact">
-        <div className="max-container">
+        <div className="inner-content">
           <h3>Get in touch with our communications team</h3>
           <Link to="/">
             <button type="button" className="button button-basic">Contact Press</button>
@@ -128,26 +142,7 @@ const PressKitPage = props => {
         </div>
       </section>
 
-      <section className="newsletter" id="newsletter">
-        <div className="inner-content">
-          <div className="eyebrow">Newsletter</div>
-          <h3>Stay Connected</h3>
-          <form>
-            <div>
-              <label>Email Address</label>
-              <input type="text"></input>
-              <button>Sign Up</button>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label>
-                I agree to the <a href="#">BCBS.com Terms & Conditions</a> and{" "}
-                <a href="#">Privacy Policy</a>
-              </label>
-            </div>
-          </form>
-        </div>
-      </section>
+      <Newsletter />
     </>
   )
 }

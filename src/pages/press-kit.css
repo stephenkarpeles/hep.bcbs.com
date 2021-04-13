@@ -51,8 +51,13 @@
 
       &-logo {
         background-color: var(--color-light-blue);
-        padding: var(--spacer-4);
+        padding: var(--spacer-3);
         flex-basis: 100%;
+        text-align: center;
+
+        @media (--medium-breakpoint-up) {
+          padding: 5rem var(--spacer-4) var(--spacer-4);
+        }
 
         @media (--large-breakpoint-up) {
           flex-basis: 35%;
@@ -61,8 +66,12 @@
 
       &-details {
         background-color: var(--color-white);
-        padding: var(--spacer-3);
+        padding: var(--spacer-2);
         flex-basis: 100%;
+
+        @media (--medium-breakpoint-up) {
+          padding: var(--spacer-3);
+        }
 
         @media (--large-breakpoint-up) {
           flex-basis: 65%;
@@ -77,7 +86,7 @@
 }
 
 .downloads {
-  margin: var(--spacer-4) auto;
+  margin: var(--spacer-3) auto;
 
   &-cards {
     display: flex;
@@ -87,14 +96,23 @@
     .card {
       flex-basis: 100%;
       border-top: 6px solid var(--color-blue);
+      margin-bottom: var(--spacer-4);
 
       @media (--medium-breakpoint-up) {
-        flex-basis: calc(33% -2rem);
+        flex-basis: calc(33% -2.5rem);
+        margin-bottom: var(--spacer-3);
+      }
+
+      h3 {
+        margin-bottom: var(--spacer-3);
       }
 
       h4 {
+        font-size: var(--font-size-h5);
+        line-height: var(--line-height-h5);
         color: var(--color-blue);
         margin-top: var(--spacer);
+        text-transform: uppercase;
       }
     }
   }
@@ -102,15 +120,30 @@
 
 .cta {
 
-  .max-container {
+  .inner-content {
     background-color: var(--color-light-gray);
     text-align: center;
     padding-top: var(--spacer-3);
     padding-bottom: var(--spacer-3);
+
+    @media (--medium-breakpoint-up) {
+      padding-top: var(--spacer-4);
+      padding-bottom: var(--spacer-4);
+    }
   }
 
   button {
     @include button-basic;
+  }
+
+  &-latest {
+    &-description {
+      margin-bottom: var(--spacer-2);
+    }
+  }
+
+  &-contact {
+    margin-bottom: var(--spacer-4);
   }
 }
 
@@ -119,12 +152,24 @@
 }
 
 .download-link {
+  margin-top: var(--spacer-2);
+
   a {
     color: var(--color-blue);
     text-decoration: none;
+    position: relative;
+    padding-left: var(--spacer-15);
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &::before {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      content: url(../images/icons/arrow-long-down-gray.svg);
+      width: 15px;
     }
   }
 }
