@@ -90,7 +90,8 @@
 }
 
 .pp-main {
-  padding-top: 170px;  
+  padding-top: 170px;
+  padding-bottom: 80px;  
   display: flex;
   justify-content: space-between;
 }
@@ -172,5 +173,38 @@
     padding-top: 5px;
     padding-left: 0;
     letter-spacing: -.72px;
+  }
+
+  h3,
+  h4,
+  h5 {
+    padding-top: 20px;
+    color: var(--color-blue);
+  }
+
+  blockquote {
+    background: var(--color-light-gray);
+    margin: 40px 0 40px;
+    padding: 40px 60px 40px 90px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    position: relative;
+  }
+
+  blockquote:before {
+    position: absolute;
+    top: 65px;
+    left: 45px;
+    color: var(--color-blue);
+    content: open-quote;
+    font-size: 60px;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  blockquote p {
+    display: inline;
   }
 }
