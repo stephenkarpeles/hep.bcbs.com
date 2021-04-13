@@ -488,7 +488,7 @@ const Tabs = () => {
   }
 
   return (
-    <section className="tabs-wrapper" id="advisory">
+    <section className="tabs-wrapper" id="advisory-top">
       <div className="inner-content">
         <h2>
           Advisory
