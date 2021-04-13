@@ -21,5 +21,5 @@ gatsby build --prefix-paths
 
 2. Move the Build files
 
-- Copy/Overwrite the contents of the `public` folder into a new feature branch in the main [BCBS.com repo](https://github.com/oomphinc/bcbs.com) `bluehealthequity` directory.
+- Copy/Overwrite the contents of the `public` folder into a new feature branch in the main [BCBS.com repo](https://github.com/oomphinc/bcbs.com) `healthequity` directory.
 - Follow the BCBS.com GitHub release procedure.
