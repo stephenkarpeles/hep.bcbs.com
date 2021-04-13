@@ -76,12 +76,9 @@ const IndexPage = props => {
           </div>
           <div className="intro--video-details">
             <div className="intro--video-quote">{t("home.quote")}</div>
-            <div className="intro--video-quote-attr">
-              &mdash; {t("home.quote-attr")}
-            </div>
-            <div className="intro--video-quote-role">
-              {t("home.quote-role")}
-            </div>
+            <div className="intro--video-content">{t("home.content")}</div>
+            <div className="intro--video-quote-attr">&mdash; {t("home.quote-attr")}</div>
+            <div className="intro--video-quote-role">{t("home.quote-role")}</div>
           </div>
         </div>
       </section>
@@ -93,6 +90,7 @@ const IndexPage = props => {
             <div className="lead--details-points">
               <ul>
                 <li>Collecting data to measure disparities</li>
+                <li>Scaling effective programs</li>
                 <li>
                   Working with providers to improve outcomes and address
                   unconscious bias
@@ -197,6 +195,23 @@ const IndexPage = props => {
               AJMC: Racial Disparities Persist in Maternal Morbidity, Mortality
               and Infant Health
             </u>
+          </div>
+        </div>
+      </section>
+
+      <section className="goal-banner" id="goal-banner">
+        <div className="max-container">
+          <div className="goal-banner-box">
+            <h6 className="goal-banner-box-title">Our Goal</h6>
+            <div className="goal-banner-box-description">
+              Reduce racial disparities in maternal health by
+            </div>
+            <div className="goal-banner-box-stat">
+              50<span>%</span>
+              <span className="goal-banner-box-text">
+                in five years.
+              </span>
+            </div>
           </div>
         </div>
       </section>

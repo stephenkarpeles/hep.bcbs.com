@@ -15,6 +15,7 @@
   --color-mid-gray: #707070;
   --color-disabled: #cfd0d1;
   --color-white: #ffffff;
+  --color-black: #000000;
 
   /* Typography */
   --font-condensed-light: "Condensed Light";
@@ -51,6 +52,7 @@
   --line-height-base-small: 20px;
   --line-height-quote: 30px;
   --line-height-56: 56px;
+  --line-height-36: 36px;
   --line-height-28: 28px;
 
   /* Spacers */
