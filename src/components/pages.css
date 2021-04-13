@@ -207,4 +207,39 @@
   blockquote p {
     display: inline;
   }
+
+  &__fancy-list {
+    margin: 45px 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      position: relative;
+      padding-left: 65px;
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        background: black;
+        width: 40px;
+        left: 0;
+        top: 10px;
+      }
+
+      h5 {
+        color: var(--color-gray);
+        font-size: 18px;
+        line-height: 22px;
+        font-family: var(--font-regular-bold);
+        margin: 0;
+        padding: 0 0 10px;
+      }
+    }
+  }
 }

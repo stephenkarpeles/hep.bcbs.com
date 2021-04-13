@@ -85,6 +85,20 @@ const PlanProfile1 = () => {
             </blockquote>
             <h4>Blue Cross and Blue Shield companies are increasing support for doulas</h4>
             <p>Many BCBS companies are including doula coverage in their members’ plans, making philanthropic contributions to doula organizations that focus on underserved communities and funding training programs to increase the number of BIPOC doulas.</p>
+            <ul className="pp-content__fancy-list">
+              <li>
+                <h5>Training</h5>
+                <p>The Blue Cross Blue Shield of Michigan Foundation funded a program at Western Michigan University Homer Stryker Medical School to create and train a network of eight community doulas to assist women at risk women of poor birth outcomes. Blue Cross and Blue Shield of Minnesota is providing scholarships to increase the number of BIPOC doulas in areas with the least access.</p>
+              </li>
+              <li>
+                <h5>Doula coverage</h5>
+                <p>CareFirst BlueCross BlueShield covers doula services for Medicaid patients, including for those who visit the innovative Mamatoto Village, an organization focused on empowering Black mothers with services and education. Blue Cross and Blue Shield of Minnesota is exploring ways to let members know that doula care is covered. Analyzing claims data, the health plan found that moms who used doulas had healthier outcomes.</p>
+              </li>
+              <li>
+                <h5>Supporting doula organizations</h5>
+                <p>Health Care Service Corporation (HCSC) has provided funding to Chicago Volunteer Doulas, who care for pregnant and new mothers in vulnerable communities. Excellus BlueCross BlueShield supports Syracuse Community Connections, an organization that provides culturally competent doula care with a focus on Black women and women of color. Blue Cross and Blue Shield of Alabama supports the Alabama Prison Birth Project, the first and largest prison doula organization in the U.S. The works is important because there are currently no mandatory healthcare standards for pregnant women in prison.</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
