@@ -61,7 +61,7 @@ const PressKitPage = props => {
                 National Health Equity Strategy and Maternal Health Program
               </p>
               <div className="download-link">
-                <a href={pressRelease}>Download press kit</a>
+                <a href="/">Download press kit</a>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ const PressKitPage = props => {
             Strategy to Confront the Nation’s Crisis in Racial Health
             Disparities
           </div>
-          <a href="/" target="_blank">
+          <a href={pressRelease} target="_blank">
             <button type="button" className="button button-basic">
               Read More
             </button>
