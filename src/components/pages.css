@@ -242,7 +242,7 @@
     }
   }
 
-  p:first-child:first-letter {
+  &__inner > p:first-child:first-letter {
     color: var(--color-gray);
     font-family: var(--font-condensed-light);
     float: left;
@@ -252,7 +252,7 @@
     padding-top: 5px;
     padding-left: 0;
     letter-spacing: -.72px;
-  }
+  }  
 
   a {
     color: var(--color-blue);
