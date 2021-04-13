@@ -1,6 +1,19 @@
+// Base Imports
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import {
+  InstantSearch,
+  SearchBox,
+  InfiniteHits,
+  Configure,
+  RefinementList,
+  MenuSelect,
+  ClearRefinements,
+} from "react-instantsearch-dom"
+import algoliasearch from "algoliasearch/lite"
+
+// Styles
 import "../../components/pages.css"
 
 // Components
@@ -9,7 +22,34 @@ import SEO from "../../components/seo"
 // Images
 import nursePatientImg from "../../images/nurse-patient-1.jpg"
 
-const PlanProfile1 = () => {
+const searchClient = algoliasearch(
+  "B604WWKJH0",
+  "156ba268a0517559cd6a89921ae9cb5f"
+)
+
+const planResult = ({ hit }) => {
+  const { title, category, plan, url, excerpt, img_url } = hit
+
+  return (
+    <div className="plan-result-card">
+      <Link to={url}>
+        <div className="plan-result-card-plan">
+          <div className="plan-result-card-image">
+            <img src={img_url} />
+          </div>
+          <div className="plan-result-card-company">{plan}</div>
+        </div>
+        <div className="plan-result-card-meta">
+          <div className="plan-result-card-category">{category}</div>
+          <div className="plan-result-card-title">{title}</div>
+          <div className="plan-result-card-excerpt">{excerpt}</div>
+        </div>
+      </Link>
+    </div>
+  )
+}
+
+const PlanProfile1 = props => {
 
   return (
     <div>
@@ -102,6 +142,20 @@ const PlanProfile1 = () => {
           </div>
         </div>
       </div>
+    
+      <div className="pp-explore">
+        <h2>Explore more stories</h2>
+        <InstantSearch searchClient={searchClient} indexName="test_index">
+          <Configure hitsPerPage={2} distinct />
+          
+          <InfiniteHits
+            hitComponent={planResult}
+            translations={{
+              loadMore: "Load more",
+            }}
+          />
+        </InstantSearch>
+      </div> 
     </div>
   )
 }

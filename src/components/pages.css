@@ -91,7 +91,7 @@
 
 .pp-main {
   padding-top: 170px;
-  padding-bottom: 80px;  
+  padding-bottom: 70px;  
   display: flex;
   justify-content: space-between;
 }
@@ -241,5 +241,25 @@
         padding: 0 0 10px;
       }
     }
+  }
+}
+
+.pp-explore {
+  background: var(--color-light-gray);
+  width: var(--width-max-container);
+  margin: 0 auto 50px;
+  padding: 100px 60px 60px 60px;
+
+  h2 {
+    color: var(--color-blue);
+    padding-bottom: 30px;
+  }
+
+  .ais-InfiniteHits-item {
+    background: white;
+  }
+
+  .ais-InfiniteHits-loadMore {
+    display: none;
   }
 }
