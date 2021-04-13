@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/the-health-of-america/blue-health-equity`,
+  pathPrefix: `/the-health-of-america/healthequity`,
   siteMetadata: {
     title: `Blue Health Equity`,
     description: `Blue Cross and Blue Shield Companies’ National Health Equity Pledge.`,
