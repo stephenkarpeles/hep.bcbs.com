@@ -140,11 +140,8 @@ const IndexPage = props => {
                   Behavioral Health
                 </div>
                 <div className="disparities-card-stat">
-                  <span style={{ position: "relative", top: "-3.5rem" }}>
-                    &mdash;
-                  </span>
                   55
-                  <span>%</span>
+                  <span>% lower</span>
                 </div>
                 <div className="disparities-card-text">
                   Millennials from majority-Black and -Hispanic communities have
@@ -177,7 +174,7 @@ const IndexPage = props => {
               <div className="disparities-card disparities-card-maternal">
                 <div className="disparities-card-heading">Maternal Health</div>
                 <div className="disparities-card-stat">
-                  3<span>x</span>
+                  3<span>x higher</span>
                 </div>
                 <div className="disparities-card-text">
                   Black mothers have 3x higher maternal mortality and 2x higher
