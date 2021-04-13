@@ -161,4 +161,16 @@
   &__inner {
     max-width: 680px;
   }
+
+  p:first-child:first-letter {
+    color: var(--color-gray);
+    font-family: var(--font-condensed-light);
+    float: left;
+    font-size: 72px;
+    line-height: 60px;
+    padding-right: 16px;
+    padding-top: 5px;
+    padding-left: 0;
+    letter-spacing: -.72px;
+  }
 }
