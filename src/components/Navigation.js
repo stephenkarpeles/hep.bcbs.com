@@ -14,7 +14,7 @@ function Navigation() {
             <span>National Health Equity Strategy</span>
           </AnchorLink>
           <AnchorLink to="/#disparities" title="Health Disparities">
-            <span>Health disparities: by the numbers</span>
+            <span>Health Disparities: By the Numbers</span>
           </AnchorLink>
           <AnchorLink to="/#commitment" title="Our Commitment">
             <span>Our Goal</span>
@@ -23,10 +23,10 @@ function Navigation() {
             to="/#community"
             title="What we're doing in your community"
           >
-            <span>What we're doing in your community</span>
+            <span>What We're Doing in Your Community</span>
           </AnchorLink>
           <AnchorLink to="/#advisory" title="Meet our Advisory Panel">
-            <span>Meet our advisory panel</span>
+            <span>Meet Our Advisory Panel</span>
           </AnchorLink>
           {/* <AnchorLink to="/#news" title="News">
             <span>News</span>
@@ -34,9 +34,6 @@ function Navigation() {
           <AnchorLink to="/press-kit" title="Press Kit">
             <span>Press Kit</span>
           </AnchorLink>
-          {/* <AnchorLink to="/#newsletter" title="Newsletter">
-            <span>Newsletter</span>
-          </AnchorLink> */}
         </nav>
       </div>
     </div>

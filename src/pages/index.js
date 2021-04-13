@@ -206,10 +206,15 @@ const IndexPage = props => {
           <h2 style={{ color: "#0072A7" }}>
             What we're doing in your community
           </h2>
-          <p style={{ maxWidth: 800, marginBottom: "3rem" }}>
-            Discover how BCBS companies are measuring disparities, addressing
-            unconscious bias and improving health outcomes in the communities
-            where you live and work.
+          <p
+            style={{
+              maxWidth: 800,
+              marginBottom: "3rem",
+              fontSize: "1.125rem",
+            }}
+          >
+            BCBS companies are addressing racial disparities and improving
+            health outcomes in the communities where you live and work.
           </p>
         </div>
         <div className="inner-content inner-content-filters">
