@@ -715,7 +715,13 @@ header {
   }
 
   @media (--extra-large-breakpoint) {
-    background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 12.5%,rgba(0,76,109,1) 12.5%,rgba(0,76,109,1) 100%);
+    background: linear-gradient(
+      to top,
+      rgba(247, 249, 250, 1) 0%,
+      rgba(247, 249, 250, 1) 12.5%,
+      rgba(0, 76, 109, 1) 12.5%,
+      rgba(0, 76, 109, 1) 100%
+    );
   }
 
   h1 {
@@ -762,7 +768,7 @@ header {
 
     &-wrapper {
       position: relative;
-      padding-bottom: 56.25%;
+      padding-bottom: 75%;
       height: 0;
       overflow: hidden;
 
@@ -786,7 +792,7 @@ header {
       padding-left: var(--spacer-2);
 
       &::before {
-        content: '\201C';
+        content: "\201C";
         font-size: var(--font-size-40);
         font-family: var(--font-condensed-bold);
         position: absolute;
@@ -824,43 +830,68 @@ header {
         }
       }
     }
-
-    &-content {
-      color: var(--color-white);
-      font-size: var(--font-size-base);
-      line-height: var(--line-height-base);
-      font-family: var(--font-roman);
-      width: 100%;
-      padding-left: var(--spacer-15);
-
-      @media (--medium-breakpoint-up) {
-        padding-left: var(--spacer-2);
-      }
-
-      @media (--large-breakpoint-up) {
-        width: 500px;
-      }
-    }
   }
 }
 
 /* Lead */
 .lead {
-  &--reg {
-    margin: 4rem 0;
-    width: 100%;
+  background-color: var(--color-light-gray);
+  padding-top: var(--spacer-4);
+  padding-bottom: var(--spacer-4);
+
+  @media (--large-breakpoint-up) {
+    padding-bottom: 5rem;
+  }
+
+  .inner-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &--main {
     color: var(--color-gray);
     font-family: var(--font-condensed-regular);
     font-size: var(--font-size-22);
     line-height: var(--line-height-28);
-    text-align: left;
     padding-bottom: var(--spacer-2);
-    border-bottom: 1px solid var(--color-disabled);
+    flex-basis: 100%;
 
-    @media (--medium-breakpoint-up) {
-      margin: 5rem auto;
-      text-align: center;
-      width: 75%;
+    @media (--large-breakpoint-up) {
+      flex-basis: 35%;
+    }
+  }
+
+  &--details {
+    &-points {
+      background-color: var(--color-white);
+      box-shadow: 0px 0px 5px #0000001a;
+      padding: var(--spacer);
+      width: 100%;
+
+      li {
+        list-style-image: url("../images/icons/checkmark.svg");
+        padding-left: 0.5rem;
+
+        &::marker {
+          font-size: var(--font-size-h4);
+        }
+      }
+
+      @media (--large-breakpoint-up) {
+        width: 700px;
+      }
+    }
+
+    &-summary {
+      width: 100%;
+      margin-top: var(--spacer-15);
+
+      @media (--large-breakpoint-up) {
+        width: 700px;
+        padding-left: var(--spacer-15);
+      }
     }
   }
 }
@@ -957,6 +988,17 @@ header {
     font-size: var(--font-size-h6);
     letter-spacing: 0.52px;
     margin: 2rem 1rem 1.25rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      margin-left: 0.5rem;
+      width: 40px;
+      height: 1px;
+      background-color: #000;
+    }
   }
 
   &-title {
@@ -1164,6 +1206,20 @@ header {
     height: 100%;
     position: relative;
 
+    &::before {
+      content: url("../images/icons/icon-search.svg");
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+
+      .mobile-search & {
+        top: 1rem;
+        left: 0;
+      }
+    }
+
     @media (--large-breakpoint-up) {
       border-left: 1px solid #d3d3d3;
     }
@@ -1177,10 +1233,10 @@ header {
     font-family: var(--font-regular-light);
     height: 100%;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 1rem 5rem;
 
-    /* needs icon */
-    &::before {
+    .mobile-search & {
+      padding: 1rem 2rem 1rem 2rem;
     }
 
     &--open {
@@ -1197,6 +1253,7 @@ header {
       width: 100vw;
       border: 1px solid #dedede;
       background-color: #f7f9fa;
+      z-index: 1;
 
       @media (--large-breakpoint-up) {
         width: 100%;
@@ -1253,6 +1310,7 @@ header {
   position: absolute;
   left: calc(-100% - 1rem);
   transition: left 0.5s ease;
+  z-index: 1;
 
   .navigation {
     padding-top: 56px;
@@ -1275,6 +1333,19 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+}
+
+.mobile-toggle {
+  button {
+    background: none;
+    border: none;
+    display: flex;
+
+    img {
+      width: 24px;
+      margin-bottom: 0;
+    }
+  }
 }
 
 /* Footer */
@@ -1318,8 +1389,103 @@ header {
     font-size: var(--font-size-h6);
   }
 }
+
 .backtotop {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+}
+
+/* Disparities */
+.disparities {
+  padding: 7.5rem 0;
+
+  .inner-content {
+  }
+
+  &-heading {
+    color: var(--color-blue);
+    text-transform: uppercase;
+    font-family: var(--font-condensed-regular);
+    font-size: var(--font-size-30);
+    letter-spacing: 1.2px;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &-cards {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    padding: 0.5rem 0.5rem 1.5rem;
+    margin: 0 -1rem;
+
+    &-wrap {
+      ::-webkit-scrollbar {
+        height: 12px;
+        -webkit-appearance: none;
+
+        @media (--extra-large-breakpoint) {
+          display: none;
+        }
+      }
+
+      ::-webkit-scrollbar-track {
+        margin: 0 1rem;
+        background: var(--color-medium-blue);
+        height: 12px;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--color-blue);
+
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &-card {
+    margin: 0 0.5rem;
+    padding: 50px 20px 16rem;
+    box-shadow: 0px 0px 5px #0000001a;
+    width: 290px;
+    flex-shrink: 0;
+    position: relative;
+
+    &-heading {
+      color: #000;
+      text-transform: uppercase;
+      font-family: var(--font-condensed-bold);
+      font-size: var(--font-size-h6);
+      letter-spacing: 0.52px;
+    }
+
+    &-stat {
+      color: var(--color-blue);
+      font-family: var(--font-condensed-regular);
+      font-size: 120px;
+      line-height: initial;
+
+      span {
+        font-size: 40px;
+      }
+    }
+
+    &-text {
+      font-size: var(--font-size-base-small);
+    }
+
+    &-image {
+      position: absolute;
+      bottom: -5px;
+    }
+  }
+
+  .sources {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #767676;
+    font-size: 12px;
+    text-align: center;
+  }
 }

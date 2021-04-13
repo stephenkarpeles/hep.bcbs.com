@@ -27,7 +27,7 @@
 
 .tab-item {
   width: 20%;
-  border-left: 1px solid rgba(112, 112, 112, .3);
+  border-left: 1px solid rgba(112, 112, 112, 0.3);
   margin-bottom: 60px;
 
   @media (--medium-breakpoint-down) {
@@ -46,8 +46,8 @@
     z-index: 100;
     overflow: visible;
     width: calc(100% + 2px);
-    left: -1px;  
-    transition: .3s ease all;
+    left: -1px;
+    transition: 0.3s ease all;
 
     /* Fix Firefox inconsistency */
     .gatsby-image-wrapper-constrained {
@@ -61,23 +61,23 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
-      background: rgba(0, 114, 167, .75);
+      background: rgba(0, 114, 167, 0.75);
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
       height: 100%;
       width: 100%;
-      transition: .3s ease all;
+      transition: 0.3s ease all;
       opacity: 0;
     }
 
-    &:hover {     
+    &:hover {
       &::after {
         opacity: 1;
-        transition: .3s ease all;
+        transition: 0.3s ease all;
       }
     }
   }
@@ -96,7 +96,7 @@
     color: var(--color-blue);
     font-size: var(--font-size-h5);
     line-height: var(--line-height-h5);
-    letter-spacing: -.01em;
+    letter-spacing: -0.01em;
     padding: 0 0 8px;
   }
 
@@ -203,7 +203,7 @@
       max-width: 230px;
       padding-bottom: 10px;
       color: var(--color-blue);
-      border-bottom: 1px solid rgba(112, 112, 112, .3);
+      border-bottom: 1px solid rgba(112, 112, 112, 0.3);
     }
 
     &__copy {
@@ -267,7 +267,7 @@
     color: var(--color-gray);
     background: var(--color-light-gray);
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     &__text {
       border-left: none;

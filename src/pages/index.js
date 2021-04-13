@@ -12,10 +12,12 @@ import {
   MenuSelect,
   ClearRefinements,
 } from "react-instantsearch-dom"
-import AdvisoryBoard from '../components/AdvisoryBoard/AdvisoryBoard'
+import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Newsletter from "../components/Newsletter/Newsletter"
+import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -74,31 +76,127 @@ const IndexPage = props => {
           </div>
           <div className="intro--video-details">
             <div className="intro--video-quote">{t("home.quote")}</div>
-            <div className="intro--video-content">{t("home.content")}</div>
-            <div className="intro--video-quote-attr">&mdash; {t("home.quote-attr")}</div>
-            <div className="intro--video-quote-role">{t("home.quote-role")}</div>
+            <div className="intro--video-quote-attr">
+              &mdash; {t("home.quote-attr")}
+            </div>
+            <div className="intro--video-quote-role">
+              {t("home.quote-role")}
+            </div>
           </div>
-
         </div>
       </section>
 
       <section className="lead" id="lead">
         <div className="inner-content">
-          <p className="lead--reg">
-            {t("home.lead")}
-          </p>
-
+          <div className="lead--main">{t("home.lead")}</div>
+          <div className="lead--details">
+            <div className="lead--details-points">
+              <ul>
+                <li>Collecting data to measure disparities</li>
+                <li>
+                  Working with providers to improve outcomes and address
+                  unconscious bias
+                </li>
+                <li>Leaning into partnerships at the community level</li>
+                <li>
+                  Influencing policy decisions at the state and federal levels
+                </li>
+              </ul>
+            </div>
+            <div className="lead--details-summary">
+              {t("home.lead-summary")}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="statistics" id="commitment">
-        <div className="min-content">
-          <h2>Statistics</h2>
-          <div className="stat">
-            <div className="stat--number">$100 million</div>
-            <div className="stat--text">
-              followup description of what this number means
+      <section className="disparities" id="disparities">
+        <div className="inner-content">
+          <div className="disparities-heading">
+            Health Disparities: By the Numbers
+          </div>
+          <div className="disparities-cards-wrap">
+            <div className="disparities-cards">
+              <div className="disparities-card disparities-card-cardio">
+                <div className="disparities-card-heading">
+                  Cardiovascular Health
+                </div>
+                <div className="disparities-card-stat">
+                  70<span>%</span>
+                </div>
+                <div className="disparities-card-text">
+                  Black men are 70% more likely to die from a stroke as compared
+                  to non-Hispanic white men.
+                </div>
+                <div className="disparities-card-image">
+                  <StaticImage
+                    src="../images/illustrations/illustration-cardiovascular-health.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="disparities-card disparities-card-behavioral">
+                <div className="disparities-card-heading">
+                  Behavioral Health
+                </div>
+                <div className="disparities-card-stat">
+                  55
+                  <span>% lower</span>
+                </div>
+                <div className="disparities-card-text">
+                  Millennials from majority-Black and -Hispanic communities have
+                  lower diagnosis rates of behavioral health conditions compared
+                  to millennials from white communities.
+                </div>
+                <div className="disparities-card-image">
+                  <StaticImage
+                    src="../images/illustrations/illustration-behavioral-health.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="disparities-card disparities-card-diabetes">
+                <div className="disparities-card-heading">Diabetes</div>
+                <div className="disparities-card-stat">
+                  60<span>%</span>
+                </div>
+                <div className="disparities-card-text">
+                  African American adults are 60% more likely than non-Hispanic
+                  white adults to be diagnosed with diabetes by a physician.
+                </div>
+                <div className="disparities-card-image">
+                  <StaticImage
+                    src="../images/illustrations/illustration-diabetes.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="disparities-card disparities-card-maternal">
+                <div className="disparities-card-heading">Maternal Health</div>
+                <div className="disparities-card-stat">
+                  3<span>x higher</span>
+                </div>
+                <div className="disparities-card-text">
+                  Black mothers have 3x higher maternal mortality and 2x higher
+                  morbidity than white mothers.
+                </div>
+                <div className="disparities-card-image">
+                  <StaticImage
+                    src="../images/illustrations/illustration-maternal-health.png"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
+          </div>
+          <div className="sources">
+            Sources: 1) <u>OMH: Stroke and African Americans</u> 2){" "}
+            <u>Millennial Health: Trends in Behavioral Health Conditions</u> 3){" "}
+            <u>CDC: National Diabetes Statistics Report</u> 4){" "}
+            <u>
+              AJMC: Racial Disparities Persist in Maternal Morbidity, Mortality
+              and Infant Health
+            </u>
           </div>
         </div>
       </section>
@@ -136,7 +234,9 @@ const IndexPage = props => {
                 />
               </div>
               <div className="search-filters-refinement">
-                <div className="search-filters-label">Plan Profile Topics</div>
+                <div className="search-filters-label">
+                  Maternal Health Topics
+                </div>
                 <RefinementList attribute="category" />
               </div>
               <ClearRefinements
@@ -156,7 +256,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <AdvisoryBoard/>
+      <AdvisoryBoard />
 
       {/* <section className="news" id="news">
         <div className="inner-content">
@@ -185,28 +285,9 @@ const IndexPage = props => {
         </div>
       </section> */}
 
-      <section className="presskit" id="presskit"></section>
+      <PressKitBanner />
 
-      <section className="newsletter" id="newsletter">
-        <div className="inner-content">
-          <div className="eyebrow">Newsletter</div>
-          <h2>Stay Connected</h2>
-          <form>
-            <div>
-              <label>Email Address</label>
-              <input type="text"></input>
-              <button>Sign Up</button>
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label>
-                I agree to the <a href="#">BCBS.com Terms & Conditions</a> and{" "}
-                <a href="#">Privacy Policy</a>
-              </label>
-            </div>
-          </form>
-        </div>
-      </section>
+      <Newsletter />
     </>
   )
 }
