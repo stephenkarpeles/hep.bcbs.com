@@ -830,6 +830,23 @@ header {
         }
       }
     }
+
+    &-content {
+      color: var(--color-white);
+      font-size: var(--font-size-base);
+      line-height: var(--line-height-base);
+      font-family: var(--font-roman);
+      width: 100%;
+      padding-left: var(--spacer-15);
+
+      @media (--medium-breakpoint-up) {
+        padding-left: var(--spacer-2);
+      }
+
+      @media (--large-breakpoint-up) {
+        width: 500px;
+      }
+    }
   }
 }
 
@@ -853,8 +870,8 @@ header {
   &--main {
     color: var(--color-gray);
     font-family: var(--font-condensed-regular);
-    font-size: var(--font-size-22);
-    line-height: var(--line-height-28);
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
     padding-bottom: var(--spacer-2);
     flex-basis: 100%;
 
