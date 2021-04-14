@@ -42,6 +42,12 @@
   font-family: var( --font-regular-bold);
   line-height: var(--line-height-h5);
   font-size: var(--font-size-base-xsmall);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-dark-blue);
+    cursor: pointer;
+  }
 }
 
 /* list reset */

@@ -92,6 +92,13 @@
         padding: 8px 24px;
         width: auto;
         margin-right: 0;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          background-color: var(--color-dark-blue);
+        }
       }
     }
   }
