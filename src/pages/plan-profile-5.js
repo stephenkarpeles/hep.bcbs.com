@@ -61,9 +61,9 @@ const PlanProfile4 = props => {
             <div className="pp-hero__share-content">
               <h4>Share</h4>
               <ul>
-                <li><a href=""><StaticImage src="../../images/icons/icon-circle-twitter.svg"/></a></li>
-                <li><a href=""><StaticImage src="../../images/icons/icon-circle-facebook.svg"/></a></li>
-                <li><a href=""><StaticImage src="../../images/icons/icon-circle-linkedin.svg"/></a></li>
+                <li><a href=""><StaticImage src="../images/icons/icon-circle-twitter.svg"/></a></li>
+                <li><a href=""><StaticImage src="../images/icons/icon-circle-facebook.svg"/></a></li>
+                <li><a href=""><StaticImage src="../images/icons/icon-circle-linkedin.svg"/></a></li>
               </ul>
             </div>
           </div>
