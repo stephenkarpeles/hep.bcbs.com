@@ -786,6 +786,7 @@ header {
 
     &-quote {
       font-size: var(--font-size-22);
+      font-family: var(--font-condensed-regular);
       line-height: var(--line-height-quote);
       color: var(--color-medium-blue);
       width: 100%;
@@ -805,7 +806,7 @@ header {
 
       @media (--large-breakpoint-up) {
         font-size: var(--font-size-quote);
-        width: 500px;
+        width: 480px;
         margin-top: 0;
       }
 
@@ -847,7 +848,7 @@ header {
       }
 
       @media (--large-breakpoint-up) {
-        width: 500px;
+        width: 480px;
       }
     }
   }
@@ -911,7 +912,6 @@ header {
 
     &-summary {
       width: 100%;
-      margin-top: var(--spacer-15);
 
       @media (--large-breakpoint-up) {
         width: 600px;
@@ -1558,7 +1558,7 @@ header {
     }
 
     &-title {
-      font-family: var(--font-regular-bold);
+      font-family: var(--font-condensed-bold);
       text-transform: uppercase;
       letter-spacing: 0.52px;
       color: var(--color-black);
@@ -1569,7 +1569,7 @@ header {
         width: 75px;
         border-bottom: 1px solid var(--color-disabled);
         position: absolute;
-        left: 90px;
+        left: 70px;
         top: 50%;
       }
 
