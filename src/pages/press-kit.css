@@ -147,18 +147,35 @@
   }
 }
 
+/* FAQs */
 .faq {
   margin: var(--spacer-4) auto;
+
+  .accordion__heading {
+    padding: 20px 0;
+    cursor: pointer;
+    color: var(--color-blue);
+    font-size: 18px;
+    line-height: var(--line-height-h5);
+    padding-left: 30px;
+  }
+
+  .accordion__item { 
+    border-bottom: 1px solid rgba(112, 112, 112, .3);
+  }
+
+  .accordion__panel {
+    padding-left: 30px;
+  }
 }
 
-.accordion-content {
-  height: 0;
-  overflow: hidden;
+.faq-col-wrap {
+  display: flex;
+  justify-content: space-between;
 }
 
-.accordion-container.is-open-accordion .accordion-content {
-  height: auto;
-  animation: fadeIn 0.3s linear;
+.faq-col {
+  width: calc(50% - 30px);
 }
 
 .download-link {

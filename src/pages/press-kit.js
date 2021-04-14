@@ -7,8 +7,17 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Newsletter from "../components/Newsletter/Newsletter"
 import "./press-kit.css"
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+} from 'react-accessible-accordion';
 
 import pressRelease from "../../static/assets/files/Press-Kit-HE-National-Press-Release.pdf"
+
+//mport 'react-accessible-accordion/dist/fancy-example.css';
 
 const searchClient = algoliasearch(
   "B604WWKJH0",
@@ -45,6 +54,7 @@ const PressKitPage = props => {
   const handleToggleAccordion = () => {
     setOpenAccordion(!isOpenAccordion);
   };
+
   return (
     <>
       <SEO title="Press Kit" />
@@ -128,9 +138,151 @@ const PressKitPage = props => {
 
       <section className="faq" id="faq">
         <div className="inner-content">
-          <h3>National Strategy FAQ</h3>
-          <div className={isOpenAccordion ? "is-open-accordion" : null}>
-            <p onClick={handleToggleAccordion}>What is the National Health Equity Strategy?</p>
+          <h3>National Strategy FAQ</h3> 
+
+          <div className="faq-col-wrap">
+            <div className="faq-col faq-col--1">
+              <Accordion allowZeroExpanded={true}>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      What is the National Health Equity Strategy?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      BCBSA’s National Health Equity Strategyintends to change the trajectory of heath disparities and re-imagine a more equitable healthcare system through close collaboration with providers and local community organizations. The multi-year strategy will focus on four conditions that disproportionately affect communities of color: maternal health, behavioral health, diabetes and cardiovascular conditions.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      What are the key elements of this approach?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      In ad velit in ex nostrud dolore cupidatat consectetur
+                        ea in ut nostrud velit in irure cillum tempor laboris
+                        sed adipisicing eu esse duis nulla non.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Illusion?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Words
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Illusion?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Words
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Illusion?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Words
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </Accordion>
+            </div>
+            <div className="faq-col faq-col--2">
+              <Accordion allowZeroExpanded={true}>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Illusion?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Words
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Illusion?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Words
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Illusion?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Words
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Illusion?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Words
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton>
+                      Illusion?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      Words
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+          
+          <div className="faq-col faq-col--1">                     
+            <p>What is the National Health Equity Strategy?</p>
             <p>
               BCBSA’s National Health Equity Strategyintends to change the
               trajectory of heath disparities and re-imagine a more equitable
@@ -140,60 +292,62 @@ const PressKitPage = props => {
               maternal health, behavioral health, diabetes and cardiovascular
               conditions.
             </p>
+            <p>What are the key elements of this approach?</p>
+            <p>
+              The strategy includes collecting data to measure disparities,
+              scaling effective programs, working with providers to improve
+              outcomes and address unconscious bias, leaning into partnerships at
+              the community level, and influencing policy decisions at the state
+              and federal levels
+            </p>
+            <p>How long is this commitment for?</p>
+            <p>
+              This is a multi-year strategy. To start, BCBSA has set a public goal
+              to reduce racial disparities in maternal health by 50% in five
+              years.
+            </p>
+            <p>Why are you launching this now?</p>
+            <p>
+              The crisis in racial disparities in U.S health care is
+              unconscionable and unacceptable. BCBScompanies have made great
+              strides in confronting racial health disparities, but there is
+              moreto be done.
+            </p>
+            <p>Which conditions will the strategy focus on?</p>
+            <p>
+              We’re focused on four conditions – maternal health, behavioral
+              health, diabetes and cardiovascular conditions – starting with
+              maternal health.
+            </p>
           </div>
-          <p>What are the key elements of this approach?</p>
-          <p>
-            The strategy includes collecting data to measure disparities,
-            scaling effective programs, working with providers to improve
-            outcomes and address unconscious bias, leaning into partnerships at
-            the community level, and influencing policy decisions at the state
-            and federal levels
-          </p>
-          <p>How long is this commitment for?</p>
-          <p>
-            This is a multi-year strategy. To start, BCBSA has set a public goal
-            to reduce racial disparities in maternal health by 50% in five
-            years.
-          </p>
-          <p>Why are you launching this now?</p>
-          <p>
-            The crisis in racial disparities in U.S health care is
-            unconscionable and unacceptable. BCBScompanies have made great
-            strides in confronting racial health disparities, but there is
-            moreto be done.
-          </p>
-          <p>Which conditions will the strategy focus on?</p>
-          <p>
-            We’re focused on four conditions – maternal health, behavioral
-            health, diabetes and cardiovascular conditions – starting with
-            maternal health.
-          </p>
-          <p>What maternal health disparities exist?</p>
-          <p>
-            White women have fewer maternal health complications than women of
-            color, and the gap isparticularly significant between Black and
-            white women.
-          </p>
-          <p>What is the maternal health goal?</p>
-          <p>
-            We aim to reduce maternal health disparities by 50% in five years.
-          </p>
-          <p>Is the maternal health program only focused on BCBS members?</p>
-          <p>
-            No. We are focusing on all women who rely on our providers and
-            community partners.
-          </p>
-          <p>What makes you positioned to lead this effort?</p>
-          <p>
-            Our deep roots in local communities, combined with the scale and
-            scope of our national reach, will enable us to drive real change.
-          </p>
-          <p>What is the BCBSA National Advisory Panel? </p>
-          <p>
-            The panel of doctors, public health experts and community leaders
-            that will provide guidance on the BCBSA National Health Equity
-            Strategy.
-          </p>
+          <div className="faq-col faq-col--2">
+            <p>What maternal health disparities exist?</p>
+            <p>
+              White women have fewer maternal health complications than women of
+              color, and the gap isparticularly significant between Black and
+              white women.
+            </p>
+            <p>What is the maternal health goal?</p>
+            <p>
+              We aim to reduce maternal health disparities by 50% in five years.
+            </p>
+            <p>Is the maternal health program only focused on BCBS members?</p>
+            <p>
+              No. We are focusing on all women who rely on our providers and
+              community partners.
+            </p>
+            <p>What makes you positioned to lead this effort?</p>
+            <p>
+              Our deep roots in local communities, combined with the scale and
+              scope of our national reach, will enable us to drive real change.
+            </p>
+            <p>What is the BCBSA National Advisory Panel? </p>
+            <p>
+              The panel of doctors, public health experts and community leaders
+              that will provide guidance on the BCBSA National Health Equity
+              Strategy.
+            </p>
+          </div>
         </div>
       </section>
 
