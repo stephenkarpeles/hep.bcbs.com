@@ -147,8 +147,81 @@
   }
 }
 
+/* FAQs */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+  }
+
+  to   { 
+    opacity: 1; 
+  }
+}
+
 .faq {
   margin: var(--spacer-4) auto;
+  padding-bottom: 80px;
+
+  .accordion__heading {
+    padding: 23px 0;
+    cursor: pointer;
+    color: var(--color-blue);
+    font-size: 18px;
+    line-height: var(--line-height-h5);
+    padding-left: 40px;
+    position: relative;
+  }
+
+  .accordion__item { 
+    border-bottom: 1px solid rgba(112, 112, 112, .3);
+  }
+
+  .accordion__panel {
+    padding-left: 40px;
+    animation: fadeIn 0.35s ease-in;
+  }
+
+  .accordion__button {
+    &::before {
+      content: '+';
+      line-height: 1;
+      padding: 0;
+      background: black;
+      border-radius: 50%;
+      color: white;
+      width: 23px;
+      height: 23px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: center;
+      position: absolute;
+      left: 0;
+    }
+
+    &[aria-expanded="true"] {
+      &::before {
+        content: '\2013';
+      }
+    }
+  }
+}
+
+.faq-col-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @media (--small-breakpoint-down) {
+    flex-direction: column;
+  }
+}
+
+.faq-col {
+  width: calc(50% - 30px);
+
+  @media (--small-breakpoint-down) {
+    width: 100%;
+  }
 }
 
 .download-link {
