@@ -1094,6 +1094,10 @@ header {
       &:nth-child(5n) {
         width: 100%;
 
+        .plan-result-card {
+          display: flex;
+        }
+
         .plan-result-card-plan,
         .plan-result-card-meta {
           flex: 1 1 50%;

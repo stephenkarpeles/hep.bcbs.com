@@ -44,7 +44,7 @@ function Footer({ props, siteTitle }) {
           </div>
         </div>
       </footer>
-      <AnchorLink className="backtotop" to="/#top" title="Back to Top">
+      <AnchorLink className="backtotop" to="#top" title="Back to Top">
         <span>Back to Top</span>
       </AnchorLink>
     </>

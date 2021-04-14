@@ -238,7 +238,7 @@ const IndexPage = props => {
         </div>
         <div className="inner-content inner-content-filters">
           <InstantSearch searchClient={searchClient} indexName="test_index">
-            <Configure hitsPerPage={25} distinct />
+            <Configure hitsPerPage={5} distinct />
             <div className="search-filters">
               <div className="search-filters-label-main">Filter</div>
               <SearchBox
