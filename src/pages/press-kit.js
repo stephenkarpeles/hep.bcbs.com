@@ -17,7 +17,7 @@ import {
 
 import pressRelease from "../../static/assets/files/Press-Kit-HE-National-Press-Release.pdf"
 
-//mport 'react-accessible-accordion/dist/fancy-example.css';
+//import 'react-accessible-accordion/dist/fancy-example.css';
 
 const searchClient = algoliasearch(
   "B604WWKJH0",
@@ -174,12 +174,12 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Illusion?
+                      How long is this commitment for?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Words
+                      This is a multi-year strategy. To start, BCBSA has set a public goal to reduce racial disparities in maternal health by 50% in five years.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -187,12 +187,12 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Illusion?
+                      Why are you launching this now?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Words
+                      The crisis in racial disparities in U.S health care is unconscionable and unacceptable. BCBScompanies have made great strides in confronting racial health disparities, but there is moreto be done.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -200,12 +200,12 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Illusion?
+                      Which conditions will the strategy focus on?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Words
+                      We’re focused on four conditions – maternal health, behavioral health, diabetes and cardiovascular conditions – starting with maternal health.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -213,15 +213,16 @@ const PressKitPage = props => {
             </div>
             <div className="faq-col faq-col--2">
               <Accordion allowZeroExpanded={true}>
+
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Illusion?
+                      What maternal health disparities exist?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Words
+                      White women have fewer maternal health complications than women of color, and the gap is particularly significant between Black and white women.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -229,12 +230,12 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Illusion?
+                      What is the maternal health goal?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Words
+                      We aim to reduce maternal health disparities by 50% in five years.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -242,12 +243,12 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Illusion?
+                      Is the maternal health program only focused on BCBS members?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Words
+                      No. We are focusing on all women who rely on our providers and community partners.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -255,12 +256,12 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Illusion?
+                      What makes you positioned to lead this effort?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Words
+                      Our deep roots in local communities, combined with the scale and scope of our national reach, will enable us to drive real change.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -268,85 +269,17 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Illusion?
+                      What is the BCBSA National Advisory Panel? 
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Words
+                      The panel of doctors, public health experts and community leaders that will provide guidance on the BCBSA National Health Equity Strategy.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
               </Accordion>
             </div>
-          </div>
-          
-          <div className="faq-col faq-col--1">                     
-            <p>What is the National Health Equity Strategy?</p>
-            <p>
-              BCBSA’s National Health Equity Strategyintends to change the
-              trajectory of heath disparities and re-imagine a more equitable
-              healthcare system through close collaboration with providers and
-              local community organizations. The multi-year strategy will focus on
-              four conditions that disproportionately affect communities of color:
-              maternal health, behavioral health, diabetes and cardiovascular
-              conditions.
-            </p>
-            <p>What are the key elements of this approach?</p>
-            <p>
-              The strategy includes collecting data to measure disparities,
-              scaling effective programs, working with providers to improve
-              outcomes and address unconscious bias, leaning into partnerships at
-              the community level, and influencing policy decisions at the state
-              and federal levels
-            </p>
-            <p>How long is this commitment for?</p>
-            <p>
-              This is a multi-year strategy. To start, BCBSA has set a public goal
-              to reduce racial disparities in maternal health by 50% in five
-              years.
-            </p>
-            <p>Why are you launching this now?</p>
-            <p>
-              The crisis in racial disparities in U.S health care is
-              unconscionable and unacceptable. BCBScompanies have made great
-              strides in confronting racial health disparities, but there is
-              moreto be done.
-            </p>
-            <p>Which conditions will the strategy focus on?</p>
-            <p>
-              We’re focused on four conditions – maternal health, behavioral
-              health, diabetes and cardiovascular conditions – starting with
-              maternal health.
-            </p>
-          </div>
-          <div className="faq-col faq-col--2">
-            <p>What maternal health disparities exist?</p>
-            <p>
-              White women have fewer maternal health complications than women of
-              color, and the gap isparticularly significant between Black and
-              white women.
-            </p>
-            <p>What is the maternal health goal?</p>
-            <p>
-              We aim to reduce maternal health disparities by 50% in five years.
-            </p>
-            <p>Is the maternal health program only focused on BCBS members?</p>
-            <p>
-              No. We are focusing on all women who rely on our providers and
-              community partners.
-            </p>
-            <p>What makes you positioned to lead this effort?</p>
-            <p>
-              Our deep roots in local communities, combined with the scale and
-              scope of our national reach, will enable us to drive real change.
-            </p>
-            <p>What is the BCBSA National Advisory Panel? </p>
-            <p>
-              The panel of doctors, public health experts and community leaders
-              that will provide guidance on the BCBSA National Health Equity
-              Strategy.
-            </p>
           </div>
         </div>
       </section>
