@@ -221,6 +221,10 @@
     a {
       color: var(--color-gray);
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
