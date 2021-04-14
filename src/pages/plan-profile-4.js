@@ -15,13 +15,13 @@ import {
 import algoliasearch from "algoliasearch/lite"
 
 // Styles
-import "../../components/pages.css"
+import "../components/pages.css"
 
 // Components
-import SEO from "../../components/seo"
+import SEO from "../components/seo"
 
 // Images
-import nursePatientImg from "../../images/nurse-patient-1.jpg"
+import nursePatientImg from "../images/nurse-patient-1.jpg"
 
 const searchClient = algoliasearch(
   "B604WWKJH0",
