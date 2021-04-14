@@ -199,7 +199,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="goal-banner" id="goal-banner">
+      <section className="goal-banner" id="commitment">
         <div className="max-container">
           <div className="goal-banner-box">
             <h6 className="goal-banner-box-title">Our Goal</h6>
