@@ -14,12 +14,13 @@
       "Illinois",
       "New York"
     ],
-    "slug": "",
-    "img_url": "/images/plan-profiles/doulas-a.png",
+    "slug": "how-doulas-can-improve-the-safety-of-childbirth-for-women-of-color",
+    "img_url": "images/plan-profiles/doulas-a.png",
     "topic": "Maternal Health",
     "subtopics": [
       "Expanding Access to Doulas"
-    ]
+    ],
+    "feature": "true"
   },
   {
     "headline": "In New Jersey, addressing mood disorders in Black postpartum women",
@@ -33,11 +34,12 @@
       "New Jersey"
     ],
     "slug": "",
-    "img_url": "/images/plan-profiles/postpartum-a.png",
+    "img_url": "images/plan-profiles/postpartum-a.png",
     "topic": "Maternal Health",
     "subtopics": [
       "Behavioral Health Services"
-    ]
+    ],
+    "feature": "true"
   },
   {
     "headline": "Culturally appropriate interventions for mothers and newborns",
@@ -51,13 +53,14 @@
       "Arizona"
     ],
     "slug": "",
-    "img_url": "/images/plan-profiles/culturally-appropriate-care-a.jpg",
+    "img_url": "images/plan-profiles/culturally-appropriate-care-a.jpg",
     "topic": "Maternal Health",
     "subtopics": [
       "Behavioral Health Services",
       "Community Partnerships",
       "Maternal Health Social Services"
-    ]
+    ],
+    "feature": "true"
   },
   {
     "headline": "Eliminating food insecurity to improve maternal and fetal health",
@@ -78,7 +81,8 @@
     "subtopics": [
       "Maternal Health Social Services",
       "Community Partnerships"
-    ]
+    ],
+    "feature": "true"
   },
   {
     "headline": "BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes",
@@ -200,7 +204,8 @@
     "slug": "",
     "img_url": "",
     "topic": "Maternal Health",
-    "subtopics": []
+    "subtopics": [],
+    "feature": "true"
   },
   {
     "headline": "Innovating maternal care for over 20 years",
