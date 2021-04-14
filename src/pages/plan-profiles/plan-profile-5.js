@@ -80,7 +80,7 @@ const PlanProfile4 = props => {
                   <h1>BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes</h1>
                 </div>
                 <div className="pp-hero__author">
-                <span>Kristin Gourlay</span>
+                <span>Carlton Houston</span>
               </div>
               </div>
             </div>
