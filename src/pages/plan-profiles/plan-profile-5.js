@@ -50,11 +50,11 @@ const planResult = ({ hit }) => {
   )
 }
 
-const PlanProfile3 = props => {
+const PlanProfile4 = props => {
 
   return (
     <div>
-      <SEO title="Culturally appropriate interventions for mothers and newborns" />
+      <SEO title="BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes" />
       <Fade>
         <div className="pp-hero">
           <div className="pp-hero__share">
@@ -77,10 +77,10 @@ const PlanProfile3 = props => {
                   <span>Published March 3, 2021</span>
                 </div>
                 <div className="pp-hero__title">
-                  <h1>Culturally appropriate interventions for mothers and newborns</h1>
+                  <h1>BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes</h1>
                 </div>
                 <div className="pp-hero__author">
-                <span>Brianna Keefe</span>
+                <span>Kristin Gourlay</span>
               </div>
               </div>
             </div>
@@ -123,35 +123,20 @@ const PlanProfile3 = props => {
         <Fade>
           <div className="pp-content">
             <div className="pp-content__inner">
-              <p>Arizona has the third-highest American Indian population in the U.S., comprised of Apache, Hopi, Navajo and many other tribes. One of the most significant health crises facing these communities is substance use disorder (SUD). Rates of SUDs are higher among American Indians than any other population group in the country, according to the Substance Abuse and Mental Health Services Administration's <a href="https://www.samhsa.gov/data/report/2018-nsduh-detailed-tables" target="_blank">2018 National Survey on Drug Use and Health</a>.</p>
-              <p>A complex fabric of social and historical factors make American Indian populations more vulnerable to substance misuse and inhibit their access to treatment:</p>
-              <ul>
-                <li>High levels of poverty</li>
-                <li>Historical trauma</li>
-                <li>Racism and discrimination</li>
-                <li>High unemployment rates</li>
-                <li>Underfunded health services</li>
-                <li>Shortages of providers in rural communities</li>
-                <li>Lack of transportation</li>
-              </ul>
-              <p>These same factors contribute to devastating maternal death rates. In Arizona, American Indian women face rates as high 70.8 deaths per 100,000 births. That's according to the CDC. The average maternal death rate across the U.S. is 16.7 per 100,000. Tribal communities throughout Arizona have identified the need for more education, prevention and treatment to serve pregnant and parenting women with an SUD.</p>
+              <p>BlueCross BlueShield of South Carolina and the BlueCross BlueShield of South Carolina Foundation launched Diabetes Free SC, a multi-million dollar, statewide initiative dedicated to addressing disparities in care in several strategic areas including improved pregnancy outcomes in women with diabetes.  BCBSSC is joining with several organizations well-established in the trenches of diabetes care.  According to the American Diabetes Association (ADA), more than 500,000 adults in the state have diagnosed diabetes while an additional 120,000 are unaware that they have the disease. African-Americans have a two times higher death rate from the disease than white adults.</p>
+              <p>According to David Pankau, president and CEO of BlueCross BlueShield of South Carolina, this effort reflects the organization’s commitment to improving the health of South Carolina communities. He said, “We believe that we can play a meaningful role in reducing disparities of care. Our vision for making a difference in this space has been under discussion for a long time. There is even more urgency now as diabetes brings additional risk in the midst of skyrocketing COVID-19 rates. As we build upon the good work already being done, we are putting a stake in the ground with our commitment.”</p>
               <blockquote>
-                In Arizona, American Indian women face rates as high 70.8 deaths per 100,000 births. That's according to the CDC. The average maternal death rate across the U.S. is 16.7 per 100,000.
+                There is even more urgency now as diabetes brings additional risk in the midst of skyrocketing COVID-19 rates. As we build upon the good work already being done, we are putting a stake in the ground with our commitment.
               </blockquote>
-              <h4>Mobilize AZ</h4>
-              <p>Blue Cross Blue Shield of Arizona (BCBSAZ) is the state's largest health insurer. With deep connections to Arizona's tribal nations, the company is committed to supporting native mothers and babies through culturally appropriate interventions. In part, that means investing in programs and organizations that already serve Native Indian communities throughout the state and expanding their capacity.</p>
-              <p>The health insurer's pubic health program, Mobilize AZ, earmarks millions of dollars each year to build statewide capacity and resources for prevention, treatment, resiliency and recovery efforts. Funding priority is given to projects that expand resources, increase systems-level capacity, target an identified vulnerable population, and have a measurable impact. Through this program, BCBSAZ is supporting:</p>
+              <p>Additional facts:</p>
               <ul>
-                <li>Free childcare for native women receiving SUD treatment</li>
-                <li>Culturally competent education on substance use prevention for young women and providers in tribal communities</li>
-                <li>Helping build self esteem among native girls and young mothers.</li>
-                <li>Education on clinically proven interventions for newborns with neonatal abstinence syndrome (NAS) </li>
-                <li>Transportation from rural tribal communities to Phoenix, Arizona for NAS treatment</li>
-                <li>Training for 250 child development specialists to provide Native Indians throughout the state with at-home support</li>
-                <li>Educating tribal families on mindfulness and stress reduction to help reduce unhealthy coping behaviors</li>
+                <li>26,000 people in South Carolina will be diagnosed this year with diabetes. </li>
+                <li>Nearly 35% of the state’s adult population has prediabetes. </li>
+                <li>In addition to pregnancy, diabetes is also a significant factor in other conditions including kidney and cardiovascular disease, which disproportionately affects African-Americans. </li>
+                <li>Goals of the program also include reduced lifelong risk of diabetes in children; and the prevention of diabetes and its complications in adults.</li>
+                <li>The annual cost of care for adult South Carolinians with diagnosed diabetes is estimated at $5.89 billion (2017).</li>
               </ul>
-              <p>The company is also advocating on behalf of the state's tribal communities on policy matters. While Medicaid in some states covers housing costs, in Arizona, it does not. BCBSAZ is leading the charge to change that policy, which would help support low-income native households--many of which qualify for Medicaid.</p>
-              <p><em>Blue Cross Blue Shield of Arizona is an independent licensee of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.</em></p>
+              <p><em>BlueCross BlueShield of South Carolina is an independent licensee of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.</em></p>
             </div>
           </div>
         </Fade>
@@ -176,4 +161,4 @@ const PlanProfile3 = props => {
   )
 }
 
-export default PlanProfile3
+export default PlanProfile4
