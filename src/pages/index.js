@@ -28,23 +28,22 @@ const searchClient = algoliasearch(
 )
 
 const planResult = ({ hit }) => {
-  const { title, category, plan, url, excerpt, img_url } = hit
+  const { headline, topic, plans, slug, teaser, img_url } = hit
 
   return (
     <div className="plan-result-card">
-      <Link to={url}>
-        <div className="plan-result-card-plan">
-          <div className="plan-result-card-image">
-            <img src={img_url} />
-          </div>
-          <div className="plan-result-card-company">{plan}</div>
+      <Link to={slug}></Link>
+      <div className="plan-result-card-plan">
+        <div className="plan-result-card-image">
+          <img src={img_url} />
         </div>
-        <div className="plan-result-card-meta">
-          <div className="plan-result-card-category">{category}</div>
-          <div className="plan-result-card-title">{title}</div>
-          <div className="plan-result-card-excerpt">{excerpt}</div>
-        </div>
-      </Link>
+        <div className="plan-result-card-company">{plans}</div>
+      </div>
+      <div className="plan-result-card-meta">
+        <div className="plan-result-card-category">{topic}</div>
+        <div className="plan-result-card-title">{headline}</div>
+        <div className="plan-result-card-excerpt">{teaser}</div>
+      </div>
     </div>
   )
 }
@@ -77,8 +76,12 @@ const IndexPage = props => {
           <div className="intro--video-details">
             <div className="intro--video-quote">{t("home.quote")}</div>
             <div className="intro--video-content">{t("home.content")}</div>
-            <div className="intro--video-quote-attr">&mdash; {t("home.quote-attr")}</div>
-            <div className="intro--video-quote-role">{t("home.quote-role")}</div>
+            <div className="intro--video-quote-attr">
+              &mdash; {t("home.quote-attr")}
+            </div>
+            <div className="intro--video-quote-role">
+              {t("home.quote-role")}
+            </div>
           </div>
         </div>
       </section>
@@ -208,9 +211,7 @@ const IndexPage = props => {
             </div>
             <div className="goal-banner-box-stat">
               50<span>%</span>
-              <span className="goal-banner-box-text">
-                in five years.
-              </span>
+              <span className="goal-banner-box-text">in five years.</span>
             </div>
           </div>
         </div>
@@ -234,7 +235,7 @@ const IndexPage = props => {
         </div>
         <div className="inner-content inner-content-filters">
           <InstantSearch searchClient={searchClient} indexName="test_index">
-            <Configure hitsPerPage={5} distinct />
+            <Configure hitsPerPage={25} distinct />
             <div className="search-filters">
               <div className="search-filters-label-main">Filter</div>
               <SearchBox

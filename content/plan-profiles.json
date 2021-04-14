@@ -5,11 +5,7 @@
     "article": "For every mother who dies a pregnancy-related death in the U.S., 70 experience a life threatening event. These are unexpected cases of what doctors call severe maternal morbidity (SMM), such as cardiac arrest, hemorrhage or sepsis, events that could be fatal or affect a woman long after childbirth. The overall rate of these events has increased by over 200% in the past two decades. And the statistics are worse for women of color. Researchers at the University of Illinois Chicago found that Black women face a 70% higher risk of SMM than any other racial group. Doulas might provide the prenatal support women at risk need to have a healthy pregnancy and childbirth. The role of doulas in reducing SMM Doulas provide emotional, physical, and informational support to women before, during and after childbirth. They’re trained but non-clinical partners to women, often supplementing care from doctors and midwives. There’s evidence to suggest that working with a doula can reduce serious complications. Research finds that doula care can help reduce C-sections, decrease maternal anxiety and depression and help coordinate care and communication between women of color and their other healthcare providers. According to the March of Dimes, “The role of doula care in reducing C-sections is important, because C-sections contribute to the risk of maternal morbidity and mortality in initial and subsequent pregnancies.” Blue Cross and Blue Shield companies are increasing support for doulas Many BCBS companies are including doula coverage in their members’ plans, making philanthropic contributions to doula organizations that focus on underserved communities and funding training programs for doulas. Training: The Blue Cross Blue Shield of Michigan Foundation funded a program at Western Michigan University Homer Stryker Medical School to create and train a network of eight community doulas to assist women at risk of poor birth outcomes. Eliminating disparities: Blue Cross and Blue Shield of Minnesota has taken action to help increase access to culturally appropriate doula services for women of color in its Medicaid plan. To make the doula model more sustainable, the company increased reimbursement rates by 60% for contracted providers for non-labor and delivery visits. It is also providing workforce development scholarships to increase the number of doulas in areas with the least access and providing member education about the doula program. Doula coverage: CareFirst BlueCross BlueShield, through their grant making efforts, covers doula services for Medicaid patients, including for those who visit the innovative Mamatoto Village, an organization focused on empowering Black mothers with services and education. Supporting doula organizations: Blue Cross and Blue Shield of Illinois has provided funding to Chicago Volunteer Doulas, who care for pregnant and new mothers in vulnerable communities. Excellus BlueCross BlueShield supports Syracuse Community Connections, an organization that provides culturally competent doula care with a focus on Black women and women of color. Doulas and culturally competent care Doulas may also be able to play another role in eliminating racial disparities in maternal health. A Tufts University School of Medicine researcher notes that doulas may be more trusted members of the community and able to spend time listening to a mother's needs and concerns. Within the traditional healthcare system, Black women face unconscious bias, which can cause doctors to dismiss a Black mother's concerns or create a lack of trust between patient and doctor. Blue Cross and Blue Shield of Illinois, Blue Cross Blue Shield of Michigan, Blue Cross Blue Shield of Michigan Foundation, Blue Cross and Blue Shield of Minnesota, CareFirst BlueCross BlueShield and Excellus BlueCross BlueShield are licensees of the Blue Cross Blue Shield Association, an association of independent, locally owned Blue Cross and Blue Shield companies. All company names and brands are the property of their respective owners, used for identification purposes only, and are in no way associated or affiliated with the Blue Cross and Blue Shield Association. Use of these names and brands does not imply endorsement.",
     "byline": "Kristin Gourlay",
     "plans": [
-      "BCBSM",
-      "BCBS MN",
-      "CareFirst BCBS",
-      "BCBS IL",
-      "Excellus BCBS"
+      "BCBSA"
     ],
     "states": [
       "Michigan",
@@ -20,7 +16,8 @@
     ],
     "slug": "",
     "img_url": "/images/plan-profiles/doulas-a.png",
-    "topics": [
+    "topic": "Maternal Health",
+    "subtopics": [
       "Expanding Access to Doulas"
     ]
   },
@@ -37,7 +34,8 @@
     ],
     "slug": "",
     "img_url": "/images/plan-profiles/postpartum-a.png",
-    "topics": [
+    "topic": "Maternal Health",
+    "subtopics": [
       "Behavioral Health Services"
     ]
   },
@@ -54,7 +52,8 @@
     ],
     "slug": "",
     "img_url": "/images/plan-profiles/culturally-appropriate-care-a.jpg",
-    "topics": [
+    "topic": "Maternal Health",
+    "subtopics": [
       "Behavioral Health Services",
       "Community Partnerships",
       "Maternal Health Social Services"
@@ -66,9 +65,7 @@
     "article": "Researchers are still learning how limited or uncertain access to nutritious food can be harmful during and after pregnancy for both mother and baby. Food insecurity may increase the release of stress hormones, which has been linked to pre-term birth as well asunhealthy changes in a mother’s pregnancy weight. It has been linked to an increased risk for post-partum depression. Food insecurity can also affect a pregnant woman’s blood pressure, and so much more. Who is food insecure? The burden of food insecurity is borne disproportionately by Black, Indigenous and women of color. Federal statistics show Black Americans are twice as likely to be food insecure as the national average. Through another lens, one in five Black people is food insecure, according to Feeding America. Federal food assistance programs may help. But doctors and health insurers are seeing an opportunity — and using new resources — to support women at risk. Three programs that keep pregnant women and their families from going hungry In Minnesota, Blue Cross and Blue Shield of Minnesota is studying the impact of providing mothers and families in need clinically tailored meals, food boxes and nutritional coaching. Members can start as early as 20 weeks into their pregnancy and continue through the second month after birth. The healthy food program is a partnership with Project Well and Second Harvest Heartland, which will deliver the food and the coaching. Members can also be connected to additional food benefit programs and resources to meet other social needs through case management. In New York, Excellus BlueCross BlueShield is working with FoodLink, a local food bank, to pilot a nutrition program designed to identify at - risk moms and connect them to nutritional education and resources. Experts from Excellus BCBS say providing boxes of food is only one step in addressing food insecurity. Empowering mothers with culturally competent nutrition education can do even more to keep moms and their children healthy. Blue Cross and Blue Shield of Kansas City works with local food banks and food distributions centers to help members who are pregnant or new moms. Mothers who continue to experience food insecurity are connected with a state food assistance program. The health plan trains front line providers to screen women for food insecurity. Then Blue Cross and Blue Shield of Kansas City community health workers connect those members to resources to meet their social needs and follow up with providers. Food as healthcare Healthcare providers and health insurers are increasingly involved in meeting more than just medical needs for their patients. They recognize that having enough food to eat, or access to transportation, among other social needs, are just as critical for good health as a blood test or a sonogram. And right now, there may be more needs to meet. The economic crisis brought on by the pandemic has left more Americans out of work, living in poverty and struggling. Programs like these will be critical for catching those who might otherwise fall through the cracks. Blue Cross and Blue Shield of Minnesota, Blue Cross and Blue Shield of Kansas City and Excellus BlueCross BlueShield are independent licensees of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.",
     "byline": "Kristin Gourlay",
     "plans": [
-      "BCBS MN",
-      "Excellus BCBS",
-      "BCBS KC"
+      "BCBSA"
     ],
     "states": [
       "Minnesota",
@@ -77,7 +74,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": [
+    "topic": "Maternal Health",
+    "subtopics": [
       "Maternal Health Social Services",
       "Community Partnerships"
     ]
@@ -91,7 +89,8 @@
     "states": [],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Health education and culturally competent doula support for pregnant moms",
@@ -104,7 +103,8 @@
     "states": [],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Maternity coordinators help manage high risk conditions",
@@ -119,7 +119,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Home visiting and collaborating with hospitals to improve birth outcomes",
@@ -134,7 +135,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Improving maternal outcomes with support and data",
@@ -149,7 +151,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Expanding access to doulas and addressing food insecurity",
@@ -164,7 +167,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Breaking through bias in maternity care",
@@ -179,7 +183,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Strong partnerships aim to improve birth outcomes",
@@ -194,7 +199,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Innovating maternal care for over 20 years",
@@ -209,7 +215,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Targeting health equity with community health workers leading the way",
@@ -224,7 +231,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Pursuing equitable, quality care for Black mothers and babies",
@@ -239,7 +247,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Inclusive and equitable perinatal care for pregnant Black women",
@@ -254,7 +263,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Supporting bright beginnings for mothers and babies",
@@ -269,7 +279,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Home visits address high risk conditions and social determinants of health",
@@ -284,7 +295,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "In New Jersey, Horizon addressing postpartum depression and other mood disorders in Black mothers",
@@ -299,7 +311,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Data-driven strategies to address disparities in maternal care",
@@ -314,7 +327,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Improving postpartum care for high-risk mothers",
@@ -330,7 +344,8 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Supporting mothers and babies most in need with wraparound care",
@@ -343,7 +358,8 @@
     "states": [],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   },
   {
     "headline": "Using data and technology to identify and support high-risk pregnancies",
@@ -358,6 +374,7 @@
     ],
     "slug": "",
     "img_url": "",
-    "topics": []
+    "topic": "Maternal Health",
+    "subtopics": []
   }
 ]
