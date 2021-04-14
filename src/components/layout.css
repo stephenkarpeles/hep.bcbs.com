@@ -1317,11 +1317,11 @@ header {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-between;
 
     &-image {
-      flex-shrink: 0;
       margin-right: 2rem;
+      max-width: 160px;
+      flex-shrink: 0;
     }
 
     &-content {

@@ -23,7 +23,7 @@ class Autocomplete extends Component {
   }
 
   getSuggestionValue(hit) {
-    return hit.title
+    return hit.headline
   }
 
   // testing here getting multiple elements to render with highlights
@@ -32,15 +32,20 @@ class Autocomplete extends Component {
     return (
       <>
         <div class="site-search-result">
-          <div class="site-search-result-image">
-            <img src={hit.img_url} />
-          </div>
+          {hit.img_url && (
+            <div class="site-search-result-image">
+              <img
+                src={`https://www-content.bcbs.com/sites/default/files/healthequity/images/${hit.img_url}`}
+                alt=""
+              />
+            </div>
+          )}
           <div class="site-search-result-content">
             <div class="site-search-result-content-header">
-              <Highlight attribute="title" hit={hit} tagName="span" />
+              <Highlight attribute="headline" hit={hit} tagName="span" />
             </div>
             <div class="site-search-result-content-excerpt">
-              <Highlight attribute="excerpt" hit={hit} tagName="span" />
+              <Highlight attribute="teaser" hit={hit} tagName="span" />
             </div>
           </div>
         </div>
@@ -51,7 +56,7 @@ class Autocomplete extends Component {
   // TODO: needs close on esc, navigate on enter
   onSuggestionSelected = (event, { suggestion, method }) => {
     if (method === "enter" || method === "click") {
-      navigate()
+      navigate(`${suggestion.slug}`)
     }
 
     this.setState({
