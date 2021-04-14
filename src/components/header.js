@@ -44,7 +44,7 @@ const Header = ({ props, siteTitle }) => {
       <header id="top" className={click ? "navigation-mobile" : "navigation"}>
         <div className="max-container">
           <div className="logo">
-            <Link to="/">
+            <Link to="https://www.bcbs.com/the-health-of-america/">
               <img
                 style={{ maxWidth: 160, marginBottom: 0 }}
                 src={logo}
