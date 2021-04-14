@@ -248,7 +248,7 @@ const IndexPage = props => {
                   What's Happeining in my State
                 </div>
                 <MenuSelect
-                  attribute="state"
+                  attribute="states"
                   translations={{
                     seeAllOption: "All States",
                   }}
@@ -258,7 +258,7 @@ const IndexPage = props => {
                 <div className="search-filters-label">
                   Maternal Health Topics
                 </div>
-                <RefinementList attribute="category" />
+                <RefinementList attribute="subtopics" />
               </div>
               <ClearRefinements
                 clearsQuery
