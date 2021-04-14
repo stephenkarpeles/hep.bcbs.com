@@ -990,9 +990,9 @@ header {
   position: relative;
 
   a {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    position: absolute;
+    height: 100%;
+    width: 100%;
   }
 
   &-company {
@@ -1425,7 +1425,7 @@ header {
   bottom: 1rem;
   right: 1rem;
   background-color: var(--color-white);
-  box-shadow: 0px 2px 5px #0000001A;
+  box-shadow: 0px 2px 5px #0000001a;
   border-radius: 4px;
   padding: 6px 10px;
   text-decoration: none;

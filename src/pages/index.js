@@ -35,7 +35,10 @@ const planResult = ({ hit }) => {
       <Link to={slug}></Link>
       <div className="plan-result-card-plan">
         <div className="plan-result-card-image">
-          <img src={img_url} />
+          <img
+            src={`https://www-content.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
+            alt=""
+          />
         </div>
         <div className="plan-result-card-company">{plans}</div>
       </div>
