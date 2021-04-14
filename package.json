@@ -31,7 +31,8 @@
     "react-i18next": "^11.8.12",
     "react-instantsearch-dom": "^6.10.3",
     "react-responsive": "^8.2.0",
-    "react-reveal": "^1.2.2"
+    "react-reveal": "^1.2.2",
+    "react-share": "^4.4.0"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
