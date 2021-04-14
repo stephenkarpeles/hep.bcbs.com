@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
@@ -48,12 +48,6 @@ const planResult = ({ hit }) => {
 
 const PressKitPage = props => {
   const { t } = useTranslation()
-
-  const [isOpenAccordion, setOpenAccordion] = useState("false");
-
-  const handleToggleAccordion = () => {
-    setOpenAccordion(!isOpenAccordion);
-  };
 
   return (
     <>
