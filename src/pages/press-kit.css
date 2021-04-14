@@ -151,6 +151,16 @@
   margin: var(--spacer-4) auto;
 }
 
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion-container.is-open-accordion .accordion-content {
+  height: auto;
+  animation: fadeIn 0.3s linear;
+}
+
 .download-link {
   margin-top: var(--spacer-2);
 

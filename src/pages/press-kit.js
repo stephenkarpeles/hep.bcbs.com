@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
@@ -40,6 +40,11 @@ const planResult = ({ hit }) => {
 const PressKitPage = props => {
   const { t } = useTranslation()
 
+  const [isOpenAccordion, setOpenAccordion] = useState("false");
+
+  const handleToggleAccordion = () => {
+    setOpenAccordion(!isOpenAccordion);
+  };
   return (
     <>
       <SEO title="Press Kit" />
@@ -124,16 +129,18 @@ const PressKitPage = props => {
       <section className="faq" id="faq">
         <div className="inner-content">
           <h3>National Strategy FAQ</h3>
-          <p>What is the National Health Equity Strategy?</p>
-          <p>
-            BCBSA’s National Health Equity Strategyintends to change the
-            trajectory of heath disparities and re-imagine a more equitable
-            healthcare system through close collaboration with providers and
-            local community organizations. The multi-year strategy will focus on
-            four conditions that disproportionately affect communities of color:
-            maternal health, behavioral health, diabetes and cardiovascular
-            conditions.
-          </p>
+          <div className={isOpenAccordion ? "is-open-accordion" : null}>
+            <p onClick={handleToggleAccordion}>What is the National Health Equity Strategy?</p>
+            <p>
+              BCBSA’s National Health Equity Strategyintends to change the
+              trajectory of heath disparities and re-imagine a more equitable
+              healthcare system through close collaboration with providers and
+              local community organizations. The multi-year strategy will focus on
+              four conditions that disproportionately affect communities of color:
+              maternal health, behavioral health, diabetes and cardiovascular
+              conditions.
+            </p>
+          </div>
           <p>What are the key elements of this approach?</p>
           <p>
             The strategy includes collecting data to measure disparities,
