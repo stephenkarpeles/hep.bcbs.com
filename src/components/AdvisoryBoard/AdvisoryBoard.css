@@ -79,7 +79,38 @@
         opacity: 1;
         transition: 0.3s ease all;
       }
+
+      .tab-item__overlay-arrow,
+      .tab-item__overlay-title {
+        display: block;
+      }
     }
+  }
+
+  &__overlay-arrow,
+  &__overlay-title {
+    position: absolute;
+    display: none;
+  }
+
+  &__overlay-arrow {
+    top: 20px;
+    right: 20px;
+    z-index: 200;
+
+    img {
+      width: 30px;
+      height: 12px;
+    }
+  }
+
+  &__overlay-title {
+    z-index: 300;
+    bottom: 20px;
+    right: 20px;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--color-light-gray);
   }
 
   &__text {
@@ -297,6 +328,11 @@
     background: var(--color-light-gray);
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    &__overlay-arrow,
+    &__overlay-title {
+      display: none;
+    }
 
     &__text {
       border-left: none;

@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade"
 import "./AdvisoryBoard.css"
 import imgCloseIcon from "../../images/icons/icon-close.svg"
 import imgRightArrowBlue from "../../images/icons/arrow-long-right.svg"
+import imgArrowRightWhite from "../../images/icons/arrow-long-right-white.svg"
 
 const tabItems = [
   {
@@ -579,6 +580,13 @@ const TabItem = ({
         className="tab-item__image"
       >
         {image}
+
+        <div className="tab-item__overlay-arrow">
+          <img src={imgArrowRightWhite} alt="Arrow"/>
+        </div>
+        <div className="tab-item__overlay-title">
+          Chief Executive Officer
+        </div>
       </div>
       <div className="tab-item__text">
         <div className="tab-item__name">{name}</div>
