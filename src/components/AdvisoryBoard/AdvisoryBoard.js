@@ -3,6 +3,8 @@ import { withPrefix } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import "./AdvisoryBoard.css"
+import imgCloseIcon from "../../images/icons/icon-close.svg"
+import imgRightArrowBlue from "../../images/icons/arrow-long-right.svg"
 
 const tabItems = [
   {
@@ -581,6 +583,7 @@ const TabItem = ({
       <div className="tab-item__text">
         <div className="tab-item__name">{name}</div>
         <div className="tab-item__company">{company}</div>
+        <img src={imgRightArrowBlue} alt="Arrow"/>
       </div>
     </div>
   )
@@ -625,7 +628,7 @@ const Tabs = () => {
           href={withPrefix("#advisory")}
           title="Back to Advisory Board"
         >
-          X
+          <span>Close</span> <img src={imgCloseIcon} alt="Close"/>
         </a>
         <div className="tab-content__grid">
           <Fade>

@@ -88,6 +88,10 @@
     @media (--small-breakpoint-down) {
       padding: 25px 32px 0 0;
     }
+
+    img {
+      display: none;
+    }
   }
 
   &__name {
@@ -236,9 +240,34 @@
     &__close-btn {
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: 30px;
       font-size: 30px;
       cursor: pointer;
+      text-decoration: none;
+      color: var(--color-blue);
+      font-size: 13px;
+      line-height: 18px;
+      font-family: var(--font-condensed-bold);
+      text-transform: uppercase;
+      transition: opacity .3s ease;
+
+      &:hover {
+        opacity: .7;
+        transition: opacity .3s ease;
+      }
+
+      img {
+        width: 18px;
+        height: 18px;
+        margin: 0 0 0 6px;
+        display: inline-block;
+        position: relative;
+        top: 4px;
+      }
+
+      span {
+        display: inline-block;
+      }
     }
   }
 
@@ -272,6 +301,15 @@
     &__text {
       border-left: none;
       padding: 0;
+      position: relative;
+
+      img {
+        position: absolute;
+        display: block;
+        right: -23px;
+        top: calc(50% - 9px);
+        width: 20px;
+      }
     }
 
     &__name {
@@ -300,8 +338,34 @@
         color: white;
       }
 
+      .tab-item__text {
+        img {
+          display: none;
+        }
+      }
+
       .tab-item__company {
         color: #d8d8d8;
+      }
+
+      &:hover {
+        color: var(--color-gray);
+        background: var(--color-light-gray);
+        transition: all .2s ease;
+
+        .tab-item__name {
+          color: var(--color-blue);
+        }
+
+        .tab-item__company {
+          color: var(--color-gray);
+        }
+
+        .tab-item__text {
+          img {
+            display: block;
+          }
+        }
       }
     }
   }
