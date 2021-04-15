@@ -2,7 +2,16 @@ import React from "react"
 import footerlogo from "../images/shields.svg"
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { StaticImage } from "gatsby-plugin-image"
+import facebookIcon from "../images/icons/facebook.svg"
+import facebookHover from "../images/icons/facebook-hover.svg"
+import twitterIcon from "../images/icons/twitter.svg"
+import twitterHover from "../images/icons/twitter-hover.svg"
+import youtubeIcon from "../images/icons/youtube.svg"
+import youtubeHover from "../images/icons/youtube-hover.svg"
+import linkedinIcon from "../images/icons/linkedin.svg"
+import linkedinHover from "../images/icons/linkedin-hover.svg"
+import instagramIcon from "../images/icons/instagram.svg"
+import instagramHover from "../images/icons/instagram-hover.svg"
 
 function Footer({ props, siteTitle }) {
   return (
@@ -41,31 +50,56 @@ function Footer({ props, siteTitle }) {
                 href="https://www.facebook.com/BCBSAssociation"
                 className="footer-social-link"
               >
-                <StaticImage src="../images/icons/facebook.svg" alt="" />
+                <img
+                  src={facebookIcon}
+                  alt=""
+                  onMouseOver={e => (e.currentTarget.src = facebookHover)}
+                  onMouseOut={e => (e.currentTarget.src = facebookIcon)}
+                />
               </a>
               <a
                 href="https://twitter.com/BCBSAssociation"
                 className="footer-social-link"
               >
-                <StaticImage src="../images/icons/twitter.svg" alt="" />
+                <img
+                  src={twitterIcon}
+                  alt=""
+                  onMouseOver={e => (e.currentTarget.src = twitterHover)}
+                  onMouseOut={e => (e.currentTarget.src = twitterIcon)}
+                />
               </a>
               <a
                 href="https://www.linkedin.com/company/blue-cross-and-blue-shield-association"
                 className="footer-social-link"
               >
-                <StaticImage src="../images/icons/youtube.svg" alt="" />
+                <img
+                  src={youtubeIcon}
+                  alt=""
+                  onMouseOver={e => (e.currentTarget.src = youtubeHover)}
+                  onMouseOut={e => (e.currentTarget.src = youtubeIcon)}
+                />
               </a>
               <a
                 href="https://www.youtube.com/user/bluecrossblueshield"
                 className="footer-social-link"
               >
-                <StaticImage src="../images/icons/linkedin.svg" alt="" />
+                <img
+                  src={linkedinIcon}
+                  alt=""
+                  onMouseOver={e => (e.currentTarget.src = linkedinHover)}
+                  onMouseOut={e => (e.currentTarget.src = linkedinIcon)}
+                />
               </a>
               <a
                 href="https://www.instagram.com/bcbsassociation/"
                 className="footer-social-link"
               >
-                <StaticImage src="../images/icons/instagram.svg" alt="" />
+                <img
+                  src={instagramIcon}
+                  alt=""
+                  onMouseOver={e => (e.currentTarget.src = instagramHover)}
+                  onMouseOut={e => (e.currentTarget.src = instagramIcon)}
+                />
               </a>
             </div>
             <div className="footer-copyright">
