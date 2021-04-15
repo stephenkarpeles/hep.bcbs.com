@@ -23,6 +23,9 @@ import SEO from "../components/seo"
 // Images
 import nursePatientImg from "../images/nurse-patient-1.jpg"
 
+// Sharing
+import Sharing from "../components/Sharing/sharing"
+
 const searchClient = algoliasearch(
   "B604WWKJH0",
   "156ba268a0517559cd6a89921ae9cb5f"
@@ -31,6 +34,7 @@ const searchClient = algoliasearch(
 const planResult = ({ hit }) => {
   const { title, category, plan, url, excerpt, img_url } = hit
 
+  console.log(window.location.href) //yields: "https://stacksnippets.net/js"
   return (
     <div className="plan-result-card">
       <Link to={url}>
@@ -59,23 +63,10 @@ const PlanProfile1 = props => {
           <div className="pp-hero__share">
             <div className="pp-hero__share-content">
               <h4>Share</h4>
-              <ul>
-                <li>
-                  <a href="">
-                    <StaticImage src="../../images/icons/icon-circle-twitter.svg" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <StaticImage src="../../images/icons/icon-circle-facebook.svg" />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <StaticImage src="../../images/icons/icon-circle-linkedin.svg" />
-                  </a>
-                </li>
-              </ul>
+              <Sharing
+                title="How doulas can improve the safety of childbirth for women of color"
+                url={window.location.href}
+              />
             </div>
           </div>
           <div
