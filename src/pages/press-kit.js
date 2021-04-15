@@ -132,7 +132,7 @@ const PressKitPage = props => {
             Disparities
           </div>
           <a
-            href="/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities"
+            href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities"
             target="_blank"
           >
             <button type="button" className="button button-basic">
