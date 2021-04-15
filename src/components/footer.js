@@ -2,6 +2,7 @@ import React from "react"
 import footerlogo from "../images/shields.svg"
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { StaticImage } from "gatsby-plugin-image"
 
 function Footer({ props, siteTitle }) {
   return (
@@ -35,6 +36,38 @@ function Footer({ props, siteTitle }) {
                 BCBS Health Index
               </a>
             </nav>
+            <div className="footer-social">
+              <a
+                href="https://www.facebook.com/BCBSAssociation"
+                className="footer-social-link"
+              >
+                <StaticImage src="../images/icons/facebook.svg" alt="" />
+              </a>
+              <a
+                href="https://twitter.com/BCBSAssociation"
+                className="footer-social-link"
+              >
+                <StaticImage src="../images/icons/twitter.svg" alt="" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/blue-cross-and-blue-shield-association"
+                className="footer-social-link"
+              >
+                <StaticImage src="../images/icons/youtube.svg" alt="" />
+              </a>
+              <a
+                href="https://www.youtube.com/user/bluecrossblueshield"
+                className="footer-social-link"
+              >
+                <StaticImage src="../images/icons/linkedin.svg" alt="" />
+              </a>
+              <a
+                href="https://www.instagram.com/bcbsassociation/"
+                className="footer-social-link"
+              >
+                <StaticImage src="../images/icons/instagram.svg" alt="" />
+              </a>
+            </div>
             <div className="footer-copyright">
               © {new Date().getFullYear()} Blue Cross Blue Shield Association -
               All Rights Reserved. The Blue Cross Blue Shield Association is an
