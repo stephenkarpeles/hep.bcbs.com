@@ -51,7 +51,10 @@ const planResult = ({ hit }) => {
 const PlanProfile1 = props => {
   return (
     <div>
-      <SEO title="How doulas can improve the safety of childbirth for women of color" />
+      <SEO
+        title="How doulas can improve the safety of childbirth for women of color"
+        description="Doulas can help reduce severe maternal morbidity (SMM) among Black, Indigenous and other women of color (BIPOC)."
+      />
       <Fade>
         <div className="pp-hero">
           <div className="pp-hero__share">
