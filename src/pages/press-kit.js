@@ -15,7 +15,10 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 
-import pressRelease from "../../static/assets/files/Press-Kit-HE-National-Press-Release.pdf"
+import communityHighlights from "../../static/assets/files/Press-Kit_Community-Highlights.pdf"
+import factSheet from "../../static/assets/files/Press-Kit_Factsheet.pdf"
+import panelBios from "../../static/assets/files/Press-Kit_National-Advisory-Panel-Biographies.pdf"
+import pressFull from "../../static/assets/files/Press-Kit_Full.pdf"
 
 //import 'react-accessible-accordion/dist/fancy-example.css';
 
@@ -70,7 +73,7 @@ const PressKitPage = props => {
                 National Health Equity Strategy and Maternal Health Program
               </p>
               <div className="download-link">
-                <a href="/">Download press kit</a>
+                <a href={pressFull} target="_blank">Download press kit</a>
               </div>
             </div>
           </div>
@@ -88,7 +91,9 @@ const PressKitPage = props => {
                 Strategy
               </div>
               <div className="download-link">
-                <a href="">Download</a>
+                <a href={factSheet} target="_blank">
+                  Download
+                </a>
               </div>
             </div>
             <div className="card">
@@ -97,7 +102,9 @@ const PressKitPage = props => {
                 Meet the members of our national advisory panel
               </div>
               <div className="download-link">
-                <a href="">Download</a>
+                <a href={panelBios} target="_blank">
+                  Download
+                </a>
               </div>
             </div>
             <div className="card">
@@ -107,7 +114,9 @@ const PressKitPage = props => {
                 Cross Blue Shield (BCBS) system
               </div>
               <div className="download-link">
-                <a href="">Download</a>
+                <a href={communityHighlights} target="_blank">
+                  Download
+                </a>
               </div>
             </div>
           </div>
@@ -122,7 +131,10 @@ const PressKitPage = props => {
             Strategy to Confront the Nation’s Crisis in Racial Health
             Disparities
           </div>
-          <a href={pressRelease} target="_blank">
+          <a
+            href="/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities"
+            target="_blank"
+          >
             <button type="button" className="button button-basic">
               Read More
             </button>
@@ -132,7 +144,7 @@ const PressKitPage = props => {
 
       <section className="faq" id="faq">
         <div className="inner-content">
-          <h3>National Strategy FAQ</h3> 
+          <h3>National Strategy FAQ</h3>
 
           <div className="faq-col-wrap">
             <div className="faq-col faq-col--1">
@@ -145,11 +157,18 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      BCBSA’s National Health Equity Strategyintends to change the trajectory of heath disparities and re-imagine a more equitable healthcare system through close collaboration with providers and local community organizations. The multi-year strategy will focus on four conditions that disproportionately affect communities of color: maternal health, behavioral health, diabetes and cardiovascular conditions.
+                      BCBSA’s National Health Equity Strategy intends to change
+                      the trajectory of heath disparities and re-imagine a more
+                      equitable healthcare system through close collaboration
+                      with providers and local community organizations. The
+                      multi-year strategy will focus on four conditions that
+                      disproportionately affect communities of color: maternal
+                      health, behavioral health, diabetes and cardiovascular
+                      conditions.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
-                
+
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
@@ -158,13 +177,13 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      In ad velit in ex nostrud dolore cupidatat consectetur
-                        ea in ut nostrud velit in irure cillum tempor laboris
-                        sed adipisicing eu esse duis nulla non.
+                      In ad velit in ex nostrud dolore cupidatat consectetur ea
+                      in ut nostrud velit in irure cillum tempor laboris sed
+                      adipisicing eu esse duis nulla non.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
-                
+
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
@@ -173,7 +192,9 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      This is a multi-year strategy. To start, BCBSA has set a public goal to reduce racial disparities in maternal health by 50% in five years.
+                      This is a multi-year strategy. To start, BCBSA has set a
+                      public goal to reduce racial disparities in maternal
+                      health by 50% in five years.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -186,7 +207,10 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      The crisis in racial disparities in U.S health care is unconscionable and unacceptable. BCBScompanies have made great strides in confronting racial health disparities, but there is moreto be done.
+                      The crisis in racial disparities in U.S health care is
+                      unconscionable and unacceptable. BCBScompanies have made
+                      great strides in confronting racial health disparities,
+                      but there is moreto be done.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -199,7 +223,9 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      We’re focused on four conditions – maternal health, behavioral health, diabetes and cardiovascular conditions – starting with maternal health.
+                      We’re focused on four conditions – maternal health,
+                      behavioral health, diabetes and cardiovascular conditions
+                      – starting with maternal health.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -207,7 +233,6 @@ const PressKitPage = props => {
             </div>
             <div className="faq-col faq-col--2">
               <Accordion allowZeroExpanded={true}>
-
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
@@ -216,7 +241,9 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      White women have fewer maternal health complications than women of color, and the gap is particularly significant between Black and white women.
+                      White women have fewer maternal health complications than
+                      women of color, and the gap is particularly significant
+                      between Black and white women.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -229,7 +256,8 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      We aim to reduce maternal health disparities by 50% in five years.
+                      We aim to reduce maternal health disparities by 50% in
+                      five years.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -237,12 +265,14 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      Is the maternal health program only focused on BCBS members?
+                      Is the maternal health program only focused on BCBS
+                      members?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      No. We are focusing on all women who rely on our providers and community partners.
+                      No. We are focusing on all women who rely on our providers
+                      and community partners.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -255,7 +285,9 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      Our deep roots in local communities, combined with the scale and scope of our national reach, will enable us to drive real change.
+                      Our deep roots in local communities, combined with the
+                      scale and scope of our national reach, will enable us to
+                      drive real change.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -263,12 +295,14 @@ const PressKitPage = props => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
-                      What is the BCBSA National Advisory Panel? 
+                      What is the BCBSA National Advisory Panel?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      The panel of doctors, public health experts and community leaders that will provide guidance on the BCBSA National Health Equity Strategy.
+                      The panel of doctors, public health experts and community
+                      leaders that will provide guidance on the BCBSA National
+                      Health Equity Strategy.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -281,11 +315,11 @@ const PressKitPage = props => {
       <section className="cta cta-contact" id="cta-contact">
         <div className="inner-content">
           <h3>Get in touch with our communications team</h3>
-          <Link to="/">
+          <a href="mailto:press@bcbsca.com">
             <button type="button" className="button button-basic">
               Contact Press
             </button>
-          </Link>
+          </a>
         </div>
       </section>
 
