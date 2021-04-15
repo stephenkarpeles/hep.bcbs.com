@@ -771,7 +771,7 @@ header {
 
     &-wrapper {
       position: relative;
-      padding-bottom: 75%;
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
 
@@ -849,6 +849,18 @@ header {
 
       @media (--large-breakpoint-up) {
         width: 480px;
+      }
+    }
+
+    &-details {
+      flex-basis: 100%;
+
+      @media (--large-breakpoint-up) {
+        flex-basis: 46%;
+      }
+
+      @media (--extra-large-breakpoint) {
+        flex-basis: 41%;
       }
     }
   }

@@ -66,10 +66,10 @@ const IndexPage = props => {
             <div className="intro--video-wrapper">
               <iframe
                 loading="lazy"
-                width="780"
-                height="438"
-                src="https://www.youtube.com/embed/EngW7tLk6R8"
-                title="YouTube video player"
+                width="640"
+                height="360"
+                src="https://player.vimeo.com/video/532000011"
+                title="Vimeo video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
