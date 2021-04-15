@@ -39,6 +39,26 @@ const Header = ({ props, siteTitle }) => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
 
+  const menuOpenClass = "mobile-menu-is-open"
+
+  function addMenuOpenClass() {
+    document.body.classList.add(menuOpenClass);
+  }
+
+  function removeMenuOpenClass() {
+    document.body.classList.remove(menuOpenClass);
+  }
+
+  function showMobileNav() {
+    document.querySelector('header').classList.add('navigation-mobile');
+    document.querySelector('header').classList.remove('navigation');
+  }
+
+  function hideMobileNav() {
+    document.querySelector('header').classList.remove('navigation-mobile');
+    document.querySelector('header').classList.add('navigation');
+  }
+
   return (
     <>
       <header id="top" className={click ? "navigation-mobile" : "navigation"}>
@@ -59,16 +79,23 @@ const Header = ({ props, siteTitle }) => {
           </Desktop>
 
           <MobileTablet>
-            <div className="mobile-toggle" onClick={handleClick}>
-              {click ? (
-                <button>
-                  <img src={close} />
-                </button>
-              ) : (
-                <button>
-                  <img src={burger} />
-                </button>
-              )}
+            <div className="mobile-toggle">
+              <button 
+                onClick={() => {
+                  removeMenuOpenClass();
+                  hideMobileNav();
+                }}
+                onKeyDown={removeMenuOpenClass}>
+                <img src={close} />
+              </button>
+              <button 
+                onClick={() => {
+                  addMenuOpenClass();
+                  showMobileNav();
+                }} 
+                onKeyDown={addMenuOpenClass}>
+                <img src={burger} />
+              </button>
             </div>
           </MobileTablet>
         </div>
