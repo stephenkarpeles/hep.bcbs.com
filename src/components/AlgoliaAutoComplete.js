@@ -10,12 +10,7 @@ class Autocomplete extends Component {
     value: this.props.currentRefinement,
   }
 
-  onChange = (event, { newValue, method }) => {
-    if (method === "escape") {
-      this.setState({
-        hits: [],
-      })
-    }
+  onChange = (event, { newValue }) => {
     this.setState({ value: newValue })
   }
 
@@ -24,7 +19,10 @@ class Autocomplete extends Component {
   }
 
   onSuggestionsClearRequested = () => {
-    // this.props.refine()
+    // clears the searchbox when using escape key
+    this.setState({
+      hits: [],
+    })
   }
 
   getSuggestionValue(hit) {
@@ -61,7 +59,7 @@ class Autocomplete extends Component {
   // TODO: needs close on esc, navigate on enter
   onSuggestionSelected = (event, { suggestion, method }) => {
     if (method === "enter" || method === "click") {
-      navigate(`${suggestion.slug}`)
+      navigate(`/${suggestion.slug}/`)
     }
 
     this.setState({
