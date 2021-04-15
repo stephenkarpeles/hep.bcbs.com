@@ -34,7 +34,6 @@ const searchClient = algoliasearch(
 const planResult = ({ hit }) => {
   const { title, category, plan, url, excerpt, img_url } = hit
 
-  console.log(window.location.href) //yields: "https://stacksnippets.net/js"
   return (
     <div className="plan-result-card">
       <Link to={url}>
