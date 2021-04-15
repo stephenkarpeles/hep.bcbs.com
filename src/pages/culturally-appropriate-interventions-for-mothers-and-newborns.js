@@ -51,14 +51,17 @@ const planResult = ({ hit }) => {
 const PlanProfile3 = props => {
   return (
     <div>
-      <SEO title="Culturally appropriate interventions for mothers and newborns" />
+      <SEO
+        title="Maternal health services for American Indian women in Arizona"
+        description="Blue Cross Blue Shield of Arizona is helping pregnant and parenting women access education, care and treatment for SUDs in tribal communities across the state."
+      />
       <Fade>
         <div className="pp-hero">
           <div className="pp-hero__share">
             <div className="pp-hero__share-content">
               <h4>Share</h4>
               <Sharing
-                title="Culturally appropriate interventions for mothers and newborns"
+                title="Maternal health services for American Indian women in Arizona"
                 url="https://www.bcbs.com/healthequity/culturally-appropriate-interventions-for-mothers-and-newborns/"
               />
             </div>

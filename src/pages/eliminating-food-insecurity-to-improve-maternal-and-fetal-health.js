@@ -51,14 +51,17 @@ const planResult = ({ hit }) => {
 const PlanProfile4 = props => {
   return (
     <div>
-      <SEO title="Eliminating food insecurity to improve maternal and fetal health" />
+      <SEO
+        title="Eliminating food insecurity improves maternal/fetal health"
+        description="Programs located in Minnesota, New York and Kansas City help keep pregnant women and their families from going hungry."
+      />
       <Fade>
         <div className="pp-hero">
           <div className="pp-hero__share">
             <div className="pp-hero__share-content">
               <h4>Share</h4>
               <Sharing
-                title="Eliminating food insecurity to improve maternal and fetal health"
+                title="Eliminating food insecurity improves maternal/fetal health"
                 url="https://www.bcbs.com/healthequity/eliminating-food-insecurity-to-improve-maternal-and-fetal-health/"
               />
             </div>

@@ -51,14 +51,17 @@ const planResult = ({ hit }) => {
 const PlanProfile2 = props => {
   return (
     <div>
-      <SEO title="In New Jersey, addressing mood disorders in Black postpartum women" />
+      <SEO
+        title="Addressing postpartum in Black women"
+        description="Horizon Blue Cross Blue Shield of New Jersey is working to ensure Black mothers receive the care they need for postpartum depression and other mood disorders."
+      />
       <Fade>
         <div className="pp-hero">
           <div className="pp-hero__share">
             <div className="pp-hero__share-content">
               <h4>Share</h4>
               <Sharing
-                title="In New Jersey, addressing mood disorders in Black postpartum women"
+                title="Addressing postpartum in Black women"
                 url="https://www.bcbs.com/healthequity/in-new-jersey-addressing-mood-disorders-in-black-postpartum-women/"
               />
             </div>
