@@ -289,7 +289,7 @@ const PlanProfile2 = props => {
       </div>
 
       <Fade>
-        <div className="pp-explore">
+        <div className="pp-explore pp-explore-single-card">
           <h2>Explore more stories</h2>
           <InstantSearch searchClient={searchClient} indexName="test_index">
             <Configure
