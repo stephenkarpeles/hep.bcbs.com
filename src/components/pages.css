@@ -30,7 +30,7 @@
       padding-top: 60px;
       text-align: right;
 
-      ul {
+      .share-buttons {
         margin: 0;
         padding: 0;
       }
@@ -138,7 +138,7 @@
   &__author {
     color: black;
     text-transform: uppercase;
-    font-weight: 900;    
+    font-weight: 900;
     font-size: var(--font-size-base-small);
     line-height: var(--line-height-base-small);
     font-family: var(--font-condensed-bold);
@@ -147,7 +147,7 @@
 
 .pp-main {
   padding-top: 170px;
-  padding-bottom: 70px;  
+  padding-bottom: 70px;
   display: flex;
   justify-content: space-between;
 
@@ -256,7 +256,7 @@
     padding-top: 5px;
     padding-left: 0;
     letter-spacing: -.72px;
-  }  
+  }
 
   a {
     color: var(--color-blue);
