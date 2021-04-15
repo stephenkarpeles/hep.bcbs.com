@@ -65,7 +65,7 @@ const PlanProfile4 = props => {
               <h4>Share</h4>
               <Sharing
                 title="BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes"
-                url={window.location.href}
+                url="https://www.bcbs.com/healthequity/bluecross-blueshield-of-south-carolina-aims-to-improve-pregnancy-outcomes-in-women-with-diabetes/"
               />
             </div>
           </div>

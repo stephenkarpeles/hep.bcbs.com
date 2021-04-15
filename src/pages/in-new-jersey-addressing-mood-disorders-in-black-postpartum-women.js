@@ -65,7 +65,7 @@ const PlanProfile2 = props => {
               <h4>Share</h4>
               <Sharing
                 title="In New Jersey, addressing mood disorders in Black postpartum women"
-                url={window.location.href}
+                url="https://www.bcbs.com/healthequity/in-new-jersey-addressing-mood-disorders-in-black-postpartum-women/"
               />
             </div>
           </div>

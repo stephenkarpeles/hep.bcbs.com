@@ -65,7 +65,7 @@ const PlanProfile3 = props => {
               <h4>Share</h4>
               <Sharing
                 title="Culturally appropriate interventions for mothers and newborns"
-                url={window.location.href}
+                url="https://www.bcbs.com/healthequity/culturally-appropriate-interventions-for-mothers-and-newborns/"
               />
             </div>
           </div>

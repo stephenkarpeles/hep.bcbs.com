@@ -64,7 +64,7 @@ const PlanProfile1 = props => {
               <h4>Share</h4>
               <Sharing
                 title="How doulas can improve the safety of childbirth for women of color"
-                url={window.location.href}
+                url="https://www.bcbs.com/healthequity/how-doulas-can-improve-the-safety-of-childbirth-for-women-of-color/"
               />
             </div>
           </div>
