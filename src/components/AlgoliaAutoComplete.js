@@ -10,7 +10,12 @@ class Autocomplete extends Component {
     value: this.props.currentRefinement,
   }
 
-  onChange = (event, { newValue }) => {
+  onChange = (event, { newValue, method }) => {
+    if (method === "escape") {
+      this.setState({
+        hits: [],
+      })
+    }
     this.setState({ value: newValue })
   }
 
@@ -19,7 +24,7 @@ class Autocomplete extends Component {
   }
 
   onSuggestionsClearRequested = () => {
-    this.props.refine()
+    // this.props.refine()
   }
 
   getSuggestionValue(hit) {
