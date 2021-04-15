@@ -32,7 +32,7 @@ const planResult = ({ hit }) => {
 
   return (
     <div className="plan-result-card">
-      <Link to={slug}></Link>
+      <Link to={`/${slug}/`}></Link>
       <div className="plan-result-card-plan">
         <div className="plan-result-card-image">
           <img
