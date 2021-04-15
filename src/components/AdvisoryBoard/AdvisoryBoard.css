@@ -63,7 +63,7 @@
     &::after {
       content: "";
       position: absolute;
-      background: rgba(0, 114, 167, 0.75);
+      background: rgba(0, 114, 167, 0.8);
       top: 0;
       bottom: 0;
       left: 0;
@@ -79,7 +79,40 @@
         opacity: 1;
         transition: 0.3s ease all;
       }
+
+      .tab-item__overlay-arrow,
+      .tab-item__overlay-title {
+        display: block;
+      }
     }
+  }
+
+  &__overlay-arrow,
+  &__overlay-title {
+    position: absolute;
+    display: none;
+  }
+
+  &__overlay-arrow {
+    top: 20px;
+    right: 20px;
+    z-index: 200;
+
+    img {
+      width: 30px;
+      height: 12px;
+    }
+  }
+
+  &__overlay-title {
+    text-align: right;
+    padding-left: 20px;
+    z-index: 300;
+    bottom: 20px;
+    right: 20px;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--color-light-gray);
   }
 
   &__text {
@@ -87,6 +120,10 @@
 
     @media (--small-breakpoint-down) {
       padding: 25px 32px 0 0;
+    }
+
+    img {
+      display: none;
     }
   }
 
@@ -96,8 +133,9 @@
     color: var(--color-blue);
     font-size: var(--font-size-h5);
     line-height: var(--line-height-h5);
-    letter-spacing: -0.01em;
+    letter-spacing: .8px;
     padding: 0 0 8px;
+    font-family: var(--font-condensed-regular);
   }
 
   &__company {
@@ -191,6 +229,7 @@
     }
 
     &__personal-info-name {
+      font-family: var(--font-condensed-regular);
       max-width: 230px;
       text-transform: uppercase;
       color: var(--color-blue);
@@ -199,11 +238,19 @@
       padding-bottom: 20px;
     }
 
+    &__personal-info-title {
+      padding-top: 8px;
+      font-size: var(--font-size-base-small);
+      line-height: var(--line-height-base-small);
+    }
+
     &__personal-info-company {
       max-width: 230px;
       padding-bottom: 10px;
       color: var(--color-blue);
       border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+      font-size: var(--font-size-base-small);
+      line-height: var(--line-height-base-small);
     }
 
     &__copy {
@@ -221,6 +268,7 @@
       h3 {
         font-size: 24px;
         line-height: 30px;
+        font-family: var(--font-condensed-regular);
       }
 
       p {
@@ -236,9 +284,34 @@
     &__close-btn {
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: 30px;
       font-size: 30px;
       cursor: pointer;
+      text-decoration: none;
+      color: var(--color-blue);
+      font-size: 13px;
+      line-height: 18px;
+      font-family: var(--font-condensed-bold);
+      text-transform: uppercase;
+      transition: opacity .3s ease;
+
+      &:hover {
+        opacity: .7;
+        transition: opacity .3s ease;
+      }
+
+      img {
+        width: 18px;
+        height: 18px;
+        margin: 0 0 0 6px;
+        display: inline-block;
+        position: relative;
+        top: 4px;
+      }
+
+      span {
+        display: inline-block;
+      }
     }
   }
 
@@ -262,16 +335,30 @@
 
   .tab-item {
     width: 340px;
-    padding: 15px 40px 15px 15px;
+    padding: 15px 40px 15px 20px;
     cursor: pointer;
     color: var(--color-gray);
     background: var(--color-light-gray);
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
+    &__overlay-arrow,
+    &__overlay-title {
+      display: none;
+    }
+
     &__text {
       border-left: none;
       padding: 0;
+      position: relative;
+
+      img {
+        position: absolute;
+        display: block;
+        right: -23px;
+        top: calc(50% - 9px);
+        width: 20px;
+      }
     }
 
     &__name {
@@ -281,6 +368,7 @@
       line-height: var(--line-height-h5);
       margin-bottom: 0;
       padding: 0 0 4px;
+      font-family: var(--font-condensed-regular);
     }
 
     &__company {
@@ -300,8 +388,34 @@
         color: white;
       }
 
+      .tab-item__text {
+        img {
+          display: none;
+        }
+      }
+
       .tab-item__company {
         color: #d8d8d8;
+      }
+
+      &:hover {
+        color: var(--color-gray);
+        background: var(--color-light-gray);
+        transition: all .2s ease;
+
+        .tab-item__name {
+          color: var(--color-blue);
+        }
+
+        .tab-item__company {
+          color: var(--color-gray);
+        }
+
+        .tab-item__text {
+          img {
+            display: block;
+          }
+        }
       }
     }
   }

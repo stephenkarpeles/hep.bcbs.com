@@ -3,6 +3,9 @@ import { withPrefix } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import "./AdvisoryBoard.css"
+import imgCloseIcon from "../../images/icons/icon-close.svg"
+import imgRightArrowBlue from "../../images/icons/arrow-long-right.svg"
+import imgArrowRightWhite from "../../images/icons/arrow-long-right-white.svg"
 
 const tabItems = [
   {
@@ -90,8 +93,8 @@ const tabItems = [
           Dr. Marshall H. Chin, a practicing general internist and health
           services researcher, has dedicated his career to reducing health
           disparities through interventions at individual, organizational,
-          community and policy levels. Dr. Chin has elucidated practical
-          approaches to improving care of diverse individual patients and
+          community and policy levels.</h3>
+          <p>Dr. Chin has elucidated practical approaches to improving care of diverse individual patients and
           addressing systemic, structural drivers of disparities in the health
           care system. Through the Robert Wood Johnson Foundation Advancing
           Health Equity program, Dr. Chin collaborates with teams of state
@@ -100,8 +103,8 @@ const tabItems = [
           incentivize care transformations that advance health equity. He also
           partners with eight urban and rural communities to integrate medical
           and social care to reduce diabetes disparities through the Merck
-          Foundation Bridging the Gap program. Dr. Chin evaluates the value of
-          the federally qualified health center program, improves diabetes
+          Foundation Bridging the Gap program.</p>
+          <p>Dr. Chin evaluates the value of the federally qualified health center program, improves diabetes
           outcomes in Chicago’s South Side through healthcare and community
           interventions, and improves shared decision making among clinicians
           and LGBTQ persons of color. He also applies ethical principles to
@@ -116,7 +119,7 @@ const tabItems = [
           member of the National Advisory Council of the National Institute on
           Minority Health and Health Disparities. He is a former President of
           the Society of General Internal Medicine.
-        </h3>
+        </p>
         <p>
           Dr. Chin is a graduate of Harvard College and the University of
           California at San Francisco School of Medicine, and he completed
@@ -282,8 +285,8 @@ const tabItems = [
         <h3>
           Maria S. Gomez, President and CEO of Mary’s Center, founded the
           organization in 1988 as a clinic to provide prenatal and postpartum
-          care to Latino women living in DC’s Ward 1. Under Gomez’s leadership,
-          Mary’s Center has grown from an initial budget of $250,000, serving
+          care to Latino women living in DC’s Ward 1.</h3>
+          <p>Under Gomez’s leadership, Mary’s Center has grown from an initial budget of $250,000, serving
           200 participants a year, to an annual budget of $61 million serving
           nearly 50,000 participants from all over the globe at five medical
           locations, two senior wellness centers and a program office throughout
@@ -292,8 +295,8 @@ const tabItems = [
           she was selected by the White House as one of the 18 recipients of the
           2012 Presidential Citizens Medal, the nation’s second-highest civilian
           honor. She is also frequently recognized for her role in the DC
-          metropolitan region’s healthcare system. Prior to establishing Mary’s
-          Center, Gomez was a public health nurse at the D.C. Department of
+          metropolitan region’s healthcare system.</p>
+          <p>Prior to establishing Mary’s Center, Gomez was a public health nurse at the D.C. Department of
           Health. She also worked at the Red Cross, where she directed community
           education programming and disaster services, and at the Visiting
           Nurses Association. Originally from Colombia, Gomez immigrated with
@@ -304,7 +307,7 @@ const tabItems = [
           Care Association, the Primary Care Coalition of Montgomery County, and
           the Washington Area Women’s Foundation. Gomez is the recipient of many
           awards.
-        </h3>
+        </p>
         <p>
           Mary's Center provides primary health care and other wrap-around
           services to any individual that enters their doors regardless of their
@@ -334,13 +337,14 @@ const tabItems = [
           serves as the center's Founding Director. Dr. Hardeman's program of
           research applies the tools of population health science and health
           services research to elucidate a critical and complex determinant of
-          health inequity—racism. Dr. Hardeman leverages the frameworks of
+          health inequity—racism.</h3>
+          <p>Dr. Hardeman leverages the frameworks of
           critical race theory and reproductive justice to inform her
           equity-centered work which aims to build the empirical evidence of
           racism’s impact on health, particularly for Black birthing people and
           their babies. In 2020, she was named the first Blue Cross Endowed
           Professor of Health and Racial Equity.
-        </h3>
+        </p>
         <p>
           Dr. Hardeman’s research includes a partnership with Roots Community
           Birth Center, in North Minneapolis, one of five Black-owned
@@ -449,14 +453,15 @@ const tabItems = [
           With over 30 years of business and professional experience, Richard
           Taylor is responsible for the overall strategic direction of the
           company. Taylor graduated cum laude with a B.S. in Business
-          Administration from Georgetown University. During his tenure in the
+          Administration from Georgetown University.</h3>
+          <p>During his tenure in the
           nation’s capital, he worked on Capitol Hill as a government relations
           representative for a Fortune 500 energy company and was also actively
           involved in Congressional and Presidential campaigns across the
           country. He later attended Tulane University School of Law where he
           earned his Juris Doctor, cum laude, and then served as a law clerk to
           Judge James L. Dennis on the U.S. 5th Circuit Court of Appeals. 
-        </h3>
+        </p>
         <p>
           Prior to joining ImbuTec, Taylor served in various legal and senior
           corporate management roles in the energy industry, and he also
@@ -554,6 +559,7 @@ const TabItem = ({
   id = "",
   name = "",
   company = "",
+  title = "",
   image = "",
   onItemClicked = () => console.error("You passed no action to the component"),
   isActive = false,
@@ -577,10 +583,18 @@ const TabItem = ({
         className="tab-item__image"
       >
         {image}
+
+        <div className="tab-item__overlay-arrow">
+          <img src={imgArrowRightWhite} alt="Arrow"/>
+        </div>
+        <div className="tab-item__overlay-title">
+          {title}
+        </div>
       </div>
       <div className="tab-item__text">
         <div className="tab-item__name">{name}</div>
         <div className="tab-item__company">{company}</div>
+        <img src={imgRightArrowBlue} alt="Arrow"/>
       </div>
     </div>
   )
@@ -605,13 +619,14 @@ const Tabs = () => {
         </h2>
       </div>
       <div className="tab-items">
-        {tabItems.map(({ id, image, name, company }) => (
+        {tabItems.map(({ id, image, name, company, title }) => (
           <TabItem
             key={name}
             image={image}
             id={id}
             name={name}
             company={company}
+            title={title}
             onItemClicked={() => setActive(id)}
             isActive={active === id}
           />
@@ -625,7 +640,7 @@ const Tabs = () => {
           href={withPrefix("#advisory")}
           title="Back to Advisory Board"
         >
-          X
+          <span>Close</span> <img src={imgCloseIcon} alt="Close"/>
         </a>
         <div className="tab-content__grid">
           <Fade>
@@ -643,6 +658,11 @@ const Tabs = () => {
               <div className="tab-content__personal-info-company">
                 {tabItems.map(({ id, company }) => {
                   return active === id ? company : ""
+                })}
+              </div>
+              <div className="tab-content__personal-info-title">
+                {tabItems.map(({ id, title }) => {
+                  return active === id ? title : ""
                 })}
               </div>
             </div>
