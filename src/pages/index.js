@@ -28,7 +28,7 @@ const searchClient = algoliasearch(
 )
 
 const planResult = ({ hit }) => {
-  const { headline, topic, plans, slug, teaser, img_url } = hit
+  const { headline, topic, plans, slug, teaser, img_url, read_time } = hit
 
   return (
     <div className="plan-result-card">
@@ -36,7 +36,7 @@ const planResult = ({ hit }) => {
       <div className="plan-result-card-plan">
         <div className="plan-result-card-image">
           <img
-            src={`https://www-content.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
+            src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
             alt=""
           />
         </div>
@@ -46,6 +46,7 @@ const planResult = ({ hit }) => {
         <div className="plan-result-card-category">{topic}</div>
         <div className="plan-result-card-title">{headline}</div>
         <div className="plan-result-card-excerpt">{teaser}</div>
+        <div className="plan-result-card-read">{read_time} min read</div>
       </div>
     </div>
   )

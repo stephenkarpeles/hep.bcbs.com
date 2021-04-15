@@ -1039,12 +1039,27 @@ header {
   }
 
   &-excerpt {
-    color: #767676;
-    font-family: var(--font-roman);
     font-size: var(--font-size-base-small);
     line-height: var(--line-height-base-small);
     margin: 0 1.5rem;
     padding-bottom: 2rem;
+  }
+
+  &-read {
+    display: flex;
+    align-items: center;
+    margin: 0 1.5rem;
+    font-size: var(--font-size-base-small);
+
+    &::before {
+      content: "";
+      background-image: url("../images/icons/story-card-icon-clock.svg");
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      margin-right: 10px;
+    }
   }
 }
 
