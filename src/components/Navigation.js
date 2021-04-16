@@ -31,6 +31,7 @@ function Navigation() {
             }}
             onKeyDown={removeMenuOpenClass} 
             to="/#healthequity" 
+            className="navigation__anchor-link"
             title="What is Health Equity">
             <span>National Health Equity Strategy</span>
           </AnchorLink>
@@ -41,6 +42,7 @@ function Navigation() {
             }}
             onKeyDown={removeMenuOpenClass} 
             to="/#disparities" 
+            className="navigation__anchor-link"
             title="Health Disparities">
             <span>Health Disparities: By the Numbers</span>
           </AnchorLink>
@@ -51,6 +53,7 @@ function Navigation() {
             }} 
             onKeyDown={removeMenuOpenClass} 
             to="/#commitment" 
+            className="navigation__anchor-link"
             title="Our Commitment">
             <span>Our Goal</span>
           </AnchorLink>
@@ -61,6 +64,7 @@ function Navigation() {
             }} 
             onKeyDown={removeMenuOpenClass}
             to="/#community"
+            className="navigation__anchor-link"
             title="What we're doing in your community"
           >
             <span>What We're Doing in Your Community</span>
@@ -72,6 +76,7 @@ function Navigation() {
             }} 
             onKeyDown={removeMenuOpenClass} 
             to="/#advisory" 
+            className="navigation__anchor-link"
             title="Meet our Advisory Panel">
             <span>Meet Our Advisory Panel</span>
           </AnchorLink>
@@ -85,6 +90,7 @@ function Navigation() {
             }} 
             onKeyDown={removeMenuOpenClass}
             to="/press-kit" 
+            className="navigation__anchor-link"
             title="Press Kit">
             <span>Press Kit</span>
           </AnchorLink>
