@@ -171,6 +171,12 @@
     line-height: var(--line-height-h5);
     padding-left: 40px;
     position: relative;
+    transition: opacity .3s ease;
+
+    &:hover {
+      transition: opacity .3s ease;
+      opacity: .7;
+    }
   }
 
   .accordion__item { 
