@@ -7,7 +7,7 @@
 
 .alert-opened {
   display: block;
-  background-color: var(--color-gray);
+  background-color: var(--color-light-gray);
 
   .wide-container {
     max-width: 1800px;
@@ -113,10 +113,12 @@
     line-height: 18px;
     font-family: var(--font-condensed-bold);
     text-transform: uppercase;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
     border: 1px solid var(--color-disabled);
     border-radius: 4px;
     background-color: var(--color-white);
+    box-shadow: 0px 2px 5px #0000001a;
+    padding: 6px 10px;
 
     @media (--medium-breakpoint-up) {
       top: 20px;
@@ -124,8 +126,8 @@
     }
 
     &:hover {
-      opacity: .7;
-      transition: opacity .3s ease;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
     }
 
     img {
