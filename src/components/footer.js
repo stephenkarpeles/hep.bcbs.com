@@ -69,7 +69,7 @@ function Footer({ props, siteTitle }) {
                 />
               </a>
               <a
-                href="https://www.linkedin.com/company/blue-cross-and-blue-shield-association"
+                href="https://www.youtube.com/user/bluecrossblueshield"
                 className="footer-social-link"
               >
                 <img
@@ -80,7 +80,7 @@ function Footer({ props, siteTitle }) {
                 />
               </a>
               <a
-                href="https://www.youtube.com/user/bluecrossblueshield"
+                href="https://www.linkedin.com/company/blue-cross-and-blue-shield-association"
                 className="footer-social-link"
               >
                 <img
