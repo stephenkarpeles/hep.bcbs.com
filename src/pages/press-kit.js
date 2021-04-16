@@ -177,9 +177,7 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      In ad velit in ex nostrud dolore cupidatat consectetur ea
-                      in ut nostrud velit in irure cillum tempor laboris sed
-                      adipisicing eu esse duis nulla non.
+                      The strategy includes collecting data to measure disparities, scaling effective programs, working with providers to improve outcomes and address unconscious bias, leaning into partnerships at the community level, and influencing policy decisions at the state and federal levels.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
@@ -208,9 +206,9 @@ const PressKitPage = props => {
                   <AccordionItemPanel>
                     <p>
                       The crisis in racial disparities in U.S health care is
-                      unconscionable and unacceptable. BCBScompanies have made
+                      unconscionable and unacceptable. BCBS companies have made
                       great strides in confronting racial health disparities,
-                      but there is moreto be done.
+                      but there is more to be done.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>

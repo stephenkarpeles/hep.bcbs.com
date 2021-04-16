@@ -290,7 +290,7 @@ const tabItems = [
           200 participants a year, to an annual budget of $61 million serving
           nearly 50,000 participants from all over the globe at five medical
           locations, two senior wellness centers and a program office throughout
-          DC and Maryland in 2018. Maria is among the strongest leaders in the
+          DC and Maryland in 2018. Gomez is among the strongest leaders in the
           region. As a testament to her significant commitment to her community,
           she was selected by the White House as one of the 18 recipients of the
           2012 Presidential Citizens Medal, the nation’s second-highest civilian
@@ -322,7 +322,7 @@ const tabItems = [
   },
   {
     id: 6,
-    name: "Rachel Hardeman, Ph.D",
+    name: "Rachel R. Hardeman, PhD, MPH",
     title: "Tenured Associate Professor",
     company: "University of Minnesota",
     image: [
@@ -512,7 +512,7 @@ const tabItems = [
       <>
         <h3>
           A 43-year YMCA professional, Kevin Washington is the 14th person and
-          first African American to lead theY in the United States.
+          first African American to lead the Y in the United States.
         </h3>
         <p>
           He came to YMCA of the USA in February 2015 from the YMCA of Greater

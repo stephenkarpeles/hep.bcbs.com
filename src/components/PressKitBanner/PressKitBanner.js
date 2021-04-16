@@ -7,7 +7,7 @@ const PressKitBanner = () => (
     <div className="max-container">
       <div className="press-kit-banner-box">
         <h2>Press Kit</h2>
-        <p>Access press release, factsheet, FAQ, data or contact our media team</p>
+        <p>Access the latest press release, press tools and media contacts</p>
         <Link to="/press-kit">
           <button type="button" className="button button-basic">View Resources</button>
         </Link>
