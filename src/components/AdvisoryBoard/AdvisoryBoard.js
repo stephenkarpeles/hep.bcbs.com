@@ -10,9 +10,9 @@ import imgArrowRightWhite from "../../images/icons/arrow-long-right-white.svg"
 const tabItems = [
   {
     id: 1,
-    name: "Tracey Brown",
+    name: "Tracey D. Brown",
     title: "CEO",
-    company: "American Diabetes Association",
+    company: "American Diabetes Association®",
     image: [
       <>
         <StaticImage src="../../images/advisory-board/tracey-brown.jpg" />
@@ -80,7 +80,7 @@ const tabItems = [
   {
     id: 2,
     name: "Marshall Chin, MD, MPH",
-    title: "Richard Parrillo Family Professor of Healthcare Ethics",
+    title: "Professor of Healthcare Ethics",
     company: "University of Chicago",
     image: [
       <>
@@ -151,7 +151,7 @@ const tabItems = [
     id: 3,
     name: "Gilbert Darrington",
     title: "CEO",
-    company: "Health Services, Inc.",
+    company: "Health Services, Incorporated",
     image: [
       <>
         <StaticImage src="../../images/advisory-board/gilbert-darrington.jpg" />
@@ -197,9 +197,9 @@ const tabItems = [
   },
   {
     id: 4,
-    name: "Adaeze Enekwechi, Ph.D, MPP",
+    name: "Adaeze Enekwechi, PhD, MPP",
     title: "Research Associate Professor",
-    company: "Milken Institute School of Public Health",
+    company: "George Washington University",
     image: [
       <>
         <StaticImage src="../../images/advisory-board/adaeze-enekwechi.jpg" />
@@ -290,7 +290,7 @@ const tabItems = [
           200 participants a year, to an annual budget of $61 million serving
           nearly 50,000 participants from all over the globe at five medical
           locations, two senior wellness centers and a program office throughout
-          DC and Maryland in 2018. Maria is among the strongest leaders in the
+          DC and Maryland in 2018. Gomez is among the strongest leaders in the
           region. As a testament to her significant commitment to her community,
           she was selected by the White House as one of the 18 recipients of the
           2012 Presidential Citizens Medal, the nation’s second-highest civilian
@@ -322,7 +322,7 @@ const tabItems = [
   },
   {
     id: 6,
-    name: "Rachel Hardeman, Ph.D",
+    name: "Rachel R. Hardeman, PhD, MPH",
     title: "Tenured Associate Professor",
     company: "University of Minnesota",
     image: [
@@ -512,7 +512,7 @@ const tabItems = [
       <>
         <h3>
           A 43-year YMCA professional, Kevin Washington is the 14th person and
-          first African American to lead theY in the United States.
+          first African American to lead the Y in the United States.
         </h3>
         <p>
           He came to YMCA of the USA in February 2015 from the YMCA of Greater
