@@ -148,7 +148,7 @@ const PressKitPage = props => {
 
           <div className="faq-col-wrap">
             <div className="faq-col faq-col--1">
-              <Accordion allowZeroExpanded={true}>
+              <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>
@@ -230,7 +230,7 @@ const PressKitPage = props => {
               </Accordion>
             </div>
             <div className="faq-col faq-col--2">
-              <Accordion allowZeroExpanded={true}>
+              <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton>

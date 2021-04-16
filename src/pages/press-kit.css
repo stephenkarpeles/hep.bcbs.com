@@ -163,6 +163,7 @@
   padding-bottom: 80px;
 
   .accordion__heading {
+    outline: none;
     padding: 23px 0;
     cursor: pointer;
     color: var(--color-blue);
@@ -182,6 +183,8 @@
   }
 
   .accordion__button {
+    outline: none;
+
     &::before {
       content: '+';
       line-height: 1;
