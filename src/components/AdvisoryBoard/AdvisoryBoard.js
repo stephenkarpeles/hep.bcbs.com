@@ -10,9 +10,9 @@ import imgArrowRightWhite from "../../images/icons/arrow-long-right-white.svg"
 const tabItems = [
   {
     id: 1,
-    name: "Tracey Brown",
+    name: "Tracey D. Brown",
     title: "CEO",
-    company: "American Diabetes Association",
+    company: "American Diabetes Association®",
     image: [
       <>
         <StaticImage src="../../images/advisory-board/tracey-brown.jpg" />
@@ -80,7 +80,7 @@ const tabItems = [
   {
     id: 2,
     name: "Marshall Chin, MD, MPH",
-    title: "Richard Parrillo Family Professor of Healthcare Ethics",
+    title: "Professor of Healthcare Ethics",
     company: "University of Chicago",
     image: [
       <>
@@ -151,7 +151,7 @@ const tabItems = [
     id: 3,
     name: "Gilbert Darrington",
     title: "CEO",
-    company: "Health Services, Inc.",
+    company: "Health Services, Incorporated",
     image: [
       <>
         <StaticImage src="../../images/advisory-board/gilbert-darrington.jpg" />
@@ -197,9 +197,9 @@ const tabItems = [
   },
   {
     id: 4,
-    name: "Adaeze Enekwechi, Ph.D, MPP",
+    name: "Adaeze Enekwechi, PhD, MPP",
     title: "Research Associate Professor",
-    company: "Milken Institute School of Public Health",
+    company: "George Washington University",
     image: [
       <>
         <StaticImage src="../../images/advisory-board/adaeze-enekwechi.jpg" />
