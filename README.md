@@ -14,7 +14,7 @@
 ```
 cd hep.bcbs.com
 git pull master
-gatsby build --prefix-paths
+gatsby clean && gatsby build --prefix-paths
 ```
 
 **Note** the `--prefix-paths` flag is important for moving this repo over to the main bcbs.com repo.
