@@ -153,9 +153,10 @@ const IndexPage = props => {
                   <span>% lower</span>
                 </div>
                 <div className="disparities-card-text">
-                  Millennials from majority-Black and -Hispanic communities have
-                  lower diagnosis rates of behavioral health conditions compared
-                  to millennials from white communities.
+                  Likely to due to under-diagnosis, Millennials from majority
+                  Black and Hispanic communities have lower diagnosis rates of
+                  major depression, 31% and 55% lower respectively when compare
+                  to white communities.
                 </div>
                 <div className="disparities-card-image">
                   <StaticImage
