@@ -102,12 +102,12 @@ const PlanProfile4 = props => {
             <ul className="pp-related__list">
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
-                  <span>Health of America</span>
+                  <span>Podcast</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Doulas of color can help moms of color have healthier babies
-                  </Link>
+                  <a href="https://www.bcbs.com/the-health-of-america/podcast/podcast-improving-maternal-health-starts-pregnancy">
+                    Improving maternal health starts before pregnancy
+                  </a>
                 </div>
               </li>
               <li className="pp-related__list-item">
@@ -115,21 +115,19 @@ const PlanProfile4 = props => {
                   <span>Report</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Inclusive and equitable perinatal care for pregnant Black
-                    women
-                  </Link>
+                  <a href="https://www.bcbs.com/the-health-of-america/podcast/using-telemedicine-improve-rural-womens-health-and-save-babies-lives">
+                    Using telemedicine to improve rural women’s health and save babies’ lives
+                  </a>
                 </div>
               </li>
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
-                  <span>Report</span>
+                  <span>Article</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    In New Jersey, addressing postpartum depression in Black
-                    mothers
-                  </Link>
+                  <a href="https://www.bcbs.com/the-health-of-america/articles/standardized-screening-social-determinants-of-health-means-holistic">
+                    Standardized screening for social determinants of health means holistic healthcare from the first appointment
+                  </a>
                 </div>
               </li>
             </ul>
