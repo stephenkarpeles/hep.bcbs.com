@@ -92,40 +92,18 @@ const EquitableQualityCare = props => {
         <Fade>
           <div className="pp-related">
             <h5 className="pp-related__title">Related</h5>
-            {/* <ul className="pp-related__list">
+            <ul className="pp-related__list">
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
-                  <span>Health of America</span>
+                  <span>Podcast</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Doulas of color can help moms of color have healthier babies
-                  </Link>
+                  <a href="https://www.bcbs.com/the-health-of-america/podcast/podcast-improving-maternal-health-starts-pregnancy">
+                    Improving maternal health starts before pregnancy
+                  </a>
                 </div>
               </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Report</span>
-                </div>
-                <div className="pp-related__text">
-                  <Link to="/">
-                    Inclusive and equitable perinatal care for pregnant Black
-                    women
-                  </Link>
-                </div>
-              </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Report</span>
-                </div>
-                <div className="pp-related__text">
-                  <Link to="/">
-                    In New Jersey, addressing postpartum depression in Black
-                    mothers
-                  </Link>
-                </div>
-              </li>
-            </ul> */}
+            </ul>
           </div>
         </Fade>
         <Fade>
@@ -170,20 +148,23 @@ const EquitableQualityCare = props => {
         </Fade>
       </div>
 
-      {/* <Fade>
+      <Fade>
         <div className="pp-explore">
           <h2>Explore more stories</h2>
-          <InstantSearch searchClient={searchClient} indexName="he_plan_profiles">
+          <InstantSearch
+            searchClient={searchClient}
+            indexName="he_plan_profiles"
+          >
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'Strong partnerships aim to improve birth outcomes' OR headline:'Culturally appropriate interventions for mothers and newborns'"
+              filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'Culturally appropriate interventions for mothers and newborns'"
             />
 
             <InfiniteHits hitComponent={planResult} />
           </InstantSearch>
         </div>
-      </Fade> */}
+      </Fade>
     </div>
   )
 }
