@@ -1320,7 +1320,7 @@ header {
     &--open {
       position: absolute;
       background-color: #fff;
-      width: 100vw;
+      /* width: 100vw; */
       border: 1px solid #dedede;
       background-color: #f7f9fa;
       z-index: 1;
@@ -1413,11 +1413,11 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-    
+
     &:first-child {
       display: none;
     }
-    
+
     &:last-child {
       display: flex;
     }
