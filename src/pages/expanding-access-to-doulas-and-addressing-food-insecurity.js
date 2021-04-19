@@ -144,7 +144,7 @@ const ExpandingAccess = props => {
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'Strong partnerships aim to improve birth outcomes'"
+              filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'Strong collaborations aim to improve birth outcomes'"
             />
 
             <InfiniteHits hitComponent={planResult} />
