@@ -5,7 +5,6 @@ import imgCloseIcon from "../../images/icons/icon-close.svg"
 import "./Alert.css"
 
 const AlertBanner = () => {
-
   const alertOpen = "alert-opened"
   const alertClose = "alert-closed"
 
@@ -67,7 +66,10 @@ const AlertBanner = () => {
               />
             </div>
             <div className="alert-opened-content-cta">
-              <a href="https://www.youtube.com/watch?v=zczs34aYmiM">
+              <a
+                target="_blank"
+                href="https://www.youtube.com/watch?v=zczs34aYmiM"
+              >
                 <button className="button button-basic">Watch Here</button>
               </a>
             </div>
