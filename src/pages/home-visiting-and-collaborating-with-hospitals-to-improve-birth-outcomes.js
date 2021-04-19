@@ -1,7 +1,175 @@
-import React from "react"
+// Base Imports
+import * as React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import Fade from "react-reveal/Fade"
+import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
+import algoliasearch from "algoliasearch/lite"
 
-function placeholder108() {
-  return <div>placeholder page</div>
+// Styles
+import "../components/pages.css"
+
+// Components
+import SEO from "../components/seo"
+
+// Sharing
+import Sharing from "../components/Sharing/sharing"
+
+const searchClient = algoliasearch(
+  "B604WWKJH0",
+  "156ba268a0517559cd6a89921ae9cb5f"
+)
+
+const planResult = ({ hit }) => {
+  const { headline, topic, plans, slug, teaser, img_url, read_time } = hit
+
+  return (
+    <div className="plan-result-card">
+      <Link to={`/${slug}/`}></Link>
+      <div className="plan-result-card-plan">
+        <div className="plan-result-card-image">
+          <img
+            src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
+            alt=""
+          />
+        </div>
+        <div className="plan-result-card-company">{plans}</div>
+      </div>
+      <div className="plan-result-card-meta">
+        <div className="plan-result-card-category">{topic}</div>
+        <div className="plan-result-card-title">{headline}</div>
+        <div className="plan-result-card-excerpt">{teaser}</div>
+        <div className="plan-result-card-read">{read_time} min read</div>
+      </div>
+    </div>
+  )
 }
 
-export default placeholder108
+const HomeVisiting = props => {
+  return (
+    <div>
+      <SEO
+        title="Home visit program improves prenatal health and birth outcomes"
+        description="Blue Cross and Blue Shield of Alabama collaborates with organizations focused on improving prenatal care and detecting health problems."
+      />
+      <Fade>
+        <div className="pp-hero">
+          <div className="pp-hero__share">
+            <div className="pp-hero__share-content">
+              <h4>Share</h4>
+              <Sharing
+                title="Home visit program improves prenatal health and birth outcomes"
+                url="https://www.bcbs.com/the-health-of-america/healthequity/home-visiting-and-collaborating-with-hospitals-to-improve-birth-outcomes/"
+              />
+            </div>
+          </div>
+          <div
+            className="pp-hero__image"
+            style={{
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-home-visiting-and-collaborating-with-hospitals-to-improve-birth-outcomes.jpg")`,
+            }}
+          >
+            <div className="pp-hero__meta">
+              <div className="pp-hero__meta-content">
+                <div className="pp-hero__category">
+                  <span>Maternal health</span>
+                </div>
+                {/* <div className="pp-hero__date">
+                  <span>Published March 3, 2021</span>
+                </div> */}
+                <div className="pp-hero__title">
+                  <h1>
+                    Home visiting and collaborating with hospitals to improve birth outcomes
+                  </h1>
+                </div>
+                <div className="pp-hero__author">
+                  <span>Kristin Gourlay</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Fade>
+
+      <div className="pp-main">
+        <Fade>
+          <div className="pp-related">
+            {/* <h5 className="pp-related__title">Related</h5>
+            <ul className="pp-related__list">
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Report</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
+                    Trends in pregnancy and childbirth complications in the U.S. 
+                  </a>
+                </div>
+              </li>              
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Podcast</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/podcast/podcast-improving-maternal-health-starts-pregnancy">
+                    Improving maternal health starts before pregnancy
+                  </a>
+                </div>
+              </li>
+            </ul> */}
+          </div>
+        </Fade>
+        <Fade>
+          <div className="pp-content">
+            <div className="pp-content__inner">
+              <p>
+                Helping pregnant women manage conditions like hypertension or substance use before they give birth leads to safer outcomes for mom and baby. Blue Cross and Blue Shield of Alabama collaborates with organizations focused on improving prenatal care and detecting health problems before they worsen.
+              </p>
+              <p>
+                In addition, Anthem BCBS’s New Baby, New LifeSM and Taking Care of Baby and Me® are comprehensive care management programs focused on improving prenatal health and birth outcomes for pregnant Medicaid members:
+              </p>
+              <ul className="pp-content__fancy-list">
+                <li>
+                  <p>
+                    The health plan supports Nurse Family Partnership, a 40-year-old program that pairs pregnant women and new mothers with a regular home visitor. Trained home visitors provide prenatal health education, help women prepare for a safe childbirth and keep connected to a family after childbirth to support healthy child development. Researchers find the program has prevent infant deaths, reduced preterm births and hypertension.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    One of the key causes of pregnancy-related complications—and sometimes death—is hypertension. Blue Cross and Blue Shield of Alabama has partnered with the <a href="https://www.alpqc.org/" target="_blank">Alabama Perinatal Quality Collaborative</a> to help hospitals implement programs to improve early detection and treatment of hypertension, including producing a toolkit for clinicians.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    BCBS Alabama, in collaboration with the state, has implemented the <em>AllBabies</em> program. This program identifies uninsured pregnant women who live in the one of three Alabama counties with the highest infant mortality rates. The uninsured women are eligible to enroll in a program that provides coverage throughout their pregnancy. Prenatal care, hospitalizations and delivery are covered. The health plan also provides additional support to women at high risk of complications, and offers a wellness program that provides education on having a healthy pregnancy. Women at high risk may also be connected to case managers who can work closely with doctors, hospitals and home health services to ensure a healthy pregnancy, childbirth and postpartum recovery.
+                  </p>
+                </li>
+              </ul>
+              <p><em>Blue Cross and Blue Shield of Alabama is a licensee of the Blue Cross Blue Shield Association, an association of independent, locally owned Blue Cross and Blue Shield companies.</em></p>
+            </div>
+          </div>
+        </Fade>
+      </div>
+
+      {/* <Fade>
+        <div className="pp-explore">
+          <h2>Explore more stories</h2>
+          <InstantSearch
+            searchClient={searchClient}
+            indexName="he_plan_profiles"
+          >
+            <Configure
+              hitsPerPage={2}
+              distinct
+              filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'Culturally appropriate interventions for mothers and newborns'"
+            />
+
+            <InfiniteHits hitComponent={planResult} />
+          </InstantSearch>
+        </div>
+      </Fade> */}
+    </div>
+  )
+}
+
+export default HomeVisiting
