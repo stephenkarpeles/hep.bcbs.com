@@ -44,12 +44,12 @@ const planResult = ({ hit }) => {
   )
 }
 
-const HomeVisits = props => {
+const ImprovePregnancyOutcomes = props => {
   return (
     <div>
       <SEO
-        title="Home visit program for pregnant women have safer pregnancies"
-        description="Home visits throughout a woman’s pregnancy can help address chronic conditions and other barriers to healthy pregnancies."
+        title="Improving pregnancy outcomes in women with diabetes"
+        description="Statewide initiative in South Carolina dedicated to addressing disparities in care including improved pregnancy outcomes in women with diabetes."
       />
       <Fade>
         <div className="pp-hero">
@@ -57,15 +57,15 @@ const HomeVisits = props => {
             <div className="pp-hero__share-content">
               <h4>Share</h4>
               <Sharing
-                title="Home visits address high risk conditions and social determinants of health"
-                url="https://www.bcbs.com/the-health-of-america/healthequity/home-visits-address-high-risk-conditions-and-social-determinants-of-health"
+                title="BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes"
+                url="https://www.bcbs.com/the-health-of-america/healthequity/bcbcs-sc-aims-to-improve-pregnancy-outcomes-in-women-with-diabetes/"
               />
             </div>
           </div>
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-home-visits-address-high-risk-conditions-and-social-determinants-of-health.jpg")`,
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-bcbssc-aims-to-improve-pregnancy-outcomes-in-women-with-diabetes.jpg")`,
             }}
           >
             <div className="pp-hero__meta">
@@ -75,12 +75,12 @@ const HomeVisits = props => {
                 </div>
                 <div className="pp-hero__title">
                   <h1>
-                    Home visits address high risk conditions and social
-                    determinants of health
+                    BlueCross BlueShield of South Carolina aims to improve
+                    pregnancy outcomes in women with diabetes
                   </h1>
                 </div>
                 <div className="pp-hero__author">
-                  <span>Kristin Gourlay</span>
+                  <span>Carlton Houston</span>
                 </div>
               </div>
             </div>
@@ -130,35 +130,73 @@ const HomeVisits = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                Home visiting for pregnant mothers is an evidence-based practice
-                shown to help women have healthier, safer pregnancies. For women
-                of color, who are likely to die from pregnancy-related causes or
-                experience pregnancy complications, a home visiting program can
-                help address some of the risk factors, including support in
-                managing chronic conditions like hypertension or diabetes.
-                Highmark Blue Cross Blue Shield of Western New York and Highmark
-                Blue Shield of Northeastern New York have created a high-risk
-                maternity home visiting case management program, partnering with
-                local agencies to deliver services in a mother’s home. Home
-                visitors can also address social determinants of health that
-                might affect a woman’s pregnancy, childbirth or postpartum
-                health, including housing and transportation issues.
+                BlueCross BlueShield of South Carolina and the BlueCross
+                BlueShield of South Carolina Foundation launched Diabetes Free
+                SC, an ambitious, long-term multi-million dollar, statewide
+                initiative dedicated to addressing disparities in care in
+                several strategic areas including improved pregnancy outcomes in
+                women with diabetes.  According to the American Diabetes
+                Association (ADA), more than 500,000 adults in the state have
+                diagnosed diabetes while an additional 120,000 are unaware that
+                they have the disease. African-Americans have a two times higher
+                death rate from the disease than white adults.
               </p>
               <p>
-                Members receiving home visits can work one on one, in person
-                when safe, with specialty-trained nurses who provide
-                individualized education and help coordinate care throughout a
-                mother’s pregnancy and for six months after delivery. Nurses
-                also follow up with a mother’s clinicians about her status and
-                facilitate specialty services or referrals.
+                According to David Pankau, president and CEO of BlueCross
+                BlueShield of South Carolina, this effort reflects the
+                organization’s commitment to improving the health of South
+                Carolina communities. He said, “We have a long history of
+                ensuring access to care through the work of the BlueCross
+                BlueShield of South Carolina Foundation. We understand that our
+                organization can play a meaningful role in reducing disparities
+                of care for the people of South Carolina. And, even as we build
+                upon the good work already being done, our efforts to address
+                disparities and assist in overcoming barriers to care continue
+                to develop and mature. We are putting a stake in the ground with
+                our commitment.”
               </p>
+              <p>Additional Facts:</p>
+              <ul className="pp-content__fancy-list">
+                <li>
+                  <p>
+                    26,000 people in South Carolina will be diagnosed this year
+                    with diabetes.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Nearly 35% of the state’s adult population has prediabetes.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    In addition to pregnancy, diabetes is also a significant
+                    factor in other conditions including kidney and
+                    cardiovascular disease, which disproportionately affects
+                    African-Americans.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Goals of the program also include reduced lifelong risk of
+                    diabetes in children; and the prevention of diabetes and its
+                    complications in adults.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The annual cost of care for adult South Carolinians with
+                    diagnosed diabetes is estimated at $5.89 billion (2017)
+                  </p>
+                </li>
+              </ul>
               <p>
                 <em>
-                  Highmark Blue Cross Blue Shield Western New York and Highmark
-                  Blue Shield Northeastern New York is an independent licensee
-                  of the Blue Cross Blue Shield Association, an association of
-                  independent, locally operated Blue Cross and Blue Shield
-                  companies.
+                  BlueCross BlueShield of South Carolina and the BlueCross
+                  BlueShield of South Carolina Foundation are independent
+                  licensees of the Blue Cross Blue Shield Association, an
+                  association of independent, locally operated Blue Cross and
+                  Blue Shield companies.
                 </em>
               </p>
             </div>
@@ -167,13 +205,13 @@ const HomeVisits = props => {
       </div>
 
       <Fade>
-        <div className="pp-explore pp-explore-single-card">
+        <div className="pp-explore">
           <h2>Explore more stories</h2>
           <InstantSearch searchClient={searchClient} indexName="test_index">
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'Using data and technology to identify and support high-risk pregnancies'"
+              filters="headline:'Improving postpartum care for high-risk mothers' OR headline:'Maternity coordinators help manage high risk conditions'"
             />
 
             <InfiniteHits hitComponent={planResult} />
@@ -184,4 +222,4 @@ const HomeVisits = props => {
   )
 }
 
-export default HomeVisits
+export default ImprovePregnancyOutcomes

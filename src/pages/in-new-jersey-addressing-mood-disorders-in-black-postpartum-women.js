@@ -61,14 +61,16 @@ const PlanProfile2 = props => {
             <div className="pp-hero__share-content">
               <h4>Share</h4>
               <Sharing
-                title="Addressing postpartum in Black women"
-                url="https://www.bcbs.com/healthequity/in-new-jersey-addressing-mood-disorders-in-black-postpartum-women/"
+                title="In New Jersey, addressing mood disorders in Black postpartum women"
+                url="https://www.bcbs.com/the-health-of-america/healthequity/in-new-jersey-addressing-mood-disorders-in-black-postpartum-women/"
               />
             </div>
           </div>
           <div
             className="pp-hero__image"
-            style={{ backgroundImage: `url(${nursePatientImg})` }}
+            style={{
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-in-new-jersey-addressing-mood-disorders-in-black-postpartum-women-a.png")`,
+            }}
           >
             <div className="pp-hero__meta">
               <div className="pp-hero__meta-content">
@@ -100,34 +102,23 @@ const PlanProfile2 = props => {
             <ul className="pp-related__list">
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
-                  <span>Health of America</span>
+                  <span>Article</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Doulas of color can help moms of color have healthier babies
-                  </Link>
+                  <a href="https://www.bcbs.com/the-health-of-america/articles/pediatricians-screen-new-moms-postpartum-depression">
+                    Pediatricians screen new moms for postpartum depression
+                  </a>
                 </div>
               </li>
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
-                  <span>Report</span>
+                  <span>Article</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Inclusive and equitable perinatal care for pregnant Black
-                    women
-                  </Link>
-                </div>
-              </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Report</span>
-                </div>
-                <div className="pp-related__text">
-                  <Link to="/">
-                    In New Jersey, addressing postpartum depression in Black
-                    mothers
-                  </Link>
+                  <a href="https://www.bcbs.com/the-health-of-america/articles/lowering-chronic-disease-makes-childbirth-safer-mississippi-women">
+                    Lowering chronic disease makes childbirth safer for
+                    Mississippi women
+                  </a>
                 </div>
               </li>
             </ul>
@@ -292,13 +283,13 @@ const PlanProfile2 = props => {
       </div>
 
       <Fade>
-        <div className="pp-explore pp-explore-single-card">
+        <div className="pp-explore">
           <h2>Explore more stories</h2>
           <InstantSearch searchClient={searchClient} indexName="test_index">
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'How doulas can improve the safety of childbirth for women of color'"
+              filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'Improving postpartum care for high-risk mothers'"
             />
 
             <InfiniteHits hitComponent={planResult} />
