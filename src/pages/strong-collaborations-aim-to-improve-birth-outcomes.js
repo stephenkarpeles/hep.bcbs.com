@@ -129,7 +129,7 @@ const StrongCollaborations = props => {
                 leading cause of infant death in the state, through pledges from
                 hospitals to end non-medically indicated elective inductions,
                 public and private alignment on a non-payment policy and
-                outreach to at-risk mothers. 
+                outreach to at-risk mothers.
               </p>
               <p>
                 Launched in 2011, the BOI has three interconnected goals that
@@ -196,7 +196,10 @@ const StrongCollaborations = props => {
       <Fade>
         <div className="pp-explore">
           <h2>Explore more stories</h2>
-          <InstantSearch searchClient={searchClient} indexName="test_index">
+          <InstantSearch
+            searchClient={searchClient}
+            indexName="he_plan_profiles"
+          >
             <Configure
               hitsPerPage={2}
               distinct

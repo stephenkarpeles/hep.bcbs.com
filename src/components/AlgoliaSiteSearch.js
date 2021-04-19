@@ -10,8 +10,8 @@ const searchClient = algoliasearch(
 
 const AlgoliaSiteSearch = () => {
   return (
-    <InstantSearch indexName="test_index" searchClient={searchClient}>
-      <InstantSearch searchClient={searchClient} indexName="test_index">
+    <InstantSearch indexName="he_plan_profiles" searchClient={searchClient}>
+      <InstantSearch searchClient={searchClient} indexName="he_plan_profiles">
         <Configure hitsPerPage={5} />
         <Autocomplete />
         {/* <VoiceSearch

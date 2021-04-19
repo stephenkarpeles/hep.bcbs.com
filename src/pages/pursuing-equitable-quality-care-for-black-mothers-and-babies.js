@@ -173,7 +173,7 @@ const EquitableQualityCare = props => {
       {/* <Fade>
         <div className="pp-explore">
           <h2>Explore more stories</h2>
-          <InstantSearch searchClient={searchClient} indexName="test_index">
+          <InstantSearch searchClient={searchClient} indexName="he_plan_profiles">
             <Configure
               hitsPerPage={2}
               distinct
