@@ -54,7 +54,10 @@ const PressKitPage = props => {
 
   return (
     <>
-      <SEO title="Press Kit" />
+      <SEO
+        title="Press and Media"
+        description="Access the latest press release, press tools and media contacts"
+      />
 
       <section className="intro-press" id="intro">
         <div className="inner-content">
@@ -73,7 +76,9 @@ const PressKitPage = props => {
                 National Health Equity Strategy and Maternal Health Program
               </p>
               <div className="download-link">
-                <a href={pressFull} target="_blank">Download press kit</a>
+                <a href={pressFull} target="_blank">
+                  Download press kit
+                </a>
               </div>
             </div>
           </div>
@@ -177,7 +182,12 @@ const PressKitPage = props => {
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p>
-                      The strategy includes collecting data to measure disparities, scaling effective programs, working with providers to improve outcomes and address unconscious bias, leaning into partnerships at the community level, and influencing policy decisions at the state and federal levels.
+                      The strategy includes collecting data to measure
+                      disparities, scaling effective programs, working with
+                      providers to improve outcomes and address unconscious
+                      bias, leaning into partnerships at the community level,
+                      and influencing policy decisions at the state and federal
+                      levels.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
