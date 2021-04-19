@@ -79,12 +79,11 @@ const HealthEducation = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    Culturally appropriate interventions for mothers and
-                    newborns
+                    Health education and doula support for pregnant moms
                   </h1>
                 </div>
                 <div className="pp-hero__author">
-                  <span>Brianna Keefe</span>
+                  <span>Kristin Gourlay</span>
                 </div>
               </div>
             </div>
