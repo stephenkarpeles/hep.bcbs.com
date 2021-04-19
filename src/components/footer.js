@@ -105,7 +105,7 @@ function Footer({ props, siteTitle }) {
             <div className="footer-copyright">
               © {new Date().getFullYear()} Blue Cross Blue Shield Association -
               All Rights Reserved. The Blue Cross Blue Shield Association is an
-              association of independant, locally operated Blue Cross and Blue
+              association of independent, locally operated Blue Cross and Blue
               Shield Companies.
             </div>
           </div>
