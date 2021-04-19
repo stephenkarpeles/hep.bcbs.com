@@ -73,7 +73,7 @@
 
   &__image {
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     height: 540px;
     width: 83vw;
     position: relative;

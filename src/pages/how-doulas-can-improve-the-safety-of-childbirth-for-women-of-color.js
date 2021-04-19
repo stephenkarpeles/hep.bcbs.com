@@ -103,7 +103,7 @@ const PlanProfile1 = props => {
                   <span>Health of America</span>
                 </div>
                 <div className="pp-related__text">
-                  <a to="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
+                  <a href="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
                     Trends in pregnancy and childbirth complications in the U.S.
                   </a>
                 </div>
@@ -113,7 +113,7 @@ const PlanProfile1 = props => {
                   <span>Podcast</span>
                 </div>
                 <div className="pp-related__text">
-                  <a to="https://www.bcbs.com/the-health-of-america/podcast/podcast-improving-maternal-health-starts-pregnancy">
+                  <a href="https://www.bcbs.com/the-health-of-america/podcast/podcast-improving-maternal-health-starts-pregnancy">
                     Improving maternal health starts before pregnancy
                   </a>
                 </div>

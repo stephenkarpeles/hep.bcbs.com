@@ -68,7 +68,9 @@ const PlanProfile3 = props => {
           </div>
           <div
             className="pp-hero__image"
-            style={{ backgroundImage: `url(${nursePatientImg})` }}
+            style={{
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-culturally-appropriate-interventions-for-mothers-and-newborns-a.jpg")`,
+            }}
           >
             <div className="pp-hero__meta">
               <div className="pp-hero__meta-content">
@@ -100,12 +102,22 @@ const PlanProfile3 = props => {
             <ul className="pp-related__list">
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
-                  <span>Health of America</span>
+                  <span>Article</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Doulas of color can help moms of color have healthier babies
-                  </Link>
+                  <a href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities">
+                    BCBSA announces national health equity strategy
+                  </a>
+                </div>
+              </li>              
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Maternal Health</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
+                    Trends in pregnancy and childbirth complications in the U.S.
+                  </a>
                 </div>
               </li>
               <li className="pp-related__list-item">
@@ -113,21 +125,9 @@ const PlanProfile3 = props => {
                   <span>Report</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Inclusive and equitable perinatal care for pregnant Black
-                    women
-                  </Link>
-                </div>
-              </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Report</span>
-                </div>
-                <div className="pp-related__text">
-                  <Link to="/">
-                    In New Jersey, addressing postpartum depression in Black
-                    mothers
-                  </Link>
+                  <a href="https://www.bcbs.com/coronavirus-updates/stories/the-front-lines-of-covid-19-mass-vaccination-efforts">
+                    On the front lines of COVID-19 mass vaccination efforts
+                  </a>
                 </div>
               </li>
             </ul>
