@@ -52,7 +52,7 @@ const PlanProfile1 = props => {
   return (
     <div>
       <SEO
-        title="How doulas can improve the safety of childbirth for women of color"
+        title="How doulas can improve childbirth safety for women of color"
         description="Doulas can help reduce severe maternal morbidity (SMM) among Black, Indigenous and other women of color (BIPOC)."
       />
       <Fade>
@@ -103,31 +103,19 @@ const PlanProfile1 = props => {
                   <span>Health of America</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Doulas of color can help moms of color have healthier babies
-                  </Link>
+                  <a to="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
+                    Trends in pregnancy and childbirth complications in the U.S.
+                  </a>
                 </div>
               </li>
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
-                  <span>Report</span>
+                  <span>Podcast</span>
                 </div>
                 <div className="pp-related__text">
-                  <Link to="/">
-                    Inclusive and equitable perinatal care for pregnant Black
-                    women
-                  </Link>
-                </div>
-              </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Report</span>
-                </div>
-                <div className="pp-related__text">
-                  <Link to="/">
-                    In New Jersey, addressing postpartum depression in Black
-                    mothers
-                  </Link>
+                  <a to="https://www.bcbs.com/the-health-of-america/podcast/podcast-improving-maternal-health-starts-pregnancy">
+                    Improving maternal health starts before pregnancy
+                  </a>
                 </div>
               </li>
             </ul>
