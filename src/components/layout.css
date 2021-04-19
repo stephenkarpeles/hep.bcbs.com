@@ -1714,3 +1714,9 @@ header {
     }
   }
 }
+
+/* Password Protect Page */
+main div h1 + h4 + form ~ a {
+  /* Making this overly selective, because we can't edit the root elements of the plugin */
+  display: none;
+}
