@@ -9,6 +9,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
+      resolve: '@mkitio/gatsby-theme-password-protect',
+      options: {
+        password: 'sUp3rS3cR3t' // delete or `undefined` to disable password protection
+      }
+    },
+    {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: `${__dirname}/src/components/layout.js`,
