@@ -767,11 +767,7 @@ header {
     flex-basis: 100%;
 
     @media (--large-breakpoint-up) {
-      flex-basis: 50%;
-    }
-
-    @media (--extra-large-breakpoint) {
-      flex-basis: 55%;
+      flex-basis: 60%;
     }
 
     &-wrapper {
@@ -811,7 +807,6 @@ header {
 
       @media (--large-breakpoint-up) {
         font-size: var(--font-size-quote);
-        width: 480px;
         margin-top: 0;
       }
 
@@ -847,25 +842,27 @@ header {
       font-family: var(--font-roman);
       width: 100%;
       padding-left: var(--spacer-15);
+      position: relative;
 
       @media (--medium-breakpoint-up) {
         padding-left: var(--spacer-2);
       }
 
-      @media (--large-breakpoint-up) {
-        width: 480px;
-      }
+      /* &::after {
+        content: "\201C";
+        font-size: var(--font-size-40);
+        font-family: var(--font-condensed-bold);
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+      } */
     }
 
     &-details {
       flex-basis: 100%;
 
       @media (--large-breakpoint-up) {
-        flex-basis: 46%;
-      }
-
-      @media (--extra-large-breakpoint) {
-        flex-basis: 41%;
+        flex-basis: 32%;
       }
     }
   }
