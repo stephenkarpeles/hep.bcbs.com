@@ -62,7 +62,7 @@ const PlanProfile4 = props => {
               <h4>Share</h4>
               <Sharing
                 title="Eliminating food insecurity improves maternal/fetal health"
-                url="https://www.bcbs.com/healthequity/eliminating-food-insecurity-to-improve-maternal-and-fetal-health/"
+                url="https://www.bcbs.com/the-health-of-america/eliminating-food-insecurity-to-improve-maternal-and-fetal-health/"
               />
             </div>
           </div>

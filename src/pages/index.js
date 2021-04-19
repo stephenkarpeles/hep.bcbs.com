@@ -58,7 +58,10 @@ const IndexPage = props => {
 
   return (
     <>
-      <SEO title="Home" />
+      <SEO
+        title="Blue Health Equity"
+        description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
+      />
       <Alert />
       <section className="intro" id="intro">
         <div className="max-container">
@@ -70,8 +73,8 @@ const IndexPage = props => {
                 loading="lazy"
                 width="640"
                 height="360"
-                src="https://player.vimeo.com/video/532000011"
-                title="Vimeo video player"
+                src="https://www.youtube.com/embed/KNUblC8hLPg"
+                title="Youtube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
@@ -196,12 +199,42 @@ const IndexPage = props => {
             </div>
           </div>
           <div className="sources">
-            Sources: 1) <u><a target="_blank" href="https://minorityhealth.hhs.gov/omh/browse.aspx?lvl=4&lvlid=28">OMH: Stroke and African Americans</a></u> 2){" "}
-            <u><a href="https://www.bcbs.com/the-health-of-america/reports/millennial-health-trends-behavioral-health-conditions" target="_blank">Millennial Health: Trends in Behavioral Health Conditions</a></u> 3){" "}
-            <u><a href="https://www.cdc.gov/diabetes/pdfs/data/statistics/national-diabetes-statistics-report.pdf" target="_blank">CDC: National Diabetes Statistics Report</a></u> 4){" "}
+            Sources: 1){" "}
             <u>
-              <a href="https://www.ajmc.com/view/racial-disparities-persist-in-maternal-morbidity-mortality-and-infant-health" target="_blank">AJMC: Racial Disparities Persist in Maternal Morbidity, Mortality
-              and Infant Health</a>
+              <a
+                target="_blank"
+                href="https://minorityhealth.hhs.gov/omh/browse.aspx?lvl=4&lvlid=28"
+              >
+                OMH: Stroke and African Americans
+              </a>
+            </u>{" "}
+            2){" "}
+            <u>
+              <a
+                href="https://www.bcbs.com/the-health-of-america/reports/millennial-health-trends-behavioral-health-conditions"
+                target="_blank"
+              >
+                Millennial Health: Trends in Behavioral Health Conditions
+              </a>
+            </u>{" "}
+            3){" "}
+            <u>
+              <a
+                href="https://www.cdc.gov/diabetes/pdfs/data/statistics/national-diabetes-statistics-report.pdf"
+                target="_blank"
+              >
+                CDC: National Diabetes Statistics Report
+              </a>
+            </u>{" "}
+            4){" "}
+            <u>
+              <a
+                href="https://www.ajmc.com/view/racial-disparities-persist-in-maternal-morbidity-mortality-and-infant-health"
+                target="_blank"
+              >
+                AJMC: Racial Disparities Persist in Maternal Morbidity,
+                Mortality and Infant Health
+              </a>
             </u>
           </div>
         </div>
