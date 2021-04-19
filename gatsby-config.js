@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: '@mkitio/gatsby-theme-password-protect',
       options: {
-        password: 'sUp3rS3cR3t' // delete or `undefined` to disable password protection
+        password: 'HealthEquity2021!' // delete or `undefined` to disable password protection
       }
     },
     {
