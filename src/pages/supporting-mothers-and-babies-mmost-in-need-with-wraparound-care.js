@@ -65,7 +65,7 @@ const WrapAroundCare = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-supporting-mothers-and-babies-most-in-need-with-wraparound-care.jpg")`,
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-supporting-mothers-and-babies-most-in-need-with-wraparound-care.png")`,
             }}
           >
             <div className="pp-hero__meta">
