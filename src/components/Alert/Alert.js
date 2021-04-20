@@ -57,7 +57,9 @@ const AlertBanner = () => {
               </div>
             </div>
 
-            <div className="alert-opened-content-date">April 20, 2021</div>
+            <div className="alert-opened-content-date">
+              April 20, 2021 until 1pm CDT
+            </div>
             <div className="alert-opened-content-logo">
               <StaticImage
                 style={{ maxWidth: 380 }}
