@@ -79,7 +79,8 @@ const HomeVisiting = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    Home visiting and collaborating with hospitals to improve birth outcomes
+                    Home visiting and collaborating with hospitals to improve
+                    birth outcomes
                   </h1>
                 </div>
                 <div className="pp-hero__author">
@@ -102,10 +103,10 @@ const HomeVisiting = props => {
                 </div>
                 <div className="pp-related__text">
                   <a href="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
-                    Trends in pregnancy and childbirth complications in the U.S. 
+                    Trends in pregnancy and childbirth complications in the U.S.
                   </a>
                 </div>
-              </li>              
+              </li>
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
                   <span>Podcast</span>
@@ -123,29 +124,64 @@ const HomeVisiting = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                Helping pregnant women manage conditions like hypertension or substance use before they give birth leads to safer outcomes for mom and baby. Blue Cross and Blue Shield of Alabama collaborates with organizations focused on improving prenatal care and detecting health problems before they worsen.
-              </p>
-              <p>
-                In addition, Anthem BCBS’s New Baby, New LifeSM and Taking Care of Baby and Me® are comprehensive care management programs focused on improving prenatal health and birth outcomes for pregnant Medicaid members:
+                In addition, Anthem BCBS’s New Baby, New LifeSM and Taking Care
+                of Baby and Me® are comprehensive care management programs
+                focused on improving prenatal health and birth outcomes for
+                pregnant Medicaid members:
               </p>
               <ul className="pp-content__fancy-list">
                 <li>
                   <p>
-                    The health plan supports Nurse Family Partnership, a 40-year-old program that pairs pregnant women and new mothers with a regular home visitor. Trained home visitors provide prenatal health education, help women prepare for a safe childbirth and keep connected to a family after childbirth to support healthy child development. Researchers find the program has prevent infant deaths, reduced preterm births and hypertension.
+                    The health plan supports Nurse Family Partnership, a
+                    40-year-old program that pairs pregnant women and new
+                    mothers with a regular home visitor. Trained home visitors
+                    provide prenatal health education, help women prepare for a
+                    safe childbirth and keep connected to a family after
+                    childbirth to support healthy child development. Researchers
+                    find the program has prevented infant deaths, reduced preterm
+                    births and hypertension.
                   </p>
                 </li>
                 <li>
                   <p>
-                    One of the key causes of pregnancy-related complications—and sometimes death—is hypertension. Blue Cross and Blue Shield of Alabama has partnered with the <a href="https://www.alpqc.org/" target="_blank">Alabama Perinatal Quality Collaborative</a> to help hospitals implement programs to improve early detection and treatment of hypertension, including producing a toolkit for clinicians.
+                    One of the key causes of pregnancy-related complications—and
+                    sometimes death—is hypertension. Blue Cross and Blue Shield
+                    of Alabama has partnered with the{" "}
+                    <a href="https://www.alpqc.org/" target="_blank">
+                      Alabama Perinatal Quality Collaborative
+                    </a>{" "}
+                    to help hospitals implement programs to improve early
+                    detection and treatment of hypertension, including producing
+                    a toolkit for clinicians.
                   </p>
                 </li>
                 <li>
                   <p>
-                    BCBS Alabama, in collaboration with the state, has implemented the <em>AllBabies</em> program. This program identifies uninsured pregnant women who live in the one of three Alabama counties with the highest infant mortality rates. The uninsured women are eligible to enroll in a program that provides coverage throughout their pregnancy. Prenatal care, hospitalizations and delivery are covered. The health plan also provides additional support to women at high risk of complications, and offers a wellness program that provides education on having a healthy pregnancy. Women at high risk may also be connected to case managers who can work closely with doctors, hospitals and home health services to ensure a healthy pregnancy, childbirth and postpartum recovery.
+                    BCBS Alabama, in collaboration with the state, has
+                    implemented the <em>AllBabies</em> program. This program
+                    identifies uninsured pregnant women who live in one of
+                    three Alabama counties with the highest infant mortality
+                    rates. The uninsured women are eligible to enroll in a
+                    program that provides coverage throughout their pregnancy.
+                    Prenatal care, hospitalizations and delivery are covered.
+                    The health plan also provides additional support to women at
+                    high risk of complications, and offers a wellness program
+                    that provides education on having a healthy pregnancy. Women
+                    at high risk may also be connected to case managers who can
+                    work closely with doctors, hospitals and home health
+                    services to ensure a healthy pregnancy, childbirth and
+                    postpartum recovery.
                   </p>
                 </li>
               </ul>
-              <p><em>Blue Cross and Blue Shield of Alabama is a licensee of the Blue Cross Blue Shield Association, an association of independent, locally owned Blue Cross and Blue Shield companies.</em></p>
+              <p>
+                <em>
+                  Blue Cross and Blue Shield of Alabama is a licensee of the
+                  Blue Cross Blue Shield Association, an association of
+                  independent, locally owned Blue Cross and Blue Shield
+                  companies.
+                </em>
+              </p>
             </div>
           </div>
         </Fade>
