@@ -144,7 +144,7 @@ const BlueHealthEquityRoundtable = props => {
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'Improving postpartum care for high-risk mothers' OR headline:'Eliminating food insecurity to improve maternal and fetal health'"
+              filters="headline:'Kim Keck’s new Plan Profile' OR headline:'Eliminating food insecurity to improve maternal and fetal health'"
             />
 
             <InfiniteHits hitComponent={planResult} />
