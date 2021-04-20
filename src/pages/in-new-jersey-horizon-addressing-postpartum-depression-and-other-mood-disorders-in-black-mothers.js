@@ -57,7 +57,7 @@ const NewJerseyHorizon = props => {
             <div className="pp-hero__share-content">
               <h4>Share</h4>
               <Sharing
-                title="In New Jersey, Horizon addressing postpartum depression and other mood disorders in Black mothers"
+                title="In New Jersey, Horizon is addressing postpartum depression and other mood disorders in Black mothers"
                 url="https://www.bcbs.com/the-health-of-america/healthequity/in-new-jersey-horizon-addressing-postpartum-depression-and-other-mood-disorders-in-black-mothers/"
               />
             </div>
@@ -78,7 +78,7 @@ const NewJerseyHorizon = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    In New Jersey, Horizon addressing postpartum depression and
+                    In New Jersey, Horizon is addressing postpartum depression and
                     other mood disorders in Black mothers
                   </h1>
                 </div>
