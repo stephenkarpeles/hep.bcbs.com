@@ -68,7 +68,9 @@ const PlanProfile1 = props => {
           </div>
           <div
             className="pp-hero__image"
-            style={{ backgroundImage: `url(${nursePatientImg})` }}
+            style={{
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-how-doulas-can-improve-the-safety-of-childbirth-for-women-of-color-a.png")`,
+            }}
           >
             <div className="pp-hero__meta">
               <div className="pp-hero__meta-content">
