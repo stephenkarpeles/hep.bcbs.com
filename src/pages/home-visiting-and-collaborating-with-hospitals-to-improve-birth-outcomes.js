@@ -124,10 +124,10 @@ const HomeVisiting = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                In addition, Anthem BCBS’s New Baby, New LifeSM and Taking Care
-                of Baby and Me® are comprehensive care management programs
-                focused on improving prenatal health and birth outcomes for
-                pregnant Medicaid members:
+                In addition, Anthem BCBS’s New Baby, New Life<sup>SM</sup> and
+                Taking Care of Baby and Me® are comprehensive care management
+                programs focused on improving prenatal health and birth outcomes
+                for pregnant Medicaid members:
               </p>
               <ul className="pp-content__fancy-list">
                 <li>
@@ -138,8 +138,8 @@ const HomeVisiting = props => {
                     provide prenatal health education, help women prepare for a
                     safe childbirth and keep connected to a family after
                     childbirth to support healthy child development. Researchers
-                    find the program has prevented infant deaths, reduced preterm
-                    births and hypertension.
+                    find the program has prevented infant deaths, reduced
+                    preterm births and hypertension.
                   </p>
                 </li>
                 <li>
@@ -159,18 +159,17 @@ const HomeVisiting = props => {
                   <p>
                     BCBS Alabama, in collaboration with the state, has
                     implemented the <em>AllBabies</em> program. This program
-                    identifies uninsured pregnant women who live in one of
-                    three Alabama counties with the highest infant mortality
-                    rates. The uninsured women are eligible to enroll in a
-                    program that provides coverage throughout their pregnancy.
-                    Prenatal care, hospitalizations and delivery are covered.
-                    The health plan also provides additional support to women at
-                    high risk of complications, and offers a wellness program
-                    that provides education on having a healthy pregnancy. Women
-                    at high risk may also be connected to case managers who can
-                    work closely with doctors, hospitals and home health
-                    services to ensure a healthy pregnancy, childbirth and
-                    postpartum recovery.
+                    identifies uninsured pregnant women who live in one of three
+                    Alabama counties with the highest infant mortality rates.
+                    The uninsured women are eligible to enroll in a program that
+                    provides coverage throughout their pregnancy. Prenatal care,
+                    hospitalizations and delivery are covered. The health plan
+                    also provides additional support to women at high risk of
+                    complications, and offers a wellness program that provides
+                    education on having a healthy pregnancy. Women at high risk
+                    may also be connected to case managers who can work closely
+                    with doctors, hospitals and home health services to ensure a
+                    healthy pregnancy, childbirth and postpartum recovery.
                   </p>
                 </li>
               </ul>
