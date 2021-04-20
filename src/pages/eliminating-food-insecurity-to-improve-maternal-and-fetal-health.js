@@ -199,8 +199,7 @@ const PlanProfile4 = props => {
                 offering mothers and families in need clinically tailored meals
                 and food boxes as well as nutritional coaching. Members can
                 start as early as 20 weeks into their pregnancy and continue
-                through the second month after birth. The program, called{" "}
-                <strong>Food Rx</strong>, is a partnership with Project Well and
+                through the second month after birth. The program is a partnership with Project Well and
                 Second Harvest Heartland, which will deliver the food and the
                 coaching. Members will also be connected to food programs and
                 solutions to meet other social needs through case management.
