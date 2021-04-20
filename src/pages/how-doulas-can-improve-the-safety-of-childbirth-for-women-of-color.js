@@ -280,7 +280,7 @@ const PlanProfile1 = props => {
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'Strong partnerships aim to improve birth outcomes' OR headline:'Culturally appropriate interventions for mothers and newborns'"
+              filters="headline:'Strong collaborations aim to improve birth outcomes' OR headline:'Culturally appropriate interventions for mothers and newborns'"
             />
 
             <InfiniteHits hitComponent={planResult} />
