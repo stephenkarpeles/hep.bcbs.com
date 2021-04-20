@@ -54,6 +54,7 @@
     /* Fix Firefox inconsistency */
     .gatsby-image-wrapper-constrained {
       display: block !important;
+      height: 240px;
     }
 
     img {
