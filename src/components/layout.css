@@ -911,6 +911,16 @@ header {
         &::marker {
           font-size: var(--font-size-h4);
         }
+
+        a {
+          color: var(--color-blue);
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
       }
 
       @media (--medium-breakpoint-up) {
