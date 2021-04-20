@@ -62,7 +62,7 @@ const IndexPage = props => {
         title="Blue Health Equity"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
-      <Alert />
+      {/* <Alert /> */}
       <section className="intro" id="intro">
         <div className="max-container">
           <h1 id="healthequity">{t("home.title")}</h1>
