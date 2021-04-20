@@ -25,7 +25,7 @@ const AlertBanner = () => {
             layout="fullWidth"
             aspectRatio={3 / 1}
             alt=""
-            src="../../images/health-equity-roundtable-alert-banner.png"
+            src="../../images/health-equity-roundtable-alert-banner.jpg"
           />
 
           <div
