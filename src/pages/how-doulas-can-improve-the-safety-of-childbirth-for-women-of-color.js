@@ -165,7 +165,7 @@ const PlanProfile1 = props => {
                   href="https://www.marchofdimes.org/materials/Doulas%20and%20birth%20outcomes%20position%20statement%20final%20January%2030%20PM.pdf"
                   target="_blank"
                 >
-                  According to the March of Dimes
+                  According to March of Dimes
                 </a>
                 , “The role of doula care in reducing c-sections is important,
                 because c-sections contribute to the risk of maternal morbidity

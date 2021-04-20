@@ -123,7 +123,7 @@ const BreakingBias = props => {
                 To support healthcare workers in identifying and addressing
                 their own implicit biases,{" "}
                 <strong>Blue Cross and Blue Shield of North Carolina</strong>{" "}
-                (Blue Cross NC) helped the March of Dimes launch its national
+                (Blue Cross NC) helped March of Dimes launch its national
                 Breaking Through Bias in Maternity Care program in North
                 Carolina, which was converted to a virtual experience due to the
                 COVID-19 pandemic. Maternal care providers across North Carolina

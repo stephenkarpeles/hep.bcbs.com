@@ -428,10 +428,10 @@ const tabItems = [
           Madeline and Savannah.
         </p>
         <p>
-          The March of Dimes is a national, non-profit organization that was
+          March of Dimes is a national, non-profit organization that was
           established in 1938. The mission of the foundation is to improve the
           health of babies by preventing birth defects, premature birth and
-          infant mortality. The March of Dimes funds programs of research,
+          infant mortality. March of Dimes funds programs of research,
           community services, education and advocacy.
         </p>
       </>,
