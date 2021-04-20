@@ -96,39 +96,19 @@ const BlueHealthEquityRoundtable = props => {
       <div className="pp-main">
         <Fade>
           <div className="pp-related">
-            {/* <h5 className="pp-related__title">Related</h5>
+            <h5 className="pp-related__title">Related</h5>
             <ul className="pp-related__list">
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
-                  <span>Report</span>
+                  <span>Press Release</span>
                 </div>
                 <div className="pp-related__text">
-                  <a href="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
-                    Trends in Pregnancy and Childbirth Complications in the US
+                  <a href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities">
+                    BCBS announces national health equity strategy to confront the nation’s crisis in racial health disparities
                   </a>
                 </div>
               </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Article</span>
-                </div>
-                <div className="pp-related__text">
-                  <a href="https://www.bcbs.com/the-health-of-america/articles/bcbs-companies-support-new-and-expectant-mothers">
-                    BCBS companies support new and expectant mothers
-                  </a>
-                </div>
-              </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Podcast</span>
-                </div>
-                <div className="pp-related__text">
-                  <a href="https://www.bcbs.com/the-health-of-america/podcast/podcast-improving-maternal-health-starts-pregnancy">
-                    Improving maternal health starts before pregnancy
-                  </a>
-                </div>
-              </li>
-            </ul> */}
+            </ul>
           </div>
         </Fade>
         <Fade>
@@ -139,7 +119,7 @@ const BlueHealthEquityRoundtable = props => {
                   loading="lazy"
                   width="640"
                   height="360"
-                  src="https://www.youtube.com/embed/I9bxujl_D8o"
+                  src="https://www.youtube.com/embed/zczs34aYmiM"
                   title="Vimeo video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -154,7 +134,7 @@ const BlueHealthEquityRoundtable = props => {
         </Fade>
       </div>
 
-      {/* <Fade>
+      <Fade>
         <div className="pp-explore">
           <h2>Explore more stories</h2>
           <InstantSearch
@@ -164,13 +144,13 @@ const BlueHealthEquityRoundtable = props => {
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'Improving postpartum care for high-risk mothers' OR headline:'Maternity coordinators help manage high risk conditions'"
+              filters="headline:'Improving postpartum care for high-risk mothers' OR headline:'Eliminating food insecurity to improve maternal and fetal health'"
             />
 
             <InfiniteHits hitComponent={planResult} />
           </InstantSearch>
         </div>
-      </Fade> */}
+      </Fade>
     </div>
   )
 }
