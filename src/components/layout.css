@@ -887,14 +887,34 @@ header {
   &--details {
     &-points {
       width: 100%;
+      
+      ul {
+        margin: 0;
+        padding: 0 0 0 var(--spacer-15);;
+      }
 
-      li {
-        list-style-image: url("../images/icons/checkmark.svg");
-        padding-left: 0.5rem;
+      li {        
+        list-style-type: none;
+        padding-left: 18px;
+        position: relative;
 
-        &::marker {
-          font-size: var(--font-size-h4);
+        &::after {
+          position: absolute;
+          left: -15px;
+          top: 3px;
+          content: '';
+          display: inline-block;
+          z-index: 100;
+          background-image: url("../images/icons/checkmark.svg");
+          background-repeat: no-repeat;
+          background-position: center left;
+          width: 15px;
+          height: 15px;
         }
+
+        /* &::marker {
+          font-size: var(--font-size-h4);
+        } */
 
         a {
           color: var(--color-blue);
