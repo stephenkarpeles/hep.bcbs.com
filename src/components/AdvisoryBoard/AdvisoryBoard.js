@@ -441,7 +441,7 @@ const tabItems = [
     id: 8,
     name: "Richard Taylor",
     title: "CEO",
-    company: "ImbuTec",
+    company: "ImbuTec®",
     image: [
       <>
         <StaticImage src="../../images/advisory-board/richard-taylor.jpg" />
