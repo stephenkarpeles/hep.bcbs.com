@@ -257,7 +257,7 @@ const PlanProfile3 = props => {
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'In New Jersey, addressing mood disorders in Black postpartum women'"
+              filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'In New Jersey, addressing mood disorders in postpartum Black women'"
             />
 
             <InfiniteHits hitComponent={planResult} />
