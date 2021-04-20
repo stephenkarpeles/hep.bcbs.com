@@ -8,12 +8,12 @@ import Layout from "../components/layout"
 import Newsletter from "../components/Newsletter/Newsletter"
 import "./press-kit.css"
 import {
-    Accordion,
-    AccordionItem,
-    AccordionItemHeading,
-    AccordionItemButton,
-    AccordionItemPanel,
-} from 'react-accessible-accordion';
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion"
 
 import communityHighlights from "../../static/assets/files/Press-Kit_Community-Highlights.pdf"
 import factSheet from "../../static/assets/files/Press-Kit_Factsheet.pdf"
@@ -163,7 +163,7 @@ const PressKitPage = props => {
                   <AccordionItemPanel>
                     <p>
                       BCBSA’s National Health Equity Strategy intends to change
-                      the trajectory of heath disparities and re-imagine a more
+                      the trajectory of health disparities and reimagine a more
                       equitable healthcare system through close collaboration
                       with providers and local community organizations. The
                       multi-year strategy will focus on four conditions that

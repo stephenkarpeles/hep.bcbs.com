@@ -820,7 +820,7 @@ header {
         font-size: var(--font-size-base-small);
         line-height: var(--line-height-h6);
         text-transform: uppercase;
-        margin-top: var(--spacer-3);
+        margin-top: var(--spacer-2);
         color: var(--color-white);
         padding-left: var(--spacer-15);
       }
@@ -1534,6 +1534,7 @@ header {
     letter-spacing: 1.2px;
     margin-bottom: 3rem;
     text-align: center;
+    line-height: initial;
   }
 
   &-cards {
@@ -1606,7 +1607,7 @@ header {
 
   .sources {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 8px auto 0;
     color: #767676;
     font-size: 12px;
     text-align: center;
