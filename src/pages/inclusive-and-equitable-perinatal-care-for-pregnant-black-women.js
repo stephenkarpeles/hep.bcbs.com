@@ -122,7 +122,7 @@ const InclusivePerinatalCare = props => {
             <div className="pp-content__inner">
               <p>
                 The rate of pregnancy-related deaths is nearly three times
-                higher for Black women in Maryland than it is for White women,
+                higher for Black women in Maryland than it is for white women,
                 according to the Maryland Department of Health’s annual maternal
                 mortality review. Across the country, that number is not
                 improving, but in Baltimore, home to the largest health plan,
