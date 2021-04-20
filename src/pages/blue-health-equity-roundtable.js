@@ -68,7 +68,7 @@ const BlueHealthEquityRoundtable = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url(${backgroundImage})`,
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-roundtable-alert-banner.jpg")`,
             }}
           >
             <div className="pp-hero__meta">
