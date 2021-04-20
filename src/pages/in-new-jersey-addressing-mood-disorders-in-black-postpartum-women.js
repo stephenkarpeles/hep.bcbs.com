@@ -77,9 +77,9 @@ const PlanProfile2 = props => {
                 <div className="pp-hero__category">
                   <span>Maternal health</span>
                 </div>
-                <div className="pp-hero__date">
+                {/* <div className="pp-hero__date">
                   <span>Published March 3, 2021</span>
-                </div>
+                </div> */}
                 <div className="pp-hero__title">
                   <h1>
                     In New Jersey, addressing mood disorders in postpartum Black women
@@ -171,7 +171,7 @@ const PlanProfile2 = props => {
                 treated{" "}
               </h4>
               <p>
-                Many doctors use a standard method for screening postpartum
+                Many doctors use a standard method for screening for postpartum
                 depression. But Horizon’s Valerie Harr says that method may fall
                 short for Black mothers “Postpartum depression may not be
                 expressed the same way by Black women,” says Harr. “They may
@@ -181,7 +181,7 @@ const PlanProfile2 = props => {
               </p>
               <p>
                 Harr says the team’s analysis also found that Black mothers may
-                not be able to access postpartum care as easily as their White
+                not be able to access postpartum care as easily as their white
                 counterparts. They may need transportation, child care or help
                 paying out-of-pocket costs for appointments. Medicaid patients
                 face the biggest barriers to care.
