@@ -262,7 +262,7 @@ const PlanProfile4 = props => {
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'Strong partnerships aim to improve birth outcomes' OR headline:'BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes'"
+              filters="headline:'Strong collaborations aim to improve birth outcomes' OR headline:'BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes'"
             />
 
             <InfiniteHits hitComponent={planResult} />
