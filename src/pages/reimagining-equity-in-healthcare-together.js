@@ -71,9 +71,9 @@ does."
           >
             <div className="pp-hero__meta">
               <div className="pp-hero__meta-content">
-                <div className="pp-hero__category">
+                {/* <div className="pp-hero__category">
                   <span>Maternal health</span>
-                </div>
+                </div> */}
                 <div className="pp-hero__date">
                   <span>Published April 19, 2021</span>
                 </div>
@@ -92,7 +92,7 @@ does."
       <div className="pp-main">
         <Fade>
           <div className="pp-related">
-            <h5 className="pp-related__title">Related</h5>
+            {/* <h5 className="pp-related__title">Related</h5>
             <ul className="pp-related__list">
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
@@ -114,7 +114,7 @@ does."
                   </a>
                 </div>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </Fade>
         <Fade>
