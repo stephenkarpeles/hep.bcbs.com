@@ -860,9 +860,11 @@ header {
 
     &-details {
       flex-basis: 100%;
+      padding-right: 0;
 
       @media (--large-breakpoint-up) {
-        flex-basis: 32%;
+        flex-basis: 34.5%;
+        padding-right: 80px;
       }
     }
   }
