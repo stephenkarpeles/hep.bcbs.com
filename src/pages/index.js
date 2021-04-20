@@ -155,7 +155,7 @@ const IndexPage = props => {
                 <div className="disparities-card-text">
                   Likely to due to under-diagnosis, Millennials from majority
                   Black and Hispanic communities have lower diagnosis rates of
-                  major depression, 31% and 55% lower respectively when compare
+                  major depression, 31% and 55% lower respectively when compared
                   to white communities.
                 </div>
                 <div className="disparities-card-image">

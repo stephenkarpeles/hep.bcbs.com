@@ -65,7 +65,7 @@ const NewJerseyHorizon = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-in-new-jersey-horizon-addressing-postpartum-depression-and-other-mood-disorders-in-black-mothers.jpg")`,
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-in-new-jersey-horizon-addressing-postpartum-depression-and-other-mood-disorders-in-black-mothers-final.jpg")`,
             }}
           >
             <div className="pp-hero__meta">
@@ -78,8 +78,8 @@ const NewJerseyHorizon = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    In New Jersey, Horizon is addressing postpartum depression and
-                    other mood disorders in Black mothers
+                    In New Jersey, Horizon is addressing postpartum depression
+                    and other mood disorders in Black mothers
                   </h1>
                 </div>
                 <div className="pp-hero__author">
