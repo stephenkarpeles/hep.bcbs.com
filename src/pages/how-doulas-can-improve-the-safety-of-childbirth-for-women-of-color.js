@@ -140,7 +140,7 @@ const PlanProfile1 = props => {
                   has increased by over 200%
                 </a>{" "}
                 in the past two decades. And the statistics are worse for Black,
-                Indigenous and other women of color (BIPOC). Researchers at the
+                Indigenous and other women of color. Researchers at the
                 University of Illinois Chicago found that{" "}
                 <a
                   href="https://pubmed.ncbi.nlm.nih.gov/30877505/"
@@ -159,9 +159,9 @@ const PlanProfile1 = props => {
                 non-clinical partners to women, often supplementing care from
                 doctors and midwives. There’s evidence to suggest that working
                 with a doula can reduce serious complications among BIPOC women.
-                Research finds that doula care can help reduce c-sections,
+                Research finds that doula care can help reduce C-sections,
                 decrease maternal anxiety and depression and help coordinate
-                care and communication between BIPOC women and their other
+                care and communication between women of color and their other
                 healthcare providers.{" "}
                 <a
                   href="https://www.marchofdimes.org/materials/Doulas%20and%20birth%20outcomes%20position%20statement%20final%20January%2030%20PM.pdf"
@@ -169,13 +169,13 @@ const PlanProfile1 = props => {
                 >
                   According to March of Dimes
                 </a>
-                , “The role of doula care in reducing c-sections is important,
-                because c-sections contribute to the risk of maternal morbidity
+                , “The role of doula care in reducing C-sections is important,
+                because C-sections contribute to the risk of maternal morbidity
                 and mortality in initial and subsequent pregnancies.”
               </p>
               <blockquote>
-                The role of doula care in reducing c-sections is important,
-                because c-sections contribute to the risk of maternal morbidity
+                The role of doula care in reducing C-sections is important,
+                because C-sections contribute to the risk of maternal morbidity
                 and mortality in initial and subsequent pregnancies.
               </blockquote>
               <h4>
@@ -186,7 +186,7 @@ const PlanProfile1 = props => {
                 Many BCBS companies are including doula coverage in their
                 members’ plans, making philanthropic contributions to doula
                 organizations that focus on underserved communities and funding
-                training programs to increase the number of BIPOC doulas.
+                training programs to increase the number of doulas of color.
               </p>
               <ul className="pp-content__fancy-list">
                 <li>
@@ -197,7 +197,7 @@ const PlanProfile1 = props => {
                     School to create and train a network of eight community
                     doulas to assist women at risk of poor birth outcomes. Blue
                     Cross and Blue Shield of Minnesota is providing scholarships
-                    to increase the number of BIPOC doulas in areas with the
+                    to increase the number of doulas in areas with the
                     least access.
                   </p>
                 </li>
