@@ -59,7 +59,7 @@ const IndexPage = props => {
   return (
     <>
       <SEO
-        title="Blue Health Equity"
+        title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
       {/* <Alert /> */}
