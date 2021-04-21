@@ -124,22 +124,23 @@ const HomeVisiting = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                In addition, Anthem BCBS’s New Baby, New Life<sup>SM</sup> and
-                Taking Care of Baby and Me® are comprehensive care management
-                programs focused on improving prenatal health and birth outcomes
-                for pregnant Medicaid members:
+                Helping pregnant women manage conditions like hypertension or
+                substanceuse before they give birth leads to safer outcomes for
+                mom and baby. Blue Cross and Blue Shield of Alabama collaborates
+                with organizations focused on improving prenatal care and
+                detecting health problems before they worsen.
               </p>
               <ul className="pp-content__fancy-list">
                 <li>
                   <p>
                     The health plan supports Nurse Family Partnership, a
-                    40-year-old program that pairs pregnant women and new
-                    mothers with a regular home visitor. Trained home visitors
-                    provide prenatal health education, help women prepare for a
-                    safe childbirth and keep connected to a family after
-                    childbirth to support healthy child development. Researchers
-                    find the program has prevented infant deaths, reduced
-                    preterm births and hypertension.
+                    40-year-old nationalprogram that pairs pregnant women and
+                    new mothers with a regular home visitor. Trained home
+                    visitors provide prenatal health education, help women
+                    prepare for a safe childbirth and keep connected to a family
+                    after childbirth to support healthy child development.
+                    Researchers find the program has prevented infant deaths and
+                    reduced preterm births and hypertension.
                   </p>
                 </li>
                 <li>
@@ -152,23 +153,26 @@ const HomeVisiting = props => {
                     </a>{" "}
                     to help hospitals implement programs to improve early
                     detection and treatment of hypertension, including producing
-                    a toolkit for clinicians.
+                    a toolkitfor clinicians.
                   </p>
                 </li>
                 <li>
                   <p>
-                    BCBS Alabama, in collaboration with the state, has
-                    implemented the <em>AllBabies</em> program. This program
+                    Blue Cross in collaboration with the State, has implemented
+                    the <em>AllBabies</em> program,which is administered by
+                    Alabama's Children's Health Insurance Program (CHIP) through
+                    the Alabama Department of Public Health. This program
                     identifies uninsured pregnant women who live in one of three
                     Alabama counties with the highest infant mortality rates.
-                    The uninsured women are eligible to enroll in a program that
-                    provides coverage throughout their pregnancy. Prenatal care,
-                    hospitalizations and delivery are covered. The health plan
-                    also provides additional support to women at high risk of
-                    complications, and offers a wellness program that provides
-                    education on having a healthy pregnancy. Women at high risk
-                    may also be connected to case managers who can work closely
-                    with doctors, hospitals and home health services to ensure a
+                    The uninsured women who cannot afford health insurance are
+                    eligible to enroll in a program that provides coverage
+                    throughout their pregnancy. Prenatal care, hospitalizations
+                    and delivery are covered. The health plan also provides
+                    additional support to women at high risk of complications
+                    and offers a wellness program that provides education on
+                    having a healthy pregnancy. Women at high risk may also be
+                    connected to case managers who can work closely with
+                    doctors, hospitals and home health services to ensure a
                     healthy pregnancy, childbirth and postpartum recovery.
                   </p>
                 </li>
