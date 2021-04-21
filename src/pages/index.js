@@ -297,6 +297,7 @@ const IndexPage = props => {
                 </div>
                 <MenuSelect
                   attribute="states"
+                  limit={50}
                   translations={{
                     seeAllOption: "All States",
                   }}
