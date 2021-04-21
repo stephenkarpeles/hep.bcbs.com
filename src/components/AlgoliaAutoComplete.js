@@ -38,7 +38,7 @@ class Autocomplete extends Component {
           {hit.img_url && (
             <div class="site-search-result-image">
               <img
-                src={`https://www-content.bcbs.com/sites/default/files/healthequity/images/${hit.img_url}`}
+                src={`https://www.bcbs.com/sites/default/files/healthequity/images/${hit.img_url}`}
                 alt=""
               />
             </div>
