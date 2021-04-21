@@ -206,7 +206,7 @@ const tabItems = [
     company: "George Washington University",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/adaeze-enekwechi.jpg" />
+        <StaticImage src="../../images/advisory-board/adaeze-enekwechi-latest.jpg" />
       </>,
     ],
     content: [
