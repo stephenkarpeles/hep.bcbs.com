@@ -102,10 +102,11 @@ const ExpandingAccess = props => {
                 </div>
                 <div className="pp-related__text">
                   <a href="https://www.bcbs.com/the-health-of-america/articles/standardized-screening-social-determinants-of-health-means-holistic">
-                    Standardized screening for social determinants of health means holistic healthcare from the first appointment
+                    Standardized screening for social determinants of health
+                    means holistic healthcare from the first appointment
                   </a>
                 </div>
-              </li>              
+              </li>
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
                   <span>Podcast</span>
@@ -123,12 +124,40 @@ const ExpandingAccess = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                <strong>Food insecurity</strong>: Limited or uncertain access to nutritious food can be harmful during and after pregnancy for both mother and baby. The burden of food insecurity is borne disproportionately by women of color. That’s why Blue Cross and Blue Shield of Minnesota is offering mothers and families in need clinically tailored meals and food boxes as well as nutritional coaching. Members can start as early as 20 weeks into their pregnancy and continue through the second month after birth. The healthy food program is a partnership with Project Well and Second Harvest Heartland, which will deliver the food and the coaching. Members can also be connected to other food benefits and resources to meet other needs through case management.
+                <strong>Food insecurity</strong>: Limited or uncertain access to
+                nutritious food can be harmful during and after pregnancy for
+                both mother and baby. The burden of food insecurity is borne
+                disproportionately by women of color. That’s why Blue Cross and
+                Blue Shield of Minnesota is offering mothers and families in
+                need clinically tailored meals and food boxes as well as
+                nutritional coaching. Members can start as early as 20 weeks
+                into their pregnancy and continue through the second month after
+                birth. The healthy food program is a partnership with Project
+                Well and Second Harvest Heartland, which will deliver the food
+                and the coaching. Members can also be connected to other food
+                benefits and resources to meet other needs through case
+                management.
               </p>
               <p>
-                <strong>Doulas</strong>: Access to supportive, culturally sensitive prenatal care can make the difference for pregnant women at risk of birth complications. A doula is a woman trained to support pregnant women emotionally and physically during pregnancy, childbirth and postpartum. There’s evidence to suggest that working with a doula can reduce negative health outcomes among women of color. The Plan is addressing the sustainability of the doula model, including increases in reimbursement, culturally appropriate access, workforce development scholarships and member education.
+                <strong>Doulas</strong>: Access to supportive, culturally
+                sensitive prenatal care can make the difference for pregnant
+                women at risk of birth complications. A doula is a woman trained
+                to support pregnant women emotionally and physically during
+                pregnancy, childbirth and postpartum. There’s evidence to
+                suggest that working with a doula can reduce negative health
+                outcomes among women of color. The Plan is addressing the
+                sustainability of the doula model, including increases in
+                reimbursement, culturally appropriate access, workforce
+                development scholarships and member education.
               </p>
-              <p><em>Blue Cross and Blue Shield of Minnesota is an independent licensee of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.</em></p>
+              <p>
+                <em>
+                  Blue Cross and Blue Shield of Minnesota is an independent
+                  licensee of the Blue Cross Blue Shield Association, an
+                  association of independent, locally operated Blue Cross and
+                  Blue Shield companies.
+                </em>
+              </p>
             </div>
           </div>
         </Fade>
