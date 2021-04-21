@@ -79,7 +79,8 @@ const ImprovingMaternalOutcomes = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    Home visits address high risk conditions and social determinants of health
+                    Home visits address high risk conditions and social
+                    determinants of health
                   </h1>
                 </div>
                 <div className="pp-hero__author">
@@ -105,7 +106,7 @@ const ImprovingMaternalOutcomes = props => {
                     BCBS companies support new and expectant mothers
                   </a>
                 </div>
-              </li>              
+              </li>
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
                   <span>Podcast</span>
@@ -123,12 +124,37 @@ const ImprovingMaternalOutcomes = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                Home visiting for pregnant mothers is an evidence-based practice shown to help women have healthier, safer pregnancies. For women of color, who are likely to die from pregnancy-related causes or experience pregnancy complications, a home visiting program can help address some of the risk factors, including support in managing chronic conditions like hypertension or diabetes. Highmark Blue Cross Blue Shield of Western New York and Highmark Blue Shield of Northeastern New York have created a high-risk maternity home visiting case management program, partnering with local agencies to deliver services in a mother’s home. Home visitors can also address social determinants of health that might affect a woman’s pregnancy, childbirth or postpartum health, including housing and transportation issues.
+                Home visiting for pregnant mothers is an evidence-based practice
+                shown to help women have healthier, safer pregnancies. For women
+                of color, who are likely to die from pregnancy-related causes or
+                experience pregnancy complications, a home visiting program can
+                help address some of the risk factors, including support in
+                managing chronic conditions like hypertension or diabetes.
+                Highmark Blue Cross Blue Shield of Western New York and Highmark
+                Blue Shield of Northeastern New York have created a high-risk
+                maternity home visiting case management program, partnering with
+                local agencies to deliver services in a mother’s home. Home
+                visitors can also address social determinants of health that
+                might affect a woman’s pregnancy, childbirth or postpartum
+                health, including housing and transportation issues.
               </p>
               <p>
-                Members receiving home visits can work one on one, in person when safe, with specialty-trained nurses who provide individualized education and help coordinate care throughout a mother’s pregnancy and for six months after delivery. Nurses also follow up with a mother’s clinicians about her status and facilitate specialty services or referrals.
+                Members receiving home visits can work one on one, in person
+                when safe, with specialty-trained nurses who provide
+                individualized education and help coordinate care throughout a
+                mother’s pregnancy and for six months after delivery. Nurses
+                also follow up with a mother’s clinicians about her status and
+                facilitate specialty services or referrals.
               </p>
-              <p><em>Highmark Blue Cross Blue Shield Western New York and Highmark Blue Shield Northeastern New York is an independent licensee of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.</em></p>
+              <p>
+                <em>
+                  Highmark Blue Cross Blue Shield Western New York and Highmark
+                  Blue Shield Northeastern New York is an independent licensee
+                  of the Blue Cross Blue Shield Association, an association of
+                  independent, locally operated Blue Cross and Blue Shield
+                  companies.
+                </em>
+              </p>
             </div>
           </div>
         </Fade>
