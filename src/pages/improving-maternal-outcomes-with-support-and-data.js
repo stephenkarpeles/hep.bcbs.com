@@ -79,8 +79,7 @@ const ImprovingMaternalOutcomes = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    Home visits address high risk conditions and social
-                    determinants of health
+                    Improving maternal outcomes with support and data
                   </h1>
                 </div>
                 <div className="pp-hero__author">
@@ -124,35 +123,26 @@ const ImprovingMaternalOutcomes = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                Home visiting for pregnant mothers is an evidence-based practice
-                shown to help women have healthier, safer pregnancies. For women
-                of color, who are likely to die from pregnancy-related causes or
-                experience pregnancy complications, a home visiting program can
-                help address some of the risk factors, including support in
-                managing chronic conditions like hypertension or diabetes.
-                Highmark Blue Cross Blue Shield of Western New York and Highmark
-                Blue Shield of Northeastern New York have created a high-risk
-                maternity home visiting case management program, partnering with
-                local agencies to deliver services in a mother’s home. Home
-                visitors can also address social determinants of health that
-                might affect a woman’s pregnancy, childbirth or postpartum
-                health, including housing and transportation issues.
+                The Blue Cross Blue Shield of Michigan Foundation supported a doula support integration and coordination of care for high risk women in labor through a partnership with Western Michigan University Homer Stryker Medical School.  The program will create and train a network of eight community doulas to assist the most at risk women (low socioeconomic status, women of color, or prior poor birth outcome), who lack support during labor and postpartum, and provide coordination between doulas and community health workers for transition of care from hospital to home.
               </p>
               <p>
-                Members receiving home visits can work one on one, in person
-                when safe, with specialty-trained nurses who provide
-                individualized education and help coordinate care throughout a
-                mother’s pregnancy and for six months after delivery. Nurses
-                also follow up with a mother’s clinicians about her status and
-                facilitate specialty services or referrals.
+                Additionally, Labor and Delivery staff will be trained on the outcome benefits for having doulas; identify high-risk women for doula services through local prenatal clinics services and at delivery. Doulas will assist women during delivery, visit patient at home (first week), following covid-19 protection protocols and then will connect the women with a community health worker for post-natal/early infancy home visitation follow-up.
+              </p>
+              <p>
+                The Obstetrics Initiative (OBI) is a state-wide, data-driven quality improvement project supported by Blue Cross Blue Shield of Michigan (BCBSMI)/Blue Care Network to create optimal maternity care experiences for Michigan families.
+              </p>
+              <blockquote>
+                The first initiative is supporting vaginal birth and safely lowering the cesarean delivery rate among low-risk patients.
+              </blockquote>
+              <p>
+                OBI is working to identify and address variation in obstetric driven care in the state of Michigan through collaboration, rapid cycle data reporting, and quality improvement initiatives. The first initiative is supporting vaginal birth and safely lowering the cesarean delivery rate among low-risk patients. OBI promotes collaboration and the sharing of best practices among participating maternity hospitals. By collecting data, analyzing data, and reporting data back to OBI participants, opportunities for improvement can be identified and quality improvement initiatives can be implemented.
+              </p>
+              <p>
+                Addressing Perinatal Opioid Use Disorder-BCBSMI and BCBSMI Foundation partnership with the Michigan Department of Health &amp; Human Services to address perinatal opioid use disorder. Five regional health organizations across the state in partnership with their Regional Perinatal Quality Collaborative received a combined total of $300,000 in grant funding to begin new projects, enhance or expand existing projects to prevent and treat opioid use disorder among women, their children and infants during prenatal, pregnancy and postpartum periods. 
               </p>
               <p>
                 <em>
-                  Highmark Blue Cross Blue Shield Western New York and Highmark
-                  Blue Shield Northeastern New York is an independent licensee
-                  of the Blue Cross Blue Shield Association, an association of
-                  independent, locally operated Blue Cross and Blue Shield
-                  companies.
+                  <a href="https://www.bcbsm.com/" target="_blank">Blue Cross Blue Shield of Michigan</a> and the Blue Cross Blue Shield of Michigan Foundation are independent licensees of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.
                 </em>
               </p>
             </div>
