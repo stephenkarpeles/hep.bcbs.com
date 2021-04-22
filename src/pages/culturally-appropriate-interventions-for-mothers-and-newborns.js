@@ -159,10 +159,10 @@ const PlanProfile3 = props => {
                 <li>Lack of transportation</li>
               </ul>
               <p>
-                These same factors contribute to devastating maternal death rates. In Arizona, American Indian women face rates as high 70.8 deaths per 100,000 births according to the CDC. The average maternal death rate across the U.S. is 16.7 per 100,000. Tribal communities throughout Arizona have identified the need for more education, prevention and treatment to serve pregnant and parenting women with a SUD.
+                These same factors contribute to devastating maternal death rates. In Arizona, American Indian women face rates as high as 70.8 deaths per 100,000 births according to the CDC. The average maternal death rate across the U.S. is 16.7 per 100,000. Tribal communities throughout Arizona have identified the need for more education, prevention and treatment to serve pregnant and parenting women with a SUD.
               </p>
               <blockquote>
-                In Arizona, American Indian women face rates as high 70.8 deaths per 100,000 births according to the CDC. The average maternal death rate across the U.S. is 16.7 per 100,000.
+                In Arizona, American Indian women face rates as high as 70.8 deaths per 100,000 births according to the CDC. The average maternal death rate across the U.S. is 16.7 per 100,000.
               </blockquote>
               <h4>Mobilize AZ</h4>
               <p>
