@@ -49,7 +49,7 @@ const WrapAroundCare = props => {
     <div>
       <SEO
         title="Supporting mothers and babies most in need"
-        description="Health Care Service Corporation is piloting a new way to connect most in need mothers and babies to care improving prenatal and postpartum outcomes."
+        description="To support pregnant women and their infants, Blue Cross and Blue Shield of Illinois (BCBSIL) is providing new resources to help improve health outcomes of people in underserved communities across Illinois."
       />
       <Fade>
         <div className="pp-hero">
@@ -57,8 +57,8 @@ const WrapAroundCare = props => {
             <div className="pp-hero__share-content">
               <h4>Share</h4>
               <Sharing
-                title="Supporting mothers and babies most in need with wraparound care"
-                url="https://www.bcbs.com/the-health-of-america/healthequity/supporting-mothers-and-babies-mmost-in-need-with-wraparound-care/"
+                title="Reducing disparities and expanding care for expectant mothers and babies"
+                url="https://www.bcbs.com/the-health-of-america/healthequity/reducing-disparities-and-expanding-care-for-expectant-mothers-and-babies/"
               />
             </div>
           </div>
@@ -78,8 +78,8 @@ const WrapAroundCare = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    Supporting mothers and babies most in need with wraparound
-                    care
+                    Reducing disparities and expanding care for expectant
+                    mothers and babies
                   </h1>
                 </div>
                 <div className="pp-hero__author">
@@ -124,36 +124,49 @@ const WrapAroundCare = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                Doctors spend their days immersed in hands-on care. They don't
-                always get time to support patients' social needs. But factors
-                like food security, educational resources and mental health can
-                make big impacts in patients' overall health--especially when
-                those patients are expectant mothers. To support mothers and
-                babies most in need,{" "}
-                <strong>Health Care Service Corporation (HCSC)</strong> is
-                piloting a new way to connect them to care.
+                The United States has the{" "}
+                <a
+                  href="https://www.commonwealthfund.org/publications/issue-briefs/2020/nov/maternal-mortality-maternity-care-us-compared-10-countries"
+                  target="_blank"
+                >
+                  highest maternal and infant mortality rates
+                </a>{" "}
+                in comparison to other developed countries, and the{" "}
+                <a
+                  href="https://www.cdc.gov/nchs/maternal-mortality/index.htm"
+                  target="_blank"
+                >
+                  statistics
+                </a>{" "}
+                are worse for women of color. These disparities are leading to
+                worsening health outcomes for pregnant and post-partum women,
+                particularly in low-income and remote communities.
               </p>
               <p>
-                With a goal of improving prenatal and postpartum health
-                outcomes, the health plan is working with providers to refer
-                expectant mothers to their Special Beginnings Program. Once
-                signed up, mothers are connected with the support and resources
-                they need keep themselves and their newborns healthy. For some,
-                this means education on what to expect. For those with more
-                complex needs, this support may include mental health care,
-                connection to social services like WIC, car seat fittings and
-                regular calls from an HCSC care manager.
+                In an effort to help improve these statistics, BCBSIL is
+                supporting parents in Chicago’s South and West Side
+                neighborhoods by providing funding to community-based
+                organizations working to improve maternal health outcomes. The
+                organizations utilize doulas, midwives and telemedicine to
+                provide education, labor care, breastfeeding help and postpartum
+                support within a culturally appropriate lens.
               </p>
               <p>
-                The plan is also connecting parents in communities across
-                Chicago with doulas, who can support women with education, labor
-                care, breastfeeding help and postpartum needs within a
-                culturally appropriate lens. Their work is also focused on
-                individuals with an income below $50,0000; persons of color;
-                LGBTQ+ individuals; those with disabilities; survivors of
-                violence; those who have experienced pregnancy or birth trauma,
-                or postpartum depression; refugees; and those of minoritized
-                religious groups.
+                BCBSIL is also teaming up with Centering Healthcare Institute, a
+                non-profit focused on delivering better health outcomes and
+                improving the care experience for patients and their doctors.
+                Through a three-year grant, BCBSIL will be bringing CHI’s
+                CenteringPregnancy program to a number of Federally Qualified
+                Health Centers (FQHCs) that focus on serving underserved and
+                at-risk populations.
+              </p>
+              <p>
+                <em>
+                  Blue Cross and Blue Shield of Illinois is an independent
+                  licensee of the Blue Cross Blue Shield Association, an
+                  association of independent, locally operated Blue Cross and
+                  Blue Shield companies.
+                </em>
               </p>
             </div>
           </div>
