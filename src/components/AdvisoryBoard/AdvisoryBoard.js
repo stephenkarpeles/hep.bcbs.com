@@ -579,8 +579,19 @@ const TabItem = ({
 }) => {
   const advisoryPanelIsOpen = "advisory-panel-is-open"
 
+  function AdvisoryBoardAnalytics() {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: "Advisory Board Click",
+      category: "Health Equity",
+      action: "health-equity-advisory-board",
+      label: TabItem.name,
+    })
+  }
+
   function openAdvisoryPanel() {
     document.body.classList.add(advisoryPanelIsOpen)
+    AdvisoryBoardAnalytics()
   }
 
   return (
