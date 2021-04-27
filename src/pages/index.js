@@ -32,10 +32,10 @@ const planResult = ({ hit }) => {
   const { headline, topic, plans, slug, teaser, img_url, video_url, read_time } = hit
 
   return (
-    <div className="plan-result-card">
+    <div className={`plan-result-card ${video_url ? "plan-result-card--has-video" : ""}`}>
       <Link to={`/${slug}/`}></Link>
       <div className="plan-result-card-plan">
-        {img_url &&
+        {hit.img_url && !hit.video_url &&         
           <div className="plan-result-card-image">
             <img
               src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
@@ -43,14 +43,14 @@ const planResult = ({ hit }) => {
             />
           </div>
         }
-        {video_url &&
+        {hit.video_url && 
           <div className="plan-result-card-video">
             <div className="plan-result-card-video__wrapper">
               <iframe
                 loading="lazy"
-                width="100%"
-                height="auto"
-                src="test"
+                width="960"
+                height="640"
+                src={video_url}
                 title="Youtube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
