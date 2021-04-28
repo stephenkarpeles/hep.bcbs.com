@@ -1019,9 +1019,10 @@ header {
 .plan-result-card {
   position: relative;
 
-  &--has-video {
+  /* &--has-video {
+    height: 100%;
     background: var(--color-light-blue);
-  }
+  } */
 
   a {
     position: absolute;
