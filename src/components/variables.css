@@ -19,13 +19,13 @@
   --color-black: #000000;
 
   /* Typography */
-  --font-condensed-light: "Condensed Light";
-  --font-condensed-regular: "Condensed Regular";
-  --font-condensed-bold: "Condensed Bold";
-  --font-roman: Roman;
-  --font-regular-light: "Basic Light";
-  --font-regular-bold: "Basic Bold";
-  --font-fallback: Arial, Helvetica, sans-serif;
+  --font-condensed-light: "Condensed Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-condensed-regular: "Condensed Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-condensed-bold: "Condensed Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-roman: Roman, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-regular-light: "Basic Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-regular-bold: "Basic Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif
 
   --font-size-h1: 80px;
   --font-size-h2: 64px;

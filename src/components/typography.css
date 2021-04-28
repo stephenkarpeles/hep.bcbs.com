@@ -7,7 +7,7 @@
     url("../fonts/20e9f687-a6c7-4276-bf9c-49c4971d1829.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Ultra Condensed Thin";
@@ -16,7 +16,7 @@
     url("../fonts/ea2bbac5-d730-41a6-8817-a3ee88741001.woff") format("woff");
   font-weight: 250;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Ultra Condensed Light";
@@ -25,7 +25,7 @@
     url("../fonts/50fba20f-52b8-4ccd-967d-aba183bb87a1.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Ultra Condensed Roman";
@@ -34,7 +34,7 @@
     url("../fonts/fd30d8f0-f05a-4019-a853-3b6017c23e80.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Basic Thin";
@@ -43,7 +43,7 @@
     url("../fonts/a1c4330f-ba73-4f1f-aa05-bd237c58ba51.woff") format("woff");
   font-weight: 100;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Basic Light";
@@ -52,7 +52,7 @@
     url("../fonts/fc09acb4-f628-4ba0-b648-d2ca30265b20.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Basic Light Italic";
@@ -61,7 +61,7 @@
     url("../fonts/88e0673d-3db0-4931-ae03-8a4a6eb1bbe6.woff") format("woff");
   font-weight: 300;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Basic Regular";
@@ -70,7 +70,7 @@
     url("../fonts/cb3c8591-6f6f-498c-b8e7-ee3a9d0a7547.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Basic Regular Italic";
@@ -79,7 +79,7 @@
     url("../fonts/00f88057-c6a6-448b-be2e-e8bc4a9c28d4.woff") format("woff");
   font-weight: 400;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Basic Bold";
@@ -88,7 +88,7 @@
     url("../fonts/7b11912a-986d-462e-b88a-4a1758eb23f1.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Condensed Light";
@@ -97,7 +97,7 @@
     url("../fonts/ea5d0a5d-6935-48e9-8e1a-40d788b29fc3.woff") format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Condensed Regular";
@@ -106,7 +106,7 @@
     url("../fonts/6b207f04-a670-4f46-b749-47a7ae9612b8.woff") format("woff");
   font-weight: 800;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Condensed Bold";
@@ -115,7 +115,7 @@
     url("../fonts/387a924a-6aec-4120-918b-f34231ba2407.woff") format("woff");
   font-weight: 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: "Compressed Regular";
@@ -124,5 +124,5 @@
     url("../fonts/7fafa073-511f-47bf-9b94-5a859a735e47.woff") format("woff");
   font-weight: 600;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
