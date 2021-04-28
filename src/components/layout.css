@@ -1019,6 +1019,11 @@ header {
 .plan-result-card {
   position: relative;
 
+  /* &--has-video {
+    height: 100%;
+    background: var(--color-light-blue);
+  } */
+
   a {
     position: absolute;
     height: 100%;
@@ -1038,6 +1043,22 @@ header {
   }
 
   &-image {
+  }
+
+  &-video__wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &-category {
