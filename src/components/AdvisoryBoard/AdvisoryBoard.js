@@ -585,7 +585,7 @@ const TabItem = ({
       event: "Advisory Board Click",
       category: "Health Equity",
       action: "health-equity-advisory-board",
-      label: TabItem.name,
+      label: name,
     })
   }
 
