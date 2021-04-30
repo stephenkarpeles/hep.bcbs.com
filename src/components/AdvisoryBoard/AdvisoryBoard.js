@@ -591,14 +591,16 @@ const TabItem = ({
 
   function openAdvisoryPanel() {
     document.body.classList.add(advisoryPanelIsOpen)
-    AdvisoryBoardAnalytics()
   }
 
   return (
     <div
       id={id}
       className={isActive ? "tab-item" : "tab-item tab-item--inactive"}
-      onClick={onItemClicked}
+      onClick={() => {
+        onItemClicked();
+        AdvisoryBoardAnalytics();
+      }}
     >
       <i className={icon}></i>
       <div
