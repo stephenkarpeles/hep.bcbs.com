@@ -15,7 +15,7 @@ import {
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
-import Zoom from 'react-reveal/Zoom';
+//import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
