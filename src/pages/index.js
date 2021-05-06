@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
@@ -78,6 +79,8 @@ const planResult = ({ hit }) => {
 
 const IndexPage = props => {
   const { t } = useTranslation()
+
+  const [viewPortEntered, setViewPortEntered] = useState(false);
 
   return (
     <>
@@ -167,9 +170,17 @@ const IndexPage = props => {
                     Cardiovascular Health
                   </div>
                   <div className="disparities-card-stat">
-                    <CountUp end={70} redraw={true} duration={.5} useEasing={false}>
-                      {({ countUpRef, start }) => (
-                        <VisibilitySensor onChange={start} delayedCall>
+                    <CountUp start={viewPortEntered ? null : 0} end={70} redraw={true} duration={.5} useEasing={false}>
+                      {({ countUpRef }) => (
+                          <VisibilitySensor
+                            active={!viewPortEntered}
+                            onChange={isVisible => {
+                              if (isVisible) {
+                                setViewPortEntered(true);
+                              }
+                            }}
+                            delayedCall
+                          >
                           <span ref={countUpRef} />
                         </VisibilitySensor>
                       )}
@@ -192,9 +203,17 @@ const IndexPage = props => {
                     Behavioral Health
                   </div>
                   <div className="disparities-card-stat">
-                    <CountUp end={55} redraw={true} duration={1} useEasing={false}>
-                      {({ countUpRef, start }) => (
-                        <VisibilitySensor onChange={start} delayedCall>
+                    <CountUp start={viewPortEntered ? null : 0} end={55} redraw={true} duration={1} useEasing={false}>
+                      {({ countUpRef }) => (
+                          <VisibilitySensor
+                            active={!viewPortEntered}
+                            onChange={isVisible => {
+                              if (isVisible) {
+                                setViewPortEntered(true);
+                              }
+                            }}
+                            delayedCall
+                          >
                           <span ref={countUpRef} />
                         </VisibilitySensor>
                       )}
@@ -217,9 +236,17 @@ const IndexPage = props => {
                 <div className="disparities-card disparities-card-diabetes">
                   <div className="disparities-card-heading">Diabetes</div>
                   <div className="disparities-card-stat">
-                    <CountUp end={60} redraw={true} duration={1.25} useEasing={false}>
-                      {({ countUpRef, start }) => (
-                        <VisibilitySensor onChange={start} delayedCall>
+                    <CountUp start={viewPortEntered ? null : 0} end={60} redraw={true} duration={1.25} useEasing={false}>
+                      {({ countUpRef }) => (
+                          <VisibilitySensor
+                            active={!viewPortEntered}
+                            onChange={isVisible => {
+                              if (isVisible) {
+                                setViewPortEntered(true);
+                              }
+                            }}
+                            delayedCall
+                          >
                           <span ref={countUpRef} />
                         </VisibilitySensor>
                       )}
@@ -240,9 +267,17 @@ const IndexPage = props => {
                 <div className="disparities-card disparities-card-maternal">
                   <div className="disparities-card-heading">Maternal Health</div>
                   <div className="disparities-card-stat">
-                    <CountUp end={3} redraw={true} duration={.75} useEasing={false}>
-                      {({ countUpRef, start }) => (
-                        <VisibilitySensor onChange={start} delayedCall>
+                    <CountUp start={viewPortEntered ? null : 0} end={3} redraw={true} duration={.75} useEasing={false}>
+                      {({ countUpRef }) => (
+                          <VisibilitySensor
+                            active={!viewPortEntered}
+                            onChange={isVisible => {
+                              if (isVisible) {
+                                setViewPortEntered(true);
+                              }
+                            }}
+                            delayedCall
+                          >
                           <span ref={countUpRef} />
                         </VisibilitySensor>
                       )}
