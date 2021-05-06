@@ -65,3 +65,86 @@
   font-size: var(--font-size-h6);
   letter-spacing: 0.52px;
 }
+
+/* draw border */
+@mixin draw-blue-border {
+  transition: color 0.2s;
+  position: relative;
+  vertical-align: middle;
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: color 0.2s;
+  border: 0;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before,
+  &::after {
+    /* Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts */
+    border: 1px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  &:hover {
+    /* color: var(--color-bright-blue); */
+  }
+
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: var(--color-bright-blue); 
+    border-right-color: var(--color-bright-blue);
+    transition:
+      width 0.2s ease-out, 
+      height 0.2s ease-out 0.2s; 
+  }
+
+  &:hover::after {
+    border-bottom-color: var(--color-bright-blue);
+    border-left-color: var(--color-bright-blue);
+    transition:
+      border-color 0s ease-out 0.45s, 
+      width 0.2s ease-out 0.45s, 
+      height 0.2s ease-out 0.7s; 
+  }
+
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  &:hover::before {
+    border-top-color: var(--color-bright-blue);
+    border-right-color: var(--color-bright-blue);
+  }
+
+  &:hover::after {
+    border-bottom-color: var(--color-bright-blue);
+    border-left-color: var(--color-bright-blue);
+    transition:
+      height 0.2s ease-out,
+      width 0.2s ease-out 0.2s;
+  }
+}
