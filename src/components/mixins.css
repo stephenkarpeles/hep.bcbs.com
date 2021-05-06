@@ -68,11 +68,11 @@
 
 /* draw border */
 @mixin draw-blue-border {
-  transition: color 0.2s;
+  transition: color 0.4s;
   position: relative;
   vertical-align: middle;
   box-shadow: inset 0 0 0 1px transparent;
-  transition: color 0.2s;
+  transition: color 0.4s;
   border: 0;
   box-sizing: border-box;
 
@@ -118,17 +118,17 @@
     border-top-color: var(--color-bright-blue); 
     border-right-color: var(--color-bright-blue);
     transition:
-      width 0.2s ease-out, 
-      height 0.2s ease-out 0.2s; 
+      width 0.4s ease-out, 
+      height 0.4s ease-out 0.4s; 
   }
 
   &:hover::after {
     border-bottom-color: var(--color-bright-blue);
     border-left-color: var(--color-bright-blue);
     transition:
-      border-color 0s ease-out 0.45s, 
-      width 0.2s ease-out 0.45s, 
-      height 0.2s ease-out 0.7s; 
+      border-color 0s ease-out 0.75s, 
+      width 0.4s ease-out 0.75s, 
+      height 0.4s ease-out 0.9s; 
   }
 
   &::after {
@@ -145,7 +145,7 @@
     border-bottom-color: var(--color-bright-blue);
     border-left-color: var(--color-bright-blue);
     transition:
-      height 0.2s ease-out,
-      width 0.2s ease-out 0.2s;
+      height 0.4s ease-out,
+      width 0.4s ease-out 0.4s;
   }
 }
