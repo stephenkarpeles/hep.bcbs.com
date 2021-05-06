@@ -12,6 +12,8 @@ import {
   MenuSelect,
   ClearRefinements,
 } from "react-instantsearch-dom"
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 
 import Layout from "../components/layout"
@@ -155,7 +157,14 @@ const IndexPage = props => {
                   Cardiovascular Health
                 </div>
                 <div className="disparities-card-stat">
-                  70<span>%</span>
+                  <CountUp end={70} redraw={true} duration={.5} useEasing={false}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  <span>%</span>
                 </div>
                 <div className="disparities-card-text">
                   Black men are 70% more likely to die from a stroke as compared
@@ -173,7 +182,13 @@ const IndexPage = props => {
                   Behavioral Health
                 </div>
                 <div className="disparities-card-stat">
-                  55
+                  <CountUp end={55} redraw={true} duration={1.5} useEasing={false}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
                   <span>% lower</span>
                 </div>
                 <div className="disparities-card-text">
@@ -192,7 +207,14 @@ const IndexPage = props => {
               <div className="disparities-card disparities-card-diabetes">
                 <div className="disparities-card-heading">Diabetes</div>
                 <div className="disparities-card-stat">
-                  60<span>%</span>
+                  <CountUp end={60} redraw={true} duration={2.25} useEasing={false}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  <span>%</span>
                 </div>
                 <div className="disparities-card-text">
                   African American adults are 60% more likely than non-Hispanic
@@ -208,7 +230,14 @@ const IndexPage = props => {
               <div className="disparities-card disparities-card-maternal">
                 <div className="disparities-card-heading">Maternal Health</div>
                 <div className="disparities-card-stat">
-                  3<span>x higher</span>
+                  <CountUp end={3} redraw={true} duration={1.4} useEasing={false}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
+                  <span>x higher</span>
                 </div>
                 <div className="disparities-card-text">
                   Black mothers have 3x higher maternal mortality and 2x higher

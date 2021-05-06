@@ -1631,7 +1631,7 @@ header {
       font-size: 120px;
       line-height: initial;
 
-      span {
+      span:not(:first-child) {
         font-size: 40px;
       }
     }
