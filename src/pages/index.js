@@ -307,19 +307,19 @@ const IndexPage = props => {
 
       <Slide right>
         <section className="goal-banner" id="commitment">
-        <div className="max-container">
-          <div className="goal-banner-box">
-            <h6 className="goal-banner-box-title">Our Goal</h6>
-            <div className="goal-banner-box-description">
-              Reduce racial disparities in maternal health by
-            </div>
-            <div className="goal-banner-box-stat">
-              50<span>%</span>
-              <span className="goal-banner-box-text">in five years.</span>
+          <div className="max-container">
+            <div className="goal-banner-box">
+              <h6 className="goal-banner-box-title">Our Goal</h6>
+              <div className="goal-banner-box-description">
+                Reduce racial disparities in maternal health by
+              </div>
+              <div className="goal-banner-box-stat">
+                50<span>%</span>
+                <span className="goal-banner-box-text">in five years.</span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </Slide>
       
       <section className="profiles" id="community">
