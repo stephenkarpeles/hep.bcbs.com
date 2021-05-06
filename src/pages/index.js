@@ -182,7 +182,7 @@ const IndexPage = props => {
                   Behavioral Health
                 </div>
                 <div className="disparities-card-stat">
-                  <CountUp end={55} redraw={true} duration={1.5} useEasing={false}>
+                  <CountUp end={55} redraw={true} duration={1} useEasing={false}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
@@ -207,7 +207,7 @@ const IndexPage = props => {
               <div className="disparities-card disparities-card-diabetes">
                 <div className="disparities-card-heading">Diabetes</div>
                 <div className="disparities-card-stat">
-                  <CountUp end={60} redraw={true} duration={2.25} useEasing={false}>
+                  <CountUp end={60} redraw={true} duration={1.25} useEasing={false}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
@@ -230,7 +230,7 @@ const IndexPage = props => {
               <div className="disparities-card disparities-card-maternal">
                 <div className="disparities-card-heading">Maternal Health</div>
                 <div className="disparities-card-stat">
-                  <CountUp end={3} redraw={true} duration={1.4} useEasing={false}>
+                  <CountUp end={3} redraw={true} duration={1} useEasing={false}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
