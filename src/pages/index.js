@@ -15,6 +15,9 @@ import {
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -84,40 +87,43 @@ const IndexPage = props => {
       />
       {/* <Alert /> */}
       <section className="intro" id="intro">
-        <div className="max-container">
-          <h1 id="healthequity">{t("home.title")}</h1>
-          <div className="subtitle">{t("home.subtitle")}</div>
-          <div className="intro--video">
-            <div className="intro--video-wrapper">
-              <iframe
-                loading="lazy"
-                width="640"
-                height="360"
-                src="https://www.youtube.com/embed/KNUblC8hLPg"
-                title="Youtube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+        <Fade>
+          <div className="max-container">
+            <h1 id="healthequity">{t("home.title")}</h1>
+            <div className="subtitle">{t("home.subtitle")}</div>
+            <div className="intro--video">
+              <div className="intro--video-wrapper">
+                <iframe
+                  loading="lazy"
+                  width="640"
+                  height="360"
+                  src="https://www.youtube.com/embed/KNUblC8hLPg"
+                  title="Youtube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+            <div className="intro--video-details">
+              <div className="intro--video-quote">{t("home.quote")}</div>
+              <div className="intro--video-content">{t("home.content")}</div>
+              <div className="intro--video-quote-attr">
+                &mdash; {t("home.quote-attr")}
+              </div>
+              <div className="intro--video-quote-role">
+                {t("home.quote-role")}
+              </div>
             </div>
           </div>
-          <div className="intro--video-details">
-            <div className="intro--video-quote">{t("home.quote")}</div>
-            <div className="intro--video-content">{t("home.content")}</div>
-            <div className="intro--video-quote-attr">
-              &mdash; {t("home.quote-attr")}
-            </div>
-            <div className="intro--video-quote-role">
-              {t("home.quote-role")}
-            </div>
-          </div>
-        </div>
-      </section>
+        </Fade>
+     </section>
 
       <section className="lead" id="lead">
         <div className="inner-content">
-          <div className="lead--main">{t("home.lead")}</div>
-          <div className="lead--details">
+          <Fade>
+            <div className="lead--main">{t("home.lead")}</div>
+            <div className="lead--details">
             <div className="lead--details-points">
               <ul>
                 <li>Collecting data to measure disparities</li>
@@ -142,115 +148,120 @@ const IndexPage = props => {
               {t("home.lead-summary")}
             </div>
           </div>
+          </Fade>
         </div>
       </section>
 
       <section className="disparities" id="disparities">
         <div className="inner-content">
-          <div className="disparities-heading">
-            Health Disparities: By the Numbers
-          </div>
-          <div className="disparities-cards-wrap">
-            <div className="disparities-cards">
-              <div className="disparities-card disparities-card-cardio">
-                <div className="disparities-card-heading">
-                  Cardiovascular Health
-                </div>
-                <div className="disparities-card-stat">
-                  <CountUp end={70} redraw={true} duration={.5} useEasing={false}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                  <span>%</span>
-                </div>
-                <div className="disparities-card-text">
-                  Black men are 70% more likely to die from a stroke as compared
-                  to non-Hispanic white men.
-                </div>
-                <div className="disparities-card-image">
-                  <StaticImage
-                    src="../images/illustrations/illustration-cardiovascular-health.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="disparities-card disparities-card-behavioral">
-                <div className="disparities-card-heading">
-                  Behavioral Health
-                </div>
-                <div className="disparities-card-stat">
-                  <CountUp end={55} redraw={true} duration={1} useEasing={false}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                  <span>% lower</span>
-                </div>
-                <div className="disparities-card-text">
-                  Likely to due to under-diagnosis, Millennials from majority
-                  Black and Hispanic communities have lower diagnosis rates of
-                  major depression, 31% and 55% lower respectively when compared
-                  to white communities.
-                </div>
-                <div className="disparities-card-image">
-                  <StaticImage
-                    src="../images/illustrations/illustration-behavioral-health.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="disparities-card disparities-card-diabetes">
-                <div className="disparities-card-heading">Diabetes</div>
-                <div className="disparities-card-stat">
-                  <CountUp end={60} redraw={true} duration={1.25} useEasing={false}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                  <span>%</span>
-                </div>
-                <div className="disparities-card-text">
-                  African American adults are 60% more likely than non-Hispanic
-                  white adults to be diagnosed with diabetes by a physician.
-                </div>
-                <div className="disparities-card-image">
-                  <StaticImage
-                    src="../images/illustrations/illustration-diabetes.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="disparities-card disparities-card-maternal">
-                <div className="disparities-card-heading">Maternal Health</div>
-                <div className="disparities-card-stat">
-                  <CountUp end={3} redraw={true} duration={1} useEasing={false}>
-                    {({ countUpRef, start }) => (
-                      <VisibilitySensor onChange={start} delayedCall>
-                        <span ref={countUpRef} />
-                      </VisibilitySensor>
-                    )}
-                  </CountUp>
-                  <span>x higher</span>
-                </div>
-                <div className="disparities-card-text">
-                  Black mothers have 3x higher maternal mortality and 2x higher
-                  morbidity than white mothers.
-                </div>
-                <div className="disparities-card-image">
-                  <StaticImage
-                    src="../images/illustrations/illustration-maternal-health.png"
-                    alt=""
-                  />
-                </div>
-              </div>
+          <Fade>
+            <div className="disparities-heading">
+              Health Disparities: By the Numbers
             </div>
+          </Fade>
+          <div className="disparities-cards-wrap">
+            <Fade bottom cascade>
+              <div className="disparities-cards">
+                <div className="disparities-card disparities-card-cardio">
+                  <div className="disparities-card-heading">
+                    Cardiovascular Health
+                  </div>
+                  <div className="disparities-card-stat">
+                    <CountUp end={70} redraw={true} duration={.5} useEasing={false}>
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                    <span>%</span>
+                  </div>
+                  <div className="disparities-card-text">
+                    Black men are 70% more likely to die from a stroke as compared
+                    to non-Hispanic white men.
+                  </div>
+                  <div className="disparities-card-image">
+                    <StaticImage
+                      src="../images/illustrations/illustration-cardiovascular-health.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="disparities-card disparities-card-behavioral">
+                  <div className="disparities-card-heading">
+                    Behavioral Health
+                  </div>
+                  <div className="disparities-card-stat">
+                    <CountUp end={55} redraw={true} duration={1} useEasing={false}>
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                    <span>% lower</span>
+                  </div>
+                  <div className="disparities-card-text">
+                    Likely to due to under-diagnosis, Millennials from majority
+                    Black and Hispanic communities have lower diagnosis rates of
+                    major depression, 31% and 55% lower respectively when compared
+                    to white communities.
+                  </div>
+                  <div className="disparities-card-image">
+                    <StaticImage
+                      src="../images/illustrations/illustration-behavioral-health.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="disparities-card disparities-card-diabetes">
+                  <div className="disparities-card-heading">Diabetes</div>
+                  <div className="disparities-card-stat">
+                    <CountUp end={60} redraw={true} duration={1.25} useEasing={false}>
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                    <span>%</span>
+                  </div>
+                  <div className="disparities-card-text">
+                    African American adults are 60% more likely than non-Hispanic
+                    white adults to be diagnosed with diabetes by a physician.
+                  </div>
+                  <div className="disparities-card-image">
+                    <StaticImage
+                      src="../images/illustrations/illustration-diabetes.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="disparities-card disparities-card-maternal">
+                  <div className="disparities-card-heading">Maternal Health</div>
+                  <div className="disparities-card-stat">
+                    <CountUp end={3} redraw={true} duration={.75} useEasing={false}>
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                    <span>x higher</span>
+                  </div>
+                  <div className="disparities-card-text">
+                    Black mothers have 3x higher maternal mortality and 2x higher
+                    morbidity than white mothers.
+                  </div>
+                  <div className="disparities-card-image">
+                    <StaticImage
+                      src="../images/illustrations/illustration-maternal-health.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </Fade>
           </div>
           <div className="sources">
             Sources: 1){" "}
@@ -294,7 +305,8 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="goal-banner" id="commitment">
+      <Slide right>
+        <section className="goal-banner" id="commitment">
         <div className="max-container">
           <div className="goal-banner-box">
             <h6 className="goal-banner-box-title">Our Goal</h6>
@@ -308,9 +320,11 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
-
+      </Slide>
+      
       <section className="profiles" id="community">
-        <div className="inner-content community">
+        <Fade>
+          <div className="inner-content community">
           <h2 style={{ color: "#0072A7" }}>
             What we're doing in your community
           </h2>
@@ -325,13 +339,15 @@ const IndexPage = props => {
             health outcomes in the communities where you live and work.
           </p>
         </div>
+        </Fade>
         <div className="inner-content inner-content-filters">
           <InstantSearch
             searchClient={searchClient}
             indexName="he_plan_profiles"
-          >
+          > 
             <Configure hitsPerPage={5} distinct />
-            <div className="search-filters">
+            <Fade>
+              <div className="search-filters">
               <div className="search-filters-label-main">Filter</div>
               <SearchBox
                 translations={{
@@ -363,6 +379,7 @@ const IndexPage = props => {
                 }}
               />
             </div>
+            </Fade>
             <InfiniteHits
               hitComponent={planResult}
               translations={{
@@ -373,7 +390,9 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <AdvisoryBoard />
+      <Fade>
+        <AdvisoryBoard />
+      </Fade>
 
       {/* <section className="news" id="news">
         <div className="inner-content">
@@ -402,7 +421,9 @@ const IndexPage = props => {
         </div>
       </section> */}
 
-      <PressKitBanner />
+      <Fade>
+        <PressKitBanner />
+      </Fade>
 
       <Newsletter />
     </>
