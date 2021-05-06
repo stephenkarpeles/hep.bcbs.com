@@ -276,8 +276,8 @@ h2 {
   font-family: var(--font-condensed-light), var(--font-fallback);
   font-weight: 300;
   text-rendering: optimizeLegibility;
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2);
+  font-size: clamp(2.6rem, 2rem + 2.6291vw, 4rem);
+  line-height: clamp(2.925rem, 2.2rem + 2.6291vw, 4.5rem);
 }
 h3 {
   margin-left: 0;
