@@ -19,7 +19,6 @@
     "gatsby-plugin-react-helmet": "^4.1.0",
     "gatsby-plugin-sharp": "^3.1.1",
     "gatsby-plugin-styled-components": "^4.4.0",
-    "gatsby-plugin-translate": "^1.1.5",
     "gatsby-plugin-typography": "^3.4.0",
     "gatsby-source-filesystem": "^3.1.0",
     "gatsby-transformer-sharp": "^3.1.0",
