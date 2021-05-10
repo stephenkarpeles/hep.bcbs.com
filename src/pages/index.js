@@ -20,11 +20,9 @@ import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 import Fade from "react-reveal/Fade"
 import Slide from "react-reveal/Slide"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
 import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
-import Alert from "../components/Alert/Alert"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/

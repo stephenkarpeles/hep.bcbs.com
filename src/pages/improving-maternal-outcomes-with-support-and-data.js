@@ -1,7 +1,6 @@
 // Base Imports
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"

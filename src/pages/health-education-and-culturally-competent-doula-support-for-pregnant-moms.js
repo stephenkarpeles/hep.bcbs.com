@@ -1,7 +1,6 @@
 // Base Imports
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
@@ -78,9 +77,7 @@ const HealthEducation = props => {
                   <span>Published March 3, 2021</span>
                 </div> */}
                 <div className="pp-hero__title">
-                  <h1>
-                    Health education and doula support for pregnant moms
-                  </h1>
+                  <h1>Health education and doula support for pregnant moms</h1>
                 </div>
                 <div className="pp-hero__author">
                   <span>Kristin Gourlay</span>
@@ -102,10 +99,10 @@ const HealthEducation = props => {
                 </div>
                 <div className="pp-related__text">
                   <a href="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
-                    Trends in pregnancy and childbirth complications in the U.S. 
+                    Trends in pregnancy and childbirth complications in the U.S.
                   </a>
                 </div>
-              </li>              
+              </li>
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
                   <span>Podcast</span>
@@ -123,29 +120,52 @@ const HealthEducation = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                Doula care is available for Medicaid members in several of Anthem Blue Cross and Blue Shield (Anthem BCBS) markets based on benefits and eligibility. When possible, pregnant mothers of color are matched with doulas of color to provide culturally sensitive care.
+                Doula care is available for Medicaid members in several of
+                Anthem Blue Cross and Blue Shield (Anthem BCBS) markets based on
+                benefits and eligibility. When possible, pregnant mothers of
+                color are matched with doulas of color to provide culturally
+                sensitive care.
               </p>
               <p>
-                In addition, Anthem BCBS’s New Baby, New LifeSM and Taking Care of Baby and Me® are comprehensive care management programs focused on improving prenatal health and birth outcomes for pregnant Medicaid members:
+                In addition, Anthem BCBS’s New Baby, New LifeSM and Taking Care
+                of Baby and Me® are comprehensive care management programs
+                focused on improving prenatal health and birth outcomes for
+                pregnant Medicaid members:
               </p>
               <ul className="pp-content__fancy-list">
                 <li>
                   <p>
-                    Pregnant members receive proactive, culturally appropriate outreach and twice- weekly educational support for both prenatal and postpartum needs through phone, apps or on a website depending on a member’s preferences.
+                    Pregnant members receive proactive, culturally appropriate
+                    outreach and twice- weekly educational support for both
+                    prenatal and postpartum needs through phone, apps or on a
+                    website depending on a member’s preferences.
                   </p>
                 </li>
                 <li>
                   <p>
-                    Members who consent to case management receive additional support from skilled clinicians who coordinate access to prenatal services, address gaps in care and social drivers of health that may be impacting both mother and baby.
+                    Members who consent to case management receive additional
+                    support from skilled clinicians who coordinate access to
+                    prenatal services, address gaps in care and social drivers
+                    of health that may be impacting both mother and baby.
                   </p>
                 </li>
                 <li>
                   <p>
-                    Case management focuses on helping mothers manage high risk conditions such as preeclampsia, diabetes or gestational diabetes, substance use disorder or a previous pre-term delivery.
+                    Case management focuses on helping mothers manage high risk
+                    conditions such as preeclampsia, diabetes or gestational
+                    diabetes, substance use disorder or a previous pre-term
+                    delivery.
                   </p>
                 </li>
               </ul>
-              <p><em>Anthem Blue Cross and Blue Shield is an independent licensee of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.</em></p>
+              <p>
+                <em>
+                  Anthem Blue Cross and Blue Shield is an independent licensee
+                  of the Blue Cross Blue Shield Association, an association of
+                  independent, locally operated Blue Cross and Blue Shield
+                  companies.
+                </em>
+              </p>
             </div>
           </div>
         </Fade>

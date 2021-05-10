@@ -1,10 +1,6 @@
 // Base Imports
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
-import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
-import algoliasearch from "algoliasearch/lite"
 
 // Styles
 import "../components/pages.css"
@@ -14,36 +10,6 @@ import SEO from "../components/seo"
 
 // Sharing
 import Sharing from "../components/Sharing/sharing"
-
-const searchClient = algoliasearch(
-  "B604WWKJH0",
-  "156ba268a0517559cd6a89921ae9cb5f"
-)
-
-const planResult = ({ hit }) => {
-  const { headline, topic, plans, slug, teaser, img_url, read_time } = hit
-
-  return (
-    <div className="plan-result-card">
-      <Link to={`/${slug}/`}></Link>
-      <div className="plan-result-card-plan">
-        <div className="plan-result-card-image">
-          <img
-            src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
-            alt=""
-          />
-        </div>
-        <div className="plan-result-card-company">{plans}</div>
-      </div>
-      <div className="plan-result-card-meta">
-        <div className="plan-result-card-category">{topic}</div>
-        <div className="plan-result-card-title">{headline}</div>
-        <div className="plan-result-card-excerpt">{teaser}</div>
-        <div className="plan-result-card-read">{read_time} min read</div>
-      </div>
-    </div>
-  )
-}
 
 const HomeVisiting = props => {
   return (
