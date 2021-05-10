@@ -154,7 +154,6 @@ const IndexPage = props => {
                       href="https://s3.amazonaws.com/cdn720/bcbsprogresshealth/2021/2021_Issue%20Brief_Addressing%20Health%20Disparities%20&%20Inequities_Final.pdf"
                       target="_blank"
                       rel="noreferrer"
-                      rel="noopener noreferrer"
                     >
                       Influencing policy decisions at the state and federal
                       levels

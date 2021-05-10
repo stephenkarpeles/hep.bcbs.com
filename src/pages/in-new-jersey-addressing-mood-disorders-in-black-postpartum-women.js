@@ -129,7 +129,6 @@ const PlanProfile2 = props => {
                   href="https://www.womenshealth.gov/mental-health/mental-health-conditions/postpartum-depression#13"
                   target="_blank"
                   rel="noreferrer"
-                  rel="noreferrer"
                 >
                   one in nine mothers
                 </a>{" "}
