@@ -127,6 +127,7 @@ does."
                 <a
                   href="https://www.cdc.gov/minorityhealth/index.html"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   40% of the U.S. population
                 </a>
@@ -138,6 +139,7 @@ does."
                 <a
                   href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   National Health Equity Strategy
                 </a>{" "}
@@ -148,6 +150,7 @@ does."
                 <a
                   href="https://www.bcbs.com/press-releases/pledge-make-meaningful-change"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   pledge
                 </a>{" "}
@@ -182,6 +185,7 @@ does."
                 <a
                   href="https://www.commonwealthfund.org/publications/issue-briefs/2020/nov/maternal-mortality-maternity-care-us-compared-10-countries"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   the U.S. is the most dangerous developed country
                 </a>{" "}

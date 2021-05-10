@@ -148,7 +148,11 @@ const HomeVisiting = props => {
                     One of the key causes of pregnancy-related complications—and
                     sometimes death—is hypertension. Blue Cross and Blue Shield
                     of Alabama has partnered with the{" "}
-                    <a href="https://www.alpqc.org/" target="_blank">
+                    <a
+                      href="https://www.alpqc.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Alabama Perinatal Quality Collaborative
                     </a>{" "}
                     to help hospitals implement programs to improve early

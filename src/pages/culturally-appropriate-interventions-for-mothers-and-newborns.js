@@ -109,7 +109,7 @@ const PlanProfile3 = props => {
                     BCBSA announces national health equity strategy
                   </a>
                 </div>
-              </li>              
+              </li>
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
                   <span>Maternal Health</span>
@@ -137,17 +137,26 @@ const PlanProfile3 = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                Arizona has the third-highest American Indian population in the U.S., comprised of Apache, Hopi, Navajo and many other tribes. One of the most significant health crises facing these communities is substance use disorder (SUD). Rates of SUDs are higher among American Indians than any other population group in the country, according to the Substance Abuse and Mental Health Services Administration's
+                Arizona has the third-highest American Indian population in the
+                U.S., comprised of Apache, Hopi, Navajo and many other tribes.
+                One of the most significant health crises facing these
+                communities is substance use disorder (SUD). Rates of SUDs are
+                higher among American Indians than any other population group in
+                the country, according to the Substance Abuse and Mental Health
+                Services Administration's
                 <a
                   href="https://www.samhsa.gov/data/report/2018-nsduh-detailed-tables"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   2018 National Survey on Drug Use and Health
                 </a>
                 .
               </p>
               <p>
-                A complex fabric of social and historical factors make American Indian populations more vulnerable to substance use and inhibit their access to treatment:
+                A complex fabric of social and historical factors make American
+                Indian populations more vulnerable to substance use and inhibit
+                their access to treatment:
               </p>
               <ul>
                 <li>Historical trauma</li>
@@ -159,28 +168,67 @@ const PlanProfile3 = props => {
                 <li>Lack of transportation</li>
               </ul>
               <p>
-                These same factors contribute to devastating maternal death rates. In Arizona, American Indian women face rates as high as 70.8 deaths per 100,000 births according to the CDC. The average maternal death rate across the U.S. is 16.7 per 100,000. Tribal communities throughout Arizona have identified the need for more education, prevention and treatment to serve pregnant and parenting women with a SUD.
+                These same factors contribute to devastating maternal death
+                rates. In Arizona, American Indian women face rates as high as
+                70.8 deaths per 100,000 births according to the CDC. The average
+                maternal death rate across the U.S. is 16.7 per 100,000. Tribal
+                communities throughout Arizona have identified the need for more
+                education, prevention and treatment to serve pregnant and
+                parenting women with a SUD.
               </p>
               <blockquote>
-                In Arizona, American Indian women face rates as high as 70.8 deaths per 100,000 births according to the CDC. The average maternal death rate across the U.S. is 16.7 per 100,000.
+                In Arizona, American Indian women face rates as high as 70.8
+                deaths per 100,000 births according to the CDC. The average
+                maternal death rate across the U.S. is 16.7 per 100,000.
               </blockquote>
               <h4>Mobilize AZ</h4>
               <p>
-                Blue Cross Blue Shield of Arizona (BCBSAZ) is the state's largest health insurer. Partnering with Arizona's tribal nations, the company is committed to supporting native mothers and newborns through culturally appropriate interventions. In part, that means investing in programs and organizations that already serve American Indian communities throughout the state and expanding their capacity.
+                Blue Cross Blue Shield of Arizona (BCBSAZ) is the state's
+                largest health insurer. Partnering with Arizona's tribal
+                nations, the company is committed to supporting native mothers
+                and newborns through culturally appropriate interventions. In
+                part, that means investing in programs and organizations that
+                already serve American Indian communities throughout the state
+                and expanding their capacity.
               </p>
               <p>
-                The health insurer's public health initiative, Mobilize AZ, focuses on key health issues impacting Arizonans - substance use disorder, mental health, and diabetes, as well as social determinants of health.  The initiative earmarks millions of dollars each year to build statewide capacity and resources for substance use disorder prevention, treatment, resiliency, and recovery efforts. Funding priority is given to projects that expand resources, increase systems-level capacity, target an identified vulnerable population, and have a measurable impact. Through this initiative, BCBSAZ is supporting:
+                The health insurer's public health initiative, Mobilize AZ,
+                focuses on key health issues impacting Arizonans - substance use
+                disorder, mental health, and diabetes, as well as social
+                determinants of health. The initiative earmarks millions of
+                dollars each year to build statewide capacity and resources for
+                substance use disorder prevention, treatment, resiliency, and
+                recovery efforts. Funding priority is given to projects that
+                expand resources, increase systems-level capacity, target an
+                identified vulnerable population, and have a measurable impact.
+                Through this initiative, BCBSAZ is supporting:
               </p>
               <ul>
-                <li>Free childcare for native women receiving SUD treatment</li> 
-                <li>Culturally appropriate education on substance use prevention for young women and providers in tribal communities</li> 
-                <li>Programs that build self-esteem among American Indian girls and young mothers.</li> 
-                <li>Education on clinically-proven interventions for newborns with neonatal abstinence syndrome (NAS)</li>  
-                <li>Mindfulness and stress reduction education that has been culturally adapted to tribal communities to help reduce unhealthy coping behaviors</li>            
+                <li>Free childcare for native women receiving SUD treatment</li>
+                <li>
+                  Culturally appropriate education on substance use prevention
+                  for young women and providers in tribal communities
+                </li>
+                <li>
+                  Programs that build self-esteem among American Indian girls
+                  and young mothers.
+                </li>
+                <li>
+                  Education on clinically-proven interventions for newborns with
+                  neonatal abstinence syndrome (NAS)
+                </li>
+                <li>
+                  Mindfulness and stress reduction education that has been
+                  culturally adapted to tribal communities to help reduce
+                  unhealthy coping behaviors
+                </li>
               </ul>
               <p>
                 <em>
-                  Blue Cross Blue Shield of Arizona is an independent licensee of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.
+                  Blue Cross Blue Shield of Arizona is an independent licensee
+                  of the Blue Cross Blue Shield Association, an association of
+                  independent, locally operated Blue Cross and Blue Shield
+                  companies.
                 </em>
               </p>
             </div>

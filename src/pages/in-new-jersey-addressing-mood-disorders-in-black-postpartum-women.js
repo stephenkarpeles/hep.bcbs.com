@@ -82,7 +82,8 @@ const PlanProfile2 = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    In New Jersey, addressing mood disorders in postpartum Black women
+                    In New Jersey, addressing mood disorders in postpartum Black
+                    women
                   </h1>
                 </div>
                 <div className="pp-hero__author">
@@ -131,6 +132,8 @@ const PlanProfile2 = props => {
                 <a
                   href="https://www.womenshealth.gov/mental-health/mental-health-conditions/postpartum-depression#13"
                   target="_blank"
+                  rel="noreferrer"
+                  rel="noreferrer"
                 >
                   one in nine mothers
                 </a>{" "}

@@ -13,12 +13,12 @@ import {
   MenuSelect,
   ClearRefinements,
 } from "react-instantsearch-dom"
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+import CountUp from "react-countup"
+import VisibilitySensor from "react-visibility-sensor"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 //import Zoom from 'react-reveal/Zoom';
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
+import Fade from "react-reveal/Fade"
+import Slide from "react-reveal/Slide"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -35,22 +35,35 @@ const searchClient = algoliasearch(
 )
 
 const planResult = ({ hit }) => {
-  const { headline, topic, plans, slug, teaser, img_url, video_url, read_time } = hit
+  const {
+    headline,
+    topic,
+    plans,
+    slug,
+    teaser,
+    img_url,
+    video_url,
+    read_time,
+  } = hit
 
   return (
     <Fade>
-      <div className={`plan-result-card ${video_url ? "plan-result-card--has-video" : ""}`}>
+      <div
+        className={`plan-result-card ${
+          video_url ? "plan-result-card--has-video" : ""
+        }`}
+      >
         <Link to={`/${slug}/`}></Link>
         <div className="plan-result-card-plan">
-          {hit.img_url && !hit.video_url &&         
+          {hit.img_url && !hit.video_url && (
             <div className="plan-result-card-image">
               <img
                 src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
                 alt=""
               />
             </div>
-          }
-          {hit.video_url && 
+          )}
+          {hit.video_url && (
             <div className="plan-result-card-video">
               <div className="plan-result-card-video__wrapper">
                 <iframe
@@ -65,7 +78,7 @@ const planResult = ({ hit }) => {
                 ></iframe>
               </div>
             </div>
-          }
+          )}
           <div className="plan-result-card-company">{plans}</div>
         </div>
         <div className="plan-result-card-meta">
@@ -82,7 +95,7 @@ const planResult = ({ hit }) => {
 const IndexPage = props => {
   const { t } = useTranslation()
 
-  const [viewPortEntered, setViewPortEntered] = useState(false);
+  const [viewPortEntered, setViewPortEntered] = useState(false)
 
   return (
     <>
@@ -122,37 +135,39 @@ const IndexPage = props => {
             </div>
           </div>
         </Fade>
-     </section>
+      </section>
 
       <section className="lead" id="lead">
         <div className="inner-content">
           <Fade>
             <div className="lead--main">{t("home.lead")}</div>
             <div className="lead--details">
-            <div className="lead--details-points">
-              <ul>
-                <li>Collecting data to measure disparities</li>
-                <li>Scaling effective programs</li>
-                <li>
-                  Working with providers to improve outcomes and address
-                  unconscious bias
-                </li>
-                <li>Leaning into partnerships at the community level</li>
-                <li>
-                  <a
-                    href="https://s3.amazonaws.com/cdn720/bcbsprogresshealth/2021/2021_Issue%20Brief_Addressing%20Health%20Disparities%20&%20Inequities_Final.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Influencing policy decisions at the state and federal levels
-                  </a>
-                </li>
-              </ul>
+              <div className="lead--details-points">
+                <ul>
+                  <li>Collecting data to measure disparities</li>
+                  <li>Scaling effective programs</li>
+                  <li>
+                    Working with providers to improve outcomes and address
+                    unconscious bias
+                  </li>
+                  <li>Leaning into partnerships at the community level</li>
+                  <li>
+                    <a
+                      href="https://s3.amazonaws.com/cdn720/bcbsprogresshealth/2021/2021_Issue%20Brief_Addressing%20Health%20Disparities%20&%20Inequities_Final.pdf"
+                      target="_blank"
+                      rel="noreferrer"
+                      rel="noopener noreferrer"
+                    >
+                      Influencing policy decisions at the state and federal
+                      levels
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="lead--details-summary">
+                {t("home.lead-summary")}
+              </div>
             </div>
-            <div className="lead--details-summary">
-              {t("home.lead-summary")}
-            </div>
-          </div>
           </Fade>
         </div>
       </section>
@@ -172,17 +187,23 @@ const IndexPage = props => {
                     Cardiovascular Health
                   </div>
                   <div className="disparities-card-stat">
-                    <CountUp start={viewPortEntered ? null : 0} end={70} redraw={true} duration={.5} useEasing={false}>
+                    <CountUp
+                      start={viewPortEntered ? null : 0}
+                      end={70}
+                      redraw={true}
+                      duration={0.5}
+                      useEasing={false}
+                    >
                       {({ countUpRef }) => (
-                          <VisibilitySensor
-                            active={!viewPortEntered}
-                            onChange={isVisible => {
-                              if (isVisible) {
-                                setViewPortEntered(true);
-                              }
-                            }}
-                            delayedCall
-                          >
+                        <VisibilitySensor
+                          active={!viewPortEntered}
+                          onChange={isVisible => {
+                            if (isVisible) {
+                              setViewPortEntered(true)
+                            }
+                          }}
+                          delayedCall
+                        >
                           <span ref={countUpRef} />
                         </VisibilitySensor>
                       )}
@@ -190,8 +211,8 @@ const IndexPage = props => {
                     <span>%</span>
                   </div>
                   <div className="disparities-card-text">
-                    Black men are 70% more likely to die from a stroke as compared
-                    to non-Hispanic white men.
+                    Black men are 70% more likely to die from a stroke as
+                    compared to non-Hispanic white men.
                   </div>
                   <div className="disparities-card-image">
                     <StaticImage
@@ -205,17 +226,23 @@ const IndexPage = props => {
                     Behavioral Health
                   </div>
                   <div className="disparities-card-stat">
-                    <CountUp start={viewPortEntered ? null : 0} end={55} redraw={true} duration={1} useEasing={false}>
+                    <CountUp
+                      start={viewPortEntered ? null : 0}
+                      end={55}
+                      redraw={true}
+                      duration={1}
+                      useEasing={false}
+                    >
                       {({ countUpRef }) => (
-                          <VisibilitySensor
-                            active={!viewPortEntered}
-                            onChange={isVisible => {
-                              if (isVisible) {
-                                setViewPortEntered(true);
-                              }
-                            }}
-                            delayedCall
-                          >
+                        <VisibilitySensor
+                          active={!viewPortEntered}
+                          onChange={isVisible => {
+                            if (isVisible) {
+                              setViewPortEntered(true)
+                            }
+                          }}
+                          delayedCall
+                        >
                           <span ref={countUpRef} />
                         </VisibilitySensor>
                       )}
@@ -225,8 +252,8 @@ const IndexPage = props => {
                   <div className="disparities-card-text">
                     Likely to due to under-diagnosis, Millennials from majority
                     Black and Hispanic communities have lower diagnosis rates of
-                    major depression, 31% and 55% lower respectively when compared
-                    to white communities.
+                    major depression, 31% and 55% lower respectively when
+                    compared to white communities.
                   </div>
                   <div className="disparities-card-image">
                     <StaticImage
@@ -238,17 +265,23 @@ const IndexPage = props => {
                 <div className="disparities-card disparities-card-diabetes">
                   <div className="disparities-card-heading">Diabetes</div>
                   <div className="disparities-card-stat">
-                    <CountUp start={viewPortEntered ? null : 0} end={60} redraw={true} duration={1.25} useEasing={false}>
+                    <CountUp
+                      start={viewPortEntered ? null : 0}
+                      end={60}
+                      redraw={true}
+                      duration={1.25}
+                      useEasing={false}
+                    >
                       {({ countUpRef }) => (
-                          <VisibilitySensor
-                            active={!viewPortEntered}
-                            onChange={isVisible => {
-                              if (isVisible) {
-                                setViewPortEntered(true);
-                              }
-                            }}
-                            delayedCall
-                          >
+                        <VisibilitySensor
+                          active={!viewPortEntered}
+                          onChange={isVisible => {
+                            if (isVisible) {
+                              setViewPortEntered(true)
+                            }
+                          }}
+                          delayedCall
+                        >
                           <span ref={countUpRef} />
                         </VisibilitySensor>
                       )}
@@ -256,8 +289,9 @@ const IndexPage = props => {
                     <span>%</span>
                   </div>
                   <div className="disparities-card-text">
-                    African American adults are 60% more likely than non-Hispanic
-                    white adults to be diagnosed with diabetes by a physician.
+                    African American adults are 60% more likely than
+                    non-Hispanic white adults to be diagnosed with diabetes by a
+                    physician.
                   </div>
                   <div className="disparities-card-image">
                     <StaticImage
@@ -267,19 +301,27 @@ const IndexPage = props => {
                   </div>
                 </div>
                 <div className="disparities-card disparities-card-maternal">
-                  <div className="disparities-card-heading">Maternal Health</div>
+                  <div className="disparities-card-heading">
+                    Maternal Health
+                  </div>
                   <div className="disparities-card-stat">
-                    <CountUp start={viewPortEntered ? null : 0} end={3} redraw={true} duration={.75} useEasing={false}>
+                    <CountUp
+                      start={viewPortEntered ? null : 0}
+                      end={3}
+                      redraw={true}
+                      duration={0.75}
+                      useEasing={false}
+                    >
                       {({ countUpRef }) => (
-                          <VisibilitySensor
-                            active={!viewPortEntered}
-                            onChange={isVisible => {
-                              if (isVisible) {
-                                setViewPortEntered(true);
-                              }
-                            }}
-                            delayedCall
-                          >
+                        <VisibilitySensor
+                          active={!viewPortEntered}
+                          onChange={isVisible => {
+                            if (isVisible) {
+                              setViewPortEntered(true)
+                            }
+                          }}
+                          delayedCall
+                        >
                           <span ref={countUpRef} />
                         </VisibilitySensor>
                       )}
@@ -287,8 +329,8 @@ const IndexPage = props => {
                     <span>x higher</span>
                   </div>
                   <div className="disparities-card-text">
-                    Black mothers have 3x higher maternal mortality and 2x higher
-                    morbidity than white mothers.
+                    Black mothers have 3x higher maternal mortality and 2x
+                    higher morbidity than white mothers.
                   </div>
                   <div className="disparities-card-image">
                     <StaticImage
@@ -305,6 +347,7 @@ const IndexPage = props => {
             <u>
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://minorityhealth.hhs.gov/omh/browse.aspx?lvl=4&lvlid=28"
               >
                 OMH: Stroke and African Americans
@@ -315,6 +358,7 @@ const IndexPage = props => {
               <a
                 href="https://www.bcbs.com/the-health-of-america/reports/millennial-health-trends-behavioral-health-conditions"
                 target="_blank"
+                rel="noreferrer"
               >
                 Millennial Health: Trends in Behavioral Health Conditions
               </a>
@@ -324,6 +368,7 @@ const IndexPage = props => {
               <a
                 href="https://www.cdc.gov/diabetes/pdfs/data/statistics/national-diabetes-statistics-report.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 CDC: National Diabetes Statistics Report
               </a>
@@ -333,6 +378,7 @@ const IndexPage = props => {
               <a
                 href="https://www.ajmc.com/view/racial-disparities-persist-in-maternal-morbidity-mortality-and-infant-health"
                 target="_blank"
+                rel="noreferrer"
               >
                 AJMC: Racial Disparities Persist in Maternal Morbidity,
                 Mortality and Infant Health
@@ -358,64 +404,64 @@ const IndexPage = props => {
           </div>
         </section>
       </Slide>
-      
+
       <section className="profiles" id="community">
         <Fade>
           <div className="inner-content community">
-          <h2 style={{ color: "#0072A7" }}>
-            What we're doing in your community
-          </h2>
-          <p
-            style={{
-              maxWidth: 800,
-              marginBottom: "3rem",
-              fontSize: "1.125rem",
-            }}
-          >
-            BCBS companies are addressing racial disparities and improving
-            health outcomes in the communities where you live and work.
-          </p>
-        </div>
+            <h2 style={{ color: "#0072A7" }}>
+              What we're doing in your community
+            </h2>
+            <p
+              style={{
+                maxWidth: 800,
+                marginBottom: "3rem",
+                fontSize: "1.125rem",
+              }}
+            >
+              BCBS companies are addressing racial disparities and improving
+              health outcomes in the communities where you live and work.
+            </p>
+          </div>
         </Fade>
         <div className="inner-content inner-content-filters">
           <InstantSearch
             searchClient={searchClient}
             indexName="he_plan_profiles"
-          > 
+          >
             <Configure hitsPerPage={5} distinct />
             <Fade>
               <div className="search-filters">
-              <div className="search-filters-label-main">Filter</div>
-              <SearchBox
-                translations={{
-                  placeholder: "Keyword",
-                }}
-              />
-              <div className="search-filters-refinement">
-                <div className="search-filters-label">
-                  What's Happening in my State
-                </div>
-                <MenuSelect
-                  attribute="states"
-                  limit={50}
+                <div className="search-filters-label-main">Filter</div>
+                <SearchBox
                   translations={{
-                    seeAllOption: "All States",
+                    placeholder: "Keyword",
+                  }}
+                />
+                <div className="search-filters-refinement">
+                  <div className="search-filters-label">
+                    What's Happening in my State
+                  </div>
+                  <MenuSelect
+                    attribute="states"
+                    limit={50}
+                    translations={{
+                      seeAllOption: "All States",
+                    }}
+                  />
+                </div>
+                <div className="search-filters-refinement">
+                  <div className="search-filters-label">
+                    Maternal Health Topics
+                  </div>
+                  <RefinementList attribute="subtopics" />
+                </div>
+                <ClearRefinements
+                  clearsQuery
+                  translations={{
+                    reset: "Clear Filters",
                   }}
                 />
               </div>
-              <div className="search-filters-refinement">
-                <div className="search-filters-label">
-                  Maternal Health Topics
-                </div>
-                <RefinementList attribute="subtopics" />
-              </div>
-              <ClearRefinements
-                clearsQuery
-                translations={{
-                  reset: "Clear Filters",
-                }}
-              />
-            </div>
             </Fade>
             <InfiniteHits
               hitComponent={planResult}

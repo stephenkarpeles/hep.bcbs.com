@@ -78,9 +78,7 @@ const ImprovingMaternalOutcomes = props => {
                   <span>Published March 3, 2021</span>
                 </div> */}
                 <div className="pp-hero__title">
-                  <h1>
-                    Improving maternal outcomes with support and data
-                  </h1>
+                  <h1>Improving maternal outcomes with support and data</h1>
                 </div>
                 <div className="pp-hero__author">
                   <span>Kristin Gourlay</span>
@@ -123,26 +121,73 @@ const ImprovingMaternalOutcomes = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                The Blue Cross Blue Shield of Michigan Foundation supported a doula support integration and coordination of care for high risk women in labor through a partnership with Western Michigan University Homer Stryker Medical School.  The program will create and train a network of eight community doulas to assist the most at risk women (low socioeconomic status, women of color, or prior poor birth outcome), who lack support during labor and postpartum, and provide coordination between doulas and community health workers for transition of care from hospital to home.
+                The Blue Cross Blue Shield of Michigan Foundation supported a
+                doula support integration and coordination of care for high risk
+                women in labor through a partnership with Western Michigan
+                University Homer Stryker Medical School.  The program will
+                create and train a network of eight community doulas to assist
+                the most at risk women (low socioeconomic status, women of
+                color, or prior poor birth outcome), who lack support during
+                labor and postpartum, and provide coordination between doulas
+                and community health workers for transition of care from
+                hospital to home.
               </p>
               <p>
-                Additionally, Labor and Delivery staff will be trained on the outcome benefits for having doulas; identify high-risk women for doula services through local prenatal clinics services and at delivery. Doulas will assist women during delivery, visit patient at home (first week), following covid-19 protection protocols and then will connect the women with a community health worker for post-natal/early infancy home visitation follow-up.
+                Additionally, Labor and Delivery staff will be trained on the
+                outcome benefits for having doulas; identify high-risk women for
+                doula services through local prenatal clinics services and at
+                delivery. Doulas will assist women during delivery, visit
+                patient at home (first week), following covid-19 protection
+                protocols and then will connect the women with a community
+                health worker for post-natal/early infancy home visitation
+                follow-up.
               </p>
               <p>
-                The Obstetrics Initiative (OBI) is a state-wide, data-driven quality improvement project supported by Blue Cross Blue Shield of Michigan (BCBSMI)/Blue Care Network to create optimal maternity care experiences for Michigan families.
+                The Obstetrics Initiative (OBI) is a state-wide, data-driven
+                quality improvement project supported by Blue Cross Blue Shield
+                of Michigan (BCBSMI)/Blue Care Network to create optimal
+                maternity care experiences for Michigan families.
               </p>
               <blockquote>
-                The first initiative is supporting vaginal birth and safely lowering the cesarean delivery rate among low-risk patients.
+                The first initiative is supporting vaginal birth and safely
+                lowering the cesarean delivery rate among low-risk patients.
               </blockquote>
               <p>
-                OBI is working to identify and address variation in obstetric driven care in the state of Michigan through collaboration, rapid cycle data reporting, and quality improvement initiatives. The first initiative is supporting vaginal birth and safely lowering the cesarean delivery rate among low-risk patients. OBI promotes collaboration and the sharing of best practices among participating maternity hospitals. By collecting data, analyzing data, and reporting data back to OBI participants, opportunities for improvement can be identified and quality improvement initiatives can be implemented.
+                OBI is working to identify and address variation in obstetric
+                driven care in the state of Michigan through collaboration,
+                rapid cycle data reporting, and quality improvement initiatives.
+                The first initiative is supporting vaginal birth and safely
+                lowering the cesarean delivery rate among low-risk patients. OBI
+                promotes collaboration and the sharing of best practices among
+                participating maternity hospitals. By collecting data, analyzing
+                data, and reporting data back to OBI participants, opportunities
+                for improvement can be identified and quality improvement
+                initiatives can be implemented.
               </p>
               <p>
-                Addressing Perinatal Opioid Use Disorder-BCBSMI and BCBSMI Foundation partnership with the Michigan Department of Health &amp; Human Services to address perinatal opioid use disorder. Five regional health organizations across the state in partnership with their Regional Perinatal Quality Collaborative received a combined total of $300,000 in grant funding to begin new projects, enhance or expand existing projects to prevent and treat opioid use disorder among women, their children and infants during prenatal, pregnancy and postpartum periods. 
+                Addressing Perinatal Opioid Use Disorder-BCBSMI and BCBSMI
+                Foundation partnership with the Michigan Department of Health
+                &amp; Human Services to address perinatal opioid use disorder.
+                Five regional health organizations across the state in
+                partnership with their Regional Perinatal Quality Collaborative
+                received a combined total of $300,000 in grant funding to begin
+                new projects, enhance or expand existing projects to prevent and
+                treat opioid use disorder among women, their children and
+                infants during prenatal, pregnancy and postpartum periods.
               </p>
               <p>
                 <em>
-                  <a href="https://www.bcbsm.com/" target="_blank">Blue Cross Blue Shield of Michigan</a> and the Blue Cross Blue Shield of Michigan Foundation are independent licensees of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.
+                  <a
+                    href="https://www.bcbsm.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Blue Cross Blue Shield of Michigan
+                  </a>{" "}
+                  and the Blue Cross Blue Shield of Michigan Foundation are
+                  independent licensees of the Blue Cross Blue Shield
+                  Association, an association of independent, locally operated
+                  Blue Cross and Blue Shield companies.
                 </em>
               </p>
             </div>

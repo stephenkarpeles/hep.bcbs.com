@@ -70,6 +70,7 @@ const AlertBanner = () => {
             <div className="alert-opened-content-cta">
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.youtube.com/watch?v=zczs34aYmiM"
               >
                 <button className="button button-basic">Watch Here</button>

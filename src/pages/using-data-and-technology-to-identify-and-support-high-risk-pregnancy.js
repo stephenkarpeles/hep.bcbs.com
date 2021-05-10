@@ -131,6 +131,7 @@ const DataTechnology = props => {
                 <a
                   href="https://www.bcbsla.com/wellness/member-programs/maternity-programs"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Healthy Blue Beginnings
                 </a>{" "}
@@ -164,7 +165,11 @@ const DataTechnology = props => {
               <p>
                 Another pregnancy support program is a unique texting service
                 called{" "}
-                <a href="https://www.text4baby.org/" target="_blank">
+                <a
+                  href="https://www.text4baby.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   text4baby
                 </a>
                 . Whether or not a woman joins Healthy Blue Beginnings, BCBSLA
@@ -175,31 +180,51 @@ const DataTechnology = props => {
                 511411 on your cellphone.
               </p>
               <p>
-                <a href="https://www.bcbsla.com/stronger" target="_blank">
+                <a
+                  href="https://www.bcbsla.com/stronger"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Stronger Than
                 </a>{" "}
                 is a BCBSLA care management program that can connect women to
                 these services listed above as well as a wide range of free or
                 low - cost community services. One of these is{" "}
-                <a href="https://coffective.com/" target="_blank">
+                <a
+                  href="https://coffective.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Coffectiv
                 </a>
                 , a coalition of community resources to support women before,
                 during and after pregnancy. Find more at{" "}
-                <a href="https://supportservices.bcbsla.com/" target="_blank">
+                <a
+                  href="https://supportservices.bcbsla.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   supportservices.bcbsla.com
                 </a>
               </p>
               <p>
                 BCBSLA employees and the{" "}
-                <a href="http://bcbslafoundation.org/" target="_blank">
+                <a
+                  href="http://bcbslafoundation.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Blue Cross Blue Shield Foundation
                 </a>{" "}
                 also support the health of babies and young children in a number
                 of ways. The Foundation’s focus is on Louisiana children’s
                 health and wellbeing, and many of its grants are awarded
                 accordingly . One the Foundation’s most successful grantees,{" "}
-                <a href="https://www.facebook.com/fit.nola/" target="_blank">
+                <a
+                  href="https://www.facebook.com/fit.nola/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Fit NOLA
                 </a>
                 , has recently expanded a program that lets doctors give “fruit
@@ -214,6 +239,7 @@ const DataTechnology = props => {
                 <a
                   href="https://news.bcbsla.com/press-releases/2020/louisiana-pregnancy-complications"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   https://news/bcbsla.com/press-releases/2020/louisiana-pregnancy-complications
                 </a>

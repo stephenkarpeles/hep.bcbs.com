@@ -76,7 +76,7 @@ const PressKitPage = props => {
                 National Health Equity Strategy and Maternal Health Program
               </p>
               <div className="download-link">
-                <a href={pressFull} target="_blank">
+                <a href={pressFull} target="_blank" rel="noreferrer">
                   Download press kit
                 </a>
               </div>
@@ -96,7 +96,7 @@ const PressKitPage = props => {
                 Strategy
               </div>
               <div className="download-link">
-                <a href={factSheet} target="_blank">
+                <a href={factSheet} target="_blank" rel="noreferrer">
                   Download
                 </a>
               </div>
@@ -107,7 +107,7 @@ const PressKitPage = props => {
                 Meet the members of our national advisory panel
               </div>
               <div className="download-link">
-                <a href={panelBios} target="_blank">
+                <a href={panelBios} target="_blank" rel="noreferrer">
                   Download
                 </a>
               </div>
@@ -119,7 +119,7 @@ const PressKitPage = props => {
                 Cross Blue Shield (BCBS) system
               </div>
               <div className="download-link">
-                <a href={communityHighlights} target="_blank">
+                <a href={communityHighlights} target="_blank" rel="noreferrer">
                   Download
                 </a>
               </div>
@@ -139,6 +139,7 @@ const PressKitPage = props => {
           <a
             href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities"
             target="_blank"
+            rel="noreferrer"
           >
             <button type="button" className="button button-basic">
               Read More

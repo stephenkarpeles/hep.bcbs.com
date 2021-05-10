@@ -136,6 +136,7 @@ const PlanProfile1 = props => {
                 <a
                   href="https://www.cdc.gov/reproductivehealth/maternalinfanthealth/severematernalmorbidity.html"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   has increased by over 200%
                 </a>{" "}
@@ -145,6 +146,7 @@ const PlanProfile1 = props => {
                 <a
                   href="https://pubmed.ncbi.nlm.nih.gov/30877505/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Black women face a 70% higher risk of SMM than any other
                   racial group
@@ -166,6 +168,7 @@ const PlanProfile1 = props => {
                 <a
                   href="https://www.marchofdimes.org/materials/Doulas%20and%20birth%20outcomes%20position%20statement%20final%20January%2030%20PM.pdf"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   According to March of Dimes
                 </a>
@@ -197,8 +200,8 @@ const PlanProfile1 = props => {
                     School to create and train a network of eight community
                     doulas to assist women at risk of poor birth outcomes. Blue
                     Cross and Blue Shield of Minnesota is providing scholarships
-                    to increase the number of doulas in areas with the
-                    least access.
+                    to increase the number of doulas in areas with the least
+                    access.
                   </p>
                 </li>
                 <li>
@@ -235,6 +238,7 @@ const PlanProfile1 = props => {
                 <a
                   href="https://www.aamc.org/media/44091/download"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   notes
                 </a>{" "}

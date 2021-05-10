@@ -116,6 +116,7 @@ const EquitableQualityCare = props => {
                 <a
                   href="https://www.ajmc.com/view/racial-disparities-persist-in-maternal-morbidity-mortality-and-infant-health"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Black mothers face
                 </a>{" "}
