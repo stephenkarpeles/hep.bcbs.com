@@ -500,10 +500,8 @@ const IndexPage = props => {
           </div>
         </div>
       </section> */}
-
-      <Fade>
-        <PressKitBanner />
-      </Fade>
+      
+      <PressKitBanner />      
 
       <Newsletter />
     </>
