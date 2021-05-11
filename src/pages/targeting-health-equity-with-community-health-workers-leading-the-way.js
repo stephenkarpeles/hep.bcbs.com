@@ -111,7 +111,11 @@ const TargetingHealthEquity = props => {
           <div className="pp-content">
             <div className="pp-content__inner">
               <p>
-                <a href="https://www.bluekc.com/" target="_blank">
+                <a
+                  href="https://www.bluekc.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Blue Cross and Blus Shield of Kansas City
                 </a>{" "}
                 (Blue KC) is leading efforts to reduce racial disparities in

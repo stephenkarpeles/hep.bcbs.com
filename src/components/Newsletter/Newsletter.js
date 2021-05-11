@@ -21,6 +21,7 @@ function Newsletter() {
               name="mc-embedded-subscribe-form"
               className="validate"
               target="_blank"
+              rel="noreferrer"
               noValidate
             >
               <div id="mc_embed_signup_scroll">
@@ -99,7 +100,11 @@ function Newsletter() {
                       We use Mailchimp as our marketing platform. By clicking
                       below to subscribe, you acknowledge that your information
                       will be transferred to Mailchimp for processing.{" "}
-                      <a href="https://mailchimp.com/legal/" target="_blank">
+                      <a
+                        href="https://mailchimp.com/legal/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         Learn more about Mailchimp's privacy practices here.
                       </a>
                     </p>

@@ -1,10 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import algoliasearch from "algoliasearch/lite"
-import { useTranslation } from "react-i18next"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
 import Newsletter from "../components/Newsletter/Newsletter"
 import "./press-kit.css"
 import {
@@ -20,38 +16,7 @@ import factSheet from "../../static/assets/files/Press-Kit_Factsheet.pdf"
 import panelBios from "../../static/assets/files/Press-Kit_National-Advisory-Panel-Biographies.pdf"
 import pressFull from "../../static/assets/files/Press-Kit_Full.pdf"
 
-//import 'react-accessible-accordion/dist/fancy-example.css';
-
-const searchClient = algoliasearch(
-  "B604WWKJH0",
-  "156ba268a0517559cd6a89921ae9cb5f"
-)
-
-const planResult = ({ hit }) => {
-  const { title, category, plan, url, excerpt, img_url } = hit
-
-  return (
-    <div className="plan-result-card">
-      <Link to={url}>
-        <div className="plan-result-card-plan">
-          <div className="plan-result-card-image">
-            <img src={img_url} />
-          </div>
-          <div className="plan-result-card-company">{plan}</div>
-        </div>
-        <div className="plan-result-card-meta">
-          <div className="plan-result-card-category">{category}</div>
-          <div className="plan-result-card-title">{title}</div>
-          <div className="plan-result-card-excerpt">{excerpt}</div>
-        </div>
-      </Link>
-    </div>
-  )
-}
-
 const PressKitPage = props => {
-  const { t } = useTranslation()
-
   return (
     <>
       <SEO
@@ -76,7 +41,7 @@ const PressKitPage = props => {
                 National Health Equity Strategy and Maternal Health Program
               </p>
               <div className="download-link">
-                <a href={pressFull} target="_blank">
+                <a href={pressFull} target="_blank" rel="noreferrer">
                   Download press kit
                 </a>
               </div>
@@ -96,7 +61,7 @@ const PressKitPage = props => {
                 Strategy
               </div>
               <div className="download-link">
-                <a href={factSheet} target="_blank">
+                <a href={factSheet} target="_blank" rel="noreferrer">
                   Download
                 </a>
               </div>
@@ -107,7 +72,7 @@ const PressKitPage = props => {
                 Meet the members of our national advisory panel
               </div>
               <div className="download-link">
-                <a href={panelBios} target="_blank">
+                <a href={panelBios} target="_blank" rel="noreferrer">
                   Download
                 </a>
               </div>
@@ -119,7 +84,7 @@ const PressKitPage = props => {
                 Cross Blue Shield (BCBS) system
               </div>
               <div className="download-link">
-                <a href={communityHighlights} target="_blank">
+                <a href={communityHighlights} target="_blank" rel="noreferrer">
                   Download
                 </a>
               </div>
@@ -139,6 +104,7 @@ const PressKitPage = props => {
           <a
             href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities"
             target="_blank"
+            rel="noreferrer"
           >
             <button type="button" className="button button-basic">
               Read More

@@ -128,6 +128,7 @@ const WrapAroundCare = props => {
                 <a
                   href="https://www.commonwealthfund.org/publications/issue-briefs/2020/nov/maternal-mortality-maternity-care-us-compared-10-countries"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   highest maternal and infant mortality rates
                 </a>{" "}
@@ -135,6 +136,7 @@ const WrapAroundCare = props => {
                 <a
                   href="https://www.cdc.gov/nchs/maternal-mortality/index.htm"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   statistics
                 </a>{" "}

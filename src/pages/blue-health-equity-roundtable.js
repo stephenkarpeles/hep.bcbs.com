@@ -5,9 +5,6 @@ import Fade from "react-reveal/Fade"
 import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
 
-// Images
-import backgroundImage from "../images/health-equity-roundtable-alert-banner.png"
-
 // Styles
 import "../components/pages.css"
 
@@ -80,9 +77,7 @@ const BlueHealthEquityRoundtable = props => {
                   <span>Published April 20, 2021</span>
                 </div>
                 <div className="pp-hero__title">
-                  <h1>
-                    Blue Health Equity Roundtable
-                  </h1>
+                  <h1>Blue Health Equity Roundtable</h1>
                 </div>
                 {/* <div className="pp-hero__author">
                   <span>Carlton Houston</span>
@@ -104,7 +99,8 @@ const BlueHealthEquityRoundtable = props => {
                 </div>
                 <div className="pp-related__text">
                   <a href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities">
-                    BCBS announces national health equity strategy to confront the nation’s crisis in racial health disparities
+                    BCBS announces national health equity strategy to confront
+                    the nation’s crisis in racial health disparities
                   </a>
                 </div>
               </li>
@@ -127,8 +123,16 @@ const BlueHealthEquityRoundtable = props => {
                 ></iframe>
               </div>
               <p>
-                The crisis in racial disparities in our country’s healthcare is unconscionable and unacceptable. Join Blue Cross Blue Shield Association President and CEO Kim Keck, Dr. Jackie Walters, OBGYN and cast member of Married to Medicine, March of Dimes CEO Stacey D. Stewart and CareFirst BlueCross BlueShield Executive Vice President of Health Services Stacia Cohen for an in-depth look at the current state of racial disparities in healthcare, ways we can change the trajectory of heath disparities and how we can reimagine a more equitable healthcare system.
-              </p>              
+                The crisis in racial disparities in our country’s healthcare is
+                unconscionable and unacceptable. Join Blue Cross Blue Shield
+                Association President and CEO Kim Keck, Dr. Jackie Walters,
+                OBGYN and cast member of Married to Medicine, March of Dimes CEO
+                Stacey D. Stewart and CareFirst BlueCross BlueShield Executive
+                Vice President of Health Services Stacia Cohen for an in-depth
+                look at the current state of racial disparities in healthcare,
+                ways we can change the trajectory of heath disparities and how
+                we can reimagine a more equitable healthcare system.
+              </p>
             </div>
           </div>
         </Fade>

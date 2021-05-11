@@ -1,7 +1,6 @@
 // Base Imports
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
@@ -11,9 +10,6 @@ import "../components/pages.css"
 
 // Components
 import SEO from "../components/seo"
-
-// Images
-import nursePatientImg from "../images/nurse-patient-1.jpg"
 
 // Sharing
 import Sharing from "../components/Sharing/sharing"
@@ -116,7 +112,8 @@ const PlanProfile4 = props => {
                 </div>
                 <div className="pp-related__text">
                   <a href="https://www.bcbs.com/the-health-of-america/podcast/using-telemedicine-improve-rural-womens-health-and-save-babies-lives">
-                    Using telemedicine to improve rural women’s health and save babies’ lives
+                    Using telemedicine to improve rural women’s health and save
+                    babies’ lives
                   </a>
                 </div>
               </li>
@@ -126,7 +123,8 @@ const PlanProfile4 = props => {
                 </div>
                 <div className="pp-related__text">
                   <a href="https://www.bcbs.com/the-health-of-america/articles/standardized-screening-social-determinants-of-health-means-holistic">
-                    Standardized screening for social determinants of health means holistic healthcare from the first appointment
+                    Standardized screening for social determinants of health
+                    means holistic healthcare from the first appointment
                   </a>
                 </div>
               </li>
@@ -143,6 +141,7 @@ const PlanProfile4 = props => {
                 <a
                   href="https://sites.nationalacademies.org/cs/groups/dbassesite/documents/webpage/dbasse_084309.pdf"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   release of stress hormones
                 </a>
@@ -151,6 +150,7 @@ const PlanProfile4 = props => {
                 <a
                   href="https://www.healthaffairs.org/doi/10.1377/hlthaff.2015.0645"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   an increased risk for post-partum depression
                 </a>
@@ -158,6 +158,7 @@ const PlanProfile4 = props => {
                 <a
                   href="https://www.cdc.gov/pcd/issues/2016/16_0212.htm"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   blood pressure
                 </a>
@@ -179,6 +180,7 @@ const PlanProfile4 = props => {
                 <a
                   href="https://www.feedingamerica.org/hunger-in-america/african-american"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   according to Feeding America
                 </a>
@@ -199,10 +201,11 @@ const PlanProfile4 = props => {
                 offering mothers and families in need clinically tailored meals
                 and food boxes as well as nutritional coaching. Members can
                 start as early as 20 weeks into their pregnancy and continue
-                through the second month after birth. The program is a partnership with Project Well and
-                Second Harvest Heartland, which will deliver the food and the
-                coaching. Members will also be connected to food programs and
-                solutions to meet other social needs through case management.
+                through the second month after birth. The program is a
+                partnership with Project Well and Second Harvest Heartland,
+                which will deliver the food and the coaching. Members will also
+                be connected to food programs and solutions to meet other social
+                needs through case management.
               </p>
               <p>
                 In New York, <strong>Excellus BlueCross BlueShield</strong> is
