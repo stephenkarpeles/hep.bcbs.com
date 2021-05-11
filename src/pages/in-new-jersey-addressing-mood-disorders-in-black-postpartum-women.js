@@ -69,7 +69,7 @@ const PlanProfile2 = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-in-new-jersey-addressing-mood-disorders-in-black-postpartum-women-a.png")`,
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-strong-collaborations-aim-to-improve-birth-outcomes.png")`,
             }}
           >
             <div className="pp-hero__meta">
@@ -82,7 +82,8 @@ const PlanProfile2 = props => {
                 </div> */}
                 <div className="pp-hero__title">
                   <h1>
-                    In New Jersey, addressing mood disorders in postpartum Black women
+                    In New Jersey, addressing mood disorders in postpartum Black
+                    women
                   </h1>
                 </div>
                 <div className="pp-hero__author">
