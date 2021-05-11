@@ -24,6 +24,7 @@
     "gatsby-transformer-sharp": "^3.1.0",
     "i18next": "^20.1.0",
     "instantsearch.js": "^4.17.0",
+    "is-svg": ">=4.2.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-accessible-accordion": "^3.3.4",
@@ -39,11 +40,12 @@
     "react-typography": "^0.16.19",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^5.2.3",
+    "trim": ">=0.0.3",
     "typography": "^0.16.19"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
-    "postcss": "^8.2.8",
+    "postcss": "^8.2.14",
     "postcss-advanced-variables": "^3.0.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-hexrgba": "^2.0.1",
