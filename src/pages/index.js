@@ -501,7 +501,9 @@ const IndexPage = props => {
         </div>
       </section> */}
 
-      <PressKitBanner />
+      <Fade>
+        <PressKitBanner />
+      </Fade>
 
       <Newsletter />
     </>
