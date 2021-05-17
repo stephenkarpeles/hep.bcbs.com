@@ -71,7 +71,7 @@ const AlertBanner = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.youtube.com/watch?v=zczs34aYmiM"
+                href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health"
               >
                 <button className="button button-basic">Read the Report</button>
               </a>
