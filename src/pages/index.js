@@ -450,10 +450,7 @@ const IndexPage = props => {
                   <div className="search-filters-label">
                     Maternal Health Topics
                   </div>
-                  <div
-                    class="search-filters-topics-menuselect"
-                    style={{ display: "none" }}
-                  >
+                  <div class="search-filters-topics-menuselect">
                     <MenuSelect
                       attribute="subtopics"
                       limit={50}
@@ -462,7 +459,10 @@ const IndexPage = props => {
                       }}
                     />
                   </div>
-                  <div class="search-filters-topics-refinement">
+                  <div
+                    class="search-filters-topics-refinement"
+                    style={{ display: "none" }}
+                  >
                     <RefinementList attribute="subtopics" limit={50} />
                   </div>
                 </div>
