@@ -49,9 +49,9 @@ const AlertBanner = () => {
               <span>Close</span> <img src={imgCloseIcon} alt="Close" />
             </button>
             <div className="alert-opened-content-heading">
-              <div className="alert-opened-content-heading--white">
+              {/* <div className="alert-opened-content-heading--white">
                 Read the report
-              </div>
+              </div> */}
               <div className="alert-opened-content-heading--blue">
                 Racial Disparities in Maternal Health
               </div>
