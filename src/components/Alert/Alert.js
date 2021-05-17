@@ -50,16 +50,16 @@ const AlertBanner = () => {
             </button>
             <div className="alert-opened-content-heading">
               <div className="alert-opened-content-heading--white">
-                Blue Health Equity
+                Read the report
               </div>
               <div className="alert-opened-content-heading--blue">
-                Virtual Round Table
+                Racial Disparities in Maternal Health
               </div>
             </div>
 
-            <div className="alert-opened-content-date">
+            {/* <div className="alert-opened-content-date">
               April 20, 2021 until 1pm CDT
-            </div>
+            </div> */}
             <div className="alert-opened-content-logo">
               <StaticImage
                 style={{ maxWidth: 380 }}
@@ -73,7 +73,7 @@ const AlertBanner = () => {
                 rel="noreferrer"
                 href="https://www.youtube.com/watch?v=zczs34aYmiM"
               >
-                <button className="button button-basic">Watch Here</button>
+                <button className="button button-basic">Read the Report</button>
               </a>
             </div>
           </div>
