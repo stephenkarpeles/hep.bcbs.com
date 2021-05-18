@@ -20,12 +20,12 @@ const AlertBanner = () => {
           <StaticImage
             style={{
               gridArea: "1/1",
-              maxHeight: "425px",
+              maxHeight: "325px",
             }}
             layout="fullWidth"
             aspectRatio={3 / 1}
             alt=""
-            src="../../images/health-equity-roundtable-alert-banner.jpg"
+            src="../../images/health-equity-roundtable-alert-banner-alt.jpg"
           />
 
           <div

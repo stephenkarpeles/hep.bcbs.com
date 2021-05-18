@@ -24,7 +24,7 @@
     }
 
     @media (--large-breakpoint-up) {
-      grid-template-rows: 175px 80px 40px;
+      grid-template-rows: 175px 80px 0px;
       padding: 40px;
     }
 
@@ -47,7 +47,7 @@
 
       &--blue {
         color: var(--color-bright-blue);
-        max-width: 1000px;
+        max-width: 780px;
       }
     }
 
@@ -87,7 +87,7 @@
       grid-column: 1 / 2;
 
       @media (--large-breakpoint-up) {
-        grid-row: 3 / 4;
+        grid-row: 2 / 3;
       }
 
       button {
