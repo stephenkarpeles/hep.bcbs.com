@@ -53,7 +53,9 @@ const AlertBanner = () => {
                 Read the report
               </div> */}
               <div className="alert-opened-content-heading--blue">
-                Racial Disparities in Maternal Health
+                Racial Disparities in
+                <br />
+                Maternal Health
               </div>
             </div>
 
