@@ -23,6 +23,7 @@ import Slide from "react-reveal/Slide"
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
 import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
+import Alert from "../components/Alert/Alert"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -101,7 +102,7 @@ const IndexPage = props => {
         title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
-      {/* <Alert /> */}
+      <Alert />
       <section className="intro" id="intro">
         <Fade>
           <div className="max-container">
@@ -500,8 +501,8 @@ const IndexPage = props => {
           </div>
         </div>
       </section> */}
-      
-      <PressKitBanner />      
+
+      <PressKitBanner />
 
       <Newsletter />
     </>

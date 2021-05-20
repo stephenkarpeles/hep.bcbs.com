@@ -15,6 +15,7 @@ import communityHighlights from "../../static/assets/files/Press-Kit_Community-H
 import factSheet from "../../static/assets/files/Press-Kit_Factsheet.pdf"
 import panelBios from "../../static/assets/files/Press-Kit_National-Advisory-Panel-Biographies.pdf"
 import pressFull from "../../static/assets/files/Press-Kit_Full.pdf"
+import hoaMaternalHealthDisparities from "../../static/assets/files/HOA_Maternal_Health_Disaparities_Factsheet.pdf"
 
 const PressKitPage = props => {
   return (
@@ -57,11 +58,15 @@ const PressKitPage = props => {
             <div className="card">
               <h4 className="card-headline">Factsheet</h4>
               <div className="card-copy">
-                Review key components of the BCBSA National Health Equity
-                Strategy
+                Download the Racial Disparities in Maternal Health Report
+                Factsheet
               </div>
               <div className="download-link">
-                <a href={factSheet} target="_blank" rel="noreferrer">
+                <a
+                  href={hoaMaternalHealthDisparities}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Download
                 </a>
               </div>

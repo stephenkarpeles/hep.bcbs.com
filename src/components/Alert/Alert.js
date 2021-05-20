@@ -20,12 +20,12 @@ const AlertBanner = () => {
           <StaticImage
             style={{
               gridArea: "1/1",
-              maxHeight: "425px",
+              maxHeight: "325px",
             }}
             layout="fullWidth"
             aspectRatio={3 / 1}
             alt=""
-            src="../../images/health-equity-roundtable-alert-banner.jpg"
+            src="../../images/health-equity-roundtable-alert-banner-alt.jpg"
           />
 
           <div
@@ -49,17 +49,19 @@ const AlertBanner = () => {
               <span>Close</span> <img src={imgCloseIcon} alt="Close" />
             </button>
             <div className="alert-opened-content-heading">
-              <div className="alert-opened-content-heading--white">
-                Blue Health Equity
-              </div>
+              {/* <div className="alert-opened-content-heading--white">
+                Read the report
+              </div> */}
               <div className="alert-opened-content-heading--blue">
-                Virtual Round Table
+                Racial Disparities in
+                <br />
+                Maternal Health
               </div>
             </div>
 
-            <div className="alert-opened-content-date">
+            {/* <div className="alert-opened-content-date">
               April 20, 2021 until 1pm CDT
-            </div>
+            </div> */}
             <div className="alert-opened-content-logo">
               <StaticImage
                 style={{ maxWidth: 380 }}
@@ -71,9 +73,9 @@ const AlertBanner = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.youtube.com/watch?v=zczs34aYmiM"
+                href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health"
               >
-                <button className="button button-basic">Watch Here</button>
+                <button className="button button-basic">Read the Report</button>
               </a>
             </div>
           </div>
