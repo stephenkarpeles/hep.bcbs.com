@@ -451,7 +451,21 @@ const IndexPage = props => {
                   <div className="search-filters-label">
                     Maternal Health Topics
                   </div>
-                  <RefinementList attribute="subtopics" />
+                  <div class="search-filters-topics-menuselect">
+                    <MenuSelect
+                      attribute="subtopics"
+                      limit={50}
+                      translations={{
+                        seeAllOption: "All Mental Health Topics",
+                      }}
+                    />
+                  </div>
+                  <div
+                    class="search-filters-topics-refinement"
+                    style={{ display: "none" }}
+                  >
+                    <RefinementList attribute="subtopics" limit={50} />
+                  </div>
                 </div>
                 <ClearRefinements
                   clearsQuery
