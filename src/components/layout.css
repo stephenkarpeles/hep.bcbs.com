@@ -1392,6 +1392,11 @@ header {
       margin-right: 2rem;
       max-width: 160px;
       flex-shrink: 0;
+      display: none;
+
+      @media (--medium-breakpoint-up) {
+        display: block;
+      }
     }
 
     &-content {

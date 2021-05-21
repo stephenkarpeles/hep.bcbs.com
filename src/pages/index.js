@@ -48,6 +48,9 @@ const planResult = ({ hit }) => {
   return (
     <Fade>
       <div
+        data-insights-object-id={hit.objectID}
+        data-insights-position={hit.__position}
+        data-insights-query-id={hit.__queryID}
         className={`plan-result-card ${
           video_url ? "plan-result-card--has-video" : ""
         }`}
@@ -431,7 +434,7 @@ const IndexPage = props => {
             searchClient={searchClient}
             indexName="he_plan_profiles"
           >
-            <Configure hitsPerPage={5} distinct />
+            <Configure hitsPerPage={5} clickAnalytics distinct />
             <Fade>
               <div className="search-filters">
                 <div className="search-filters-label-main">Filter</div>
@@ -456,7 +459,7 @@ const IndexPage = props => {
                   <div className="search-filters-label">
                     Maternal Health Topics
                   </div>
-                  <div class="search-filters-topics-menuselect">
+                  <div className="search-filters-topics-menuselect">
                     <MenuSelect
                       attribute="subtopics"
                       limit={50}
@@ -466,7 +469,7 @@ const IndexPage = props => {
                     />
                   </div>
                   <div
-                    class="search-filters-topics-refinement"
+                    className="search-filters-topics-refinement"
                     style={{ display: "none" }}
                   >
                     <RefinementList attribute="subtopics" limit={50} />

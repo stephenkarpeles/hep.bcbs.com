@@ -34,7 +34,12 @@ class Autocomplete extends Component {
   renderSuggestion(hit) {
     return (
       <>
-        <div class="site-search-result">
+        <div
+          class="site-search-result"
+          data-insights-object-id={hit.objectID}
+          data-insights-position={hit.__position}
+          data-insights-query-id={hit.__queryID}
+        >
           {hit.img_url && (
             <div class="site-search-result-image">
               <img
