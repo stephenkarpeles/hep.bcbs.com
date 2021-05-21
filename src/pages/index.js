@@ -485,9 +485,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <Fade>
-        <AdvisoryBoard />
-      </Fade>
+      <AdvisoryBoard />
 
       {/* <section className="news" id="news">
         <div className="inner-content">
