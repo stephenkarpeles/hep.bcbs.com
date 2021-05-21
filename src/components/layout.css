@@ -1240,7 +1240,7 @@ header {
 /* Algolia - MenuSelect */
 .ais-MenuSelect-select {
   color: var(--color-gray);
-  -webkit-appearance: listbox;
+  -webkit-appearance: menulist;
   background: none;
   border: none;
   border-bottom: 1px solid #7070704d;

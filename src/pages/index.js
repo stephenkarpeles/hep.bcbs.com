@@ -52,7 +52,12 @@ const planResult = ({ hit }) => {
           video_url ? "plan-result-card--has-video" : ""
         }`}
       >
-        <Link to={`/${slug}/`}></Link>
+        {headline === "BCBS companies support new and expectant mothers" ? (
+          <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health" />
+        ) : (
+          <Link to={`/${slug}/`}></Link>
+        )}
+
         <div className="plan-result-card-plan">
           {hit.img_url && !hit.video_url && (
             <div className="plan-result-card-image">
@@ -485,9 +490,7 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <Fade>
-        <AdvisoryBoard />
-      </Fade>
+      <AdvisoryBoard />
 
       {/* <section className="news" id="news">
         <div className="inner-content">
