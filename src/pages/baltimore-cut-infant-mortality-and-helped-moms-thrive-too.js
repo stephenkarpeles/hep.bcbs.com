@@ -73,6 +73,9 @@ const BaltimoreInfantMortality = props => {
                 <div className="pp-hero__category">
                   <span>Maternal health</span>
                 </div>
+                <div className="pp-hero__date">
+                  <span>Published May 21, 2021</span>
+                </div>
                 <div className="pp-hero__title">
                   <h1>
                     Podcast: Baltimore cut infant mortality and helped moms
