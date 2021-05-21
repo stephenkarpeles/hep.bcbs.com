@@ -41,18 +41,18 @@ class Autocomplete extends Component {
           data-insights-query-id={hit.__queryID}
         >
           {hit.img_url && (
-            <div class="site-search-result-image">
+            <div className="site-search-result-image">
               <img
                 src={`https://www.bcbs.com/sites/default/files/healthequity/images/${hit.img_url}`}
                 alt=""
               />
             </div>
           )}
-          <div class="site-search-result-content">
+          <div className="site-search-result-content">
             <div class="site-search-result-content-header">
               <Highlight attribute="headline" hit={hit} tagName="span" />
             </div>
-            <div class="site-search-result-content-excerpt">
+            <div className="site-search-result-content-excerpt">
               <Highlight attribute="teaser" hit={hit} tagName="span" />
             </div>
           </div>
