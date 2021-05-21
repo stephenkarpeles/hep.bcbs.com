@@ -65,7 +65,7 @@ const BaltimoreInfantMortality = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-bcbssc-aims-to-improve-pregnancy-outcomes-in-women-with-diabetes.jpg")`,
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-baltimore-cut-infant-mortality-and-helped-moms-thrive-too.jpg")`,
             }}
           >
             <div className="pp-hero__meta">
