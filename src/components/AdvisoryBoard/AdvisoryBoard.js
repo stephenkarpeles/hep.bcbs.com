@@ -15,7 +15,10 @@ const tabItems = [
     company: "American Diabetes Association®",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/tracey-brown.jpg" />
+        <StaticImage
+          alt=""
+          src="../../images/advisory-board/tracey-brown.jpg"
+        />
       </>,
     ],
     content: [
@@ -84,7 +87,10 @@ const tabItems = [
     company: "University of Chicago",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/marshall-chin.jpg" />
+        <StaticImage
+          alt=""
+          src="../../images/advisory-board/marshall-chin.jpg"
+        />
       </>,
     ],
     content: [
@@ -158,7 +164,10 @@ const tabItems = [
     company: "Health Services, Incorporated",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/gilbert-darrington.jpg" />
+        <StaticImage
+          alt=""
+          src="../../images/advisory-board/gilbert-darrington.jpg"
+        />
       </>,
     ],
     content: [
@@ -206,7 +215,10 @@ const tabItems = [
     company: "George Washington University",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/adaeze-enekwechi-latest.jpg" />
+        <StaticImage
+          alt=""
+          src="../../images/advisory-board/adaeze-enekwechi-latest.jpg"
+        />
       </>,
     ],
     content: [
@@ -281,7 +293,7 @@ const tabItems = [
     company: "Mary's Center",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/maria-gomez.jpg" />
+        <StaticImage alt="" src="../../images/advisory-board/maria-gomez.jpg" />
       </>,
     ],
     content: [
@@ -336,7 +348,10 @@ const tabItems = [
     company: "University of Minnesota",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/rachel-hardeman.jpg" />
+        <StaticImage
+          alt=""
+          src="../../images/advisory-board/rachel-hardeman.jpg"
+        />
       </>,
     ],
     content: [
@@ -406,7 +421,10 @@ const tabItems = [
     company: "March of Dimes",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/stacey-stewart.jpg" />
+        <StaticImage
+          alt=""
+          src="../../images/advisory-board/stacey-stewart.jpg"
+        />
       </>,
     ],
     content: [
@@ -455,7 +473,10 @@ const tabItems = [
     company: "ImbuTec®",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/richard-taylor-latest.jpg" />
+        <StaticImage
+          alt=""
+          src="../../images/advisory-board/richard-taylor-latest.jpg"
+        />
       </>,
     ],
     content: [
@@ -518,7 +539,10 @@ const tabItems = [
     company: "YMCA of the USA",
     image: [
       <>
-        <StaticImage src="../../images/advisory-board/kevin-washington.jpg" />
+        <StaticImage
+          alt=""
+          src="../../images/advisory-board/kevin-washington.jpg"
+        />
       </>,
     ],
     content: [
@@ -598,8 +622,8 @@ const TabItem = ({
       id={id}
       className={isActive ? "tab-item" : "tab-item tab-item--inactive"}
       onClick={() => {
-        onItemClicked();
-        AdvisoryBoardAnalytics();
+        onItemClicked()
+        AdvisoryBoardAnalytics()
       }}
     >
       <i className={icon}></i>
