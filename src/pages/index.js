@@ -30,7 +30,7 @@ import Alert from "../components/Alert/Alert"
 
 const searchClient = algoliasearch(
   "B604WWKJH0",
-  "156ba268a0517559cd6a89921ae9cb5f"
+  "d5f4c69eedaa62952d698d108856f2a0"
 )
 
 const planResult = ({ hit }) => {

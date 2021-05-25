@@ -13,7 +13,7 @@ import close from "../images/icons/icon-close.svg"
 
 const searchClient = algoliasearch(
   "B604WWKJH0",
-  "156ba268a0517559cd6a89921ae9cb5f"
+  "d5f4c69eedaa62952d698d108856f2a0"
 )
 
 // match breakpoints to the breakpoints.css file
@@ -42,21 +42,21 @@ const Header = ({ props, siteTitle }) => {
   const menuOpenClass = "mobile-menu-is-open"
 
   function addMenuOpenClass() {
-    document.body.classList.add(menuOpenClass);
+    document.body.classList.add(menuOpenClass)
   }
 
   function removeMenuOpenClass() {
-    document.body.classList.remove(menuOpenClass);
+    document.body.classList.remove(menuOpenClass)
   }
 
   function showMobileNav() {
-    document.querySelector('header').classList.add('navigation-mobile');
-    document.querySelector('header').classList.remove('navigation');
+    document.querySelector("header").classList.add("navigation-mobile")
+    document.querySelector("header").classList.remove("navigation")
   }
 
   function hideMobileNav() {
-    document.querySelector('header').classList.remove('navigation-mobile');
-    document.querySelector('header').classList.add('navigation');
+    document.querySelector("header").classList.remove("navigation-mobile")
+    document.querySelector("header").classList.add("navigation")
   }
 
   return (
@@ -80,20 +80,22 @@ const Header = ({ props, siteTitle }) => {
 
           <MobileTablet>
             <div className="mobile-toggle">
-              <button 
+              <button
                 onClick={() => {
-                  removeMenuOpenClass();
-                  hideMobileNav();
+                  removeMenuOpenClass()
+                  hideMobileNav()
                 }}
-                onKeyDown={removeMenuOpenClass}>
+                onKeyDown={removeMenuOpenClass}
+              >
                 <img src={close} />
               </button>
-              <button 
+              <button
                 onClick={() => {
-                  addMenuOpenClass();
-                  showMobileNav();
-                }} 
-                onKeyDown={addMenuOpenClass}>
+                  addMenuOpenClass()
+                  showMobileNav()
+                }}
+                onKeyDown={addMenuOpenClass}
+              >
                 <img src={burger} />
               </button>
             </div>
