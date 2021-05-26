@@ -35,7 +35,7 @@ class Autocomplete extends Component {
     return (
       <>
         <div
-          class="site-search-result"
+          className="site-search-result"
           data-insights-object-id={hit.objectID}
           data-insights-position={hit.__position}
           data-insights-query-id={hit.__queryID}
@@ -49,7 +49,7 @@ class Autocomplete extends Component {
             </div>
           )}
           <div className="site-search-result-content">
-            <div class="site-search-result-content-header">
+            <div className="site-search-result-content-header">
               <Highlight attribute="headline" hit={hit} tagName="span" />
             </div>
             <div className="site-search-result-content-excerpt">
@@ -82,6 +82,15 @@ class Autocomplete extends Component {
       value,
     }
 
+    const objectIDs = hits.map(hit => hit.objectID).join(",")
+    const userToken = getUserToken("_ALGOLIA") || "anonymous-user"
+
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      algoliaUserToken: userToken, // uniquely identifies the current visitor
+      algoliaDisplayedObjectIDs: objectIDs,
+    })
+
     return (
       <AutoSuggest
         suggestions={hits}
@@ -93,6 +102,19 @@ class Autocomplete extends Component {
         inputProps={inputProps}
       />
     )
+  }
+}
+
+// Grab Aloglia's cookie that determines who the user is.
+const getUserToken = key => {
+  if (typeof document !== undefined) {
+    return document.cookie.split(`; `).reduce((total, currentCookie) => {
+      const item = currentCookie.split(`=`)
+      const storedKey = item[0]
+      const storedValue = item[1]
+
+      return key === storedKey ? decodeURIComponent(storedValue) : total
+    }, ``)
   }
 }
 
