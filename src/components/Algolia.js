@@ -11,7 +11,12 @@ export const planResult = ({ hit }) => {
   const { headline, topic, plans, slug, teaser, img_url, read_time } = hit
 
   return (
-    <div className="plan-result-card">
+    <div
+      data-insights-object-id={hit.objectID}
+      data-insights-position={hit.__position}
+      data-insights-query-id={hit.__queryID}
+      className="plan-result-card"
+    >
       <Link to={`/${slug}/`}></Link>
       <div className="plan-result-card-plan">
         <div className="plan-result-card-image">
