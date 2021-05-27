@@ -85,11 +85,13 @@ class Autocomplete extends Component {
     const objectIDs = hits.map(hit => hit.objectID).join(",")
     const userToken = getUserToken("_ALGOLIA") || "anonymous-user"
 
-    window.dataLayer = window.dataLayer || []
-    window.dataLayer.push({
-      algoliaUserToken: userToken, // uniquely identifies the current visitor
-      algoliaDisplayedObjectIDs: objectIDs,
-    })
+    if (typeof window !== undefined) {
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({
+        algoliaUserToken: userToken, // uniquely identifies the current visitor
+        algoliaDisplayedObjectIDs: objectIDs,
+      })
+    }
 
     return (
       <AutoSuggest
