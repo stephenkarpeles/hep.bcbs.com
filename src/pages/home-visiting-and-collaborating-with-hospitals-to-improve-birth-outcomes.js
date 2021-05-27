@@ -159,24 +159,6 @@ const HomeVisiting = props => {
           </div>
         </Fade>
       </div>
-
-      {/* <Fade>
-        <div className="pp-explore">
-          <h2>Explore more stories</h2>
-          <InstantSearch
-            searchClient={searchClient}
-            indexName="he_plan_profiles"
-          >
-            <Configure
-              hitsPerPage={2}
-              distinct
-              filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'Culturally appropriate interventions for mothers and newborns'"
-            />
-
-            <InfiniteHits hitComponent={planResult} />
-          </InstantSearch>
-        </div>
-      </Fade> */}
     </div>
   )
 }
