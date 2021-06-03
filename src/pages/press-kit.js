@@ -58,15 +58,11 @@ const PressKitPage = props => {
             <div className="card">
               <h4 className="card-headline">Factsheet</h4>
               <div className="card-copy">
-                Download the Racial Disparities in Maternal Health Report
-                Factsheet
+                Review key components of the BCBSA National Health Equity
+                Strategy
               </div>
               <div className="download-link">
-                <a
-                  href={hoaMaternalHealthDisparities}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={factSheet} target="_blank" rel="noreferrer">
                   Download
                 </a>
               </div>
@@ -90,6 +86,22 @@ const PressKitPage = props => {
               </div>
               <div className="download-link">
                 <a href={communityHighlights} target="_blank" rel="noreferrer">
+                  Download
+                </a>
+              </div>
+            </div>
+            <div className="card">
+              <h4 className="card-headline">Factsheet</h4>
+              <div className="card-copy">
+                Download the Racial Disparities in Maternal Health Report
+                Factsheet
+              </div>
+              <div className="download-link">
+                <a
+                  href={hoaMaternalHealthDisparities}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Download
                 </a>
               </div>
