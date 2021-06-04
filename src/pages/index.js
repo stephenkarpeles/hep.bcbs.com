@@ -45,6 +45,28 @@ const planResult = ({ hit }) => {
     read_time,
   } = hit
 
+  // Since we have started adding blog posts (sigh) to the plan profiles we need to
+  // check if the slug will actually be on the Health Equity site.
+  let postSlug
+  if (headline === "BCBS companies support new and expectant mothers") {
+    postSlug = (
+      <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health" />
+    )
+  } else if (
+    headline ===
+    "Racial Disparities are Endangering the Lives of Mothers of Color. We Must Respond."
+  ) {
+    postSlug = (
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://aspenideas.org/articles/racial-disparities-are-endangering-the-lives-of-mothers-of-color-we-must-respond"
+      />
+    )
+  } else {
+    postSlug = <Link to={`/${slug}/`}></Link>
+  }
+
   return (
     <Fade>
       <div
@@ -55,11 +77,7 @@ const planResult = ({ hit }) => {
           video_url ? "plan-result-card--has-video" : ""
         }`}
       >
-        {headline === "BCBS companies support new and expectant mothers" ? (
-          <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health" />
-        ) : (
-          <Link to={`/${slug}/`}></Link>
-        )}
+        {postSlug}
 
         <div className="plan-result-card-plan">
           {hit.img_url && !hit.video_url && (
