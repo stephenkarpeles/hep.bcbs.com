@@ -50,7 +50,7 @@ const planResult = ({ hit }) => {
   let postSlug
   if (headline === "BCBS companies support new and expectant mothers") {
     postSlug = (
-      <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health" />
+      <a href="https://www.bcbs.com/the-health-of-america/articles/bcbs-companies-support-new-and-expectant-mothers" />
     )
   } else if (
     headline ===
