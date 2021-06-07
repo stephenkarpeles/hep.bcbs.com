@@ -482,7 +482,7 @@ const IndexPage = props => {
                       attribute="subtopics"
                       limit={50}
                       translations={{
-                        seeAllOption: "All Mental Health Topics",
+                        seeAllOption: "All Maternal Health Topics",
                       }}
                     />
                   </div>
