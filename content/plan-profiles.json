@@ -79,7 +79,7 @@
     "article": "Researchers are still learning how limited or uncertain access to nutritious food can be harmful during and after pregnancy for both mother and baby. Food insecurity may increase the release of stress hormones, which has been linked to pre-term birth as well asunhealthy changes in a mother’s pregnancy weight. It has been linked to an increased risk for post-partum depression. Food insecurity can also affect a pregnant woman’s blood pressure, and so much more. Who is food insecure? The burden of food insecurity is borne disproportionately by Black, Indigenous and women of color. Federal statistics show Black Americans are twice as likely to be food insecure as the national average. Through another lens, one in five Black people is food insecure, according to Feeding America. Federal food assistance programs may help. But doctors and health insurers are seeing an opportunity — and using new resources — to support women at risk. Three programs that keep pregnant women and their families from going hungry In Minnesota, Blue Cross and Blue Shield of Minnesota is studying the impact of providing mothers and families in need clinically tailored meals, food boxes and nutritional coaching. Members can start as early as 20 weeks into their pregnancy and continue through the second month after birth. The healthy food program is a partnership with Project Well and Second Harvest Heartland, which will deliver the food and the coaching. Members can also be connected to additional food benefit programs and resources to meet other social needs through case management. In New York, Excellus BlueCross BlueShield is working with FoodLink, a local food bank, to pilot a nutrition program designed to identify at - risk moms and connect them to nutritional education and resources. Experts from Excellus BCBS say providing boxes of food is only one step in addressing food insecurity. Empowering mothers with culturally competent nutrition education can do even more to keep moms and their children healthy. Blue Cross and Blue Shield of Kansas City works with local food banks and food distributions centers to help members who are pregnant or new moms. Mothers who continue to experience food insecurity are connected with a state food assistance program. The health plan trains front line providers to screen women for food insecurity. Then Blue Cross and Blue Shield of Kansas City community health workers connect those members to resources to meet their social needs and follow up with providers. Food as healthcare Healthcare providers and health insurers are increasingly involved in meeting more than just medical needs for their patients. They recognize that having enough food to eat, or access to transportation, among other social needs, are just as critical for good health as a blood test or a sonogram. And right now, there may be more needs to meet. The economic crisis brought on by the pandemic has left more Americans out of work, living in poverty and struggling. Programs like these will be critical for catching those who might otherwise fall through the cracks. Blue Cross and Blue Shield of Minnesota, Blue Cross and Blue Shield of Kansas City and Excellus BlueCross BlueShield are independent licensees of the Blue Cross Blue Shield Association, an association of independent, locally operated Blue Cross and Blue Shield companies.",
     "byline": "Kristin Gourlay",
     "plans": [
-      "BCBS"
+      "BCBSA"
     ],
     "states": [
       "Minnesota",
@@ -483,7 +483,7 @@
     "slug": "reimagining-equity-in-healthcare-together",
     "img_url": "blog-reimagining-equity-in-healthcare-together.jpg",
     "video_url": "",
-    "topic": "",
+    "topic": "Maternal Health",
     "subtopics": [],
     "read_time": "3"
   },
@@ -493,13 +493,13 @@
     "article": "The crisis in racial disparities in our country’s healthcare is unconscionable and unacceptable. Join Blue Cross Blue Shield Association President and CEO Kim Keck, Dr. Jackie Walters, OBGYN and cast member of Married to Medicine, March of Dimes CEO Stacey D. Stewart and CareFirst BlueCross BlueShield Executive Vice President of Health Services Stacia Cohen for an in-depth look at the current state of racial disparities in healthcare, ways we can change the trajectory of heath disparities and how we can reimagine a more equitable healthcare system.",
     "byline": "",
     "plans": [
-      "BCBS"
+      "BCBSA"
     ],
     "states": [],
     "slug": "blue-health-equity-roundtable",
     "img_url": "health-equity-roundtable-alert-banner.jpg",
     "video_url": "https://www.youtube.com/embed/zczs34aYmiM",
-    "topic": "",
+    "topic": "Maternal Health",
     "subtopics": [],
     "read_time": "1"
   },
@@ -509,7 +509,7 @@
     "article": "",
     "byline": "",
     "plans": [
-      "BCBS"
+      "BCBSA"
     ],
     "states": [
       "Alabama",
@@ -551,7 +551,7 @@
     "article": "The United States is in the midst of a maternal health crisis, and new data from the Blue Cross Blue Shield Association shows that women of color continue to face a greater risk of childbirth complications compared to white women. As these disparities in maternal health care stem from a complex fabric of social, racial and economic issues, the time is now to confront and change the trajectory for mothers across the country.",
     "byline": "Kim Keck",
     "plans": [
-      "BCBS"
+      "BCBSA"
     ],
     "states": [
       "Alabama",
@@ -611,6 +611,142 @@
     "topic": "Maternal Health",
     "subtopics": [
       "Social Services"
+    ],
+    "read_time": "1"
+  },
+  {
+    "headline": "Confronting Racial Disparities in Maternal Health",
+    "teaser": "Blue Cross Blue Shield Association hosted a discussion on racial health disparities, how to change their trajectory and solutions for Black maternal health.",
+    "article": "During a National Association of Black Journalists webinar on May 19, 2021, Blue Cross Blue Shield Association previewed the Blue Cross Blue Shield, The Health of America Report®, “Racial Disparities in Maternal Health” and hosted a discussion with health equity leaders on the current state of racial disparities in healthcare, strategies to change the trajectory of disparities, and solutions for Black maternal health. Panelists included Blue Cross Blue Shield Association President and CEO Kim Keck, Congresswoman Lauren Underwood (IL-14) and Rachel R. Hardeman, PhD, MPH, Blue Cross Endowed Professor of Health and Racial Equity and founding director, Center for Antiracism Research for Health Equity, University of Minnesota, School of Public Health. The event was moderated by Cindy George, a health journalist.",
+    "byline": "",
+    "plans": [
+      "BCBSA"
+    ],
+    "states": [
+      "Alabama",
+      "Alaska",
+      "Arizona",
+      "Arkansas",
+      "California",
+      "Colorado",
+      "Connecticut",
+      "Delaware",
+      "Florida",
+      "Georgia",
+      "Hawaii",
+      "Idaho",
+      "Illinois",
+      "Indiana",
+      "Iowa",
+      "Kansas",
+      "Kentucky",
+      "Louisiana",
+      "Maine",
+      "Maryland",
+      "Massachusetts",
+      "Michigan",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Montana",
+      "Nebraska",
+      "Nevada",
+      "New Hampshire",
+      "New Jersey",
+      "New Mexico",
+      "New York",
+      "North Carolina",
+      "North Dakota",
+      "Ohio",
+      "Oklahoma",
+      "Oregon",
+      "Pennsylvania",
+      "Rhode Island",
+      "South Carolina",
+      "South Dakota",
+      "Tennessee",
+      "Texas",
+      "Utah",
+      "Vermont",
+      "Virginia",
+      "Washington",
+      "West Virginia",
+      "Wisconsin",
+      "Wyoming"
+    ],
+    "slug": "confronting-racial-disparities-in-maternal-health",
+    "img_url": "brief-confronting-racial-disparities-in-maternal-health.jpg",
+    "video_url": "",
+    "topic": "Maternal Health",
+    "subtopics": [],
+    "read_time": "1"
+  },
+  {
+    "headline": "The Imperative for Achieving Equity in Maternal Healthcare",
+    "teaser": "Blue Cross Blue Shield Association, 4Kira4Moms and CareFirst BlueCross BlueShield discuss strategies employers can use to achieve equity in maternal healthcare",
+    "article": "Studies show Black, American Indian and Alaska Native women are more likely than white women to suffer and die from pregnancy-related causes in the U.S. Watch as experts from Blue Cross Blue Shield Association, 4Kira4Moms and CareFirst BlueCross BlueShield sit down during Business Group on Health’s 2021 Annual Conference to discuss strategies employers can use to help eliminate disparities and achieve equity in maternal healthcare.",
+    "byline": "",
+    "plans": [
+      "BCBSA"
+    ],
+    "states": [
+      "Alabama",
+      "Alaska",
+      "Arizona",
+      "Arkansas",
+      "California",
+      "Colorado",
+      "Connecticut",
+      "Delaware",
+      "Florida",
+      "Georgia",
+      "Hawaii",
+      "Idaho",
+      "Illinois",
+      "Indiana",
+      "Iowa",
+      "Kansas",
+      "Kentucky",
+      "Louisiana",
+      "Maine",
+      "Maryland",
+      "Massachusetts",
+      "Michigan",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Montana",
+      "Nebraska",
+      "Nevada",
+      "New Hampshire",
+      "New Jersey",
+      "New Mexico",
+      "New York",
+      "North Carolina",
+      "North Dakota",
+      "Ohio",
+      "Oklahoma",
+      "Oregon",
+      "Pennsylvania",
+      "Rhode Island",
+      "South Carolina",
+      "South Dakota",
+      "Tennessee",
+      "Texas",
+      "Utah",
+      "Vermont",
+      "Virginia",
+      "Washington",
+      "West Virginia",
+      "Wisconsin",
+      "Wyoming"
+    ],
+    "slug": "imperative-for-achieving-equity-in-maternal-healthcare",
+    "img_url": "brief-imperative-for-achieving-equity-in-maternal-healthcare.jpg",
+    "video_url": "",
+    "topic": "Maternal Health",
+    "subtopics": [
+      "Support from Employers"
     ],
     "read_time": "1"
   }
