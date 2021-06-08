@@ -35,7 +35,7 @@ const ImperativeAcheivingEquity = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-roundtable-alert-banner.jpg")`,
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-imperative-for-achieving-equity-in-maternal-healthcare.jpg")`,
             }}
           >
             <div className="pp-hero__meta">
