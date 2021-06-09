@@ -82,5 +82,14 @@ module.exports = {
         routeChangeEventName: "gatsby-route-change",
       },
     },
+    {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: `https://www.bcbs.com/the-health-of-america/healthequity/`,
+        apiBase: `api`, // optional, defaults to `jsonapi`
+        fastbuilds: true,
+        concurrentFileRequests: 60, // optional, defaults to `20`
+      },
+    },
   ],
 }
