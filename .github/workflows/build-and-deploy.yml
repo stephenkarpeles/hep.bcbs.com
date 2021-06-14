@@ -27,12 +27,13 @@ jobs:
       - name: Install Gatsby
         run: npm install -g gatsby-cli
 
-      - name: Retain Gatsby cache and output
+      - name: Retain Gatsby cache, output, and dependencies
         uses: actions/cache@v2
         with:
           path: |
             .cache
             public
+            node_modules
           key: ${{ runner.os }}-gatsby-cache
 
       - name: Install dependencies
