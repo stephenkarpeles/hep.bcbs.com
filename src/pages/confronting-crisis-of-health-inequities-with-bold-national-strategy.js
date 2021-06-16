@@ -25,7 +25,7 @@ const ConfrontingCrisis = props => {
         <div className="pp-hero">
           <div className="pp-hero__share">
             <div className="pp-hero__share-content">
-              <h4>Share</h4>
+              <h3>Share</h3>
               <Sharing
                 title="The facts: Confronting a crisis of health inequities with a bold national strategy"
                 url="https://www.bcbs.com/the-health-of-america/healthequity/confronting-crisis-of-health-inequities-with-bold-national-strategy/"
@@ -116,7 +116,7 @@ const ConfrontingCrisis = props => {
                   the health of all Americans.
                 </em>
               </p>
-              <h4>What are racial health inequities?</h4>
+              <h3>What are racial health inequities?</h3>
               <p>
                 According to the CDC, 
                 <a
@@ -166,13 +166,11 @@ const ConfrontingCrisis = props => {
                   </a>
                 </li>
               </ul>
-              <h4>Some facts on racial health inequities in America</h4>
+              <h3>Some facts on racial health inequities in America</h3>
               <ul className="pp-content__fancy-list">
                 <li>
-                  <strong>
-                    Black men are 70% more likely to die from a stroke
-                  </strong>
-                   as compared to non-Hispanic white men.
+                  Black men are 70% more likely to die from a stroke  as
+                  compared to non-Hispanic white men.
                 </li>
                 <li>
                   Millennials from majority Black and Hispanic communities have
@@ -180,25 +178,21 @@ const ConfrontingCrisis = props => {
                   respectively when compared to white communities.
                 </li>
                 <li>
-                  Black adults are <strong>60% more likely</strong> than
-                  non-Hispanic white adults to be diagnosed with diabetes by a
-                  physician.
+                  Black adults are 60% more likely than non-Hispanic white
+                  adults to be diagnosed with diabetes by a physician.
                 </li>
                 <li>
-                  Black mothers have 
-                  <strong>
-                    3x higher maternal mortality and 2x higher morbidity
-                  </strong>
-                   than white mothers
+                  Black mothers have  3x higher maternal mortality and 2x higher
+                  morbidity  than white mothers
                 </li>
               </ul>
-              <h4>What is health equity?</h4>
+              <h3>What is health equity?</h3>
               <blockquote>
                 Health equity is achieved when every person has the opportunity
                 to “attain his or her full health potential” and no one is
                 “disadvantaged from achieving this potential because of social
-                position or other socially determined circumstances," Centers
-                for Disease Control and Prevention
+                position or other socially determined circumstances"
+                <cite>Centers for Disease Control and Prevention</cite>
               </blockquote>
               <ul className="pp-content__fancy-list">
                 <li>
@@ -209,7 +203,7 @@ const ConfrontingCrisis = props => {
                   </a>
                 </li>
               </ul>
-              <h4>A new strategy to achieve health equity</h4>
+              <h3>A new strategy to achieve health equity</h3>
               <p>
                 <a href="https://www.bcbs.com/">
                   The Blue Cross Blue Shield Association (BCBSA)
@@ -254,7 +248,7 @@ const ConfrontingCrisis = props => {
                   </a>
                 </li>
               </ul>
-              <h4>Working together for a common goal</h4>
+              <h3>Working together for a common goal</h3>
               <p>
                 Leading health organizations are currently working to eliminate
                 health disparities through education. The Office of Minority
