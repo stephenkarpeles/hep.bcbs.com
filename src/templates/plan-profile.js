@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 
 
 export default ({ data }) => {
-  const post = data.nodeArticle
+  const post = data.nodeHealthEquityPlanProfile
   return (
     <Layout>
       <div>
