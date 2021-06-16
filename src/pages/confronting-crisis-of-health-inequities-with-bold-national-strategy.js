@@ -71,8 +71,29 @@ const ConfrontingCrisis = props => {
                   <span>Article</span>
                 </div>
                 <div className="pp-related__text">
-                  <a href="https://www.bcbs.com/the-health-of-america/articles/bcbs-companies-support-new-and-expectant-mothers">
-                    BCBS companies support new and expectant mothers
+                  <a href="https://www.bcbs.com/the-health-of-america/articles/thats-our-mission-addressing-health-equity-beyond-covid-19-strong">
+                    'That's our mission' addressing health equity beyond
+                    COVID-19 with strong community relationships
+                  </a>
+                </div>
+              </li>
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Article</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/articles/video-clinical-trials-everyone-needs-seat-the-table">
+                    In clinical trials, everyone needs a seat the table
+                  </a>
+                </div>
+              </li>
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Article</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/articles/webinar-confronting-racial-disparities-maternal-health">
+                    Confronting Racial Disparities in Maternal Health
                   </a>
                 </div>
               </li>
@@ -328,7 +349,7 @@ const ConfrontingCrisis = props => {
       </div>
 
       <Fade>
-        <div className="pp-explore">
+        <div className="pp-explore pp-explore-single-card">
           <h2>Explore more stories</h2>
           <InstantSearch
             searchClient={searchClient}
@@ -337,7 +358,7 @@ const ConfrontingCrisis = props => {
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'Data-driven strategies to address disparities in maternal care' OR headline:'Inclusive and equitable perinatal care for pregnant Black women'"
+              filters="headline:'Reimagining equity in healthcare, together'"
             />
 
             <InfiniteHits hitComponent={planResult} />
