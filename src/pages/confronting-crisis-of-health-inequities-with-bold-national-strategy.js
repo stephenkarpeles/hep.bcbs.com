@@ -35,7 +35,7 @@ const ConfrontingCrisis = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-breaking-through-bias-in-maternity-care.jpg")`,
+              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-confronting-crisis-of-health-inequities-with-bold-national-strategy.jpg")`,
             }}
           >
             <div className="pp-hero__meta">
