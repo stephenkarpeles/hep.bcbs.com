@@ -1,3 +1,10 @@
+const activeEnv = process.env.NODE_ENV
+console.log(`Using environment config: '${activeEnv}'`)
+
+require("dotenv").config({
+  path: `.env${activeEnv == 'development' ? `.${activeEnv}` : ''}`,
+})
+
 module.exports = {
   pathPrefix: `/the-health-of-america/healthequity`,
   siteMetadata: {
@@ -85,10 +92,13 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `https://www.bcbs.com/the-health-of-america/healthequity/`,
-        apiBase: `api`, // optional, defaults to `jsonapi`
-        fastbuilds: true,
+        baseUrl: `https://bcbs.lndo.site/`,
         concurrentFileRequests: 60, // optional, defaults to `20`
+        skipFileDownloads: true,
+        disallowedLinkTypes: [
+          `self`,
+          `describedby`
+        ],
       },
     },
   ],

@@ -23,3 +23,8 @@ gatsby clean && gatsby build --prefix-paths
 
 - Copy/Overwrite the contents of the `public` folder into a new feature branch in the main [BCBS.com repo](https://github.com/oomphinc/bcbs.com) `healthequity` directory.
 - Follow the BCBS.com GitHub release procedure.
+
+## Local development
+Had to run `gatsby develop --https` in order to get connection
+to https://bcbs.lndo.site/
+
