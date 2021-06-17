@@ -10,11 +10,11 @@ updates:
       - "updates"
       - "dependabot"
     versioning-strategy: increase-if-necessary
-    ignore:
-      # Ignore updates to packages that start with 'aws'
-      # Wildcards match zero or more arbitrary characters
-      # - dependency-name: "aws*"
-      # Ignore some updates to the 'express' package
-      # - dependency-name: "express"
-      # Ignore only new versions for 4.x and 5.x
-      # versions: ["4.x", "5.x"]
+    # ignore:
+    # Ignore updates to packages that start with 'aws'
+    # Wildcards match zero or more arbitrary characters
+    # - dependency-name: "aws*"
+    # Ignore some updates to the 'express' package
+    # - dependency-name: "express"
+    # Ignore only new versions for 4.x and 5.x
+    # versions: ["4.x", "5.x"]
