@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       # Copy the site content into Drupal's EFS file system
-      - rsync -avzh --delete . /mnt/data/efs/files/healthequity/
+      - rsync -avzh --delete --exclude 'buildspec.yml' . /mnt/data/efs/files/healthequity/
       # Enforce ownership and permissions
       - chmod -R u=rX,g=rX,o= /mnt/data/efs/files/healthequity/
       - chown -R apache:apache /mnt/data/efs/files/healthequity/
