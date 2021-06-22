@@ -70,8 +70,8 @@ jobs:
       - name: Parse the branch name
         id: branch
         if: |
-          "!startsWith(github.ref, 'refs/tags/')" ||
-          github.ref != 'refs/heads/master'
+          "!startsWith(github.ref, 'refs/tags/') ||
+          github.ref != 'refs/heads/master'"
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
 
       - name: Retrieve the build artifact
@@ -88,8 +88,8 @@ jobs:
 
       # - name: Configure AWS credentials
       #   if: |
-      #     "!startsWith(github.ref, 'refs/tags/')" ||
-      #     github.ref != 'refs/heads/master'
+      #     "!startsWith(github.ref, 'refs/tags/') ||
+      #     github.ref != 'refs/heads/master'"
       #   uses: aws-actions/configure-aws-credentials@v1
       #   with:
 
@@ -106,8 +106,8 @@ jobs:
       # - name: Deploy via Codebuild
       #   uses: aws-actions/aws-codebuild-run-build@v1.0.3
       #   if: |
-      #     "!startsWith(github.ref, 'refs/tags/')" ||
-      #     github.ref != 'refs/heads/master'
+      #     "!startsWith(github.ref, 'refs/tags/') ||
+      #     github.ref != 'refs/heads/master'"
       #   with:
       #     project-name: bcbscom-hep-${{ steps.branch.outputs.branch }}
 
