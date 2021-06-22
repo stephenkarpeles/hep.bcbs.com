@@ -46,7 +46,7 @@ jobs:
         run: cp buildspec.yml public/buildspec.yml
 
       - name: Archive the Gatsby output
-        run: tar -czf public.tar.gz public/
+        run: tar -C public -czf public.tar.gz .
 
       - name: Upload the Gatsby output archive
         uses: actions/upload-artifact@v2
