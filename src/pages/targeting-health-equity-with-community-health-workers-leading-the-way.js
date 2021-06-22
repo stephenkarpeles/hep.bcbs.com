@@ -86,33 +86,33 @@ const TargetingHealthEquity = props => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Blue Cross and Blus Shield of Kansas City
+                  Blue Cross and Blue Shield of Kansas City
                 </a>{" "}
                 (Blue KC) is leading efforts to reduce racial disparities in
                 prenatal care by leveraging the important role of community
-                health workers (CHW) to build trust with at - risk populations.
+                health workers (CHW) to build trust with at-risk populations.
               </p>
               <p>
                 For example, Blue KC members enrolled in health plans with
                 exclusive access to Spira Care Centers also benefit from CHW
                 best practices in a primary care setting. At Spira Care Centers
                 the member experience is simple and personal, while also
-                innovative and fo rward - thinking. Members have access to
+                innovative and forward-thinking. Members have access to
                 integrated primary care, behavioral health consultations, health
                 coaching, routine lab draws and more all in one place at low or
                 no cost.
               </p>
               <p>
                 Additionally, through successful community intervention, Blue KC
-                aims to re duce disparities in prenatal care, by offering
+                aims to reduce disparities in prenatal care, by offering
                 guidance and support to raise the awareness among mothers about
                 potential health risks. The CHW strategy will include breast
                 feeding support, lactation consultation and prenatal and
-                postnatal education and sup port. Engagement with members will
+                postnatal education and support. Engagement with members will
                 start prenatal and continue to one - year postpartum. Blue KC is
                 also exploring innovative ways to engage CHWs in other community
                 settings to further meet individuals where they are. For
-                example, they could expand into scho ols and public libraries.
+                example, they could expand into schools and public libraries.
               </p>
               <p>
                 This work is to level the playing field and remove barriers that

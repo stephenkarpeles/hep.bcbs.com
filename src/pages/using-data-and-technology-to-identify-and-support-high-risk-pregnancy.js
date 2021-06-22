@@ -105,9 +105,9 @@ const DataTechnology = props => {
                 >
                   Healthy Blue Beginnings
                 </a>{" "}
-                is BCBSLA’s care management program for high - risk pregnancies.
+                is BCBSLA’s care management program for high-risk pregnancies.
                 This program offers pregnant women personalized information and
-                confidential support from experienced nurses t hroughout their
+                confidential support from experienced nurses throughout their
                 pregnancy. In addition to referrals from individual physicians,
                 BCBSLA receives referrals to Healthy Blue Beginnings from its
                 relationship with Louisiana Women’s Healthcare Associates
@@ -126,10 +126,10 @@ const DataTechnology = props => {
               </ul>
               <p>
                 In the 2020s, data is now an important healthcare partner, and
-                data plays a part with high - risk pregnancy referrals, too.
+                data plays a part with high-risk pregnancy referrals, too.
                 Recently, Blue Cross began receiving Admit, Discharge, Transfer
                 (ADT) data from any healthcare provider that uses an electronic
-                medical records sys tem and has a capability to feed the insurer
+                medical records system and has a capability to feed the insurer
                 their data.
               </p>
               <p>
@@ -159,7 +159,7 @@ const DataTechnology = props => {
                 </a>{" "}
                 is a BCBSLA care management program that can connect women to
                 these services listed above as well as a wide range of free or
-                low - cost community services. One of these is{" "}
+                low-cost community services. One of these is{" "}
                 <a
                   href="https://coffective.com/"
                   target="_blank"
@@ -189,7 +189,7 @@ const DataTechnology = props => {
                 also support the health of babies and young children in a number
                 of ways. The Foundation’s focus is on Louisiana children’s
                 health and wellbeing, and many of its grants are awarded
-                accordingly . One the Foundation’s most successful grantees,{" "}
+                accordingly. One the Foundation’s most successful grantees,{" "}
                 <a
                   href="https://www.facebook.com/fit.nola/"
                   target="_blank"
