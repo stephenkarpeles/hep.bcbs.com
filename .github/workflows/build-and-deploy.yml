@@ -42,6 +42,9 @@ jobs:
       - name: Build Gatsby
         run: gatsby build --prefix-paths
 
+      - name: Include the AWS Codebuild file
+        run: cp buildspec.yml public/buildspec.yml
+
       - name: Archive the Gatsby output
         run: tar -czf public.tar.gz public/
 
@@ -50,3 +53,50 @@ jobs:
         with:
           name: gatsby-public
           path: public.tar.gz
+
+  deploy:
+    name: Deploy to AWS
+    runs-on: ubuntu-20.04
+    needs: build
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'repository_dispatch' ||
+      startsWith(github.ref, 'refs/tags/') ||
+      github.ref == 'refs/heads/dev' ||
+      github.ref == 'refs/heads/uat' ||
+      github.ref == 'refs/heads/stage' ||
+      github.ref == 'refs/heads/BCBSALLY-2200/build-triggers'
+    steps:
+      - name: Retrieve the build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: public.tar.gz
+          path: /tmp/
+
+      - name: Expand the build artifact
+        run: tar -xzf /tmp/public.tar.gz
+
+      - name: Package the site content for AWS
+        run: zip -r /tmp/public.zip .
+
+      # - name: Configure AWS credentials
+      #   if: |
+      #     "!startsWith(github.ref, 'refs/tags/')" ||
+      #     github.ref != 'refs/heads/master'
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+
+      # - name: Configure AWS credentials (prod)
+      #   if: |
+      #     startsWith(github.ref, 'refs/tags/') ||
+      #     github.ref == 'refs/heads/master'
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+
+      # - name: Push the site package to S3
+      #   run: aws s3 sync /tmp/public.zip s3://${{ secrets.AWS_CODEBUILD_INPUT_BUCKET }}
+
+      # - name: Run CodeBuild
+      #   uses: aws-actions/aws-codebuild-run-build@v1.0.3
+      #   with:
+      #     project-name: ${{ secrets.AWS_CODEBUILD_PROJECT_NAME }}
