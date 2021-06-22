@@ -2,7 +2,7 @@ const activeEnv = process.env.NODE_ENV
 console.log(`Using environment config: '${activeEnv}'`)
 
 require("dotenv").config({
-  path: `.env${activeEnv == 'development' ? `.${activeEnv}` : ''}`,
+  path: `.env${activeEnv == "development" ? `.${activeEnv}` : ""}`,
 })
 
 module.exports = {
@@ -92,7 +92,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `https://bcbs.lndo.site/`,
+        baseUrl: `http://bcbs.lndo.site/`,
         concurrentFileRequests: 60, // optional, defaults to `20`
         skipFileDownloads: true,
         disallowedLinkTypes: [
@@ -101,8 +101,12 @@ module.exports = {
           `node--blog_article`,
           `vote--vote`,
           `vote_result--vote_result`,
-          `password_policy--password_policy`
+          `password_policy--password_policy`,
         ],
+        filters: {
+          profiles:
+            "http://bcbs.lndo.site/jsonapi/node/health_equity_plan_profile",
+        },
       },
     },
   ],
