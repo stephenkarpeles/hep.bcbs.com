@@ -103,10 +103,6 @@ module.exports = {
           `vote_result--vote_result`,
           `password_policy--password_policy`,
         ],
-        filters: {
-          profiles:
-            "http://bcbs.lndo.site/jsonapi/node/health_equity_plan_profile",
-        },
       },
     },
   ],
