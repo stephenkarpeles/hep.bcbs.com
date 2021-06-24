@@ -186,7 +186,7 @@ const EliminateRacialDisparities = props => {
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/dc-9ZIaq_-4"
+                src="https://www.youtube.com/embed/0294YzTMGiY"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
