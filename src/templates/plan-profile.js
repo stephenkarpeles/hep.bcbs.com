@@ -117,25 +117,25 @@ export default function PlanProfileTemplate({ data }) {
         </Fade>
       </div>
 
-      <Fade>
-        <div className="pp-explore">
-          <h2>Explore more stories</h2>
-          <InstantSearch
-            searchClient={searchClient}
-            indexName="he_plan_profiles"
-          >
-            <Configure
-              hitsPerPage={2}
-              distinct
-              filters="headline:'Culturally appropriate interventions for mothers and
-                    newborns' OR headline:'How doulas can improve the safety of childbirth for women of
-                    color'"
-            />
+      {post.relationships.field_he_related_content?.length >= 1 && (
+        <Fade>
+          <div className="pp-explore">
+            <h2>Explore more stories</h2>
+            <InstantSearch
+              searchClient={searchClient}
+              indexName="he_plan_profiles"
+            >
+              <Configure
+                hitsPerPage={2}
+                distinct
+                filters={`headline:'${post.relationships.field_he_related_content[0].title}' OR headline:'${post.relationships.field_he_related_content[1].title}'`}
+              />
 
-            <InfiniteHits hitComponent={planResult} />
-          </InstantSearch>
-        </div>
-      </Fade>
+              <InfiniteHits hitComponent={planResult} />
+            </InstantSearch>
+          </div>
+        </Fade>
+      )}
     </div>
   )
 }
@@ -150,7 +150,6 @@ export const query = graphql`
       }
       field_he_reading_time
       field_he_author
-      created(formatString: "MMMM DD, YYYY")
       relationships {
         field_bcbs_plan {
           name
@@ -166,7 +165,11 @@ export const query = graphql`
             url
           }
         }
+        field_he_related_content {
+          title
+        }
       }
+      created(formatString: "MMMM DD, YYYY")
     }
   }
 `
