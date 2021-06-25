@@ -154,10 +154,13 @@ const EliminateRacialDisparities = props => {
                 (BCBSA) is taking a leadership role by announcing a national
                 health equity strategy. As part of this initiative, BCBSA has
                 set the goal of reducing racial disparities in maternal health
-                by 50% in five years. In these videos, two leading experts offer
-                insight and perspective about how to overcome health inequities
-                by bringing ideas and teams together from inside and outside the
-                healthcare industry.
+                by 50% in five years.
+              </p>
+              <p>
+                In these videos, two leading experts offer insight and
+                perspective about how to overcome health inequities by bringing
+                ideas and teams together from inside and outside the healthcare
+                industry.
               </p>
               <ul className="pp-content__fancy-list">
                 <li>
