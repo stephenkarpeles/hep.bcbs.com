@@ -107,8 +107,6 @@ export default function PlanProfileTemplate({ data }) {
         </Fade>
       </div>
 
-      {console.log(post.relationships)}
-
       {post.relationships.field_he_related_content?.length >= 1 && (
         <Fade>
           <div className="pp-explore">
