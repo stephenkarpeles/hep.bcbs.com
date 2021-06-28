@@ -70,37 +70,27 @@ export default function PlanProfileTemplate({ data }) {
           <div className="pp-related">
             <h5 className="pp-related__title">Related</h5>
             <ul className="pp-related__list">
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Report</span>
-                </div>
-                <div className="pp-related__text">
-                  <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health">
-                    Racial disparities in maternal health
-                  </a>
-                </div>
-              </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Report</span>
-                </div>
-                <div className="pp-related__text">
-                  <a href="https://www.bcbs.com/the-health-of-america/reports/trends-in-pregnancy-and-childbirth-complications-in-the-us">
-                    Trends in pregnancy and childbirth complications in the U.S.
-                  </a>
-                </div>
-              </li>
-              <li className="pp-related__list-item">
-                <div className="pp-related__category">
-                  <span>Story</span>
-                </div>
-                <div className="pp-related__text">
-                  <a href="https://www.bcbs.com/coronavirus-updates/stories/telemedicine-has-silver-lining-pregnant-women-during-covid-19">
-                    Telemedicine has a silver lining for pregnant women during
-                    COVID-19
-                  </a>
-                </div>
-              </li>
+              {post.relationships.field_he_hoa_related_content.map(
+                (field_he_hoa_related_content, idx) => (
+                  <li className="pp-related__list-item">
+                    <div className="pp-related__category">
+                      <span>
+                        {
+                          field_he_hoa_related_content.relationships.node_type
+                            .name
+                        }
+                      </span>
+                    </div>
+                    <div className="pp-related__text">
+                      <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health">
+                        <span key={idx}>
+                          {field_he_hoa_related_content.title}
+                        </span>
+                      </a>
+                    </div>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </Fade>
@@ -116,6 +106,8 @@ export default function PlanProfileTemplate({ data }) {
           </div>
         </Fade>
       </div>
+
+      {console.log(post.relationships)}
 
       {post.relationships.field_he_related_content?.length >= 1 && (
         <Fade>
@@ -167,6 +159,9 @@ export const query = graphql`
         }
         field_he_related_content {
           title
+        }
+        field_he_hoa_related_content {
+          ...RelatedHOA
         }
       }
       created(formatString: "MMMM DD, YYYY")
