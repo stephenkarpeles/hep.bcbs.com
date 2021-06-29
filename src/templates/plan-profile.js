@@ -10,6 +10,11 @@ import { getRelatedStories } from "../components/relatedHelper"
 // styles
 import "../components/pages.css"
 
+// TODOs
+// confirm working algolia
+// confirm working related items
+// confirm working hero image path
+
 export default function PlanProfileTemplate({ data }) {
   // get all the data
   const post = data.nodeHealthEquityPlanProfile
