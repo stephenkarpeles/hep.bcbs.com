@@ -1,30 +1,29 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-const RelatedHOA = ({ data }) => {
+const RelatedHOAInfographic = ({ data }) => {
   return (
     <>
       <div className="pp-related__category">
         <span>Report</span>
       </div>
       <div className="pp-related__text">
-        <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health">
-          {data.title}
-        </a>
+        <a href="#">{data.title}</a>
       </div>
     </>
   )
 }
 
-export default RelatedHOA
+export default RelatedHOAInfographic
 
 export const fragment = graphql`
-  fragment RelatedHOA on node__hoa_page {
+  fragment RelatedHOAInfographic on node__hoa_insight {
     title
     relationships {
       node_type {
         name
       }
     }
+    drupal_internal__nid
   }
 `

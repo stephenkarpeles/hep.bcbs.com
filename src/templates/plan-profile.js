@@ -5,22 +5,23 @@ import Fade from "react-reveal/Fade"
 import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
 import Sharing from "../components/Sharing/sharing"
+import { getRelatedStories } from "../components/relatedHelper"
 
 // styles
 import "../components/pages.css"
 
-// functions
-const convertToSlug = text =>
-  text
-    .toLowerCase()
-    .replace(/ /g, "-")
-    .replace(/[^\w-]+/g, "")
-
 export default function PlanProfileTemplate({ data }) {
+  // get all the data
   const post = data.nodeHealthEquityPlanProfile
+
+  // get the related stories
+  const related = post.relationships.field_he_hoa_related_content.map(
+    getRelatedStories
+  )
+
+  // build the background image url
   const backgroundImageBase = "https://www.bcbs.com"
   const backgroundImagePath = post.relationships.field_he_featured_image.uri.url
-  const slug = convertToSlug(post.title)
 
   return (
     <div>
@@ -30,7 +31,10 @@ export default function PlanProfileTemplate({ data }) {
           <div className="pp-hero__share">
             <div className="pp-hero__share-content">
               <h4>Share</h4>
-              <Sharing title={post.title} url={slug} />
+              <Sharing
+                title={post.title}
+                url={`https://www.bcbs.com/node/${post.drupal_internal__nid}`}
+              />
             </div>
           </div>
           <div
@@ -67,32 +71,12 @@ export default function PlanProfileTemplate({ data }) {
 
       <div className="pp-main">
         <Fade>
-          <div className="pp-related">
-            <h5 className="pp-related__title">Related</h5>
-            <ul className="pp-related__list">
-              {post.relationships.field_he_hoa_related_content.map(
-                (field_he_hoa_related_content, idx) => (
-                  <li className="pp-related__list-item">
-                    <div className="pp-related__category">
-                      <span>
-                        {
-                          field_he_hoa_related_content.relationships.node_type
-                            .name
-                        }
-                      </span>
-                    </div>
-                    <div className="pp-related__text">
-                      <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health">
-                        <span key={idx}>
-                          {field_he_hoa_related_content.title}
-                        </span>
-                      </a>
-                    </div>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
+          {related.length != 0 && (
+            <div className="pp-related">
+              <h5 className="pp-related__title">Related</h5>
+              <ul className="pp-related__list">{related}</ul>
+            </div>
+          )}
         </Fade>
         <Fade>
           <div className="pp-content">
@@ -159,10 +143,13 @@ export const query = graphql`
           title
         }
         field_he_hoa_related_content {
-          ...RelatedHOA
+          ...RelatedHOAPage
+          ...RelatedHOAReport
+          ...RelatedHOAInfographic
         }
       }
       created(formatString: "MMMM DD, YYYY")
+      drupal_internal__nid
     }
   }
 `
