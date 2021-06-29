@@ -76,7 +76,7 @@ export default function PlanProfileTemplate({ data }) {
 
       <div className="pp-main">
         <Fade>
-          {related.length != 0 && (
+          {related.length !== 0 && (
             <div className="pp-related">
               <h5 className="pp-related__title">Related</h5>
               <ul className="pp-related__list">{related}</ul>

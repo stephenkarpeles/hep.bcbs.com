@@ -6,35 +6,78 @@
 
 const path = require(`path`)
 
-const convertToSlug = (text) => text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'')
+const convertToSlug = text =>
+  text
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "")
 
 // Build some pages!
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  return graphql(`
+  const result = await graphql(`
     {
-     allNodeHealthEquityPlanProfile {
-       edges {
-         node {
-           id
-           title
-         }
-       }
-     }
-    }
-  `
-  ).then(result => {
-    result.data.allNodeHealthEquityPlanProfile.edges.forEach(({ node }) => {
-      if (node.title != null) {
-        createPage({
-          path: convertToSlug(node.title),
-          component: path.resolve(`./src/templates/plan-profile.js`),
-          context: {
-            id: node.id,
-          },
-        })
+      allNodeHealthEquityPlanProfile {
+        edges {
+          node {
+            id
+            title
+          }
+        }
       }
-    })
+      allNodeHealthEquityBlog {
+        edges {
+          node {
+            id
+            title
+          }
+        }
+      }
+      allNodeHealthEquityPromotion {
+        edges {
+          node {
+            id
+            title
+          }
+        }
+      }
+    }
+  `)
+
+  result.data.allNodeHealthEquityPlanProfile.edges.forEach(({ node }) => {
+    if (node.title != null) {
+      createPage({
+        path: convertToSlug(node.title),
+        component: path.resolve(`./src/templates/profile.js`),
+        context: {
+          id: node.id,
+        },
+      })
+    }
+  })
+
+  result.data.allNodeHealthEquityBlog.edges.forEach(({ node }) => {
+    if (node.title != null) {
+      createPage({
+        path: convertToSlug(node.title),
+        component: path.resolve(`./src/templates/blog.js`),
+        context: {
+          id: node.id,
+        },
+      })
+    }
+  })
+
+  result.data.allNodeHealthEquityPromotion.edges.forEach(({ node }) => {
+    if (node.title != null) {
+      createPage({
+        path: convertToSlug(node.title),
+        component: path.resolve(`./src/templates/promotion.js`),
+        context: {
+          id: node.id,
+        },
+      })
+    }
   })
 }
