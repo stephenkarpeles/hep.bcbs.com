@@ -46,7 +46,7 @@ jobs:
         run: cp buildspec.yml public/buildspec.yml
 
       - name: Archive the Gatsby output
-        run: tar -C public -czf public.tar.gz .
+        run: tar -czf public.tar.gz public/
 
       - name: Upload the Gatsby output archive
         uses: actions/upload-artifact@v2
@@ -82,9 +82,6 @@ jobs:
 
       - name: Expand the build artifact
         run: tar -xzf /tmp/public.tar.gz
-
-      - name: Package the site content for AWS
-        run: zip -r /tmp/public.zip .
 
       - name: Configure AWS credentials
         if: |
