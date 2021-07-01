@@ -28,24 +28,23 @@ const FAQs = ({ heading }) => {
     <section className="faq" id="faq">
       <div className="inner-content">
         <h3>{heading}</h3>
-        <div className="faq-col-wrap">
-          <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
-            {data.allNodeHealthEquityFaqs.edges.map(faq => (
-              <AccordionItem>
-                <AccordionItemHeading>
-                  <AccordionItemButton>{faq.node.title}</AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: faq.node.body.value,
-                    }}
-                  />
-                </AccordionItemPanel>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+
+        <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
+          {data.allNodeHealthEquityFaqs.edges.map(faq => (
+            <AccordionItem>
+              <AccordionItemHeading>
+                <AccordionItemButton>{faq.node.title}</AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: faq.node.body.value,
+                  }}
+                />
+              </AccordionItemPanel>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   )

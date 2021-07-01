@@ -13,7 +13,13 @@
     }
 
     @media (--extra-large-breakpoint) {
-      background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 12.5%,rgba(0,76,109,1) 12.5%,rgba(0,76,109,1) 100%);
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 12.5%,
+        rgba(0, 76, 109, 1) 12.5%,
+        rgba(0, 76, 109, 1) 100%
+      );
     }
 
     h1 {
@@ -47,7 +53,7 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      box-shadow: 0px 0px 30px #0000001A;
+      box-shadow: 0px 0px 30px #0000001a;
 
       &-logo {
         background-color: var(--color-light-blue);
@@ -119,7 +125,6 @@
 }
 
 .cta {
-
   .inner-content {
     background-color: var(--color-light-gray);
     text-align: center;
@@ -149,18 +154,25 @@
 
 /* FAQs */
 @keyframes fadeIn {
-  from { 
-    opacity: 0; 
+  from {
+    opacity: 0;
   }
 
-  to   { 
-    opacity: 1; 
+  to {
+    opacity: 1;
   }
 }
 
 .faq {
   margin: var(--spacer-4) auto;
   padding-bottom: 80px;
+
+  .accordion {
+    @media (--large-breakpoint-up) {
+      column-count: 2;
+      column-gap: 4rem;
+    }
+  }
 
   .accordion__heading {
     outline: none;
@@ -171,16 +183,16 @@
     line-height: var(--line-height-h5);
     padding-left: 40px;
     position: relative;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
 
     &:hover {
-      transition: opacity .3s ease;
-      opacity: .7;
+      transition: opacity 0.3s ease;
+      opacity: 0.7;
     }
   }
 
-  .accordion__item { 
-    border-bottom: 1px solid rgba(112, 112, 112, .3);
+  .accordion__item {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
   }
 
   .accordion__panel {
@@ -192,7 +204,7 @@
     outline: none;
 
     &::before {
-      content: '+';
+      content: "+";
       line-height: 1;
       padding: 0;
       background: black;
@@ -210,26 +222,9 @@
 
     &[aria-expanded="true"] {
       &::before {
-        content: '\2013';
+        content: "\2013";
       }
     }
-  }
-}
-
-.faq-col-wrap {
-  display: flex;
-  justify-content: space-between;
-
-  @media (--small-breakpoint-down) {
-    flex-direction: column;
-  }
-}
-
-.faq-col {
-  width: calc(50% - 30px);
-
-  @media (--small-breakpoint-down) {
-    width: 100%;
   }
 }
 
