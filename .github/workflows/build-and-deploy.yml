@@ -118,21 +118,6 @@ jobs:
           # Temporarily disable session tagging
           role-skip-session-tagging: true
 
-      # - name: Push the site package to S3
-      #   run: aws s3 sync /tmp/public.zip s3://${{ secrets.AWS_CODEBUILD_INPUT_BUCKET }}
-
-      # - name: Deploy via Codebuild
-      #   uses: aws-actions/aws-codebuild-run-build@v1.0.3
-      #   if: |
-      #     !startsWith(github.ref, 'refs/tags/') ||
-      #     github.ref != 'refs/heads/master'
-      #   with:
-      #     project-name: bcbscom-hep-${{ steps.branch.outputs.branch }}
-
-      # - name: Deploy via Codebuild (prod)
-      #   uses: aws-actions/aws-codebuild-run-build@v1.0.3
-      #   if: |
-      #     startsWith(github.ref, 'refs/tags/') ||
-      #     github.ref != 'refs/heads/master'
-      #   with:
-      #     project-name: bcbscom-hep-prod
+      # For testing, use the stage bucket
+      - name: Deploy the site contents to S3
+        run: aws s3 sync public/ s3://bcbscom-stage-gatsby-website
