@@ -124,19 +124,7 @@ const PressKitPage = props => {
         </div>
       </section>
 
-      <section className="faq" id="faq">
-        <div className="inner-content">
-          <h3>National Strategy FAQ</h3>
-
-          <div className="faq-col-wrap">
-            <div className="faq-col faq-col--1">
-              <FAQs />
-            </div>
-
-            <div className="faq-col faq-col--2"></div>
-          </div>
-        </div>
-      </section>
+      <FAQs heading="National Strategy FAQ" />
 
       <section className="cta cta-contact" id="cta-contact">
         <div className="inner-content">

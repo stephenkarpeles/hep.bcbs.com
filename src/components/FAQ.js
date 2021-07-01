@@ -8,7 +8,7 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion"
 
-const FAQs = () => {
+const FAQs = ({ heading }) => {
   const data = useStaticQuery(graphql`
     {
       allNodeHealthEquityFaqs {
@@ -25,22 +25,29 @@ const FAQs = () => {
   `)
 
   return (
-    <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
-      <AccordionItem>
-        <AccordionItemHeading>
-          <AccordionItemButton>
-            {data.allNodeHealthEquityFaqs.edges[0].node.title}
-          </AccordionItemButton>
-        </AccordionItemHeading>
-        <AccordionItemPanel>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: data.allNodeHealthEquityFaqs.edges[0].node.body.value,
-            }}
-          />
-        </AccordionItemPanel>
-      </AccordionItem>
-    </Accordion>
+    <section className="faq" id="faq">
+      <div className="inner-content">
+        <h3>{heading}</h3>
+        <div className="faq-col-wrap">
+          <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
+            {data.allNodeHealthEquityFaqs.edges.map(faq => (
+              <AccordionItem>
+                <AccordionItemHeading>
+                  <AccordionItemButton>{faq.node.title}</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: faq.node.body.value,
+                    }}
+                  />
+                </AccordionItemPanel>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
   )
 }
 
