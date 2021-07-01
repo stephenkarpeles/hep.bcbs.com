@@ -86,19 +86,37 @@ jobs:
       - name: Package the site content for AWS
         run: zip -r /tmp/public.zip .
 
-      # - name: Configure AWS credentials
-      #   if: |
-      #     !startsWith(github.ref, 'refs/tags/') ||
-      #     github.ref != 'refs/heads/master'
-      #   uses: aws-actions/configure-aws-credentials@v1
-      #   with:
+      - name: Configure AWS credentials
+        if: |
+          !startsWith(github.ref, 'refs/tags/') ||
+          github.ref != 'refs/heads/master'
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.ARCHIVE_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.ARCHIVE_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_ARN }}
+          role-external-id: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_EXTERNAL_ID }}
+          role-duration-seconds: 1200
+          role-session-name: GitHubActionsStaticSiteUpload
+          # Temporarily disable session tagging
+          role-skip-session-tagging: true
 
-      # - name: Configure AWS credentials (prod)
-      #   if: |
-      #     startsWith(github.ref, 'refs/tags/') ||
-      #     github.ref == 'refs/heads/master'
-      #   uses: aws-actions/configure-aws-credentials@v1
-      #   with:
+      - name: Configure AWS credentials (prod)
+        if: |
+          startsWith(github.ref, 'refs/tags/') ||
+          github.ref == 'refs/heads/master'
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.ARCHIVE_AWS_ACCESS_KEY_ID_PROD }}
+          aws-secret-access-key: ${{ secrets.ARCHIVE_AWS_SECRET_ACCESS_KEY_PROD }}
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_ARN_PROD }}
+          role-external-id: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_EXTERNAL_ID }}
+          role-duration-seconds: 1200
+          role-session-name: GitHubActionsStaticSiteUpload
+          # Temporarily disable session tagging
+          role-skip-session-tagging: true
 
       # - name: Push the site package to S3
       #   run: aws s3 sync /tmp/public.zip s3://${{ secrets.AWS_CODEBUILD_INPUT_BUCKET }}
