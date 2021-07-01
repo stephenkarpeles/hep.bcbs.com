@@ -169,8 +169,9 @@
 
   .accordion {
     @media (--large-breakpoint-up) {
-      column-count: 2;
-      column-gap: 4rem;
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0 -2rem;
     }
   }
 
@@ -193,6 +194,11 @@
 
   .accordion__item {
     border-bottom: 1px solid rgba(112, 112, 112, 0.3);
+
+    @media (--large-breakpoint-up) {
+      flex: 1 1 calc(50% - 4rem);
+      margin: 0 2rem;
+    }
   }
 
   .accordion__panel {
