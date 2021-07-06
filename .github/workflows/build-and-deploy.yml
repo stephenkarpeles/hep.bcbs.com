@@ -117,4 +117,4 @@ jobs:
 
       # For testing, use the stage bucket
       - name: Deploy the site contents to S3
-        run: aws s3 sync --acl bucket-owner-full-control public/ s3://bcbscom-stage-gatsby-website
+        run: aws s3 sync --acl bucket-owner-full-control --delete public/ s3://bcbscom-stage-gatsby-website
