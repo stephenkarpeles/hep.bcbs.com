@@ -3,7 +3,6 @@ import { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
-import { useTranslation } from "react-i18next"
 import {
   InstantSearch,
   SearchBox,
@@ -118,7 +117,6 @@ const planResult = ({ hit }) => {
 }
 
 const IndexPage = props => {
-  const { t } = useTranslation()
 
   const [viewPortEntered, setViewPortEntered] = useState(false)
 
@@ -132,8 +130,8 @@ const IndexPage = props => {
       <section className="intro" id="intro">
         <Fade>
           <div className="max-container">
-            <h1 id="healthequity">{t("home.title")}</h1>
-            <div className="subtitle">{t("home.subtitle")}</div>
+            <h1 id="healthequity">National Health Equity Strategy</h1>
+            <div className="subtitle">Blue Cross and Blue Shield Companies Confront the Nation’s Crisis in Racial Health Disparities</div>
             <div className="intro--video">
               <div className="intro--video-wrapper">
                 <iframe
@@ -149,13 +147,13 @@ const IndexPage = props => {
               </div>
             </div>
             <div className="intro--video-details">
-              <div className="intro--video-quote">{t("home.quote")}</div>
-              <div className="intro--video-content">{t("home.content")}</div>
+              <div className="intro--video-quote">Your health shouldn’t depend on the color of your skin or the neighborhood you live in.</div>
+              <div className="intro--video-content">The crisis in racial disparities in our country’s health care is unconscionable and unacceptable. While BCBS companies have made great strides in addressing racial health disparities in our local communities, there is so much more to be done."</div>
               <div className="intro--video-quote-attr">
-                &mdash; {t("home.quote-attr")}
+                &mdash; Kim Keck
               </div>
               <div className="intro--video-quote-role">
-                {t("home.quote-role")}
+                President and CEO, Blue Cross Blue Shield Association
               </div>
             </div>
           </div>
@@ -165,7 +163,7 @@ const IndexPage = props => {
       <section className="lead" id="lead">
         <div className="inner-content">
           <Fade>
-            <div className="lead--main">{t("home.lead")}</div>
+            <div className="lead--main">Blue Cross Blue Shield Association’s (BCBSA) National Health Equity Strategy includes:</div>
             <div className="lead--details">
               <div className="lead--details-points">
                 <ul>
@@ -189,7 +187,7 @@ const IndexPage = props => {
                 </ul>
               </div>
               <div className="lead--details-summary">
-                {t("home.lead-summary")}
+                The multi-year strategy will focus on four conditions that disproportionately affect communities of color: maternal health, behavioral health, diabetes and cardiovascular conditions. BCBSA will first focus on maternal health, then behavioral health in 2021.
               </div>
             </div>
           </Fade>
