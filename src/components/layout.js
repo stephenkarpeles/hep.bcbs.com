@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div style={{ height: '100px', width: '100%', background: 'red', color: 'white' }}>S3 ORIGIN CONTENT</div>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer />
