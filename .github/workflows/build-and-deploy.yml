@@ -75,7 +75,6 @@ jobs:
           branch=$(echo ${GITHUB_REF#refs/heads/})
           BRANCH=$(echo ${branch} | tr '[:lower:]' '[:upper:]')
           echo "##[set-output name=branch;]$(echo ${branch})"
-          echo "##[set-output name=BRANCH;]$(echo ${BRANCH})"
           echo "##[set-output name=cf-id-secret;]$(echo AWS_CLOUDFRONT_ID_${BRANCH})"
 
       - name: Retrieve the build artifact
