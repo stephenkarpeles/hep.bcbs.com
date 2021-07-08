@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Maintain dependencies for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "updates"
+      - "dependabot"
+    versioning-strategy: increase-if-necessary
+    # ignore:
+    # Ignore updates to packages that start with 'aws'
+    # Wildcards match zero or more arbitrary characters
+    # - dependency-name: "aws*"
+    # Ignore some updates to the 'express' package
+    # - dependency-name: "express"
+    # Ignore only new versions for 4.x and 5.x
+    # versions: ["4.x", "5.x"]

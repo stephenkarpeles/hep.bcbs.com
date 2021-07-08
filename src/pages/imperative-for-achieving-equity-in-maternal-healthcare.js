@@ -94,9 +94,9 @@ const ImperativeAcheivingEquity = props => {
                 ></iframe>
               </div>
               <p>
-                Studies show Black, American Indian and Alaska Native women are
-                more likely than white women to suffer and die from
-                pregnancy-related causes in the U.S. Watch as experts from Blue
+                The Health of America report recently revealed Black and
+                Hispanic women are more likely than white women to experience
+                childbirth complications in the U.S. Watch as experts from Blue
                 Cross Blue Shield Association, 4Kira4Moms and CareFirst
                 BlueCross BlueShield sit down during Business Group on Health’s
                 2021 Annual Conference to discuss strategies employers can use

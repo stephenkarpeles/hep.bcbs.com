@@ -286,6 +286,12 @@
     @media (--medium-breakpoint-down) {
       padding: 40px 40px 40px 70px;
     }
+
+    cite {
+      margin-top: 1rem;
+      font-size: var(--font-size-h5);
+      display: inline-block;
+    }
   }
 
   blockquote:before {
@@ -293,7 +299,7 @@
     top: 65px;
     left: 45px;
     color: var(--color-blue);
-    content: open-quote;
+    content: "\201c";
     font-size: 60px;
     line-height: 0.1em;
     margin-right: 0.25em;
@@ -406,7 +412,7 @@
   overflow: hidden;
   margin: 20px 0 60px;
   border: 5px solid white;
-  box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 
   iframe {
     position: absolute;

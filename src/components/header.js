@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Navigation from "../components/Navigation"
-import Translator from "../components/Translator"
 import { useMediaQuery } from "react-responsive"
 import algoliasearch from "algoliasearch/lite"
 import AlgoliaSiteSearch from "../components/AlgoliaSiteSearch"
@@ -75,7 +74,6 @@ const Header = ({ props, siteTitle }) => {
 
           <Desktop>
             <AlgoliaSiteSearch />
-            {/* <Translator /> */}
           </Desktop>
 
           <MobileTablet>
@@ -114,7 +112,6 @@ const Header = ({ props, siteTitle }) => {
         </div>
         <div className="mobile-navigation">
           <Navigation />
-          {/* <Translator /> */}
         </div>
       </MobileTablet>
     </>
