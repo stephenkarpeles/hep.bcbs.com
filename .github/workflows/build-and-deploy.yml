@@ -114,10 +114,22 @@ jobs:
           # Temporarily disable session tagging
           role-skip-session-tagging: true
 
-      # For testing, use the stage bucket
       - name: Deploy the site contents to S3
+        if: |
+          !startsWith(github.ref, 'refs/tags/') ||
+          github.ref != 'refs/heads/master'
         run: |
           aws s3 sync \
           --acl bucket-owner-full-control \
           --delete public/ \
           s3://bcbscom-${{ steps.branch.outputs.branch }}-gatsby-website/the-health-of-america/healthequity/
+
+      - name: Deploy the site contents to S3 (prod)
+        if: |
+          startsWith(github.ref, 'refs/tags/') ||
+          github.ref == 'refs/heads/master'
+        run: |
+          aws s3 sync \
+          --acl bucket-owner-full-control \
+          --delete public/ \
+          s3://bcbscom-prod-gatsby-website/the-health-of-america/healthequity/
