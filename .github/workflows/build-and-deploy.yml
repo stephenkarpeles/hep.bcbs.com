@@ -95,8 +95,7 @@ jobs:
           aws-access-key-id: ${{ secrets.ARCHIVE_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.ARCHIVE_AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-          role-to-assume: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_ARN }}
-          role-external-id: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_EXTERNAL_ID }}
+          role-to-assume: arn:aws:iam::737143057397:role/bcbscom-preprod-github-actions-cross-account-access
           role-duration-seconds: 1200
           role-session-name: GitHubActionsStaticSiteUpload
           # Temporarily disable session tagging
@@ -138,10 +137,10 @@ jobs:
           --delete public/ \
           s3://bcbscom-prod-gatsby-website/the-health-of-america/healthequity/
 
-      # - name: Invalidate the Cloudfront cache
-      #   if: |
-      #     !startsWith(github.ref, 'refs/tags/') ||
-      #     github.ref != 'refs/heads/master'
-      #   run: |
-      #     invalidation_id=$(aws cloudfront create-invalidation --distribution-id ${{ secrets[steps.context.outputs.cf-id-secret] }} --paths "/the-health-of-america/healthequity/" "/the-health-of-america/healthequity/*" | grep Id | awk -F'"' '{ print $4}')
-      #     aws cloudfront wait invalidation-completed --distribution-id ${{ secrets[steps.context.outputs.cf-id-secret] }} --id ${invalidation_id}
+      - name: Invalidate the Cloudfront cache
+        if: |
+          !startsWith(github.ref, 'refs/tags/') ||
+          github.ref != 'refs/heads/master'
+        run: |
+          invalidation_id=$(aws cloudfront create-invalidation --distribution-id ${{ secrets[steps.context.outputs.cf-id-secret] }} --paths "/the-health-of-america/healthequity/" "/the-health-of-america/healthequity/*" | grep Id | awk -F'"' '{ print $4}')
+          aws cloudfront wait invalidation-completed --distribution-id ${{ secrets[steps.context.outputs.cf-id-secret] }} --id ${invalidation_id}
