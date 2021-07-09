@@ -151,6 +151,19 @@ jobs:
           # Temporarily disable session tagging
           role-skip-session-tagging: true
 
+      - name: Assume the Cloudfront invalidation role (prod)
+        if: |
+          startsWith(github.ref, 'refs/tags/') ||
+          github.ref == 'refs/heads/master'
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.ARCHIVE_AWS_INVALIDATION_ROLE_ARN_PROD }}
+          role-duration-seconds: 1200
+          role-session-name: GitHubActionsCloudfrontInvalidate
+          # Temporarily disable session tagging
+          role-skip-session-tagging: true
+
       - name: Invalidate the Cloudfront cache
         if: |
           !startsWith(github.ref, 'refs/tags/') ||
