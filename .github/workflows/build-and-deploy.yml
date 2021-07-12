@@ -68,14 +68,25 @@ jobs:
     steps:
       - name: Determine the execution context
         id: context
-        if: |
-          !startsWith(github.ref, 'refs/tags/') ||
-          github.ref != 'refs/heads/master'
         run: |
-          branch=$(echo ${GITHUB_REF#refs/heads/})
-          BRANCH=$(echo ${branch} | tr '[:lower:]' '[:upper:]')
-          echo "##[set-output name=branch;]$(echo ${branch})"
-          echo "##[set-output name=cf-id-secret;]$(echo AWS_CLOUDFRONT_ID_${BRANCH})"
+          # Determine the environment
+          if [[ ${GITHUB_REF} == "refs/tags/"* || ${GITHUB_REF} == "refs/heads/master" ]]; then
+            env="prod"
+          else
+            env=$(echo ${GITHUB_REF#refs/heads/})
+          fi
+          ENV=$(echo ${env} | tr '[:lower:]' '[:upper:]')
+          # Add a flag to various secrets for production
+          if [[ ${env} == "prod" ]]; then
+            ACCOUNT="_PROD"
+          fi
+          # Set outputs for later steps
+          echo "##[set-output name=env;]$(echo ${env})"
+          echo "##[set-output name=access-key;]$(echo ARCHIVE_AWS_ACCESS_KEY_ID${ACCOUNT})"
+          echo "##[set-output name=secret-key;]$(echo ARCHIVE_AWS_SECRET_ACCESS_KEY${ACCOUNT})"
+          echo "##[set-output name=upload-role;]$(echo ARCHIVE_AWS_UPLOAD_ROLE_ARN${ACCOUNT})"
+          echo "##[set-output name=invalidation-role;]$(echo ARCHIVE_AWS_INVALIDATION_ROLE_ARN${ACCOUNT})"
+          echo "##[set-output name=cloudfront-id;]$(echo AWS_CLOUDFRONT_ID_${ENV})"
 
       - name: Retrieve the build artifact
         uses: actions/download-artifact@v2
@@ -87,31 +98,12 @@ jobs:
         run: tar -xzf /tmp/public.tar.gz
 
       - name: Configure AWS credentials
-        if: |
-          !startsWith(github.ref, 'refs/tags/') ||
-          github.ref != 'refs/heads/master'
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.ARCHIVE_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.ARCHIVE_AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets[steps.context.outputs.access-key] }}
+          aws-secret-access-key: ${{ secrets[steps.context.outputs.secret-key] }}
           aws-region: us-east-1
-          role-to-assume: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_ARN }}
-          role-external-id: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_EXTERNAL_ID }}
-          role-duration-seconds: 1200
-          role-session-name: GitHubActionsStaticSiteUpload
-          # Temporarily disable session tagging
-          role-skip-session-tagging: true
-
-      - name: Configure AWS credentials (prod)
-        if: |
-          startsWith(github.ref, 'refs/tags/') ||
-          github.ref == 'refs/heads/master'
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.ARCHIVE_AWS_ACCESS_KEY_ID_PROD }}
-          aws-secret-access-key: ${{ secrets.ARCHIVE_AWS_SECRET_ACCESS_KEY_PROD }}
-          aws-region: us-east-1
-          role-to-assume: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_ARN_PROD }}
+          role-to-assume: ${{ secrets[steps.context.outputs.upload-role] }}
           role-external-id: ${{ secrets.ARCHIVE_AWS_UPLOAD_ROLE_EXTERNAL_ID }}
           role-duration-seconds: 1200
           role-session-name: GitHubActionsStaticSiteUpload
@@ -126,48 +118,19 @@ jobs:
           aws s3 sync \
           --acl bucket-owner-full-control \
           --delete public/ \
-          s3://bcbscom-${{ steps.context.outputs.branch }}-gatsby-website/the-health-of-america/healthequity/
-
-      - name: Deploy the site contents to S3 (prod)
-        if: |
-          startsWith(github.ref, 'refs/tags/') ||
-          github.ref == 'refs/heads/master'
-        run: |
-          aws s3 sync \
-          --acl bucket-owner-full-control \
-          --delete public/ \
-          s3://bcbscom-prod-gatsby-website/the-health-of-america/healthequity/
+          s3://bcbscom-${{ steps.context.outputs.env }}-gatsby-website/the-health-of-america/healthequity/
 
       - name: Assume the Cloudfront invalidation role
-        if: |
-          !startsWith(github.ref, 'refs/tags/') ||
-          github.ref != 'refs/heads/master'
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: us-east-1
-          role-to-assume: ${{ secrets.ARCHIVE_AWS_INVALIDATION_ROLE_ARN }}
-          role-duration-seconds: 1200
-          role-session-name: GitHubActionsCloudfrontInvalidate
-          # Temporarily disable session tagging
-          role-skip-session-tagging: true
-
-      - name: Assume the Cloudfront invalidation role (prod)
-        if: |
-          startsWith(github.ref, 'refs/tags/') ||
-          github.ref == 'refs/heads/master'
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-east-1
-          role-to-assume: ${{ secrets.ARCHIVE_AWS_INVALIDATION_ROLE_ARN_PROD }}
+          role-to-assume: ${{ secrets[steps.context.outputs.invalidation-role] }}
           role-duration-seconds: 1200
           role-session-name: GitHubActionsCloudfrontInvalidate
           # Temporarily disable session tagging
           role-skip-session-tagging: true
 
       - name: Invalidate the Cloudfront cache
-        if: |
-          !startsWith(github.ref, 'refs/tags/') ||
-          github.ref != 'refs/heads/master'
         run: |
-          invalidation_id=$(aws cloudfront create-invalidation --distribution-id ${{ secrets[steps.context.outputs.cf-id-secret] }} --paths "/the-health-of-america/healthequity/" "/the-health-of-america/healthequity/*" | grep Id | awk -F'"' '{ print $4}')
-          aws cloudfront wait invalidation-completed --distribution-id ${{ secrets[steps.context.outputs.cf-id-secret] }} --id ${invalidation_id}
+          invalidation_id=$(aws cloudfront create-invalidation --distribution-id ${{ secrets[steps.context.outputs.cloudfront-id] }} --paths "/the-health-of-america/healthequity/" "/the-health-of-america/healthequity/*" | grep Id | awk -F'"' '{ print $4}')
+          aws cloudfront wait invalidation-completed --distribution-id ${{ secrets[steps.context.outputs.cloudfront-id] }} --id ${invalidation_id}
