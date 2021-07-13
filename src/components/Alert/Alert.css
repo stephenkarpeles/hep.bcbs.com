@@ -7,8 +7,16 @@
   line-height: var(--line-height-h3);
   padding: 1.5rem 0;
 
-  &-warning {
-    background-color: var(--color-yellow);
+  &-blue {
+    background-color: var(--color-alert-blue);
+  }
+
+  &-yellow {
+    background-color: var(--color-alert-yellow);
+  }
+
+  &-red {
+    background-color: var(--color-alert-red);
   }
 
   a {
@@ -18,7 +26,7 @@
     display: block;
     padding-right: 2rem;
 
-    &::after {
+    /* &::after {
       content: url("../../images/icons/arrow-down.svg");
       height: 36px;
       width: 24px;
@@ -26,6 +34,6 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
-    }
+    } */
   }
 }
