@@ -38,20 +38,20 @@ const AlertBanner = () => {
                 title={`${alert?.field_he_link?.title}`}
               >
                 {alert.title}
+                <span className={`icon ${alert.field_icon}`}></span>
               </AnchorLink>
             </>
           ) : (
             <>
               <a
-                className="navigation__anchor-link"
                 title={`${alert?.field_he_link?.title}`}
                 href={alert?.field_he_link?.uri}
               >
                 {alert.title}
+                <span className={`icon ${alert.field_icon}`}></span>
               </a>
             </>
           )}
-          <span className={`icon ${alert.field_icon}`}></span>
         </div>
       </div>
     </section>

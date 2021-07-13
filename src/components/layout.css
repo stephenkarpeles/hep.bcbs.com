@@ -1,6 +1,7 @@
 @import "variables.css";
 @import "mixins.css";
 @import "typography.css";
+@import "icons.css";
 @import "breakpoints.css";
 
 html {
