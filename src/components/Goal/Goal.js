@@ -1,8 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Slide from "react-reveal/Slide"
+import "./Goal.css"
 
-const OurGoal = () => {
+const Goal = () => {
   const data = useStaticQuery(graphql`
     {
       allNodeHealthEquityGoals(
@@ -34,20 +35,23 @@ const OurGoal = () => {
           <div className="goal-banner-box">
             <h6 className="goal-banner-box-title">{goal.title}</h6>
             <div className="goal-banner-box-description">
-              <div
+              <span
                 dangerouslySetInnerHTML={{
                   __html: goal.field_he_statistic_prefix.value,
                 }}
               />
             </div>
             <div className="goal-banner-box-stat">
-              <div
-                dangerouslySetInnerHTML={{ __html: goal.field_he_statistic }}
-              />
-              <span>%</span>
-              <span className="goal-banner-box-text">
-                {goal.field_he_statistic_suffix.value}
+              <span className="goal-banner-box-stat-number">
+                {goal.field_he_statistic}
               </span>
+              <span className="goal-banner-box-stat-marker">%</span>
+              <div
+                className="goal-banner-box-text"
+                dangerouslySetInnerHTML={{
+                  __html: goal.field_he_statistic_suffix.value,
+                }}
+              ></div>
             </div>
           </div>
         </div>
@@ -56,4 +60,4 @@ const OurGoal = () => {
   )
 }
 
-export default OurGoal
+export default Goal
