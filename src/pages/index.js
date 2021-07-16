@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -13,6 +13,7 @@ import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
 import Hero from "../components/Hero"
 import Alert from "../components/Alert/Alert"
 import Goal from "../components/Goal/Goal"
+import Disparities from "../components/Disparities/Disparities"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -106,8 +107,6 @@ const planResult = ({ hit }) => {
 }
 
 const IndexPage = props => {
-  const [viewPortEntered, setViewPortEntered] = useState(false)
-
   return (
     <>
       <SEO
