@@ -2,6 +2,7 @@
 @import "../breakpoints.css";
 
 .disparities {
+  background-color: var(--color-light-gray);
   padding: var(--spacer-2) 0;
 
   @media (--medium-breakpoint-up) {

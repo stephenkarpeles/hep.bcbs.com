@@ -20,7 +20,7 @@ const Disparities = ({ header }) => {
             field_he_statistic
             field_he_statistic_text
             field_he_dis_content_source {
-              uri
+              url
             }
 
             relationships {
@@ -115,7 +115,7 @@ const Disparities = ({ header }) => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href={source.node.field_he_dis_content_source.uri}
+                href={source.node.field_he_dis_content_source.url}
               >
                 {source.node.title}
               </a>{" "}
