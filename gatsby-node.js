@@ -91,6 +91,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     | node__hoa_page
     | node__podcast
     | node__video
+    | node__health_america_page
 
     type node__health_equity_promotion implements Node {
       field_he_author: String
@@ -105,7 +106,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type node__health_equity_blogRelationships {
       field_he_related_content: [heRelatedContentUnion] @link(from: "field_he_related_content___NODE")
-      field_he_hoa_related_content: [heRelatedContentUnion] @link(from: "field_he_hoa_related_content___NODE")
+      field_he_hoa_related_content: [hoaRelatedContentUnion] @link(from: "field_he_hoa_related_content___NODE")
     }
 
     type node__health_equity_promotion implements Node {
@@ -113,7 +114,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type node__health_equity_promotionRelationships {
       field_he_related_content: [heRelatedContentUnion] @link(from: "field_he_related_content___NODE")
-      field_he_hoa_related_content: [heRelatedContentUnion] @link(from: "field_he_hoa_related_content___NODE")
+      field_he_hoa_related_content: [hoaRelatedContentUnion] @link(from: "field_he_hoa_related_content___NODE")
     }
 
     type node__health_equity_plan_profile implements Node {
@@ -121,7 +122,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type node__health_equity_plan_profileRelationships {
       field_he_related_content: [heRelatedContentUnion] @link(from: "field_he_related_content___NODE")
-      field_he_hoa_related_content: [heRelatedContentUnion] @link(from: "field_he_hoa_related_content___NODE")
+      field_he_hoa_related_content: [hoaRelatedContentUnion] @link(from: "field_he_hoa_related_content___NODE")
     }
   `
   createTypes(typeDefs)
