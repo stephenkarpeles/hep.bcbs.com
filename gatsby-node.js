@@ -86,7 +86,11 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     union heRelatedContentUnion = node__health_equity_plan_profile
-    union hoaRelatedContentUnion = node__hoa_insight | node__hoa_page | node__podcast
+    union hoaRelatedContentUnion =
+    node__hoa_insight
+    | node__hoa_page
+    | node__podcast
+    | node__video
 
     type node__health_equity_promotion implements Node {
       field_he_author: String
