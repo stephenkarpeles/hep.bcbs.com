@@ -145,7 +145,9 @@ export const query = graphql`
           }
         }
         field_he_related_content {
-          title
+          ... on node__health_equity_plan_profile {
+            title
+          }
         }
         field_he_hoa_related_content {
           ...RelatedHOAPage

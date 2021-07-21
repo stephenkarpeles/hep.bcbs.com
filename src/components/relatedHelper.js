@@ -12,11 +12,11 @@ const relatedStories = {
 export const getRelatedStories = node => {
   // render the display name for the Drupal node type
   let nodeType = node.relationships.node_type.name
-  if (nodeType == "HoA Report") {
+  if (nodeType === "HoA Report") {
     nodeType = "Report"
-  } else if (nodeType == "HoA Infographic") {
+  } else if (nodeType === "HoA Infographic") {
     nodeType = "Infographic"
-  } else if (nodeType == "HoA Page") {
+  } else if (nodeType === "HoA Page") {
     nodeType = "Page"
   }
 
