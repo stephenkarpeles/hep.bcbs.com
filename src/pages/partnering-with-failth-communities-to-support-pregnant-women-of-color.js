@@ -129,8 +129,9 @@ const PartneringFaithCommunities = props => {
                 >
                   surveyed women about their healthcare experiences
                 </a>
-                . The results showed major disparities between the care a woman
-                receives while pregnant and whether her baby lives or dies.
+                . Out of more than 4000 responses, the results showed major
+                disparities between the care a woman receives while pregnant and
+                whether her baby lives or dies.
               </p>
               <ul className="pp-content__fancy-list">
                 <li>
@@ -169,14 +170,14 @@ const PartneringFaithCommunities = props => {
               </p>
               <h4>Faith-based groups keep a pulse on community needs</h4>
               <p>
-                That’s because, says Keck, who is also the managing medical
-                director for Anthem Blue Cross and Blue Shield’s (Anthem)
-                Indiana and Wisconsin Medicaid programs, different communities
-                have different needs. In some, it’s education about pregnancy
+                Keck, who is also managing medical director for Anthem Blue
+                Cross and Blue Shield’s (Anthem) Indiana and Wisconsin Medicaid
+                programs, says that's because different communities have
+                different needs. In some, it’s more education about pregnancy
                 care. In others, it’s better access to pregnancy and childbirth
-                healthcare providers. For some, there may be other barriers,
-                such as money, transportation or health insurance, to receiving
-                pregnancy care.
+                healthcare providers. For others, there may be different
+                barriers, such as money, transportation or health insurance, to
+                receiving pregnancy care.
               </p>
               <p>
                 Anthem has been hosting what it calls “community conversations”

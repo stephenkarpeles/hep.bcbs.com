@@ -1,6 +1,6 @@
 import React from "react"
 import algoliasearch from "algoliasearch/lite"
-import { InstantSearch, Configure, VoiceSearch } from "react-instantsearch-dom"
+import { InstantSearch, Configure } from "react-instantsearch-dom"
 import Autocomplete from "../components/AlgoliaAutoComplete"
 
 const searchClient = algoliasearch(
@@ -13,12 +13,6 @@ const AlgoliaSiteSearch = () => {
     <InstantSearch searchClient={searchClient} indexName="he_plan_profiles">
       <Configure hitsPerPage={5} clickAnalytics />
       <Autocomplete />
-      {/* <VoiceSearch
-          translations={{
-            buttonTitle: "Voice Search",
-            disabledButtonTitle: "Voice Search Disabled",
-          }}
-        /> */}
     </InstantSearch>
   )
 }
