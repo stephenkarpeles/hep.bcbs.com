@@ -314,6 +314,19 @@
     display: inline;
   }
 
+  &__callout {
+    background: var(--color-light-gray);
+    margin: 40px 0 40px;
+    padding: 40px 60px 40px 90px;
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    position: relative;
+
+    @media (--medium-breakpoint-down) {
+      padding: 40px 40px 40px 70px;
+    }
+  }
+
   &__fancy-list {
     margin: 45px 0 40px;
     padding: 0;
