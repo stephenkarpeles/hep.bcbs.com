@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-maternity-coordinators-help-manage-high-risk-conditions.jpg"
+
 const MaternityCoordinators = props => {
   return (
     <div>
       <SEO
         title="Maternity coordinators help manage high risk conditions"
         description="Blue Cross of Idaho’s Maternity Management program helps pregnant mothers with chronic health conditions have healthy, safe pregnancies and childbirth."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const MaternityCoordinators = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-maternity-coordinators-help-manage-high-risk-conditions.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

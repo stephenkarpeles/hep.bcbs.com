@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/feature-partnering-with-failth-communities-to-support-pregnant-women-of-color.jpg"
+
 const PartneringFaithCommunities = props => {
   return (
     <div>
       <SEO
         title="Partnering with faith communities to support pregnant women of color."
         description="Addressing the unique needs of communities of color could help Indiana improve the health of pregnant women. Empowering faith-based communities to do just that is one way Anthem Blue Cross and Blue Shield is hoping to help women at risk."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const PartneringFaithCommunities = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-partnering-with-failth-communities-to-support-pregnant-women-of-color.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

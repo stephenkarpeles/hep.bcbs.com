@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/feature-eliminating-food-insecurity-to-improve-maternal-and-fetal-health-a.png"
+
 const PlanProfile4 = props => {
   return (
     <div>
       <SEO
         title="Eliminating food insecurity improves maternal/fetal health"
         description="Programs located in Minnesota, New York and Kansas City help keep pregnant women and their families from going hungry."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const PlanProfile4 = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-eliminating-food-insecurity-to-improve-maternal-and-fetal-health-a.png")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

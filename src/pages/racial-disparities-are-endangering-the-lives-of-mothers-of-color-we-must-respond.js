@@ -11,6 +11,10 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/blog-racial-disparities-are-endangering-the-lives-of-mothers-of-color-we-must-respond.jpg"
+
 const WeMustRespond = props => {
   return (
     <div>
@@ -18,6 +22,7 @@ const WeMustRespond = props => {
         title="Racial Disparities are Endangering the Lives of Mothers of
                     Color. We Must Respond."
         description="The United States is in the midst of a maternal health crisis, and new data from the Blue Cross Blue Shield Association shows that women of color continue to face a greater risk of childbirth complications compared to white women."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -34,7 +39,7 @@ const WeMustRespond = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/blog-racial-disparities-are-endangering-the-lives-of-mothers-of-color-we-must-respond.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

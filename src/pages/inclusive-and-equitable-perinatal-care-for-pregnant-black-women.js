@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-inclusive-and-equitable-perinatal-care-for-pregnant-black-women.jpg"
+
 const InclusivePerinatalCare = props => {
   return (
     <div>
       <SEO
         title="B’more for Healthy Babies reduced infant deaths by over 30%"
         description="A decade-long Baltimore City initiative has improved maternal health outcomes and reduced infant mortality among vulnerable communities."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const InclusivePerinatalCare = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url(https://www.bcbs.com/sites/default/files/healthequity/images/brief-inclusive-and-equitable-perinatal-care-for-pregnant-black-women.jpg)`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-health-education-and-culturally-competent-doula-support-for-pregnant-moms.jpg"
+
 const HealthEducation = props => {
   return (
     <div>
       <SEO
         title="Health education and doula support for pregnant moms"
         description="Working with a doula can help counter racial disparities and lead to better health outcomes for women of color and their babies"
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const HealthEducation = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-health-education-and-culturally-competent-doula-support-for-pregnant-moms.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

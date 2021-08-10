@@ -4,6 +4,7 @@ module.exports = {
     title: `Blue Health Equity`,
     description: `Blue Cross and Blue Shield Companies’ National Health Equity Pledge.`,
     author: `@oomphinc`,
+    image: `src/images/bcbs-logo.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

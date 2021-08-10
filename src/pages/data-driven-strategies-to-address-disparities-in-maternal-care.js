@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-data-driven-strategies-to-address-disparities-in-maternal-care.jpg"
+
 const DataDrivenStrategies = props => {
   return (
     <div>
       <SEO
         title="Data-driven strategies to address disparities in maternal care"
         description="Using a data-first approach to inform better interventions in care to reduce health disparities among communities of color and support expectant mothers."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const DataDrivenStrategies = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-data-driven-strategies-to-address-disparities-in-maternal-care.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

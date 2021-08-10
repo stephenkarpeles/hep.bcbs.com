@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-imperative-for-achieving-equity-in-maternal-healthcare.jpg"
+
 const ImperativeAcheivingEquity = props => {
   return (
     <div>
       <SEO
         title="The Imperative for Achieving Equity in Maternal Healthcare"
         description="Blue Cross Blue Shield Association, 4Kira4Moms and CareFirst BlueCross BlueShield discuss strategies employers can use to achieve equity in maternal healthcare."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const ImperativeAcheivingEquity = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-imperative-for-achieving-equity-in-maternal-healthcare.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

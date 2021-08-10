@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-roundtable-alert-banner.jpg"
+
 const BlueHealthEquityRoundtable = props => {
   return (
     <div>
       <SEO
         title="Blue Health Equity Roundtable"
         description="An in-depth look at the current state of racial disparities in healthcare, as well as ways we can change the trajectory, and reimagine a more equitable healthcare system."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const BlueHealthEquityRoundtable = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-roundtable-alert-banner.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

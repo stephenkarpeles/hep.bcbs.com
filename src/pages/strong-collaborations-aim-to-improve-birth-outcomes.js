@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/feature-in-new-jersey-addressing-mood-disorders-in-black-postpartum-women-a.png"
+
 const StrongCollaborations = props => {
   return (
     <div>
       <SEO
         title="Strong collaborations with BlueCross BlueShield of South Carolina aim to improve birth outcomes"
         description="BlueCross BlueShield of South Carolina (BlueCross SC) is improving maternal care as a leading partner of the Birth Outcomes Initiative (BOI)"
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const StrongCollaborations = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-in-new-jersey-addressing-mood-disorders-in-black-postpartum-women-a.png")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

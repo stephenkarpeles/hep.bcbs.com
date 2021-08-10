@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/feature-in-preventing-or-treating-stroke-one-size-may-not-fit-all.jpg"
+
 const ConfrontingRacialDisparities = props => {
   return (
     <div>
       <SEO
         title="In preventing or treating stroke, one size may not fit all"
         description="Blue Cross Blue Shield Association hosted a discussion on racial health disparities, how to change their trajectory and solutions for Black maternal health."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const ConfrontingRacialDisparities = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-in-preventing-or-treating-stroke-one-size-may-not-fit-all.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

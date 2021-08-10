@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/feature-baltimore-cut-infant-mortality-and-helped-moms-thrive-too.jpg"
+
 const BaltimoreInfantMortality = props => {
   return (
     <div>
       <SEO
         title="Podcast: Baltimore cut infant mortality and helped moms thrive, too."
         description="In 10 years, Baltimore cut its infant mortality by nearly 40%. It's an incredible success story. But there's more work to do as the initiative B'more for Healthy Babies enters its second decade. Substantial racial disparities persist between Black and white infant and maternal health. In this episode, we visit the communities hardest hit by those disparities and learn how this massive, grassroots effort is turning the tide."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const BaltimoreInfantMortality = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-baltimore-cut-infant-mortality-and-helped-moms-thrive-too.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">
