@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/feature-experts-address-how-to-eliminate-racial-disparities-in-healthcare.jpg"
+
 const EliminateRacialDisparities = props => {
   return (
     <div>
       <SEO
         title="'We can do it' Experts address how to eliminate racial disparities in healthcare"
         description="Watch this 2-part discussion on how to achieve health equity from leading national experts who explain that eliminating disparities will take leadership and collaboration among many stakeholders."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const EliminateRacialDisparities = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/feature-experts-address-how-to-eliminate-racial-disparities-in-healthcare.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-strong-collaborations-aim-to-improve-birth-outcomes.png"
+
 const PlanProfile2 = props => {
   return (
     <div>
       <SEO
         title="Addressing postpartum in Black women"
         description="Horizon Blue Cross Blue Shield of New Jersey is working to ensure Black mothers receive the care they need for postpartum depression and other mood disorders."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const PlanProfile2 = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-strong-collaborations-aim-to-improve-birth-outcomes.png")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

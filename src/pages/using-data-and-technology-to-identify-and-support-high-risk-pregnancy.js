@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-using-data-and-technology-to-identify-and-support-high-risk-pregnancy.jpg"
+
 const DataTechnology = props => {
   return (
     <div>
       <SEO
         title="Using technology to identify and support high-risk pregnancies"
         description="Blue Cross and Blue Shield of Louisiana supports programs and community-focused initiatives to reduce disparities and improve access to care for mother and baby."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const DataTechnology = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url(https://www.bcbs.com/sites/default/files/healthequity/images/brief-using-data-and-technology-to-identify-and-support-high-risk-pregnancy.jpg)`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-improving-postpartum-care-for-high-risk-mothers.jpg"
+
 const ImprovingPostpartumCare = props => {
   return (
     <div>
       <SEO
         title="Improving postpartum care for high-risk mothers"
         description="Premera Blue Cross and Blue Shield companies are committed to increasing postpartum care and improving postpartum health for their members in Washington and Alaska."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const ImprovingPostpartumCare = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-improving-postpartum-care-for-high-risk-mothers.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

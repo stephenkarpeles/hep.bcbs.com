@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-breaking-through-bias-in-maternity-care.jpg"
+
 const BreakingBias = props => {
   return (
     <div>
       <SEO
         title="Identifying and addressing implicit biases in maternal care"
         description="The Breaking Through Bias in Maternity Care program covers strategies to mitigate bias in maternity care and building a culture of equity."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const BreakingBias = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-breaking-through-bias-in-maternity-care.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

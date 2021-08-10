@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-home-visits-address-high-risk-conditions-and-social-determinants-of-health.jpg"
+
 const HomeVisits = props => {
   return (
     <div>
       <SEO
         title="Home visit program for pregnant women have safer pregnancies"
         description="Home visits throughout a woman’s pregnancy can help address chronic conditions and other barriers to healthy pregnancies."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const HomeVisits = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-home-visits-address-high-risk-conditions-and-social-determinants-of-health.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

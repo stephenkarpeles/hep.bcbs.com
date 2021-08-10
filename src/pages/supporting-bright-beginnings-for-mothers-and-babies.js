@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-supporting-bright-beginnings-for-mothers-and-babies.jpg"
+
 const BrightBeginnings = props => {
   return (
     <div>
       <SEO
         title="Helping expectant mothers have safer, healthier pregnancies"
         description="Pairing Black and Brown mothers with culturally competent care, delivering groceries, and providing addiction support to mothers during and after pregnancy."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const BrightBeginnings = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url(https://www.bcbs.com/sites/default/files/healthequity/images/brief-supporting-bright-beginnings-for-mothers-and-babies.jpg)`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

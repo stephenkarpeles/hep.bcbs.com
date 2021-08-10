@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-confronting-crisis-of-health-inequities-with-bold-national-strategy.jpg"
+
 const ConfrontingCrisis = props => {
   return (
     <div>
       <SEO
         title="The facts: Confronting a crisis of health inequities with a bold national strategy"
         description="Education and understanding are the first steps to addressing health inequities and disparities according to leading health organizations."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const ConfrontingCrisis = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/brief-confronting-crisis-of-health-inequities-with-bold-national-strategy.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

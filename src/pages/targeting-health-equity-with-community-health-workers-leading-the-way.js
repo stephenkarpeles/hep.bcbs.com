@@ -14,12 +14,17 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/brief-targeting-health-equity-with-community-health-workers-leading-the-way.jpg"
+
 const TargetingHealthEquity = props => {
   return (
     <div>
       <SEO
         title="Efforts to reduce racial disparities in prenatal care"
         description="Blue KC aims to reduce disparities in prenatal care by offering guidance and support to raise the awareness among mothers about potential health risks."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -35,7 +40,7 @@ const TargetingHealthEquity = props => {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url(https://www.bcbs.com/sites/default/files/healthequity/images/brief-targeting-health-equity-with-community-health-workers-leading-the-way.jpg)`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">

@@ -11,6 +11,10 @@ import SEO from "../components/seo"
 // Sharing
 import Sharing from "../components/Sharing/sharing"
 
+// Image
+const mainImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/blog-reimagining-equity-in-healthcare-together.jpg"
+
 const ReimaginingEquity = props => {
   return (
     <div>
@@ -18,6 +22,7 @@ const ReimaginingEquity = props => {
         title="Reimagining equity in healthcare, together"
         description="Your health shouldn’t depend on the color of your skin or the neighborhood you live in, but too often it
 does."
+        image={mainImage}
       />
       <Fade>
         <div className="pp-hero">
@@ -33,7 +38,7 @@ does."
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url("https://www.bcbs.com/sites/default/files/healthequity/images/blog-reimagining-equity-in-healthcare-together.jpg")`,
+              backgroundImage: `url(${mainImage})`,
             }}
           >
             <div className="pp-hero__meta">
