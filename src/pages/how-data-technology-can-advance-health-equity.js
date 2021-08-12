@@ -54,9 +54,9 @@ const AdvanceHealthEquity = props => {
                 <div className="pp-hero__title">
                   <h1>How Data and Technology Can Advance Health Equity</h1>
                 </div>
-                {/* <div className="pp-hero__author">
-                  <span>Kristin Gourlay</span>
-                </div> */}
+                <div className="pp-hero__author">
+                  <span>Kim Keck, CEO, Blue Cross Blue Shield Association</span>
+                </div>
               </div>
             </div>
           </div>
