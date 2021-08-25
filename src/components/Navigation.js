@@ -31,9 +31,10 @@ function Navigation() {
             className="navigation__anchor-link"
             title="What is Health Equity"
           >
-            <span>National Health Equity Strategy</span>
+            {/* <span>National Health Equity Strategy</span> */}
+            <span>Latest Stories</span>
           </AnchorLink>
-          <AnchorLink
+          {/* <AnchorLink
             onAnchorLinkClick={() => {
               removeMenuOpenClass()
               hideMobileNav()
@@ -44,8 +45,8 @@ function Navigation() {
             title="Health Disparities"
           >
             <span>Health Disparities: By the Numbers</span>
-          </AnchorLink>
-          <AnchorLink
+          </AnchorLink> */}
+          {/* <AnchorLink
             onAnchorLinkClick={() => {
               removeMenuOpenClass()
               hideMobileNav()
@@ -56,8 +57,8 @@ function Navigation() {
             title="Our Commitment"
           >
             <span>Our Goal</span>
-          </AnchorLink>
-          <AnchorLink
+          </AnchorLink> */}
+          {/* <AnchorLink
             onAnchorLinkClick={() => {
               removeMenuOpenClass()
               hideMobileNav()
@@ -68,7 +69,7 @@ function Navigation() {
             title="What we're doing in your community"
           >
             <span>What We're Doing in Your Community</span>
-          </AnchorLink>
+          </AnchorLink> */}
           <AnchorLink
             onAnchorLinkClick={() => {
               removeMenuOpenClass()
