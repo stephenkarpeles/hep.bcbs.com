@@ -112,7 +112,7 @@ const IndexPage = props => {
         title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
-      <Alert />
+      {/* <Alert /> */}
       <section className="intro" id="intro">
         <Fade>
           <div className="max-container">
@@ -126,20 +126,26 @@ const IndexPage = props => {
         </Fade>
       </section>
 
-      <section className="profiles" id="community">
+      <section className="profiles" id="latest">
         <Fade>
-          <div className="inner-content community">
-            <h2 style={{ color: "#0072A7" }}>Latest Stories</h2>
-            <p
-              style={{
-                maxWidth: 800,
-                marginBottom: "3rem",
-                fontSize: "1.125rem",
-              }}
-            >
-              See how we're actively working to address racial disparities.
-            </p>
-            <Link to="/latest-stories">View All</Link>
+          <div className="inner-content latest">
+            <div className="profiles-header">
+              <div className="profiles-header-title">
+                <h2 style={{ color: "#0072A7" }}>Latest Stories</h2>
+                <p
+                  style={{
+                    maxWidth: 800,
+                    marginBottom: "3rem",
+                    fontSize: "1.125rem",
+                  }}
+                >
+                  See how we're actively working to address racial disparities.
+                </p>
+              </div>
+              <div className="profiles-header-link">
+                <Link to="/latest-stories">View All</Link>
+              </div>
+            </div>
           </div>
         </Fade>
         <div className="inner-content">
@@ -155,20 +161,26 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <section className="profiles" id="community">
+      <section className="profiles" id="maternal">
         <Fade>
-          <div className="inner-content community">
-            <h2 style={{ color: "#0072A7" }}>Maternal Health</h2>
-            <p
-              style={{
-                maxWidth: 800,
-                marginBottom: "3rem",
-                fontSize: "1.125rem",
-              }}
-            >
-              See what compnies are doing in your neighborhood.
-            </p>
-            <Link to="/maternal-health">View All</Link>
+          <div className="inner-content maternal">
+            <div className="profiles-header">
+              <div className="profiles-header-title">
+                <h2 style={{ color: "#0072A7" }}>Maternal Health</h2>
+                <p
+                  style={{
+                    maxWidth: 800,
+                    marginBottom: "3rem",
+                    fontSize: "1.125rem",
+                  }}
+                >
+                  See what compnies are doing in your neighborhood.
+                </p>
+              </div>
+              <div className="profiles-header-link">
+                <Link to="/maternal-health">View All</Link>
+              </div>
+            </div>
           </div>
         </Fade>
         <div className="inner-content">

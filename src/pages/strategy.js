@@ -100,7 +100,6 @@ const planResult = ({ hit }) => {
         <div className="plan-result-card-meta">
           <div className="plan-result-card-category">{topic}</div>
           <div className="plan-result-card-title">{headline}</div>
-          <div className="plan-result-card-excerpt">{teaser}</div>
           <div className="plan-result-card-read">{read_time} min read</div>
         </div>
       </div>
@@ -416,9 +415,9 @@ const StrategyPage = props => {
         </div>
       </section>
 
-      <section className="profiles" id="community">
+      <section className="profiles" id="latest">
         <Fade>
-          <div className="inner-content community">
+          <div className="inner-content latest">
             <h2 style={{ color: "#0072A7" }}>What we're doing</h2>
             <p
               style={{

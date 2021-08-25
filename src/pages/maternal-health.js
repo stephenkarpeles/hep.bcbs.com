@@ -155,7 +155,11 @@ const StrategyPage = props => {
             searchClient={searchClient}
             indexName="he_plan_profiles_latest"
           >
-            <Configure clickAnalytics distinct />
+            <Configure
+              clickAnalytics
+              distinct
+              filters="topic:'Maternal Health'"
+            />
             <Fade>
               <div className="search-filters">
                 <div className="search-filters-label-main">Filter</div>
