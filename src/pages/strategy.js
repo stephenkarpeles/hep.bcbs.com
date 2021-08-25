@@ -418,18 +418,24 @@ const StrategyPage = props => {
       <section className="profiles" id="latest">
         <Fade>
           <div className="inner-content latest">
-            <h2 style={{ color: "#0072A7" }}>What we're doing</h2>
-            <p
-              style={{
-                maxWidth: 800,
-                marginBottom: "3rem",
-                fontSize: "1.125rem",
-              }}
-            >
-              Blue Cross and Blue Shield Companies Adress the Nation's Crisis in
-              Racial Health Disparities.
-            </p>
-            <Link to="/what-were-doing">View All</Link>
+            <div className="profiles-header">
+              <div className="profiles-header-title">
+                <h2 style={{ color: "#0072A7" }}>What we're doing</h2>
+                <p
+                  style={{
+                    maxWidth: 800,
+                    marginBottom: "3rem",
+                    fontSize: "1.125rem",
+                  }}
+                >
+                  Blue Cross and Blue Shield Companies Adress the Nation's
+                  Crisis in Racial Health Disparities.
+                </p>
+              </div>
+              <div className="profiles-header-link">
+                <Link to="/what-were-doing">View All</Link>
+              </div>
+            </div>
           </div>
         </Fade>
         <div className="inner-content">

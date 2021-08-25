@@ -656,7 +656,8 @@ header {
     flex-flow: row wrap;
     align-items: baseline;
     /* justify-content: flex-end; */
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 65%;
 
     .mobile-navigation & {
       flex-flow: column wrap;
@@ -725,12 +726,13 @@ header {
 
 /* Intro */
 .intro {
-  background-color: var(--color-dark-blue);
-  padding: 2rem 0 1rem;
+  /* background-color: var(--color-dark-blue); */
+  /* padding: 2rem 0 1rem; */
+  padding: 2rem 0;
 
-  @media (--large-breakpoint-up) {
+  /* @media (--large-breakpoint-up) {
     padding: 7.5rem 0 2rem;
-  }
+  } */
 
   /* @media (--extra-large-breakpoint) {
     background: linear-gradient(
@@ -1785,4 +1787,11 @@ header {
 main div h1 + h4 + form ~ a {
   /* Making this overly selective, because we can't edit the root elements of the plugin */
   display: none;
+}
+
+.gatsby-image-wrapper {
+  .hero & {
+    height: calc(100vh - 143px);
+    max-height: 800px;
+  }
 }

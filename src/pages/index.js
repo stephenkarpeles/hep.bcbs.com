@@ -10,7 +10,7 @@ import Fade from "react-reveal/Fade"
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
 import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
-import Alert from "../components/Alert/Alert"
+import Hero from "../components/Hero"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -112,19 +112,7 @@ const IndexPage = props => {
         title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
-      {/* <Alert /> */}
-      <section className="intro" id="intro">
-        <Fade>
-          <div className="max-container">
-            <h1 id="healthequity">Health Equity</h1>
-            <div className="subtitle">
-              Blue Cross and Blue Shield Companies Adress the Nation's Crisis in
-              Racial Health Disparities
-              <Link to="/strategy">Read More</Link>
-            </div>
-          </div>
-        </Fade>
-      </section>
+      <Hero />
 
       <section className="profiles" id="latest">
         <Fade>
@@ -153,7 +141,12 @@ const IndexPage = props => {
             searchClient={searchClient}
             indexName="he_plan_profiles_latest"
           >
-            <Configure hitsPerPage={9} clickAnalytics distinct />
+            <Configure
+              hitsPerPage={9}
+              clickAnalytics
+              distinct
+              filters="NOT topic:'Maternal Health'"
+            />
             <div className="ais-Hits-wrap">
               <Hits hitComponent={planResult} />
             </div>
