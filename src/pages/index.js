@@ -3,21 +3,9 @@ import { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
-import {
-  InstantSearch,
-  SearchBox,
-  InfiniteHits,
-  Configure,
-  RefinementList,
-  MenuSelect,
-  ClearRefinements,
-} from "react-instantsearch-dom"
-import CountUp from "react-countup"
-import VisibilitySensor from "react-visibility-sensor"
+import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
-//import Zoom from 'react-reveal/Zoom';
 import Fade from "react-reveal/Fade"
-import Slide from "react-reveal/Slide"
 
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
@@ -108,7 +96,6 @@ const planResult = ({ hit }) => {
         <div className="plan-result-card-meta">
           <div className="plan-result-card-category">{topic}</div>
           <div className="plan-result-card-title">{headline}</div>
-          <div className="plan-result-card-excerpt">{teaser}</div>
           <div className="plan-result-card-read">{read_time} min read</div>
         </div>
       </div>
@@ -141,9 +128,7 @@ const IndexPage = props => {
       <section className="profiles" id="community">
         <Fade>
           <div className="inner-content community">
-            <h2 style={{ color: "#0072A7" }}>
-              What we're doing in your community
-            </h2>
+            <h2 style={{ color: "#0072A7" }}>Latest Stories</h2>
             <p
               style={{
                 maxWidth: 800,
@@ -151,59 +136,19 @@ const IndexPage = props => {
                 fontSize: "1.125rem",
               }}
             >
-              BCBS companies are addressing racial disparities and improving
-              health outcomes in the communities where you live and work.
+              See how we're actively working to address racial disparities.
             </p>
           </div>
         </Fade>
-        <div className="inner-content inner-content-filters">
+        <div className="inner-content">
           <InstantSearch
             searchClient={searchClient}
-            indexName="he_plan_profiles"
+            indexName="he_plan_profiles_latest"
           >
-            <Configure hitsPerPage={5} clickAnalytics distinct />
-            <Fade>
-              <div className="search-filters">
-                <div className="search-filters-label-main">Filter</div>
-                <SearchBox
-                  translations={{
-                    placeholder: "Keyword",
-                  }}
-                />
-                <div className="search-filters-refinement">
-                  <div className="search-filters-label">
-                    What's Happening in my State
-                  </div>
-                  <MenuSelect
-                    attribute="states"
-                    limit={50}
-                    translations={{
-                      seeAllOption: "All States",
-                    }}
-                  />
-                </div>
-                <div className="search-filters-refinement">
-                  <div className="search-filters-label">
-                    Maternal Health Topics
-                  </div>
-                  <div className="search-filters-topics-refinement">
-                    <RefinementList attribute="subtopics" limit={50} />
-                  </div>
-                </div>
-                <ClearRefinements
-                  clearsQuery
-                  translations={{
-                    reset: "Clear Filters",
-                  }}
-                />
-              </div>
-            </Fade>
-            <InfiniteHits
-              hitComponent={planResult}
-              translations={{
-                loadMore: "Load more",
-              }}
-            />
+            <Configure hitsPerPage={9} clickAnalytics distinct />
+            <div className="ais-Hits-wrap">
+              <Hits hitComponent={planResult} />
+            </div>
           </InstantSearch>
         </div>
       </section>

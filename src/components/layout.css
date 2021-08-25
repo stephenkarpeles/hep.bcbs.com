@@ -1129,14 +1129,14 @@ header {
 }
 
 /* Algolia - Infinte Hits */
-.ais-InfiniteHits {
+.ais-Hits {
   flex: 1 1 auto;
-  margin-left: -10px;
-  margin-right: -10px;
+  /* margin-left: -10px;
+  margin-right: -10px; */
 
   @media (--medium-breakpoint-up) {
-    margin-right: 1rem;
-    margin-left: -10px;
+    /* margin-right: 1rem;
+    margin-left: -10px; */
   }
 
   &-list {
@@ -1144,13 +1144,15 @@ header {
     padding: 0;
     list-style-type: none;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    /* flex-flow: row wrap; */
+    /* justify-content: space-between; */
+    flex-flow: row nowrap;
+    overflow-x: scroll;
   }
 
   &-item {
     border: 1px solid transparent;
-    margin: 0 10px 20px;
+    margin: 0 0 20px;
     padding: 10px;
     box-shadow: 0px 0px 5px #0000001a;
     background: white;
@@ -1159,39 +1161,33 @@ header {
     @include draw-blue-border();
 
     @media (--medium-breakpoint-up) {
-      width: calc(50% - 20px);
-
-      &:nth-child(5n) {
-        width: 100%;
-
-        .plan-result-card {
-          display: flex;
-        }
-
-        .plan-result-card-plan,
-        .plan-result-card-meta {
-          flex: 1 1 50%;
-        }
-      }
+      /* width: 33%; */
+      width: 480px;
+      flex-shrink: 0;
     }
   }
+}
 
-  &-loadMore {
-    border: 1px solid var(--color-blue);
-    color: var(--color-blue);
-    text-transform: uppercase;
-    font-family: var(--font-condensed-bold);
-    font-size: var(--font-size-h6);
-    letter-spacing: 0.52px;
-    width: 100%;
-    padding: 1rem;
-    cursor: pointer;
+.ais-Hits-wrap {
+  ::-webkit-scrollbar {
+    height: 12px;
+    -webkit-appearance: none;
 
-    &--disabled {
-      border: 1px solid var(--color-disabled);
-      color: var(--color-disabled);
-      cursor: not-allowed;
-    }
+    /* @media (--extra-large-breakpoint) {
+      display: none;
+    } */
+  }
+
+  ::-webkit-scrollbar-track {
+    margin: 0 1rem;
+    background: var(--color-medium-blue);
+    height: 12px;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-blue);
+
+    border-radius: 10px;
   }
 }
 
