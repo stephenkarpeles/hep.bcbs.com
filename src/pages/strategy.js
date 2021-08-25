@@ -3,15 +3,7 @@ import { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
-import {
-  InstantSearch,
-  SearchBox,
-  InfiniteHits,
-  Configure,
-  RefinementList,
-  MenuSelect,
-  ClearRefinements,
-} from "react-instantsearch-dom"
+import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
@@ -125,7 +117,6 @@ const StrategyPage = props => {
         title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
-      <Alert />
       <section className="intro" id="intro">
         <Fade>
           <div className="max-container">
@@ -422,6 +413,40 @@ const StrategyPage = props => {
               </a>
             </u>
           </div>
+        </div>
+      </section>
+
+      <section className="profiles" id="community">
+        <Fade>
+          <div className="inner-content community">
+            <h2 style={{ color: "#0072A7" }}>What we're doing</h2>
+            <p
+              style={{
+                maxWidth: 800,
+                marginBottom: "3rem",
+                fontSize: "1.125rem",
+              }}
+            >
+              Blue Cross and Blue Shield Companies Adress the Nation's Crisis in
+              Racial Health Disparities.
+            </p>
+            <Link to="/what-were-doing">View All</Link>
+          </div>
+        </Fade>
+        <div className="inner-content">
+          <InstantSearch
+            searchClient={searchClient}
+            indexName="he_plan_profiles_latest"
+          >
+            <Configure
+              hitsPerPage={6}
+              clickAnalytics
+              distinct
+              filters="topic:'Maternal Health'"
+            />
+
+            <Hits hitComponent={planResult} />
+          </InstantSearch>
         </div>
       </section>
 

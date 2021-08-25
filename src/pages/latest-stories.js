@@ -3,9 +3,21 @@ import { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
-import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
+import {
+  InstantSearch,
+  SearchBox,
+  MenuSelect,
+  RefinementList,
+  ClearRefinements,
+  Hits,
+  Configure,
+} from "react-instantsearch-dom"
+import CountUp from "react-countup"
+import VisibilitySensor from "react-visibility-sensor"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
+//import Zoom from 'react-reveal/Zoom';
 import Fade from "react-reveal/Fade"
+import Slide from "react-reveal/Slide"
 
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
@@ -103,7 +115,7 @@ const planResult = ({ hit }) => {
   )
 }
 
-const IndexPage = props => {
+const StrategyPage = props => {
   const [viewPortEntered, setViewPortEntered] = useState(false)
 
   return (
@@ -112,15 +124,12 @@ const IndexPage = props => {
         title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
-      <Alert />
       <section className="intro" id="intro">
         <Fade>
           <div className="max-container">
-            <h1 id="healthequity">Health Equity</h1>
+            <h1 id="healthequity">Latest Stories</h1>
             <div className="subtitle">
-              Blue Cross and Blue Shield Companies Adress the Nation's Crisis in
-              Racial Health Disparities
-              <Link to="/strategy">Read More</Link>
+              See how we're actively working to address racial disparities.
             </div>
           </div>
         </Fade>
@@ -139,61 +148,58 @@ const IndexPage = props => {
             >
               See how we're actively working to address racial disparities.
             </p>
-            <Link to="/latest-stories">View All</Link>
           </div>
         </Fade>
-        <div className="inner-content">
+        <div className="inner-content inner-content-filters">
           <InstantSearch
             searchClient={searchClient}
             indexName="he_plan_profiles_latest"
           >
-            <Configure hitsPerPage={9} clickAnalytics distinct />
-            <div className="ais-Hits-wrap">
-              <Hits hitComponent={planResult} />
-            </div>
-          </InstantSearch>
-        </div>
-      </section>
-
-      <section className="profiles" id="community">
-        <Fade>
-          <div className="inner-content community">
-            <h2 style={{ color: "#0072A7" }}>Maternal Health</h2>
-            <p
-              style={{
-                maxWidth: 800,
-                marginBottom: "3rem",
-                fontSize: "1.125rem",
-              }}
-            >
-              See what compnies are doing in your neighborhood.
-            </p>
-            <Link to="/maternal-health">View All</Link>
-          </div>
-        </Fade>
-        <div className="inner-content">
-          <InstantSearch
-            searchClient={searchClient}
-            indexName="he_plan_profiles_latest"
-          >
-            <Configure
-              hitsPerPage={6}
-              clickAnalytics
-              distinct
-              filters="topic:'Maternal Health'"
-            />
-
+            <Configure clickAnalytics distinct />
+            <Fade>
+              <div className="search-filters">
+                <div className="search-filters-label-main">Filter</div>
+                <SearchBox
+                  translations={{
+                    placeholder: "Keyword",
+                  }}
+                />
+                <div className="search-filters-refinement">
+                  <div className="search-filters-label">
+                    What's Happening in my State
+                  </div>
+                  <MenuSelect
+                    attribute="states"
+                    limit={50}
+                    translations={{
+                      seeAllOption: "All States",
+                    }}
+                  />
+                </div>
+                <div className="search-filters-refinement">
+                  <div className="search-filters-label">
+                    Maternal Health Topics
+                  </div>
+                  <div className="search-filters-topics-refinement">
+                    <RefinementList attribute="subtopics" limit={50} />
+                  </div>
+                </div>
+                <ClearRefinements
+                  clearsQuery
+                  translations={{
+                    reset: "Clear Filters",
+                  }}
+                />
+              </div>
+            </Fade>
             <Hits hitComponent={planResult} />
           </InstantSearch>
         </div>
       </section>
 
       <Newsletter />
-      <AdvisoryBoard />
-      <PressKitBanner />
-      <Newsletter />
     </>
   )
 }
 
-export default IndexPage
+export default StrategyPage

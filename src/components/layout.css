@@ -1072,13 +1072,13 @@ header {
     display: flex;
     align-items: center;
 
-    &::after {
+    /* &::after {
       content: "";
       margin-left: 0.5rem;
       width: 40px;
       height: 1px;
       background-color: #000;
-    }
+    } */
   }
 
   &-title {
@@ -1116,7 +1116,7 @@ header {
 
 /* Profiles Contanier */
 .profiles {
-  background-color: var(--color-light-gray);
+  /* background-color: var(--color-light-gray); */
   padding: 120px 0;
 }
 
@@ -1144,10 +1144,10 @@ header {
     padding: 0;
     list-style-type: none;
     display: flex;
-    /* flex-flow: row wrap; */
-    /* justify-content: space-between; */
-    flex-flow: row nowrap;
-    overflow-x: scroll;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /* flex-flow: row nowrap;
+    overflow-x: scroll; */
   }
 
   &-item {
@@ -1168,14 +1168,14 @@ header {
   }
 }
 
-.ais-Hits-wrap {
+/* .ais-Hits-wrap {
   ::-webkit-scrollbar {
     height: 12px;
     -webkit-appearance: none;
 
-    /* @media (--extra-large-breakpoint) {
+    @media (--extra-large-breakpoint) {
       display: none;
-    } */
+    }
   }
 
   ::-webkit-scrollbar-track {
@@ -1189,7 +1189,7 @@ header {
 
     border-radius: 10px;
   }
-}
+} */
 
 /* Algolia - Voice Search */
 .ais-VoiceSearch {
