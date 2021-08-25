@@ -647,6 +647,10 @@ header {
     border-top: 1px solid #d3d3d3;
   }
 
+  &-main {
+    background-color: var(--color-blue);
+  }
+
   nav {
     display: flex;
     flex-flow: row wrap;
@@ -658,7 +662,8 @@ header {
     }
 
     a {
-      color: var(--color-gray);
+      /* color: var(--color-gray); */
+      color: var(--color-white);
       font-family: var(--font-roman);
       font-size: 12px;
       text-decoration: none;
@@ -682,7 +687,8 @@ header {
 
 .he-landing {
   .navigation & {
-    color: var(--color-blue);
+    /* color: var(--color-blue); */
+    color: var(--color-white);
     text-transform: uppercase;
     font-family: var(--font-condensed-bold);
     letter-spacing: 0.52px;
