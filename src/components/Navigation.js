@@ -17,7 +17,7 @@ function Navigation() {
 
   return (
     <div className="navigation navigation-main">
-      <div className="max-container">
+      <div className="inner-content">
         {isHomepage ? (
           <nav>
             <Link className="he-landing" activeClassName="current" to="/">
