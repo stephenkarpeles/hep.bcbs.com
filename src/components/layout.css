@@ -661,6 +661,7 @@ header {
 
     .mobile-navigation & {
       flex-flow: column wrap;
+      max-width: 100%;
     }
 
     a {
@@ -680,7 +681,7 @@ header {
         font-size: var(--font-size-base-small);
         color: #fff;
         margin-left: 0;
-        border-bottom: 1px solid #dedede;
+        border-bottom: 2px solid #dedede;
         width: 100%;
       }
 
@@ -1162,6 +1163,33 @@ header {
 .profiles {
   /* background-color: var(--color-light-gray); */
   padding: 120px 0;
+
+  &-header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+
+    &-title {
+    }
+    &-link {
+    }
+  }
+}
+
+.view-all {
+  color: var(--color-blue);
+  text-transform: uppercase;
+  font-family: var(--font-condensed-regular);
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* Algolia - Searchbox */
@@ -1202,6 +1230,7 @@ header {
     box-shadow: 0px 0px 5px #0000001a;
     background: white;
     position: relative;
+    width: 100%;
 
     @include draw-blue-border();
 
@@ -1468,6 +1497,11 @@ header {
     margin-top: -56px;
     background-color: var(--color-blue);
     height: 100vh;
+
+    a {
+      border-top: 2px solid var(--color-blue);
+      border-bottom: 2px solid var(--color-white);
+    }
   }
 }
 

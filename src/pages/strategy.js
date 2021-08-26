@@ -433,7 +433,9 @@ const StrategyPage = props => {
                 </p>
               </div>
               <div className="profiles-header-link">
-                <Link to="/what-were-doing">View All</Link>
+                <Link className="view-all" to="/what-were-doing">
+                  View All&nbsp;&nbsp;&rarr;
+                </Link>
               </div>
             </div>
           </div>

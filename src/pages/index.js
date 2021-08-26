@@ -131,7 +131,9 @@ const IndexPage = props => {
                 </p>
               </div>
               <div className="profiles-header-link">
-                <Link to="/latest-stories">View All</Link>
+                <Link className="view-all" to="/latest-stories">
+                  View All&nbsp;&nbsp;&rarr;
+                </Link>
               </div>
             </div>
           </div>
@@ -171,7 +173,9 @@ const IndexPage = props => {
                 </p>
               </div>
               <div className="profiles-header-link">
-                <Link to="/maternal-health">View All</Link>
+                <Link className="view-all" to="/maternal-health">
+                  View All&nbsp;&nbsp;&rarr;
+                </Link>
               </div>
             </div>
           </div>
