@@ -4,7 +4,10 @@ import { Link, withPrefix } from "gatsby"
 
 function Navigation() {
   const menuOpenClass = "mobile-menu-is-open"
-  const isHomepage = window.location.pathname === withPrefix("/")
+  const isHomepage =
+    typeof window !== "undefined"
+      ? window.location.pathname === withPrefix("/")
+      : ""
 
   function removeMenuOpenClass() {
     document.body.classList.remove(menuOpenClass)

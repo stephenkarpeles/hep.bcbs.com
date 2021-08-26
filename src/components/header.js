@@ -39,7 +39,10 @@ const Header = ({ props, siteTitle }) => {
   const handleClick = () => setClick(!click)
 
   const menuOpenClass = "mobile-menu-is-open"
-  const isHomepage = window.location.pathname === withPrefix("/")
+  const isHomepage =
+    typeof window !== "undefined"
+      ? window.location.pathname === withPrefix("/")
+      : ""
 
   function addMenuOpenClass() {
     document.body.classList.add(menuOpenClass)
