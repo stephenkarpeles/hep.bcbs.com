@@ -726,15 +726,19 @@ header {
 
 /* Intro */
 .intro {
-  /* background-color: var(--color-dark-blue); */
-  /* padding: 2rem 0 1rem; */
-  padding: 2rem 0;
+  background-color: var(--color-dark-blue);
+  padding: 2rem 0 1rem;
 
-  /* @media (--large-breakpoint-up) {
+  .hero & {
+    background: none;
+    padding: 2rem 0;
+  }
+
+  @media (--large-breakpoint-up) {
     padding: 7.5rem 0 2rem;
-  } */
+  }
 
-  /* @media (--extra-large-breakpoint) {
+  @media (--extra-large-breakpoint) {
     background: linear-gradient(
       to top,
       rgba(247, 249, 250, 1) 0%,
@@ -742,11 +746,12 @@ header {
       rgba(0, 76, 109, 1) 12.5%,
       rgba(0, 76, 109, 1) 100%
     );
-  } */
+  }
 
   h1 {
     width: 100%;
-    color: var(--color-medium-blue);
+    /* color: var(--color-medium-blue); */
+    color: var(--color-white);
     font-family: var(--font-condensed-light);
     font-size: clamp(3.25rem, 2.6338rem + 2.6291vw, 5rem);
     line-height: var(--line-height-56);
@@ -755,6 +760,10 @@ header {
     @media (--medium-breakpoint-up) {
       line-height: var(line-height-h1);
       margin-bottom: var(--spacer-3);
+
+      .hero & {
+        margin-bottom: var(--spacer-2);
+      }
     }
   }
 
@@ -766,8 +775,16 @@ header {
     line-height: var(--line-height-quote);
     margin-bottom: var(--spacer-2);
 
+    .hero & {
+      max-width: 480px;
+    }
+
     @media (--medium-breakpoint-up) {
       margin-bottom: var(--spacer-4);
+
+      .hero & {
+        margin-bottom: var(--spacer-3);
+      }
     }
   }
 
@@ -1792,6 +1809,26 @@ main div h1 + h4 + form ~ a {
 .gatsby-image-wrapper {
   .hero & {
     height: calc(100vh - 143px);
-    max-height: 800px;
+    max-height: 602px;
   }
+}
+
+.button {
+  font-size: var(--font-size-base-xsmall);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-family: var(--font-regular-bold);
+  padding: 10px 24px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--color-dark-blue);
+  }
+}
+
+#maternal {
+  margin-top: -7.5rem;
 }

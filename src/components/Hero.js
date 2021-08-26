@@ -38,7 +38,7 @@ function Hero() {
             <div className="inner-content">
               <h1 id="healthequity">Health Equity</h1>
               <div className="subtitle">
-                Blue Cross and Blue Shield Companies Adress the Nation's Crisis
+                Blue Cross and Blue Shield Companies Address the Nation's Crisis
                 in Racial Health Disparities
               </div>
               <Link className="button" to="/strategy">
