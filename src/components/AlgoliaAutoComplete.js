@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Highlight, connectAutoComplete } from "react-instantsearch-dom"
 import AutoSuggest from "react-autosuggest"
+import { useMediaQuery } from "react-responsive"
 import { navigate } from "gatsby"
 
 // Algolia Autocomplete
@@ -102,6 +103,7 @@ class Autocomplete extends Component {
         getSuggestionValue={this.getSuggestionValue}
         renderSuggestion={this.renderSuggestion}
         inputProps={inputProps}
+        highlightFirstSuggestion={true}
       />
     )
   }
