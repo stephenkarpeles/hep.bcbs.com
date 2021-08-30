@@ -415,9 +415,9 @@ const StrategyPage = props => {
         </div>
       </section>
 
-      <section className="profiles" id="latest">
+      <section className="profiles" id="doing">
         <Fade>
-          <div className="inner-content latest">
+          <div className="inner-content doing">
             <div className="profiles-header">
               <div className="profiles-header-title">
                 <h2 style={{ color: "#0072A7" }}>What we're doing</h2>
@@ -445,12 +445,7 @@ const StrategyPage = props => {
             searchClient={searchClient}
             indexName="he_plan_profiles_latest"
           >
-            <Configure
-              hitsPerPage={6}
-              clickAnalytics
-              distinct
-              filters="topic:'Maternal Health'"
-            />
+            <Configure hitsPerPage={6} clickAnalytics distinct />
 
             <Hits hitComponent={planResult} />
           </InstantSearch>
