@@ -78,6 +78,27 @@ const BlackMillennialWomensHealth = props => {
                   </a>
                 </div>
               </li>
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Health Equity</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/healthequity/data-driven-strategies-to-address-disparities-in-maternal-care/">
+                    Data-driven strategies to address disparities in maternal
+                    care
+                  </a>
+                </div>
+              </li>
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Health Equity</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/healthequity/reimagining-equity-in-healthcare-together/">
+                    Reimagining equity in healthcare, together
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </Fade>

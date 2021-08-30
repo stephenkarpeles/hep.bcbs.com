@@ -46,7 +46,7 @@ const ClosingLifeExpectancy = props => {
             <div className="pp-hero__meta">
               <div className="pp-hero__meta-content">
                 <div className="pp-hero__category">
-                  <span>Maternal health</span>
+                  <span>Health Equity</span>
                 </div>
                 <div className="pp-hero__title">
                   <h1>
@@ -66,19 +66,41 @@ const ClosingLifeExpectancy = props => {
       <div className="pp-main">
         <Fade>
           <div className="pp-related">
-            {/* <h5 className="pp-related__title">Related</h5>
+            <h5 className="pp-related__title">Related</h5>
             <ul className="pp-related__list">
               <li className="pp-related__list-item">
                 <div className="pp-related__category">
                   <span>Report</span>
                 </div>
                 <div className="pp-related__text">
-                  <a href="https://www.bcbs.com/the-health-of-america/reports/millennial-health-trends-behavioral-health-conditions">
-                    Millennial Health: Trends in Behavioral Health Conditions
+                  <a href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health">
+                    Racial Disparities in Maternal Health
                   </a>
                 </div>
               </li>
-            </ul> */}
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Health Equity</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/healthequity/experts-address-how-to-eliminate-racial-disparities-in-healthcare/">
+                    'We can do it' Experts address how to eliminate racial
+                    disparities in healthcare
+                  </a>
+                </div>
+              </li>
+              <li className="pp-related__list-item">
+                <div className="pp-related__category">
+                  <span>Report</span>
+                </div>
+                <div className="pp-related__text">
+                  <a href="https://www.bcbs.com/the-health-of-america/healthequity/culturally-appropriate-interventions-for-mothers-and-newborns/">
+                    Culturally appropriate interventions for mothers and
+                    newborns
+                  </a>
+                </div>
+              </li>
+            </ul>
           </div>
         </Fade>
         <Fade>
@@ -359,7 +381,7 @@ const ClosingLifeExpectancy = props => {
         </Fade>
       </div>
 
-      {/* <Fade>
+      <Fade>
         <div className="pp-explore">
           <h2>Explore more stories</h2>
           <InstantSearch
@@ -369,13 +391,13 @@ const ClosingLifeExpectancy = props => {
             <Configure
               hitsPerPage={2}
               distinct
-              filters="headline:'Partnering with faith communities to support pregnant women of color' OR headline:'Breaking through bias in maternity care'"
+              filters="headline:'How Data and Technology Can Advance Health Equity' OR headline:'The facts: Confronting a crisis of health inequities with a bold national strategy'"
             />
 
             <InfiniteHits hitComponent={planResult} />
           </InstantSearch>
         </div>
-      </Fade> */}
+      </Fade>
     </div>
   )
 }
