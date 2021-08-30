@@ -1261,7 +1261,27 @@ header {
 }
 
 .ais-Hits-wrap {
-  padding: 20px;
+  position: relative;
+
+  @media (--medium-breakpoint-up) {
+    &::after {
+      content: "";
+      transform: rotate(0deg);
+      background: linear-gradient(
+        270deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      top: 0;
+      position: absolute;
+      height: 100%;
+      width: 220px;
+      right: -10px;
+      bottom: 0;
+    }
+  }
+
+  /* padding: 20px;
   @media (--medium-breakpoint-up) {
     ::-webkit-scrollbar {
       height: 12px;
@@ -1279,7 +1299,7 @@ header {
       background-color: var(--color-blue);
       border-radius: 10px;
     }
-  }
+  } */
 }
 
 /* Algolia - Voice Search */
