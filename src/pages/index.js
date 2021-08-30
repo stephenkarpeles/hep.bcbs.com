@@ -143,12 +143,7 @@ const IndexPage = props => {
             searchClient={searchClient}
             indexName="he_plan_profiles_latest"
           >
-            <Configure
-              hitsPerPage={9}
-              clickAnalytics
-              distinct
-              filters="NOT topic:'Maternal Health'"
-            />
+            <Configure hitsPerPage={6} clickAnalytics distinct />
             <div className="ais-Hits-wrap">
               <Hits hitComponent={planResult} />
             </div>
