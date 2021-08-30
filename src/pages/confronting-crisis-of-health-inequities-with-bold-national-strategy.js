@@ -2,7 +2,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
-import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
+import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
 
 // Styles
@@ -123,7 +123,7 @@ const ConfrontingCrisis = props => {
               </p>
               <h3>What are racial health inequities?</h3>
               <p>
-                According to the CDC, 
+                According to the CDC,
                 <a
                   href="https://www.cdc.gov/chronicdisease/healthequity/index.htm#:~:text=Health%20equity%20is%20achieved%20when,length%20of%20life%3B%20quality%20of%20life"
                   target="_blank"
@@ -139,7 +139,7 @@ const ConfrontingCrisis = props => {
                 The COVID-19 health crisis continues to expose the racial
                 inequities that have impacted generations of Americans.
                 Researchers and public health advocates have known for decades
-                that Americans from non-white, ethnic backgrounds experience 
+                that Americans from non-white, ethnic backgrounds experience
                 <a
                   href="https://www.cdc.gov/healthequity/racism-disparities/index.html"
                   target="_blank"
@@ -149,7 +149,7 @@ const ConfrontingCrisis = props => {
                   health conditions, including diabetes, hypertension, obesity,
                   asthma, and heart disease,
                 </a>{" "}
-                when compared to their white counterparts. 
+                when compared to their white counterparts.
                 <a
                   href="https://www.cdc.gov/healthequity/racism-disparities/impact-of-racism.html"
                   target="_blank"
@@ -213,7 +213,7 @@ const ConfrontingCrisis = props => {
                 <a href="https://www.bcbs.com/">
                   The Blue Cross Blue Shield Association (BCBSA)
                 </a>
-                 launched a 
+                 launched a
                 <a href="https://www.bcbs.com/the-health-of-america/healthequity/?utm_source=hoahomepage">
                   national health equity strategy
                 </a>
@@ -221,7 +221,7 @@ const ConfrontingCrisis = props => {
                 term approach. The multi-year strategy will focus on four
                 conditions that disproportionately affect communities of color:
                 maternal health, behavioral health, diabetes and cardiovascular
-                conditions. As a first step, BCBSA announced it would set a 
+                conditions. As a first step, BCBSA announced it would set a
                 <a href="https://www.bcbs.com/the-health-of-america/healthequity/?utm_source=hoahomepage">
                   goal of reducing racial health disparities in maternal health
                   by 50 percent in five years.
@@ -240,7 +240,7 @@ const ConfrontingCrisis = props => {
                 unconscionable and unacceptable. Our deep roots in the local
                 communities we serve, combined with the scale and scope of our
                 national reach, enable all of us at Blue Cross Blue Shield
-                companies to drive this new strategy and bring real change." 
+                companies to drive this new strategy and bring real change."
                 <cite>
                   Kim Keck, President and CEO Blue Cross Blue Shield Association
                 </cite>
@@ -259,7 +259,7 @@ const ConfrontingCrisis = props => {
                 health disparities through education. The Office of Minority
                 Health offers programs on cultural and linguistic competency
                 through the U.S. Department of Health and Human Services
-                website. 
+                website.
                 <a
                   href="https://minorityhealth.hhs.gov/omh/browse.aspx?lvl=1&lvlid=6"
                   target="_blank"
@@ -282,7 +282,7 @@ const ConfrontingCrisis = props => {
                   </a>
                 </li>
                 <li>
-                  More information: 
+                  More information:
                   <a href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities">
                     BCBSA press release on health equity
                   </a>
@@ -360,7 +360,7 @@ const ConfrontingCrisis = props => {
               filters="headline:'Reimagining equity in healthcare, together'"
             />
 
-            <InfiniteHits hitComponent={planResult} />
+            <Hits hitComponent={planResult} />
           </InstantSearch>
         </div>
       </Fade>

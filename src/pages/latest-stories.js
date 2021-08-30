@@ -11,6 +11,8 @@ import {
   ClearRefinements,
   Hits,
   Configure,
+  Stats,
+  connectStats,
 } from "react-instantsearch-dom"
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
@@ -117,6 +119,8 @@ const planResult = ({ hit }) => {
 
 const StrategyPage = props => {
   const [viewPortEntered, setViewPortEntered] = useState(false)
+  const Stats = ({ nbHits }) => <span>Displaying {nbHits} results</span>
+  const CustomStats = connectStats(Stats)
 
   return (
     <>
@@ -124,50 +128,37 @@ const StrategyPage = props => {
         title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
-      <section className="intro" id="intro">
-        <Fade>
-          <div className="max-container">
-            <h1 id="healthequity">Latest Stories</h1>
-            <div className="subtitle">
-              See how we're actively working to address racial disparities.
-            </div>
-          </div>
-        </Fade>
-      </section>
 
       <section className="profiles" id="community">
         <Fade>
-          <div className="inner-content community">
-            <h2 style={{ color: "#0072A7" }}>Latest Stories</h2>
-            <p
-              style={{
-                maxWidth: 800,
-                marginBottom: "3rem",
-                fontSize: "1.125rem",
-              }}
+          <div className="inner-content inner-content-filters">
+            <InstantSearch
+              searchClient={searchClient}
+              indexName="he_plan_profiles_latest"
             >
-              See how we're actively working to address racial disparities.
-            </p>
-          </div>
-        </Fade>
-        <div className="inner-content inner-content-filters">
-          <InstantSearch
-            searchClient={searchClient}
-            indexName="he_plan_profiles_latest"
-          >
-            <Configure clickAnalytics distinct />
-            <Fade>
+              <div className="latest-stories-results">
+                <h2 style={{ color: "#0072A7" }}>
+                  Showing Results for Latest Stories
+                </h2>
+                <p
+                  style={{
+                    maxWidth: 800,
+                    marginBottom: "3rem",
+                    fontSize: "1.125rem",
+                  }}
+                >
+                  <CustomStats />
+                </p>
+              </div>
+
+              <Configure clickAnalytics distinct />
+
               <div className="search-filters">
                 <div className="search-filters-label-main">Filter</div>
-                <SearchBox
-                  translations={{
-                    placeholder: "Keyword",
-                  }}
-                />
                 <div className="search-filters-refinement">
-                  <div className="search-filters-label">
+                  {/* <div className="search-filters-label">
                     What's Happening in my State
-                  </div>
+                  </div> */}
                   <MenuSelect
                     attribute="states"
                     limit={50}
@@ -176,13 +167,29 @@ const StrategyPage = props => {
                     }}
                   />
                 </div>
-                <div className="search-filters-refinement">
-                  <div className="search-filters-label">
+
+                {/* <div className="search-filters-label">
                     Maternal Health Topics
-                  </div>
-                  <div className="search-filters-topics-refinement">
-                    <RefinementList attribute="subtopics" limit={50} />
-                  </div>
+                  </div> */}
+
+                {/* <RefinementList attribute="subtopics" limit={50} /> */}
+                <div className="search-filters-refinement">
+                  <MenuSelect
+                    attribute="topic"
+                    limit={50}
+                    translations={{
+                      seeAllOption: "All Topics",
+                    }}
+                  />
+                </div>
+                <div className="search-filters-refinement">
+                  <MenuSelect
+                    attribute="subtopics"
+                    limit={50}
+                    translations={{
+                      seeAllOption: "All Subtopics",
+                    }}
+                  />
                 </div>
                 <ClearRefinements
                   clearsQuery
@@ -191,10 +198,11 @@ const StrategyPage = props => {
                   }}
                 />
               </div>
-            </Fade>
-            <Hits hitComponent={planResult} />
-          </InstantSearch>
-        </div>
+
+              <Hits hitComponent={planResult} />
+            </InstantSearch>
+          </div>
+        </Fade>
       </section>
 
       <Newsletter />

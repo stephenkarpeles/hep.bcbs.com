@@ -275,7 +275,7 @@ does."
               filters="headline:'Strong collaborations aim to improve birth outcomes' OR headline:'Culturally appropriate interventions for mothers and newborns'"
             />
 
-            <InfiniteHits hitComponent={planResult} />
+            <Hits hitComponent={planResult} />
           </InstantSearch>
         </div>
       </Fade> */}
