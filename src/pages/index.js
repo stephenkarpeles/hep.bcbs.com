@@ -138,7 +138,7 @@ const IndexPage = props => {
             </div>
           </div>
         </Fade>
-        <div className="inner-content">
+        <div className="">
           <InstantSearch
             searchClient={searchClient}
             indexName="he_plan_profiles_latest"

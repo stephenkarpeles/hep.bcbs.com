@@ -1254,15 +1254,14 @@ header {
       flex: 1 1 33%;
 
       #latest & {
-        flex: 1 0 36%;
-        width: 36%;
+        flex: 1 0 495px;
       }
     }
   }
 }
 
 .ais-Hits-wrap {
-  overflow-x: scroll;
+  padding: 20px;
   @media (--medium-breakpoint-up) {
     ::-webkit-scrollbar {
       height: 12px;
@@ -1278,7 +1277,6 @@ header {
 
     ::-webkit-scrollbar-thumb {
       background-color: var(--color-blue);
-
       border-radius: 10px;
     }
   }
