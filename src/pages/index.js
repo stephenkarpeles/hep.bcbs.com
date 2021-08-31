@@ -184,7 +184,7 @@ const IndexPage = props => {
               hitsPerPage={6}
               clickAnalytics
               distinct
-              filters="topic:'Maternal Health'"
+              filters="topic:'Maternal Health' AND NOT headline:'Supporting bright beginnings for mothers and babies'"
             />
 
             <Hits hitComponent={planResult} />

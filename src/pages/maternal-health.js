@@ -139,6 +139,7 @@ const StrategyPage = props => {
               <Configure
                 clickAnalytics
                 distinct
+                hitsPerPage={100}
                 filters="topic:'Maternal Health'"
               />
               <div className="maternal-health-results">

@@ -1275,8 +1275,8 @@ header {
       top: 0;
       position: absolute;
       height: 100%;
-      width: 220px;
-      right: -10px;
+      width: 5rem;
+      right: -0.625rem;
       bottom: 0;
     }
   }

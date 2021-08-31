@@ -151,7 +151,7 @@ const StrategyPage = props => {
                 </p>
               </div>
 
-              <Configure clickAnalytics distinct />
+              <Configure clickAnalytics distinct hitsPerPage={100} />
 
               <div className="search-filters">
                 <div className="search-filters-label-main">Filter</div>
