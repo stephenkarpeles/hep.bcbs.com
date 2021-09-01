@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import Navigation from "../components/Navigation"
 import { useMediaQuery } from "react-responsive"
 import algoliasearch from "algoliasearch/lite"
@@ -39,6 +39,10 @@ const Header = ({ props, siteTitle }) => {
   const handleClick = () => setClick(!click)
 
   const menuOpenClass = "mobile-menu-is-open"
+  const isHomepage =
+    typeof window !== "undefined"
+      ? window.location.pathname === withPrefix("/")
+      : ""
 
   function addMenuOpenClass() {
     document.body.classList.add(menuOpenClass)
@@ -77,26 +81,28 @@ const Header = ({ props, siteTitle }) => {
           </Desktop>
 
           <MobileTablet>
-            <div className="mobile-toggle">
-              <button
-                onClick={() => {
-                  removeMenuOpenClass()
-                  hideMobileNav()
-                }}
-                onKeyDown={removeMenuOpenClass}
-              >
-                <img src={close} />
-              </button>
-              <button
-                onClick={() => {
-                  addMenuOpenClass()
-                  showMobileNav()
-                }}
-                onKeyDown={addMenuOpenClass}
-              >
-                <img src={burger} />
-              </button>
-            </div>
+            {isHomepage && (
+              <div className="mobile-toggle">
+                <button
+                  onClick={() => {
+                    removeMenuOpenClass()
+                    hideMobileNav()
+                  }}
+                  onKeyDown={removeMenuOpenClass}
+                >
+                  <img src={close} />
+                </button>
+                <button
+                  onClick={() => {
+                    addMenuOpenClass()
+                    showMobileNav()
+                  }}
+                  onKeyDown={addMenuOpenClass}
+                >
+                  <img src={burger} />
+                </button>
+              </div>
+            )}
           </MobileTablet>
         </div>
       </header>
@@ -104,9 +110,15 @@ const Header = ({ props, siteTitle }) => {
         <Navigation />
       </Desktop>
       <MobileTablet>
-        <Link className="he-landing mobile" to="/">
-          Health Equity
-        </Link>
+        {isHomepage ? (
+          <Link className="he-landing mobile" activeClassName="current" to="/">
+            Health Equity
+          </Link>
+        ) : (
+          <Link className="he-landing mobile" activeClassName="current" to="/">
+            Back to Health Equity Home
+          </Link>
+        )}
         <div className="mobile-search">
           <AlgoliaSiteSearch />
         </div>

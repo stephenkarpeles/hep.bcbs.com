@@ -3,26 +3,14 @@ import { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
-import {
-  InstantSearch,
-  SearchBox,
-  InfiniteHits,
-  Configure,
-  RefinementList,
-  MenuSelect,
-  ClearRefinements,
-} from "react-instantsearch-dom"
-import CountUp from "react-countup"
-import VisibilitySensor from "react-visibility-sensor"
+import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
-//import Zoom from 'react-reveal/Zoom';
 import Fade from "react-reveal/Fade"
-import Slide from "react-reveal/Slide"
 
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
 import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
-import Alert from "../components/Alert/Alert"
+import Hero from "../components/Hero"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -108,7 +96,6 @@ const planResult = ({ hit }) => {
         <div className="plan-result-card-meta">
           <div className="plan-result-card-category">{topic}</div>
           <div className="plan-result-card-title">{headline}</div>
-          <div className="plan-result-card-excerpt">{teaser}</div>
           <div className="plan-result-card-read">{read_time} min read</div>
         </div>
       </div>
@@ -117,7 +104,6 @@ const planResult = ({ hit }) => {
 }
 
 const IndexPage = props => {
-
   const [viewPortEntered, setViewPortEntered] = useState(false)
 
   return (
@@ -126,408 +112,89 @@ const IndexPage = props => {
         title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
-      <Alert />
-      <section className="intro" id="intro">
+      <Hero />
+
+      <section className="profiles" id="latest">
         <Fade>
-          <div className="max-container">
-            <h1 id="healthequity">National Health Equity Strategy</h1>
-            <div className="subtitle">Blue Cross and Blue Shield Companies Confront the Nation’s Crisis in Racial Health Disparities</div>
-            <div className="intro--video">
-              <div className="intro--video-wrapper">
-                <iframe
-                  loading="lazy"
-                  width="640"
-                  height="360"
-                  src="https://www.youtube.com/embed/KNUblC8hLPg"
-                  title="Youtube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+          <div className="inner-content latest">
+            <div className="profiles-header">
+              <div className="profiles-header-title">
+                <h2 style={{ color: "#0072A7" }}>Latest Stories</h2>
+                <p
+                  style={{
+                    maxWidth: 800,
+                    marginBottom: "3rem",
+                    fontSize: "1.125rem",
+                  }}
+                >
+                  See how we're actively working to address racial disparities.
+                </p>
               </div>
-            </div>
-            <div className="intro--video-details">
-              <div className="intro--video-quote">Your health shouldn’t depend on the color of your skin or the neighborhood you live in.</div>
-              <div className="intro--video-content">The crisis in racial disparities in our country’s health care is unconscionable and unacceptable. While BCBS companies have made great strides in addressing racial health disparities in our local communities, there is so much more to be done."</div>
-              <div className="intro--video-quote-attr">
-                &mdash; Kim Keck
-              </div>
-              <div className="intro--video-quote-role">
-                President and CEO, Blue Cross Blue Shield Association
+              <div className="profiles-header-link">
+                <Link className="view-all" to="/latest-stories">
+                  View All&nbsp;&nbsp;&rarr;
+                </Link>
               </div>
             </div>
           </div>
         </Fade>
-      </section>
-
-      <section className="lead" id="lead">
         <div className="inner-content">
-          <Fade>
-            <div className="lead--main">Blue Cross Blue Shield Association’s (BCBSA) National Health Equity Strategy includes:</div>
-            <div className="lead--details">
-              <div className="lead--details-points">
-                <ul>
-                  <li>Collecting data to measure disparities</li>
-                  <li>Scaling effective programs</li>
-                  <li>
-                    Working with providers to improve outcomes and address
-                    unconscious bias
-                  </li>
-                  <li>Leaning into partnerships at the community level</li>
-                  <li>
-                    <a
-                      href="https://s3.amazonaws.com/cdn720/bcbsprogresshealth/2021/2021_Issue%20Brief_Addressing%20Health%20Disparities%20&%20Inequities_Final.pdf"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Influencing policy decisions at the state and federal
-                      levels
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="lead--details-summary">
-                The multi-year strategy will focus on four conditions that disproportionately affect communities of color: maternal health, behavioral health, diabetes and cardiovascular conditions. BCBSA will first focus on maternal health, then behavioral health in 2021.
-              </div>
-            </div>
-          </Fade>
-        </div>
-      </section>
-
-      <section className="disparities" id="disparities">
-        <div className="inner-content">
-          <Fade>
-            <div className="disparities-heading">
-              Health Disparities: By the Numbers
-            </div>
-          </Fade>
-          <div className="disparities-cards-wrap">
-            <Fade bottom cascade>
-              <div className="disparities-cards">
-                <div className="disparities-card disparities-card-cardio">
-                  <div className="disparities-card-heading">
-                    Cardiovascular Health
-                  </div>
-                  <div className="disparities-card-stat">
-                    <CountUp
-                      start={viewPortEntered ? null : 0}
-                      end={70}
-                      redraw={true}
-                      duration={0.5}
-                      useEasing={false}
-                    >
-                      {({ countUpRef }) => (
-                        <VisibilitySensor
-                          active={!viewPortEntered}
-                          onChange={isVisible => {
-                            if (isVisible) {
-                              setViewPortEntered(true)
-                            }
-                          }}
-                          delayedCall
-                        >
-                          <span ref={countUpRef} />
-                        </VisibilitySensor>
-                      )}
-                    </CountUp>
-                    <span>%</span>
-                  </div>
-                  <div className="disparities-card-text">
-                    Black men are 70% more likely to die from a stroke as
-                    compared to non-Hispanic white men.
-                  </div>
-                  <div className="disparities-card-image">
-                    <StaticImage
-                      src="../images/illustrations/illustration-cardiovascular-health.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="disparities-card disparities-card-behavioral">
-                  <div className="disparities-card-heading">
-                    Behavioral Health
-                  </div>
-                  <div className="disparities-card-stat">
-                    <CountUp
-                      start={viewPortEntered ? null : 0}
-                      end={55}
-                      redraw={true}
-                      duration={1}
-                      useEasing={false}
-                    >
-                      {({ countUpRef }) => (
-                        <VisibilitySensor
-                          active={!viewPortEntered}
-                          onChange={isVisible => {
-                            if (isVisible) {
-                              setViewPortEntered(true)
-                            }
-                          }}
-                          delayedCall
-                        >
-                          <span ref={countUpRef} />
-                        </VisibilitySensor>
-                      )}
-                    </CountUp>
-                    <span>% lower</span>
-                  </div>
-                  <div className="disparities-card-text">
-                    Likely due to under-diagnosis, Millennials from majority
-                    Black and Hispanic communities have lower diagnosis rates of
-                    major depression, 31% and 55% lower respectively when
-                    compared to white communities.
-                  </div>
-                  <div className="disparities-card-image">
-                    <StaticImage
-                      src="../images/illustrations/illustration-behavioral-health.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="disparities-card disparities-card-diabetes">
-                  <div className="disparities-card-heading">Diabetes</div>
-                  <div className="disparities-card-stat">
-                    <CountUp
-                      start={viewPortEntered ? null : 0}
-                      end={60}
-                      redraw={true}
-                      duration={1.25}
-                      useEasing={false}
-                    >
-                      {({ countUpRef }) => (
-                        <VisibilitySensor
-                          active={!viewPortEntered}
-                          onChange={isVisible => {
-                            if (isVisible) {
-                              setViewPortEntered(true)
-                            }
-                          }}
-                          delayedCall
-                        >
-                          <span ref={countUpRef} />
-                        </VisibilitySensor>
-                      )}
-                    </CountUp>
-                    <span>%</span>
-                  </div>
-                  <div className="disparities-card-text">
-                    African American adults are 60% more likely than
-                    non-Hispanic white adults to be diagnosed with diabetes by a
-                    physician.
-                  </div>
-                  <div className="disparities-card-image">
-                    <StaticImage
-                      src="../images/illustrations/illustration-diabetes.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="disparities-card disparities-card-maternal">
-                  <div className="disparities-card-heading">
-                    Maternal Health
-                  </div>
-                  <div className="disparities-card-stat">
-                    <CountUp
-                      start={viewPortEntered ? null : 0}
-                      end={3}
-                      redraw={true}
-                      duration={0.75}
-                      useEasing={false}
-                    >
-                      {({ countUpRef }) => (
-                        <VisibilitySensor
-                          active={!viewPortEntered}
-                          onChange={isVisible => {
-                            if (isVisible) {
-                              setViewPortEntered(true)
-                            }
-                          }}
-                          delayedCall
-                        >
-                          <span ref={countUpRef} />
-                        </VisibilitySensor>
-                      )}
-                    </CountUp>
-                    <span>x higher</span>
-                  </div>
-                  <div className="disparities-card-text">
-                    Black mothers have 3x higher maternal mortality and 2x
-                    higher morbidity than white mothers.
-                  </div>
-                  <div className="disparities-card-image">
-                    <StaticImage
-                      src="../images/illustrations/illustration-maternal-health.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </Fade>
-          </div>
-          <div className="sources">
-            Sources: 1){" "}
-            <u>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://minorityhealth.hhs.gov/omh/browse.aspx?lvl=4&lvlid=28"
-              >
-                OMH: Stroke and African Americans
-              </a>
-            </u>{" "}
-            2){" "}
-            <u>
-              <a
-                href="https://www.bcbs.com/the-health-of-america/reports/millennial-health-trends-behavioral-health-conditions"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Millennial Health: Trends in Behavioral Health Conditions
-              </a>
-            </u>{" "}
-            3){" "}
-            <u>
-              <a
-                href="https://www.cdc.gov/diabetes/pdfs/data/statistics/national-diabetes-statistics-report.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                CDC: National Diabetes Statistics Report
-              </a>
-            </u>{" "}
-            4){" "}
-            <u>
-              <a
-                href="https://www.ajmc.com/view/racial-disparities-persist-in-maternal-morbidity-mortality-and-infant-health"
-                target="_blank"
-                rel="noreferrer"
-              >
-                AJMC: Racial Disparities Persist in Maternal Morbidity,
-                Mortality and Infant Health
-              </a>
-            </u>
-          </div>
-        </div>
-      </section>
-
-      <Slide right>
-        <section className="goal-banner" id="commitment">
-          <div className="max-container">
-            <div className="goal-banner-box">
-              <h6 className="goal-banner-box-title">Our Goal</h6>
-              <div className="goal-banner-box-description">
-                Reduce racial disparities in maternal health by
-              </div>
-              <div className="goal-banner-box-stat">
-                50<span>%</span>
-                <span className="goal-banner-box-text">in five years.</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Slide>
-
-      <section className="profiles" id="community">
-        <Fade>
-          <div className="inner-content community">
-            <h2 style={{ color: "#0072A7" }}>
-              What we're doing in your community
-            </h2>
-            <p
-              style={{
-                maxWidth: 800,
-                marginBottom: "3rem",
-                fontSize: "1.125rem",
-              }}
-            >
-              BCBS companies are addressing racial disparities and improving
-              health outcomes in the communities where you live and work.
-            </p>
-          </div>
-        </Fade>
-        <div className="inner-content inner-content-filters">
           <InstantSearch
             searchClient={searchClient}
-            indexName="he_plan_profiles"
+            indexName="he_plan_profiles_latest"
           >
-            <Configure hitsPerPage={5} clickAnalytics distinct />
-            <Fade>
-              <div className="search-filters">
-                <div className="search-filters-label-main">Filter</div>
-                <SearchBox
-                  translations={{
-                    placeholder: "Keyword",
-                  }}
-                />
-                <div className="search-filters-refinement">
-                  <div className="search-filters-label">
-                    What's Happening in my State
-                  </div>
-                  <MenuSelect
-                    attribute="states"
-                    limit={50}
-                    translations={{
-                      seeAllOption: "All States",
-                    }}
-                  />
-                </div>
-                <div className="search-filters-refinement">
-                  <div className="search-filters-label">
-                    Maternal Health Topics
-                  </div>
-                  <div className="search-filters-topics-refinement">
-                    <RefinementList attribute="subtopics" limit={50} />
-                  </div>
-                </div>
-                <ClearRefinements
-                  clearsQuery
-                  translations={{
-                    reset: "Clear Filters",
-                  }}
-                />
-              </div>
-            </Fade>
-            <InfiniteHits
-              hitComponent={planResult}
-              translations={{
-                loadMore: "Load more",
-              }}
-            />
+            <Configure hitsPerPage={6} clickAnalytics distinct />
+            <div className="ais-Hits-wrap">
+              <Hits hitComponent={planResult} />
+            </div>
           </InstantSearch>
         </div>
       </section>
 
-      <AdvisoryBoard />
-
-      {/* <section className="news" id="news">
+      <section className="profiles" id="maternal">
+        <Fade>
+          <div className="inner-content maternal">
+            <div className="profiles-header">
+              <div className="profiles-header-title">
+                <h2 style={{ color: "#0072A7" }}>Maternal Health</h2>
+                <p
+                  style={{
+                    maxWidth: 800,
+                    marginBottom: "3rem",
+                    fontSize: "1.125rem",
+                  }}
+                >
+                  See what compnies are doing in your neighborhood.
+                </p>
+              </div>
+              <div className="profiles-header-link">
+                <Link className="view-all" to="/maternal-health">
+                  View All&nbsp;&nbsp;&rarr;
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Fade>
         <div className="inner-content">
-          <h2>Plan News</h2>
-          <div className="news-item">
-            <div className="news-item--plan-name">BCBSRI</div>
-            <div className="news-item--plan-title">
-              <a href="#">This is a Title for the post abount something.</a>
-            </div>
-            <div className="news-item--plan-date">March 15th, 2021</div>
-          </div>
-          <div className="news-item">
-            <div className="news-item--plan-name">BCBSRI</div>
-            <div className="news-item--plan-title">
-              <a href="#">This is a Title for the post abount something.</a>
-            </div>
-            <div className="news-item--plan-date">March 15th, 2021</div>
-          </div>
-          <div className="news-item">
-            <div className="news-item--plan-name">BCBSRI</div>
-            <div className="news-item--plan-title">
-              <a href="#">This is a Title for the post abount something.</a>
-            </div>
-            <div className="news-item--plan-date">March 15th, 2021</div>
-          </div>
+          <InstantSearch
+            searchClient={searchClient}
+            indexName="he_plan_profiles_latest"
+          >
+            <Configure
+              hitsPerPage={6}
+              clickAnalytics
+              distinct
+              filters="topic:'Maternal Health' AND NOT headline:'Supporting bright beginnings for mothers and babies'"
+            />
+
+            <Hits hitComponent={planResult} />
+          </InstantSearch>
         </div>
-      </section> */}
+      </section>
 
+      <Newsletter />
+      <AdvisoryBoard />
       <PressKitBanner />
-
       <Newsletter />
     </>
   )

@@ -2,7 +2,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
-import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
+import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
 
 // Styles
@@ -243,7 +243,7 @@ const PlanProfile4 = props => {
               filters="headline:'Strong collaborations aim to improve birth outcomes' OR headline:'BlueCross BlueShield of South Carolina aims to improve pregnancy outcomes in women with diabetes'"
             />
 
-            <InfiniteHits hitComponent={planResult} />
+            <Hits hitComponent={planResult} />
           </InstantSearch>
         </div>
       </Fade>

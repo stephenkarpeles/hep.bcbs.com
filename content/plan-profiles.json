@@ -1024,8 +1024,8 @@
     ],
     "feature": "true",
     "read_time": "5",
-    "post_date": "2012-08-27",
-    "post_date_timestamp": "1630094557"
+    "post_date": "2021-08-27",
+    "post_date_timestamp": 1630094557
   },
   {
     "headline": "This mapping tool gives community health advocates data to understand local health inequities",
@@ -1045,8 +1045,8 @@
     "subtopics": [],
     "feature": "",
     "read_time": "5",
-    "post_date": "2012-08-27",
-    "post_date_timestamp": "1630095579"
+    "post_date": "2021-08-27",
+    "post_date_timestamp": 1630095579
   },
   {
     "headline": "Closing life expectancy gaps by investing in non-traditional partnerships",
@@ -1069,7 +1069,7 @@
     ],
     "feature": "true",
     "read_time": "5",
-    "post_date": "2012-08-27",
-    "post_date_timestamp": "1630101040"
+    "post_date": "2021-08-27",
+    "post_date_timestamp": 1630101040
   }
 ]

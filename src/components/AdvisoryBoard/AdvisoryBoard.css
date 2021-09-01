@@ -1,7 +1,6 @@
 @import "../mixins.css";
 @import "../variables.css";
 @import "../breakpoints.css";
-/* @import "../typography.css"; */
 
 /* Default Styles */
 .tabs-wrapper {
@@ -136,7 +135,7 @@
     color: var(--color-blue);
     font-size: var(--font-size-h5);
     line-height: var(--line-height-h5);
-    letter-spacing: .8px;
+    letter-spacing: 0.8px;
     padding: 0 0 8px;
     font-family: var(--font-condensed-regular);
   }
@@ -296,11 +295,11 @@
       line-height: 18px;
       font-family: var(--font-condensed-bold);
       text-transform: uppercase;
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
 
       &:hover {
-        opacity: .7;
-        transition: opacity .3s ease;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
       }
 
       img {
@@ -404,7 +403,7 @@
       &:hover {
         color: var(--color-gray);
         background: var(--color-light-gray);
-        transition: all .2s ease;
+        transition: all 0.2s ease;
 
         .tab-item__name {
           color: var(--color-blue);

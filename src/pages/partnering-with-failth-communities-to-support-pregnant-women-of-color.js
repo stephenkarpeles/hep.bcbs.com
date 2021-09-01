@@ -2,7 +2,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
-import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
+import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
 
 // Styles
@@ -265,7 +265,7 @@ const PartneringFaithCommunities = props => {
                     health'"
             />
 
-            <InfiniteHits hitComponent={planResult} />
+            <Hits hitComponent={planResult} />
           </InstantSearch>
         </div>
       </Fade>

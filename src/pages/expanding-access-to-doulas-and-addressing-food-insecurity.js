@@ -2,7 +2,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
-import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
+import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
 
 // Styles
@@ -150,7 +150,7 @@ const ExpandingAccess = props => {
               filters="headline:'How doulas can improve the safety of childbirth for women of color' OR headline:'Strong collaborations aim to improve birth outcomes'"
             />
 
-            <InfiniteHits hitComponent={planResult} />
+            <Hits hitComponent={planResult} />
           </InstantSearch>
         </div>
       </Fade>
