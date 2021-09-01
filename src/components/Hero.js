@@ -41,7 +41,14 @@ function Hero() {
                 Blue Cross and Blue Shield Companies Address the Nation's Crisis
                 in Racial Health Disparities
               </div>
-              <Link className="button" to="/strategy">
+              <Link
+                className="button"
+                to="/latest-stories"
+                style={{ marginRight: "1rem" }}
+              >
+                View Latest Stories
+              </Link>
+              <Link className="button button-outline" to="/strategy">
                 Read Our Strategy
               </Link>
             </div>
