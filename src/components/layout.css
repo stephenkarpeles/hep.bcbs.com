@@ -1270,7 +1270,7 @@ header {
       transform: rotate(0deg);
       background: linear-gradient(
         270deg,
-        #ffffff 0%,
+        #ffffff 15%,
         rgba(255, 255, 255, 0) 100%
       );
       top: 0;
