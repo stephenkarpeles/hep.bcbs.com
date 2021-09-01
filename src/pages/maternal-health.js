@@ -117,7 +117,7 @@ const planResult = ({ hit }) => {
   )
 }
 
-const StrategyPage = props => {
+const MaternalHealth = props => {
   const [viewPortEntered, setViewPortEntered] = useState(false)
   const Stats = ({ nbHits }) => <span>Displaying {nbHits} results</span>
   const CustomStats = connectStats(Stats)
@@ -215,4 +215,4 @@ const StrategyPage = props => {
   )
 }
 
-export default StrategyPage
+export default MaternalHealth
