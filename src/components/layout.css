@@ -1253,7 +1253,7 @@ header {
     @include draw-blue-border();
 
     @media (--medium-breakpoint-up) {
-      flex: 1 1 33%;
+      flex: 0 1 33%;
 
       #latest & {
         flex: 1 0 495px;
