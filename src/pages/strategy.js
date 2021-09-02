@@ -428,7 +428,7 @@ const StrategyPage = props => {
                     fontSize: "1.125rem",
                   }}
                 >
-                  Blue Cross and Blue Shield Companies Adress the Nation's
+                  Blue Cross and Blue Shield Companies Address the Nation's
                   Crisis in Racial Health Disparities.
                 </p>
               </div>
