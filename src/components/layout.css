@@ -649,6 +649,12 @@ header {
 
   &-main {
     background-color: var(--color-blue);
+
+    &-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
   }
 
   nav {

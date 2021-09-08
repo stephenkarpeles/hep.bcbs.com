@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link, withPrefix } from "gatsby"
 import Navigation from "../components/Navigation"
+import MobileNavigation from "../components/MobileNavigation"
 import { useMediaQuery } from "react-responsive"
 import algoliasearch from "algoliasearch/lite"
 import AlgoliaSiteSearch from "../components/AlgoliaSiteSearch"
@@ -110,21 +111,31 @@ const Header = ({ props, siteTitle }) => {
         <Navigation />
       </Desktop>
       <MobileTablet>
-        {isHomepage ? (
-          <Link className="he-landing mobile" activeClassName="current" to="/">
-            Health Equity
-          </Link>
-        ) : (
-          <Link className="he-landing mobile" activeClassName="current" to="/">
-            Back to Health Equity Home
-          </Link>
-        )}
-        <div className="mobile-search">
-          <AlgoliaSiteSearch />
-        </div>
-        <div className="mobile-navigation">
-          <Navigation />
-        </div>
+        <MobileTablet>
+          {isHomepage ? (
+            <Link
+              className="he-landing mobile"
+              activeClassName="current"
+              to="/"
+            >
+              Health Equity
+            </Link>
+          ) : (
+            <Link
+              className="he-landing mobile"
+              activeClassName="current"
+              to="/"
+            >
+              Back to Health Equity Home
+            </Link>
+          )}
+          <div className="mobile-search">
+            <AlgoliaSiteSearch />
+          </div>
+          <div className="mobile-navigation">
+            <MobileNavigation />
+          </div>
+        </MobileTablet>
       </MobileTablet>
     </>
   )

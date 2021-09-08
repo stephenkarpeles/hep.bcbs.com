@@ -3,13 +3,23 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { Link, withPrefix } from "gatsby"
 
 function Navigation() {
+  const menuOpenClass = "mobile-menu-is-open"
   const isHomepage =
     typeof window !== "undefined"
       ? window.location.pathname === withPrefix("/")
       : ""
 
+  function removeMenuOpenClass() {
+    document.body.classList.remove(menuOpenClass)
+  }
+
+  function hideMobileNav() {
+    document.querySelector("header").classList.remove("navigation-mobile")
+    document.querySelector("header").classList.add("navigation")
+  }
+
   return (
-    <div className="navigation navigation-main navigation-main-sticky">
+    <div className="navigation navigation-main">
       <div className="inner-content">
         {isHomepage ? (
           <nav>
@@ -17,28 +27,35 @@ function Navigation() {
               Health Equity
             </Link>
             <AnchorLink
-              onAnchorLinkClick={() => {}}
-              // onKeyDown={}
+              onAnchorLinkClick={() => {
+                removeMenuOpenClass()
+                hideMobileNav()
+              }}
+              onKeyDown={removeMenuOpenClass}
               to="/#latest"
               className="navigation__anchor-link"
               title="Latest Stories"
-              stripHash
             >
               <span>Latest Stories</span>
             </AnchorLink>
             <AnchorLink
-              onAnchorLinkClick={() => {}}
-              // onKeyDown={}
+              onAnchorLinkClick={() => {
+                removeMenuOpenClass()
+                hideMobileNav()
+              }}
+              onKeyDown={removeMenuOpenClass}
               to="/#advisory"
               className="navigation__anchor-link"
               title="Meet our Advisory Panel"
-              stripHash
             >
               <span>Meet Our Advisory Panel</span>
             </AnchorLink>
             <AnchorLink
-              onAnchorLinkClick={() => {}}
-              // onKeyDown={}
+              onAnchorLinkClick={() => {
+                removeMenuOpenClass()
+                hideMobileNav()
+              }}
+              onKeyDown={removeMenuOpenClass}
               to="/press-kit"
               className="navigation__anchor-link"
               title="Press Kit"
