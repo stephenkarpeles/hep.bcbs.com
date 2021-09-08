@@ -23,7 +23,7 @@ const ConfrontingRacialDisparities = props => {
     <div>
       <SEO
         title="In preventing or treating stroke, one size may not fit all"
-        description="Blue Cross Blue Shield Association hosted a discussion on racial health disparities, how to change their trajectory and solutions for Black maternal health."
+        description="Adding diversity to health data could change the way doctors treat and prevent stroke. The All of Us Research Program aims to gather that kind of data and use precision medicine to tailor treatments."
         image={mainImage}
       />
       <Fade>
