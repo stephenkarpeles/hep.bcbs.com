@@ -180,7 +180,7 @@ const BlackMillennialWomensHealth = props => {
               </p>
               <p>
                 "There is very little data on the health of Black millennial
-                women," said Hey, Auntie! founder, Nicole Kennedy. "In the next
+                women," said Hey, Auntie! founder, Nicole Kenney. "In the next
                 five years, my goal is to use the data we gathered through Hey,
                 Auntie! to help inform delivery services to improve Black
                 millennial women’s behavioral and physical health. I want to
@@ -199,9 +199,9 @@ const BlackMillennialWomensHealth = props => {
                 planning, communications, and funder engagement.
               </p>
               <p>
-                The finalists then made final presentations, and Kennedy and Hey
+                The finalists then made final presentations, and Kenney and Hey
                 Auntie! came away as the winning team. Independence BC and ELGP
-                will support Kennnedy with a $50,000 grant to help her implement
+                will support Kenney with a $50,000 grant to help her implement
                 the community program outlined by her project. Other finalists
                 included:
               </p>

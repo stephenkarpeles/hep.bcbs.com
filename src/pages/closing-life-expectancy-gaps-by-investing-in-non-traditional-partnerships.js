@@ -194,7 +194,7 @@ const ClosingLifeExpectancy = props => {
                 </li>
               </ul>
               <h4>
-                Long-term health equity- 'More of a marathon than a sprint'
+                Long-term health equity - 'More of a marathon than a sprint'
               </h4>
               <p>
                 <img
@@ -207,7 +207,7 @@ const ClosingLifeExpectancy = props => {
                   src="https://www.bcbs.com/sites/default/files/healthequity/images/dr-robinson-coat.jpg"
                   alt="Dr. Derek Robinson - BCBS Illinois Vice President, Chief Medical Officer"
                 />
-                The journey to health equity for all Americans is a "more of a
+                The journey to health equity for all Americans is "more of a
                 marathon than a sprint," says{" "}
                 <a
                   href="https://www.bcbsil.com/company-info/leadership#2"

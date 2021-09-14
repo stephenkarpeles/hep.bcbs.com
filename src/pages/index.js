@@ -164,7 +164,7 @@ const IndexPage = props => {
                     fontSize: "1.125rem",
                   }}
                 >
-                  See what companies are doing in your neighborhood.
+                  See what we're doing to improve maternal health.
                 </p>
               </div>
               <div className="profiles-header-link">
