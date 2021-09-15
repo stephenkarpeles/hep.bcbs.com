@@ -1481,7 +1481,7 @@ header {
       /* width: 100vw; */
       border: 1px solid #dedede;
       background-color: #f7f9fa;
-      z-index: 1;
+      z-index: 1001;
 
       @media (--large-breakpoint-up) {
         width: 100%;
