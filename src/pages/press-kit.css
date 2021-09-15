@@ -4,7 +4,7 @@
 @import "../components/breakpoints.css";
 
 .intro {
-  &-press {
+  &_press {
     background-color: var(--color-dark-blue);
     padding: 2rem 0 1rem;
 
@@ -167,17 +167,8 @@
   margin: var(--spacer-4) auto;
   padding-bottom: 80px;
 
-  .accordion {
-    @media (--large-breakpoint-up) {
-      display: flex;
-      flex-flow: row wrap;
-      margin: 0 -2rem;
-    }
-  }
-
   .accordion__heading {
     outline: none;
-    padding: 23px 0;
     cursor: pointer;
     color: var(--color-blue);
     font-size: 18px;
@@ -194,11 +185,6 @@
 
   .accordion__item {
     border-bottom: 1px solid rgba(112, 112, 112, 0.3);
-
-    @media (--large-breakpoint-up) {
-      flex: 1 1 calc(50% - 4rem);
-      margin: 0 2rem;
-    }
   }
 
   .accordion__panel {
@@ -208,6 +194,8 @@
 
   .accordion__button {
     outline: none;
+    padding: 24px 0 12px;
+    margin-bottom: 12px;
 
     &::before {
       content: "+";
