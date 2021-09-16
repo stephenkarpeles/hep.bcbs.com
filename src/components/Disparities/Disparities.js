@@ -40,7 +40,7 @@ const Disparities = ({ header }) => {
   `)
 
   const disparities = data.allNodeHealthEquityDisparities
-  // const image = getImage(disparities.edges.node.field_he_dis_featured_image)
+  const image = getImage(disparities.edges.node.field_he_dis_featured_image)
 
   console.log(data)
 
@@ -100,7 +100,7 @@ const Disparities = ({ header }) => {
                       }
                       alt=""
                     /> */}
-                    {/* <GatsbyImage image={image} alt="" /> */}
+                    <GatsbyImage image={image} alt="" />
                   </div>
                 </div>
               ))}
