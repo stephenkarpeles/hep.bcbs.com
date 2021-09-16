@@ -204,7 +204,7 @@ const StrategyPage = props => {
                 <h2 style={{ color: "#0072A7" }}>What we're doing</h2>
                 <p
                   style={{
-                    maxWidth: 800,
+                    maxWidth: 860,
                     marginBottom: "3rem",
                     fontSize: "1.125rem",
                   }}
