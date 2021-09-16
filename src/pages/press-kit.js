@@ -2,14 +2,14 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
-import "./press-kit.css"
 import FAQs from "../components/FAQ"
+import PressKit from "../components/PressKit/PressKit"
 
-import communityHighlights from "../../static/assets/files/Press-Kit_Community-Highlights.pdf"
-import factSheet from "../../static/assets/files/Press-Kit_Factsheet.pdf"
-import panelBios from "../../static/assets/files/Press-Kit_National-Advisory-Panel-Biographies.pdf"
+// styles
+import "./press-kit.css"
+
+// files
 import pressFull from "../../static/assets/files/Press-Kit_Full.pdf"
-import hoaMaternalHealthDisparities from "../../static/assets/files/HOA_Maternal_Health_Disaparities_Factsheet.pdf"
 
 const PressKitPage = props => {
   return (
@@ -48,59 +48,7 @@ const PressKitPage = props => {
       <section className="downloads" id="downloads">
         <div className="inner-content">
           <h3>What will I get in the press kit?</h3>
-          <div className="downloads-cards">
-            <div className="card">
-              <h4 className="card-headline">Factsheet</h4>
-              <div className="card-copy">
-                Review key components of the BCBSA National Health Equity
-                Strategy
-              </div>
-              <div className="download-link">
-                <a href={factSheet} target="_blank" rel="noreferrer">
-                  Download
-                </a>
-              </div>
-            </div>
-            <div className="card">
-              <h4 className="card-headline">Advisory Panel Biographies</h4>
-              <div className="card-copy">
-                Meet the members of our national advisory panel
-              </div>
-              <div className="download-link">
-                <a href={panelBios} target="_blank" rel="noreferrer">
-                  Download
-                </a>
-              </div>
-            </div>
-            <div className="card">
-              <h4 className="card-headline">Community Highlights</h4>
-              <div className="card-copy">
-                Read about maternal health programming from across the Blue
-                Cross Blue Shield (BCBS) system
-              </div>
-              <div className="download-link">
-                <a href={communityHighlights} target="_blank" rel="noreferrer">
-                  Download
-                </a>
-              </div>
-            </div>
-            <div className="card">
-              <h4 className="card-headline">Factsheet</h4>
-              <div className="card-copy">
-                Download the Racial Disparities in Maternal Health Report
-                Factsheet
-              </div>
-              <div className="download-link">
-                <a
-                  href={hoaMaternalHealthDisparities}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Download
-                </a>
-              </div>
-            </div>
-          </div>
+          <PressKit />
         </div>
       </section>
 

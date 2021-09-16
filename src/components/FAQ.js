@@ -30,8 +30,8 @@ const FAQs = ({ heading }) => {
         <h3>{heading}</h3>
 
         <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
-          {data.allNodeHealthEquityFaqs.edges.map(faq => (
-            <AccordionItem>
+          {data.allNodeHealthEquityFaqs.edges.map((faq, idx) => (
+            <AccordionItem key={idx}>
               <AccordionItemHeading>
                 <AccordionItemButton>{faq.node.title}</AccordionItemButton>
               </AccordionItemHeading>
