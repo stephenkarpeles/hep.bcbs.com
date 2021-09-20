@@ -28,8 +28,10 @@ const Disparities = ({ header }) => {
                 name
               }
               field_he_dis_featured_image {
-                uri {
-                  value
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
                 }
               }
             }
@@ -40,9 +42,6 @@ const Disparities = ({ header }) => {
   `)
 
   const disparities = data.allNodeHealthEquityDisparities
-  // const image = getImage(disparities.edges.node.field_he_dis_featured_image)
-
-  console.log(data)
 
   return (
     <section className="disparities" id="disparities">
@@ -93,14 +92,13 @@ const Disparities = ({ header }) => {
                     }}
                   ></div>
                   <div className="disparities-card-image">
-                    {/* <StaticImage
-                      src={
+                    <GatsbyImage
+                      image={getImage(
                         disparity.node.relationships.field_he_dis_featured_image
-                          .uri.value
-                      }
+                          .localFile.childImageSharp.gatsbyImageData
+                      )}
                       alt=""
-                    /> */}
-                    {/* <GatsbyImage image={image} alt="" /> */}
+                    />
                   </div>
                 </div>
               ))}

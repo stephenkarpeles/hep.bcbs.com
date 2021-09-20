@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { withPrefix } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import "./AdvisoryBoard.css"
 import imgCloseIcon from "../../images/icons/icon-close.svg"
@@ -20,6 +20,15 @@ const AdvisoryBoard = ({ header }) => {
             title
             body {
               value
+            }
+            relationships {
+              field_he_ap_featured_image {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
+              }
             }
           }
         }
@@ -107,9 +116,12 @@ const AdvisoryBoard = ({ header }) => {
             key={idx}
             image={
               <>
-                <StaticImage
+                <GatsbyImage
+                  image={getImage(
+                    advisor.node.relationships.field_he_ap_featured_image
+                      .localFile.childImageSharp.gatsbyImageData
+                  )}
                   alt=""
-                  src="../../images/advisory-board/tracey-brown.jpg"
                 />
               </>
             }
@@ -139,9 +151,12 @@ const AdvisoryBoard = ({ header }) => {
                 {advisors.edges.map((advisor, idx) => {
                   return active === idx ? (
                     <>
-                      <StaticImage
+                      <GatsbyImage
+                        image={getImage(
+                          advisor.node.relationships.field_he_ap_featured_image
+                            .localFile.childImageSharp.gatsbyImageData
+                        )}
                         alt=""
-                        src="../../images/advisory-board/tracey-brown.jpg"
                       />
                     </>
                   ) : (
@@ -149,11 +164,6 @@ const AdvisoryBoard = ({ header }) => {
                   )
                 })}
               </div>
-              {/* <div className="tab-content__personal-info-name">
-                {advisors.edges.map((advisor, idx) => {
-                  return active === idx ? advisor.node.title : ""
-                })}
-              </div> */}
               <div className="tab-content__personal-info-company">
                 {advisors.edges.map((advisor, idx) => {
                   return active === idx ? advisor.node.field_he_company : ""

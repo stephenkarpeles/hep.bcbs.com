@@ -94,7 +94,7 @@ module.exports = {
       options: {
         baseUrl: `http://bcbs.lndo.site/`,
         concurrentFileRequests: 60, // optional, defaults to `20`
-        skipFileDownloads: true,
+        skipFileDownloads: false,
         disallowedLinkTypes: [
           `self`,
           `describedby`,
@@ -102,7 +102,17 @@ module.exports = {
           `vote--vote`,
           `vote_result--vote_result`,
           `password_policy--password_policy`,
+          `file--file`,
         ],
+        filters: {
+          "node--health_equity_disparities":
+            "include=field_he_dis_featured_image",
+          "node--health_equity_press_kit": "include=field_he_pk_download",
+          "node--health_equity_blog": "include=field_he_featured_image",
+          "node--health_equity_promotion": "include=field_he_featured_image",
+          "node--health_equity_advisory_panel":
+            "include=field_he_ap_featured_image",
+        },
       },
     },
   ],
