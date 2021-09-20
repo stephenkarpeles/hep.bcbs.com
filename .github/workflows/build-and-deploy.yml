@@ -80,6 +80,11 @@ jobs:
           DRUPAL_BASE_URL: ${{ secrets[needs.context.outputs.drupal-base-url] }}
         run: gatsby build --prefix-paths
 
+      - name: Test Drupal base URL inclusion
+        env:
+          DRUPAL_BASE_URL: ${{ secrets[needs.context.outputs.drupal-base-url] }}
+        run: echo "${DRUPAL_BASE_URL}" > public/drupal_base_url.txt
+
       - name: Include the AWS Codebuild file
         run: cp buildspec.yml public/buildspec.yml
 
