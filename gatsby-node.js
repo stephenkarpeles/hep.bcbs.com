@@ -23,6 +23,9 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             id
             title
+            path {
+              alias
+            }
           }
         }
       }
@@ -31,6 +34,9 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             id
             title
+            path {
+              alias
+            }
           }
         }
       }
@@ -39,6 +45,9 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             id
             title
+            path {
+              alias
+            }
           }
         }
       }
@@ -48,7 +57,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allNodeHealthEquityPlanProfile.edges.forEach(({ node }) => {
     if (node.title != null) {
       createPage({
-        path: convertToSlug(node.title),
+        path: node.path.alias,
         component: path.resolve(`./src/templates/profile.js`),
         context: {
           id: node.id,
@@ -60,7 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allNodeHealthEquityBlog.edges.forEach(({ node }) => {
     if (node.title != null) {
       createPage({
-        path: convertToSlug(node.title),
+        path: node.path.alias,
         component: path.resolve(`./src/templates/blog.js`),
         context: {
           id: node.id,
@@ -72,7 +81,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allNodeHealthEquityPromotion.edges.forEach(({ node }) => {
     if (node.title != null) {
       createPage({
-        path: convertToSlug(node.title),
+        path: node.path.alias,
         component: path.resolve(`./src/templates/promotion.js`),
         context: {
           id: node.id,
@@ -92,6 +101,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     | node__podcast
     | node__video
     | node__health_america_page
+    | node__blog_article
 
     type node__health_equity_promotion implements Node {
       field_he_author: String

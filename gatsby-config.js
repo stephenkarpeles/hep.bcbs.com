@@ -98,7 +98,6 @@ module.exports = {
         disallowedLinkTypes: [
           `self`,
           `describedby`,
-          `node--blog_article`,
           `vote--vote`,
           `vote_result--vote_result`,
           `password_policy--password_policy`,

@@ -18,6 +18,7 @@ import "../components/pages.css"
 export default function BlogTemplate({ data }) {
   // get all the data
   const post = data.nodeHealthEquityBlog
+  const alias = post.path.alias
 
   // get the related stories
   const related = post.relationships.field_he_hoa_related_content.map(
@@ -38,7 +39,7 @@ export default function BlogTemplate({ data }) {
               <h4>Share</h4>
               <Sharing
                 title={post.title}
-                url={`https://www.bcbs.com/node/${post.drupal_internal__nid}`}
+                url={`https://www.bcbs.com/the-health-of-america/healthequity/${alias}`}
               />
             </div>
           </div>
@@ -153,10 +154,15 @@ export const query = graphql`
           ...RelatedHOAPage
           ...RelatedHOAReport
           ...RelatedHOAInfographic
+          ...RelatedHOAArticle
+          ...RelatedHOAPodcast
+          ...RelatedHOAVideo
         }
       }
       created(formatString: "MMMM DD, YYYY")
-      drupal_internal__nid
+      path {
+        alias
+      }
     }
   }
 `

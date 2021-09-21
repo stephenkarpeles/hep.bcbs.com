@@ -18,11 +18,14 @@ import "../components/pages.css"
 export default function PlanProfileTemplate({ data }) {
   // get all the data
   const post = data.nodeHealthEquityPlanProfile
+  const alias = post.path.alias
 
   // get the related stories
   const related = post.relationships.field_he_hoa_related_content.map(
     getRelatedStories
   )
+
+  console.log({ related })
 
   // build the background image url
   const backgroundImageBase = "https://www.bcbs.com"
@@ -38,7 +41,7 @@ export default function PlanProfileTemplate({ data }) {
               <h4>Share</h4>
               <Sharing
                 title={post.title}
-                url={`https://www.bcbs.com/node/${post.drupal_internal__nid}`}
+                url={`https://www.bcbs.com/the-health-of-america/healthequity/${alias}`}
               />
             </div>
           </div>
@@ -107,7 +110,7 @@ export default function PlanProfileTemplate({ data }) {
               <Configure
                 hitsPerPage={2}
                 distinct
-                filters={`headline:'${post.relationships.field_he_related_content[0].title}' OR headline:'${post.relationships.field_he_related_content[1].title}'`}
+                filters={`headline:'${post.relationships.field_he_related_content[0]?.title}' OR headline:'${post.relationships.field_he_related_content[1]?.title}'`}
               />
 
               <InfiniteHits hitComponent={planResult} />
@@ -153,10 +156,15 @@ export const query = graphql`
           ...RelatedHOAPage
           ...RelatedHOAReport
           ...RelatedHOAInfographic
+          ...RelatedHOAArticle
+          ...RelatedHOAPodcast
+          ...RelatedHOAVideo
         }
       }
       created(formatString: "MMMM DD, YYYY")
-      drupal_internal__nid
+      path {
+        alias
+      }
     }
   }
 `

@@ -8,7 +8,7 @@ const RelatedHOAPage = ({ data }) => {
         <span>Report</span>
       </div>
       <div className="pp-related__text">
-        <a href="#">{data.title}</a>
+        <a href={`https://www.bcbs.com/${data.path.alias}`}>{data.title}</a>
       </div>
     </>
   )
@@ -24,6 +24,8 @@ export const fragment = graphql`
         name
       }
     }
-    drupal_internal__nid
+    path {
+      alias
+    }
   }
 `

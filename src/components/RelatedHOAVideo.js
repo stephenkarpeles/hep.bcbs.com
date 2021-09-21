@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-const RelatedHOAReport = ({ data }) => {
+const RelatedHOAVideo = ({ data }) => {
   return (
     <>
       <div className="pp-related__category">
-        <span>Report</span>
+        <span>Video</span>
       </div>
       <div className="pp-related__text">
         <a href={`https://www.bcbs.com/${data.path.alias}`}>{data.title}</a>
@@ -14,10 +14,10 @@ const RelatedHOAReport = ({ data }) => {
   )
 }
 
-export default RelatedHOAReport
+export default RelatedHOAVideo
 
 export const fragment = graphql`
-  fragment RelatedHOAReport on node__health_america_page {
+  fragment RelatedHOAVideo on node__video {
     title
     relationships {
       node_type {
