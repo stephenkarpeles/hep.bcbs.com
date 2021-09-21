@@ -1,3 +1,10 @@
+// Load the .env file for the target environment
+if (process.env.DEPLOY_ENV) {
+  require("dotenv").config({
+    path: `.env.${process.env.DEPLOY_ENV}`,
+  })
+}
+
 module.exports = {
   pathPrefix: `/the-health-of-america/healthequity`,
   siteMetadata: {
