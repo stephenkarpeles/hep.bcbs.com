@@ -154,7 +154,6 @@ export const query = graphql`
           ...RelatedHOAPage
           ...RelatedHOAReport
           ...RelatedHOAInfographic
-          ...RelatedHOAArticle
           ...RelatedHOAPodcast
           ...RelatedHOAVideo
         }

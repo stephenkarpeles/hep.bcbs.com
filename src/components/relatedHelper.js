@@ -2,7 +2,7 @@ import React from "react"
 import RelatedHOAPage from "../components/RelatedHOAPage"
 import RelatedHOAReport from "../components/RelatedHOAReport"
 import RelatedHOAInfographic from "../components/RelatedHOAInfographic"
-import RelatedHOAArticle from "../components/RelatedHOAArticle"
+// import RelatedHOAArticle from "../components/RelatedHOAArticle"
 import RelatedHOAPodcast from "../components/RelatedHOAPodcast"
 import RelatedHOAVideo from "../components/RelatedHOAVideo"
 
@@ -10,7 +10,7 @@ const relatedStories = {
   node__hoa_page: RelatedHOAPage,
   node__health_america_page: RelatedHOAReport,
   node__hoa_insight: RelatedHOAInfographic,
-  node__blog_article: RelatedHOAArticle,
+  // node__blog_article: RelatedHOAArticle,
   node__podcast: RelatedHOAPodcast,
   node__video: RelatedHOAVideo,
 }

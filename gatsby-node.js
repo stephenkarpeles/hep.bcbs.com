@@ -101,7 +101,6 @@ exports.createSchemaCustomization = ({ actions }) => {
     | node__podcast
     | node__video
     | node__health_america_page
-    | node__blog_article
 
     type node__health_equity_promotion implements Node {
       field_he_author: String
