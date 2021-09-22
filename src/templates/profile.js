@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Fade from "react-reveal/Fade"
-import { InstantSearch, InfiniteHits, Configure } from "react-instantsearch-dom"
+import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
 import Sharing from "../components/Sharing/sharing"
 import { getRelatedStories } from "../components/relatedHelper"
@@ -25,7 +25,7 @@ export default function PlanProfileTemplate({ data }) {
     getRelatedStories
   )
 
-  console.log({ related })
+  const filters = `headline:"${post.relationships.field_he_related_content[0]?.title}" OR headline:"${post.relationships.field_he_related_content[1]?.title}"`
 
   // build the background image url
   const backgroundImageBase = "https://www.bcbs.com"
@@ -107,13 +107,9 @@ export default function PlanProfileTemplate({ data }) {
               searchClient={searchClient}
               indexName="he_plan_profiles"
             >
-              <Configure
-                hitsPerPage={2}
-                distinct
-                filters={`headline:'${post.relationships.field_he_related_content[0]?.title}' OR headline:'${post.relationships.field_he_related_content[1]?.title}'`}
-              />
+              <Configure hitsPerPage={2} distinct filters={filters} />
 
-              <InfiniteHits hitComponent={planResult} />
+              <Hits hitComponent={planResult} />
             </InstantSearch>
           </div>
         </Fade>
@@ -149,6 +145,12 @@ export const query = graphql`
         }
         field_he_related_content {
           ... on node__health_equity_plan_profile {
+            title
+          }
+          ... on node__health_equity_promotion {
+            title
+          }
+          ... on node__health_equity_blog {
             title
           }
         }

@@ -94,7 +94,11 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    union heRelatedContentUnion = node__health_equity_plan_profile
+    union heRelatedContentUnion =
+    node__health_equity_plan_profile
+    | node__health_equity_blog
+    | node__health_equity_promotion
+
     union hoaRelatedContentUnion =
     node__hoa_insight
     | node__hoa_page
