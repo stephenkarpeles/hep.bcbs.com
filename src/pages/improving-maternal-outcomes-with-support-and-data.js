@@ -55,7 +55,7 @@ const ImprovingMaternalOutcomes = props => {
                   <h1>Improving maternal outcomes with support and data</h1>
                 </div>
                 <div className="pp-hero__author">
-                  <span>Kristin Gourlay</span>
+                  <span>Carlton Houston</span>
                 </div>
               </div>
             </div>
