@@ -219,12 +219,18 @@ const ReportingRacialDisparities = props => {
                 white patients.
               </p>
               <p className="pp-content__callout">
-                “Racial Disparities in Maternal Health,” a May 2021 Health of
-                America report from the Blue Cross Blue Shield Association,
-                found that women in majority Black communities have a 63% higher
-                rate of life-threatening childbirth complications than white
-                women. Women in majority Hispanic communities have a 32% higher
-                rate.
+                <a
+                  href="https://www.bcbs.com/the-health-of-america/reports/racial-disparities-in-maternal-health"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  “Racial Disparities in Maternal Health”
+                </a>
+                , a May 2021 Health of America report from the Blue Cross Blue
+                Shield Association, found that women in majority Black
+                communities have a 63% higher rate of life-threatening
+                childbirth complications than white women. Women in majority
+                Hispanic communities have a 32% higher rate.
               </p>
               <h4>
                 What’s next: supporting physicians and hospitals, gathering
