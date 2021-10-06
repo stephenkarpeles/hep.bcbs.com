@@ -1072,4 +1072,26 @@
     "post_date": "2021-08-27",
     "post_date_timestamp": 1630101040
   }
+  ,
+  {
+    "headline": "Reporting racial disparities in healthcare quality spurs accountability",
+    "teaser": "BCBS Massachusetts has quantified racial disparities in healthcare quality among more than 1.3 million members. Now that data can help hold people accountable for progress.",
+    "article": "Massachusetts’ largest health insurer has published the first review in the state analyzing racial disparities in healthcare claims for more than 1.3 million members. It found wide gaps between white, Black, Asian and Hispanic patients, and will use the data to make meaningful change. Blue Cross Blue Shield of Massachusetts (BCBSMA) found racial disparities in the quality of care on nearly 48 measures among more than 1.3M members. The health plan published the data in a first-of-its-kind health equity report which it plans to update every year. Understanding where the gaps are can point the way toward how to close them. “These inequities are not unique to Blue Cross members,” Dr. Mark Friedberg, BCBSMA’s senior vice president for performance measurement & improvement, told Coverage, the insurer’s health news site. “But we are making them public now in an effort to be transparent and to enable members, employers and our communities to hold us accountable for improving them over time.” New incentives BCBSMA President and CEO Andrew Dreyfus announced the health plan will work with healthcare providers and hospitals collaboratively and provide financial incentives for closing equity gaps. That will give providers a business case for changing the way they practice. “As a health plan, one of the most powerful tools we have to help guide positive change is the way we pay clinicians who care for our members,” says Dreyfus. Quality covers chronic disease, women’s health, mental health, prevention and more Doctors, hospitals and health plans report performance on many metrics to provide a consistent, objective view of the healthcare quality they provide. BCBSMA selected 48 of the most widely used measures around managing chronic diseases; mental health; women’s and children’s health; prevention and other kinds of tests and treatments. For example, when it comes to chronic disease, doctors want to see their patients’ blood pressure managed. They want to see their diabetes medication taken. They want to see their asthma well controlled. When it comes to mental health, it’s best practice to follow up with patients within 30 days of inpatient treatment. Good preventive medicine includes ensuring children receive well-child visits within the first 15 months of life. Quality women’s care includes regular mammograms. What the data revealed: stark differences for women’s health and chronic condition management BCBSMA found some of the starkest differences in healthcare quality for women. For white women, the percentage of childbirths with potentially life-threatening complications was 2.2% in 2019. For Black women, 4.1%. On other health measures, just 65.4% of Hispanic patients received an appropriate screening for colorectal cancer, compared to 70% of whites. Seventy-three percent of whites received follow-up care within 30 days of an emergency room visit for mental illness. That held true for just 50% of Black patients. About 66% of Black patients had their blood pressured controlled, compared to nearly 79% of white patients. “Racial Disparities in Maternal Health,” a May 2021 Health of America report from the Blue Cross Blue Shield Association, found that women in majority Black communities have a 63% higher rate of life-threatening childbirth complications than white women. Women in majority Hispanic communities have a 32% higher rate. What’s next: supporting physicians and hospitals, gathering self-reported data Closing racial and ethnic gaps in healthcare quality won’t happen overnight. What underpins these gaps is decades of systemic racism and myriad factors that affect patients’ health. The health plan will help physicians and hospitals along their journey to improve the quality of care through a partnership with The Institute for Healthcare Improvement. Tracking progress will also depend on gathering data from health plan members directly. Most healthcare claims don’t include it. Member race and ethnicity data for BCBSMA’s initial analyses were imputed (or, calculated using other data sets to account for what was missing) using the RAND Bayesian Improved Surname Geocoding (BISG) method, which researchers commonly use when self-reported data isn’t available. It is likely that analyses based on imputed data underestimate the true magnitude of inequities. That's why Blue Cross is currently engaged in a major effort to collect self-reported race and ethnicity data from members directly.",
+    "byline": "Kristin Gourlay",
+    "plans": [
+      "BCBS MA"
+    ],
+    "states": [
+      "Massachusetts"
+    ],
+    "slug": "reporting-racial-disparities-healthcare-quality-spurs-accountability",
+    "img_url": "reporting-racial-disparities-healthcare-quality-spurs-accountability.jpg",
+    "video_url": "",
+    "topic": "Maternal Health",
+    "subtopics": [],
+    "feature": "true",
+    "read_time": "4",
+    "post_date": "2021-10-06",
+    "post_date_timestamp": 1633551673
+  }
 ]
