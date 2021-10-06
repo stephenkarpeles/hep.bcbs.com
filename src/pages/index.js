@@ -184,7 +184,7 @@ const IndexPage = props => {
               hitsPerPage={6}
               clickAnalytics
               distinct
-              filters="topic:'Maternal Health' AND NOT headline:'Supporting bright beginnings for mothers and babies'"
+              filters="topic:'Maternal Health' AND (NOT headline:'Supporting bright beginnings for mothers and babies' AND NOT headline:'Reporting racial disparities in healthcare quality spurs accountability')"
             />
 
             <Hits hitComponent={planResult} />
