@@ -6,14 +6,7 @@
 
 const path = require(`path`)
 
-const convertToSlug = text =>
-  text
-    .toLowerCase()
-    .replace(/ /g, "-")
-    .replace(/[^\w-]+/g, "")
-
 // Build some pages!
-
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
