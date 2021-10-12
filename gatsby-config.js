@@ -1,9 +1,9 @@
-const activeEnv = process.env.NODE_ENV
-console.log(`Using environment config: '${activeEnv}'`)
-
-require("dotenv").config({
-  path: `.env${activeEnv == "development" ? `.${activeEnv}` : ""}`,
-})
+// Load the .env file for the target environment
+if (process.env.DEPLOY_ENV) {
+  require("dotenv").config({
+    path: `.env.${process.env.DEPLOY_ENV}`,
+  })
+}
 
 module.exports = {
   pathPrefix: `/the-health-of-america/healthequity`,
@@ -92,7 +92,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `http://bcbs.lndo.site/`,
+        baseUrl: `.env.${process.env.DEPLOY_ENV}`,
         concurrentFileRequests: 60, // optional, defaults to `20`
         skipFileDownloads: false,
         disallowedLinkTypes: [
