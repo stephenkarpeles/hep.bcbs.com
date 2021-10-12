@@ -17,7 +17,11 @@
   --color-disabled: #cfd0d1;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-yellow: #feda7f;
+
+  /* Alerts */
+  --color-alert-blue: #003359;
+  --color-alert-yellow: #feda7f;
+  --color-alert-red: #aa272f;
 
   /* Typography */
   --font-condensed-light: "Condensed Light", "Helvetica Neue", Helvetica, Arial,

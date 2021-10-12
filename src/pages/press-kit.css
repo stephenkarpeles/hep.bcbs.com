@@ -13,7 +13,13 @@
     }
 
     @media (--extra-large-breakpoint) {
-      background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 12.5%,rgba(0,76,109,1) 12.5%,rgba(0,76,109,1) 100%);
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 12.5%,
+        rgba(0, 76, 109, 1) 12.5%,
+        rgba(0, 76, 109, 1) 100%
+      );
     }
 
     h1 {
@@ -47,7 +53,7 @@
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      box-shadow: 0px 0px 30px #0000001A;
+      box-shadow: 0px 0px 30px #0000001a;
 
       &-logo {
         background-color: var(--color-light-blue);
@@ -85,41 +91,7 @@
   }
 }
 
-.downloads {
-  margin: var(--spacer-3) auto;
-
-  &-cards {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-
-    .card {
-      flex-basis: 100%;
-      border-top: 6px solid var(--color-blue);
-      margin-bottom: var(--spacer-4);
-
-      @media (--medium-breakpoint-up) {
-        flex-basis: calc(33% -2.5rem);
-        margin-bottom: var(--spacer-3);
-      }
-
-      h3 {
-        margin-bottom: var(--spacer-3);
-      }
-
-      h4 {
-        font-size: var(--font-size-h5);
-        line-height: var(--line-height-h5);
-        color: var(--color-blue);
-        margin-top: var(--spacer);
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
 .cta {
-
   .inner-content {
     background-color: var(--color-light-gray);
     text-align: center;
@@ -149,12 +121,12 @@
 
 /* FAQs */
 @keyframes fadeIn {
-  from { 
-    opacity: 0; 
+  from {
+    opacity: 0;
   }
 
-  to   { 
-    opacity: 1; 
+  to {
+    opacity: 1;
   }
 }
 
@@ -164,23 +136,22 @@
 
   .accordion__heading {
     outline: none;
-    padding: 23px 0;
     cursor: pointer;
     color: var(--color-blue);
     font-size: 18px;
     line-height: var(--line-height-h5);
     padding-left: 40px;
     position: relative;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
 
     &:hover {
-      transition: opacity .3s ease;
-      opacity: .7;
+      transition: opacity 0.3s ease;
+      opacity: 0.7;
     }
   }
 
-  .accordion__item { 
-    border-bottom: 1px solid rgba(112, 112, 112, .3);
+  .accordion__item {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.3);
   }
 
   .accordion__panel {
@@ -190,9 +161,11 @@
 
   .accordion__button {
     outline: none;
+    padding: 24px 0 12px;
+    margin-bottom: 12px;
 
     &::before {
-      content: '+';
+      content: "+";
       line-height: 1;
       padding: 0;
       background: black;
@@ -210,26 +183,9 @@
 
     &[aria-expanded="true"] {
       &::before {
-        content: '\2013';
+        content: "\2013";
       }
     }
-  }
-}
-
-.faq-col-wrap {
-  display: flex;
-  justify-content: space-between;
-
-  @media (--small-breakpoint-down) {
-    flex-direction: column;
-  }
-}
-
-.faq-col {
-  width: calc(50% - 30px);
-
-  @media (--small-breakpoint-down) {
-    width: 100%;
   }
 }
 
