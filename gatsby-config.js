@@ -92,7 +92,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `.env.${process.env.DEPLOY_ENV}`,
+        baseUrl: `${process.env.DRUPAL_BASE_URL}`,
         concurrentFileRequests: 60, // optional, defaults to `20`
         skipFileDownloads: false,
         disallowedLinkTypes: [
