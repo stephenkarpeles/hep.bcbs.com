@@ -77,7 +77,7 @@ jobs:
 
       - name: Build Gatsby
         env:
-          DEPLOY_ENV: ${{ secrets[needs.context.outputs.env] }}
+          DEPLOY_ENV: ${{ needs.context.outputs.env }}
         run: gatsby build --prefix-paths
 
       - name: Include the AWS Codebuild file
