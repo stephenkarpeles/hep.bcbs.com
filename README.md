@@ -7,24 +7,23 @@
 
 ## 💫 Deployments
 
-**Note** There is no CI/CD pipleine setup for this repository.
+[![Build and Deploy](https://github.com/BCBSADigital/hep.bcbs.com/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/BCBSADigital/hep.bcbs.com/actions/workflows/build-and-deploy.yml)
 
-1. Build the Production Site
+This project uses [GitHub Actions](https://github.com/BCBSADigital/hep.bcbs.com/actions) for its
+CI/CD pipeline. The main workflow builds Gatsby and, for specific cases, deploys the output to AWS S3 buckets. This workflow is triggered by pushing any branch, a semantic tag, or by the GitHub API's
+[`workflow_dispatch`][workflow] and [`repository_dispatch`][repo] events.
 
-```
-cd hep.bcbs.com
-git pull master
-gatsby clean && gatsby build --prefix-paths
-```
+The steps of the workflow are:
 
-**Note** the `--prefix-paths` flag is important for moving this repo over to the main bcbs.com repo.
+1. Build Gatsby, retaining its cache between workflow runs
+2. Archive the Gatsby output
+3. Sync the archive contents to an AWS S3 bucket
+4. Clear the AWS Cloudfront cache for the static site
 
-2. Move the Build files
+Steps 3-4 will only run for the `dev`, `uat`, `stage`, and `master` branches or any tagged releases.
+The `master` branch would normally be excluded, but this workflow can be triggered by the GitHub API's
+[`workflow_dispatch`][workflow] and [`repository_dispatch`][repo] events, which use the repository's
+default branch.
 
-- Copy/Overwrite the contents of the `public` folder into a new feature branch in the main [BCBS.com repo](https://github.com/oomphinc/bcbs.com) `healthequity` directory.
-- Follow the BCBS.com GitHub release procedure.
-
-## Local development
-Had to run `gatsby develop --https` in order to get connection
-to https://bcbs.lndo.site/
-
+[workflow]: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#workflow_dispatch
+[repo]: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#repository_dispatch
