@@ -110,6 +110,7 @@ module.exports = {
           "node--health_equity_press_kit": "include=field_he_pk_download",
           "node--health_equity_blog": "include=field_he_featured_image",
           "node--health_equity_promotion": "include=field_he_featured_image",
+          "node--health_equity_plan_profile": "include=field_he_featured_image",
           "node--health_equity_advisory_panel":
             "include=field_he_ap_featured_image",
         },
