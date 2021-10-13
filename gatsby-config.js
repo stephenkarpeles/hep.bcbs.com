@@ -117,6 +117,10 @@ module.exports = {
           `vote_result--vote_result`,
           `password_policy--password_policy`,
           `file--file`,
+          `backup_migrate_source--backup_migrate_source`,
+          `backup_migrate_settings--backup_migrate_settings`,
+          `backup_migrate_destination--backup_migrate_destination`,
+          `backup_migrate_schedule--backup_migrate_schedule`,
         ],
         filters: {
           "node--health_equity_disparities":
