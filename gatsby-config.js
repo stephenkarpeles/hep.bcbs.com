@@ -2,7 +2,7 @@ const { flushSync } = require("react-dom")
 const fs = require("fs")
 
 // Load the .env file for the target environment
-if (process.env.DEPLOY_ENV) {
+if (process.env.DEPLOY_ENV && fs.existsSync(`.env.${process.env.DEPLOY_ENV}`)) {
   // Use the value of the DEPLOY_ENV envvar
   require("dotenv").config({
     path: `.env.${process.env.DEPLOY_ENV}`,
