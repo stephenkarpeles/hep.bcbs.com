@@ -20,7 +20,7 @@ if (process.env.DEPLOY_ENV && fs.existsSync(`.env.${process.env.DEPLOY_ENV}`)) {
 }
 
 module.exports = {
-  pathPrefix: `/the-health-of-america/healthequity`,
+  pathPrefix: `/`,
   siteMetadata: {
     title: `Blue Health Equity`,
     description: `Blue Cross and Blue Shield Companies’ National Health Equity Pledge.`,
@@ -106,8 +106,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: process.env.DRUPAL_BASE_URL,
-        // baseUrl: `http://bcbs.lndo.site/`,
+        baseUrl: process.env.DRUPAL_BASE_URL || `http://bcbs.lndo.site/`,
         concurrentFileRequests: 60, // optional, defaults to `20`
         skipFileDownloads: false,
         disallowedLinkTypes: [
