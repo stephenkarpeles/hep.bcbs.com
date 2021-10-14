@@ -20,7 +20,7 @@ if (process.env.DEPLOY_ENV && fs.existsSync(`.env.${process.env.DEPLOY_ENV}`)) {
 }
 
 module.exports = {
-  pathPrefix: `/`,
+  pathPrefix: `/the-health-of-america/healthequity`,
   siteMetadata: {
     title: `Blue Health Equity`,
     description: `Blue Cross and Blue Shield Companies’ National Health Equity Pledge.`,
@@ -106,7 +106,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: process.env.DRUPAL_BASE_URL || `http://bcbs.lndo.site/`,
+        baseUrl: process.env.DRUPAL_BASE_URL,
         concurrentFileRequests: 60, // optional, defaults to `20`
         skipFileDownloads: false,
         disallowedLinkTypes: [
@@ -117,10 +117,6 @@ module.exports = {
           `vote_result--vote_result`,
           `password_policy--password_policy`,
           `file--file`,
-          `backup_migrate_source--backup_migrate_source`,
-          `backup_migrate_settings--backup_migrate_settings`,
-          `backup_migrate_destination--backup_migrate_destination`,
-          `backup_migrate_schedule--backup_migrate_schedule`,
         ],
         filters: {
           "node--health_equity_disparities":
