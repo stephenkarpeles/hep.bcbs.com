@@ -30,6 +30,12 @@ export const getRelatedStories = node => {
     nodeType = "Podcast"
   } else if (nodeType === "HoA Video") {
     nodeType = "Video"
+  } else if (nodeType === "Press Release") {
+    nodeType = "Press Release"
+  } else if (nodeType === "Page") {
+    nodeType = "BCBSA"
+  } else if (nodeType === "Covid Article") {
+    nodeType = "Covid Article"
   }
 
   return (
