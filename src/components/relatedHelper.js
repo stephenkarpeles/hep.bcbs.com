@@ -50,7 +50,7 @@ export const getRelatedStories = node => {
         <span>{nodeType}</span>
       </div>
       <div className="pp-related__text">
-        <a href={`https://www.bcbs.com/${node.path.alias}`}>{node.title}</a>
+        <a href={`https://www.bcbs.com${node.path.alias}`}>{node.title}</a>
       </div>
     </li>
   )
