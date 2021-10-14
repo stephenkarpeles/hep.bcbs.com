@@ -100,7 +100,13 @@ export default function BlogTemplate({ data }) {
 
       {post.relationships.field_he_related_content?.length >= 1 && (
         <Fade>
-          <div className="pp-explore">
+          <div
+            className={`pp-explore ${
+              post.relationships.field_he_related_content?.length === 1
+                ? "pp-explore-single-card"
+                : ""
+            }`}
+          >
             <h2>Explore more stories</h2>
             <InstantSearch
               searchClient={searchClient}
