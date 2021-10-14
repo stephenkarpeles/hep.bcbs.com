@@ -7,7 +7,7 @@ if (process.env.DEPLOY_ENV && fs.existsSync(`.env.${process.env.DEPLOY_ENV}`)) {
   require("dotenv").config({
     path: `.env.${process.env.DEPLOY_ENV}`,
   })
-} else if (fs.existsSync('.env.local')) {
+} else if (fs.existsSync(".env.local")) {
   // Detect local environments
   require("dotenv").config({
     path: `.env.local`,
@@ -106,7 +106,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `http://bcbs.lndo.site/`,
+        baseUrl: process.env.DRUPAL_BASE_URL,
         concurrentFileRequests: 60, // optional, defaults to `20`
         skipFileDownloads: false,
         disallowedLinkTypes: [
