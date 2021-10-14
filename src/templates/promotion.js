@@ -21,9 +21,8 @@ export default function PromotionTemplate({ data }) {
   const alias = post.path.alias
 
   // get the related stories
-  const related = post.relationships.field_he_hoa_related_content.map(
-    getRelatedStories
-  )
+  const related =
+    post.relationships.field_he_hoa_related_content.map(getRelatedStories)
 
   const filters = `headline:"${post.relationships.field_he_related_content[0]?.title}" OR headline:"${post.relationships.field_he_related_content[1]?.title}"`
 
@@ -41,7 +40,7 @@ export default function PromotionTemplate({ data }) {
               <h4>Share</h4>
               <Sharing
                 title={post.title}
-                url={`https://www.bcbs.com/the-health-of-america/healthequity/${alias}`}
+                url={`https://www.bcbs.com/the-health-of-america/healthequity${alias}`}
               />
             </div>
           </div>
@@ -119,7 +118,7 @@ export default function PromotionTemplate({ data }) {
 }
 
 export const query = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     nodeHealthEquityPromotion(id: { eq: $id }) {
       title
       body {
