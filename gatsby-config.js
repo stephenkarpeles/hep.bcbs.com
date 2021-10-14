@@ -1,7 +1,21 @@
+const { flushSync } = require("react-dom")
+const fs = require("fs")
+
 // Load the .env file for the target environment
 if (process.env.DEPLOY_ENV) {
+  // Use the value of the DEPLOY_ENV envvar
   require("dotenv").config({
     path: `.env.${process.env.DEPLOY_ENV}`,
+  })
+} else if (fs.existsSync('.env.local')) {
+  // Detect local environments
+  require("dotenv").config({
+    path: `.env.local`,
+  })
+} else {
+  // Default to the stage environment
+  require("dotenv").config({
+    path: `.env.stage`,
   })
 }
 
