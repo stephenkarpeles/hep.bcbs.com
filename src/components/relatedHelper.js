@@ -5,6 +5,9 @@ import RelatedHOAInfographic from "../components/RelatedHOAInfographic"
 // import RelatedHOAArticle from "../components/RelatedHOAArticle"
 import RelatedHOAPodcast from "../components/RelatedHOAPodcast"
 import RelatedHOAVideo from "../components/RelatedHOAVideo"
+import RelatedBCBSPage from "../components/RelatedBCBSPage"
+import RelatedBCBSPressRelease from "../components/RelatedBCBSPressRelease"
+import RelatedBCBSCovidArticle from "../components/RelatedBCBSCovidArticle"
 
 const relatedStories = {
   node__hoa_page: RelatedHOAPage,
@@ -13,6 +16,9 @@ const relatedStories = {
   // node__blog_article: RelatedHOAArticle,
   node__podcast: RelatedHOAPodcast,
   node__video: RelatedHOAVideo,
+  node__page: RelatedBCBSPage,
+  node__press_release: RelatedBCBSPressRelease,
+  node__bcbs_covid_article: RelatedBCBSCovidArticle,
 }
 
 export const getRelatedStories = node => {
