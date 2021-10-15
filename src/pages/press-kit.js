@@ -77,7 +77,7 @@ const PressKitPage = props => {
       <section className="cta cta-contact" id="cta-contact">
         <div className="inner-content">
           <h3>Get in touch with our communications team</h3>
-          <a href="mailto:press@bcbsca.com">
+          <a href="mailto:press@bcbsa.com">
             <button type="button" className="button button-basic">
               Contact Press
             </button>
