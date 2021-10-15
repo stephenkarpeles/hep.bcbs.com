@@ -246,7 +246,7 @@
     }
   }
 
-  &__inner > p:first-child:first-letter {
+  &__inner > div > p:first-child:first-letter {
     color: var(--color-gray);
     font-family: var(--font-condensed-light);
     float: left;
