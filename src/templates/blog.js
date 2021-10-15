@@ -31,7 +31,7 @@ export default function BlogTemplate({ data }) {
   const backgroundImagePath = post.relationships.field_he_featured_image.uri.url
 
   return (
-    <div>
+    <div className="blog-template">
       <SEO title={post.title} description={post.body.summary} />
       <Fade>
         <div className="pp-hero">

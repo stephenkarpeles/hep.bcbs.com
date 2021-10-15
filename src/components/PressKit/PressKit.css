@@ -15,7 +15,7 @@
       margin: 0 2.5rem var(--spacer-4);
 
       @media (--medium-breakpoint-up) {
-        flex-basis: calc(33% -2.5rem);
+        flex-basis: calc(33% - 5rem);
         margin-bottom: var(--spacer-3);
       }
 
