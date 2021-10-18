@@ -26,6 +26,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [0.1.4] - 2021-10-18
 ### Changed
 - Update Hero Image for SEO component om Index page.
+- Bump `gatsby-source-drupal` from `4.14.0` to `4.14.1`
+- Bump `instantsearch.js` from `4.30.2` to `4.31.0`
+- Bump `babel-plugin-styled-components` from `1.13.2` to `1.13.3`
 
 ## [0.1.3] - 2021-10-18
 ### Changed
