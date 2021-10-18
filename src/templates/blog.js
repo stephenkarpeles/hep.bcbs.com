@@ -29,10 +29,15 @@ export default function BlogTemplate({ data }) {
   // build the background image url
   const backgroundImageBase = "https://www.bcbs.com"
   const backgroundImagePath = post.relationships.field_he_featured_image.uri.url
+  const backgroundImage = backgroundImageBase + backgroundImagePath
 
   return (
     <div className="blog-template">
-      <SEO title={post.title} description={post.body.summary} />
+      <SEO
+        title={post.title}
+        description={post.body.summary}
+        image={post.relationships.field_he_featured_image.uri.url}
+      />
       <Fade>
         <div className="pp-hero">
           <div className="pp-hero__share">
@@ -47,9 +52,7 @@ export default function BlogTemplate({ data }) {
           <div
             className="pp-hero__image"
             style={{
-              backgroundImage: `url(${
-                backgroundImageBase + backgroundImagePath
-              })`,
+              backgroundImage: `url(${backgroundImage})`,
             }}
           >
             <div className="pp-hero__meta">
