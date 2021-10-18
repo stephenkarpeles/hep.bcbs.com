@@ -20,9 +20,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- Fixed Hero Image for SEO component om Index page.
 
 ### Security
+
+## [0.1.4] - 2021-10-18
+### Changed
+- Update Hero Image for SEO component om Index page.
 
 ## [0.1.3] - 2021-10-18
 ### Changed
@@ -42,7 +45,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.3...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.4...HEAD
+[0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.0.0...0.1.1
