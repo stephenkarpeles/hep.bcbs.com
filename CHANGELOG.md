@@ -24,9 +24,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Security
 
 ## [0.1.3] - 2021-10-18
-
 ### Changed
-
 - Bump `gatsby` from `3.14.0` to `3.14.3`
 - Bump `gatsby-plugin-sharp` from `3.14.0` to `3.14.1`
 - Bump `browserslist` from `4.17.3` to `4.17.4`
@@ -36,15 +34,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - Bump `postcss` from `8.3.7` to `8.3.9`
 
 ## [0.1.2] - 2021-10-18
-
 ### Added
-
 - Initial Decoupled Frontend Release
 
 ## [0.1.1] - 2021-10-11
-
 ### Added
-
 - Test Release
 
 [unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.3...HEAD
