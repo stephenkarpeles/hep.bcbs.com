@@ -112,7 +112,9 @@ const IndexPage = props => {
       <SEO
         title="National Health Equity Strategy"
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
-        image={"../images/health-equity-hero.png"}
+        image={
+          "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero.png"
+        }
       />
       <Hero />
 

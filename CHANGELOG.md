@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- Fixed Hero Image for SEO component om Index page.
 
 ### Security
 

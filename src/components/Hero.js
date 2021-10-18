@@ -3,6 +3,9 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 
+const heroImage =
+  "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero.png"
+
 function Hero() {
   return (
     <div className="hero" style={{ display: "grid" }}>
@@ -19,7 +22,7 @@ function Hero() {
         // This is a presentational image, so the alt should be an empty string
         alt=""
         // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
-        src={"../images/health-equity-hero.png"}
+        src={heroImage}
         formats={["auto", "webp", "avif"]}
       />
       <div
