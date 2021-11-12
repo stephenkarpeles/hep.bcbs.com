@@ -14,7 +14,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- BCBSALLY-2451: Update posts being filtered by Algolia in Maternal Health
 
 ### Deprecated
 
@@ -23,6 +22,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.5] - 2021-11-12
+### Changed
+- BCBSALLY-2451: Update posts being filtered by Algolia in Maternal Health
 
 ## [0.1.4] - 2021-10-18
 ### Changed
@@ -49,7 +52,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.4...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.5...HEAD
+[0.1.4]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.4...0.1.5
 [0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.1...0.1.2
