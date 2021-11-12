@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- BCBSALLY-2451: Update posts being filtered by Algolia in Maternal Health
 
 ### Deprecated
 
