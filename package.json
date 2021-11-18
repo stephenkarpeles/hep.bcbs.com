@@ -61,7 +61,8 @@
     "postcss-pxtorem": "^6.0.0",
     "prettier": "2.4.1",
     "react-refresh": "^0.10.0",
-    "ws": "^8.2.2"
+    "ws": "^8.2.2",
+    "nth-check": ">=2.0.1"
   },
   "keywords": [
     "gatsby"
