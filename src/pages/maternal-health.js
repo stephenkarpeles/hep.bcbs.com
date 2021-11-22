@@ -193,7 +193,7 @@ const MaternalHealth = props => {
                     }}
                   >
                     Click to download our{" "}
-                    <a href="#">
+                    <a href="https://www.bcbs.com/sites/default/files/healthequity/presskit/2021-10/HOA_Maternal_Health_Disaparities_Factsheet-5096f98f1faa71a34e2cd7f7ab13516c.pdf">
                       Racial Disparities in Maternal Health Fact Sheet
                     </a>
                   </p>
