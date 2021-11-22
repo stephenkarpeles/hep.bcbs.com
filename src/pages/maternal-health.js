@@ -143,13 +143,75 @@ const MaternalHealth = props => {
                 filters="topic:'Maternal Health'"
               />
               <div className="maternal-health-results">
-                <h2 style={{ color: "#0072A7" }}>
-                  Showing Results for Maternal Health
-                </h2>
+                <div id="control">
+                  <h2 style={{ color: "#0072A7" }}>
+                    Showing Results for Maternal Health
+                  </h2>
+                </div>
+
+                <div id="variant1" style={{ display: "none" }}>
+                  <h2 style={{ color: "#0072A7" }}>
+                    Showing Results for Maternal Health
+                  </h2>
+                  <p
+                    style={{
+                      marginBottom: "3rem",
+                      fontSize: "1.125rem",
+                    }}
+                  >
+                    We are dedicated to ensuring that every mom gets the care
+                    she needs and that every baby has a healthy mom. Because yor
+                    health shouldn't depend on the color of yur skin or the
+                    neighborhood you live in. Read more to learn what BCBS
+                    companies are doing to help local communities through
+                    greater access to doulas, food and nutrition services,
+                    mental health resources, and more.
+                  </p>
+                </div>
+
+                <div id="variant2" style={{ display: "none" }}>
+                  <h2 style={{ color: "#0072A7" }}>
+                    Showing Results for Maternal Health
+                  </h2>
+                  <p
+                    style={{
+                      fontSize: "1.125rem",
+                    }}
+                  >
+                    We are dedicated to ensuring that every mom gets the care
+                    she needs and that every baby has a healthy mom. Because yor
+                    health shouldn't depend on the color of yur skin or the
+                    neighborhood you live in.
+                  </p>
+                  <img
+                    src="https://www.bcbs.com/sites/default/files/uploads/inline-images/Maternal_Health_graphic.png"
+                    alt=""
+                  />
+                  <p
+                    style={{
+                      fontSize: "1.125rem",
+                    }}
+                  >
+                    Click to download our{" "}
+                    <a href="#">
+                      Racial Disparities in Maternal Health Fact Sheet
+                    </a>
+                  </p>
+                  <p
+                    style={{
+                      marginBottom: "3rem",
+                      fontSize: "1.125rem",
+                    }}
+                  >
+                    Read more to learn what BCBS companies are doing to help
+                    local communities through greater access to doulas, food and
+                    nutrition services, mental health resources, and more.
+                  </p>
+                </div>
                 <p
                   style={{
                     maxWidth: 800,
-                    marginBottom: "3rem",
+                    marginBottom: "1rem",
                     fontSize: "1.125rem",
                   }}
                 >
