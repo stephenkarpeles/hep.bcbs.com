@@ -12,10 +12,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
-- BCBSALLY-2446: Add sections for Maternal Health landing page AB Test.
 
 ### Changed
-- Bump `nth-check` from `^1.0.2` to `>=2.0.1`
 
 ### Deprecated
 
@@ -24,6 +22,25 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.6] - 2021-11-22
+### Added
+- BCBSALLY-2446: Add sections for Maternal Health landing page AB Test.
+
+### Changed
+- Bump `react-instantsearch-dom` from `6.12.1` to `6.15.0``
+- Bump `postcss` from `8.3.9` to `8.3.11`
+- Bump `gatsby` from `3.14.5` to `3.14.6`
+- Bump `gatsby-source-drupal` from `4.14.2` to `4.14.3`
+- Bump `nth-check` from `^1.0.2` to `>=2.0.1`
+- Bump `gatsby-plugin-sharp` from `3.14.1` to `3.14.3`
+- Bump `gatsby-source-drupal` from `4.14.1` to `4.14.2`
+- Bump `algoliasearch` from `4.10.5` to `4.11.0`
+- Bump `instantsearch.js` from `4.31.0` to `4.33.2`
+- Bump `styled-components` from `5.3.1` to `5.3.3`
+- Bump `instantsearch.js` from `4.31.0` to `4.33.1`
+- Bump `browserslist` from `4.17.4` to `4.18.1`
+- Bump `gatsby` from `3.14.3` to `3.14.5`
 
 ## [0.1.5] - 2021-11-12
 ### Changed
@@ -54,7 +71,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.5...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.6...HEAD
+[0.1.5]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.5...0.1.6
 [0.1.4]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.4...0.1.5
 [0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.2...0.1.3
