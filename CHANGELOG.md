@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- Bump `nth-check` from `^1.0.2` to `>=2.0.1`
 
 ### Deprecated
 
