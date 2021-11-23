@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
-- BCBSALLY-2446: Add Google Optimize Script for AB Testing
 
 ### Changed
 
@@ -23,6 +22,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.7] - 2021-11-22
+### Added
+- BCBSALLY-2446: Add Google Optimize Script for AB Testing
+
+### Changed
+- Bump `babel-plugin-styled-components` from `1.13.3` to `2.0.1`
+- Bump `@pmmmwh/react-refresh-webpack-plugin` from `0.5.1` to `0.5.2`
+- Bump `postcss-merge-rules` from `5.0.2` to `5.0.3`
 
 ## [0.1.6] - 2021-11-22
 ### Added
