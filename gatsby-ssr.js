@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/ssr-apis/
  */
 
-import * as React from "react"
+const React = require("react")
 
 /**
  * Add the Google Optimize Script to Health Equity
