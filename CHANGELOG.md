@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- BCBSALLY-2469: Hide Health Disparities block temporarily
 
 ### Deprecated
 
