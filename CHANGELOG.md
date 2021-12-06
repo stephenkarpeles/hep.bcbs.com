@@ -14,7 +14,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- BCBSALLY-2469: Hide Health Disparities block temporarily
 
 ### Deprecated
 
@@ -23,6 +22,18 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.8] - 2021-12-06
+### Changed
+- BCBSALLY-2469: Hide Health Disparities block temporarily
+- Bump `postcss` from `8.3.11` to `8.4.4`
+- Bump `immer` from `9.0.6` to `9.0.7`
+- Bump `prettier` from `2.4.1` to `2.5.0`
+- Bump `ws` from `8.2.3` to `8.3.0`
+- Bump `is-svg` from `4.3.1` to `4.3.2`
+- Bump `react-instantsearch-dom` from `6.15.0` to `6.16.0`
+- Bump `babel-plugin-styled-components` from `2.0.1` to `2.0.2`
+- Bump `@pmmmwh/react-refresh-webpack-plugin` from `0.5.2` to `0.5.3`
 
 ## [0.1.7] - 2021-11-22
 ### Added
@@ -81,7 +92,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.6...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.8...HEAD
+[0.1.7]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.7...0.1.8
+[0.1.6]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.6...0.1.7
 [0.1.5]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.5...0.1.6
 [0.1.4]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.4...0.1.5
 [0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.3...0.1.4
