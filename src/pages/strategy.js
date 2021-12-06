@@ -178,13 +178,6 @@ const StrategyPage = props => {
                   </li>
                 </ul>
               </div>
-              <div className="lead--details-summary">
-                The multi-year strategy will focus on four conditions that
-                disproportionately affect communities of color: maternal health,
-                behavioral health, diabetes and cardiovascular conditions. BCBSA
-                will first focus on maternal health, then behavioral health in
-                2021.
-              </div>
             </div>
           </Fade>
         </div>
