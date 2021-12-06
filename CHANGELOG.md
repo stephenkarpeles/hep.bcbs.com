@@ -18,11 +18,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
-- BCBSALLY-2469: Hide Health Disparities pargaraph temporarily
 
 ### Fixed
 
 ### Security
+
+## [0.1.9] - 2021-12-06
+### Chnaged
+- BCBSALLY-2469: Hide Health Disparities pargaraph temporarily
 
 ## [0.1.8] - 2021-12-06
 ### Changed
