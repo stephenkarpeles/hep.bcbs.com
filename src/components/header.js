@@ -79,6 +79,15 @@ const Header = ({ props, siteTitle }) => {
 
           <Desktop>
             <AlgoliaSiteSearch />
+            <a
+              class="langLink"
+              data-href="https://es.bcbs.com/"
+              href="https://es.bcbs.com/"
+              data-lang="es"
+              mporgnav="href"
+            >
+              Español
+            </a>
           </Desktop>
 
           <MobileTablet>
