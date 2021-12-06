@@ -18,11 +18,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
-- BCBSALLY-2469: Hide Health Disparities pargaraph temporarily
 
 ### Fixed
 
 ### Security
+
+## [0.1.9] - 2021-12-06
+### Chnaged
+- BCBSALLY-2469: Hide Health Disparities pargaraph temporarily
 
 ## [0.1.8] - 2021-12-06
 ### Changed
@@ -93,7 +96,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.8...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.9...HEAD
+[0.1.8]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.8...0.1.9
 [0.1.7]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.7...0.1.8
 [0.1.6]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.6...0.1.7
 [0.1.5]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.5...0.1.6
