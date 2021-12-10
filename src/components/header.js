@@ -80,7 +80,7 @@ const Header = ({ props, siteTitle }) => {
           <Desktop>
             <AlgoliaSiteSearch />
             <a
-              class="langLink"
+              className="langLink"
               data-href="https://es.bcbs.com/"
               href="https://es.bcbs.com/"
               data-lang="es"
