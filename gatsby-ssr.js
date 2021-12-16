@@ -10,7 +10,7 @@ const React = require("react")
  * Add the Google Optimize Script to Health Equity
  * @see https://medium.com/@pisanocaroline/optimizing-google-optimize-in-gatsby-js-e67d0a59bfa1
  */
-exports.onRenderBody = ({ setHeadComponents }) => {
+exports.onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
   //if (process.env.DEPLOY_ENV === `prod`) {
   setHeadComponents([
     // Add Google Optimize Script
@@ -63,6 +63,17 @@ exports.onRenderBody = ({ setHeadComponents }) => {
         }`,
       }}
     />,
-  ])
+  ]),
+    setPostBodyComponents([
+      // MotionPoint closing script
+      <script
+        type="text/javascript"
+        key="motionpoint-script-closing"
+        id="mpelid"
+        src="//bcbscom.mpeasylink.com/mpel/mpel.js"
+        async
+      ></script>,
+    ])
   // }
 }
+1
