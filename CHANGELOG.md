@@ -18,11 +18,20 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
-- BCBSALLY-2270: Remove Google Optimize scripts from SSR
 
 ### Fixed
 
 ### Security
+
+## [0.1.10] - 2021-12-17
+### Changed
+- Bump `postcss` from `8.4.4` to `8.4.5`
+- Bump `prettier` from `2.5.0` to `2.5.1`
+- Bump `instantsearch.js` from `4.33.2` to `4.36.0`
+- Bump `react-instantsearch-dom` from `6.16.0` to `6.18.0`
+
+### Removed
+- BCBSALLY-2270: Remove Google Optimize scripts from SSR
 
 ## [0.1.9] - 2021-12-06
 ### Chnaged
