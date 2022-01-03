@@ -1735,6 +1735,8 @@ main div h1 + h4 + form ~ a {
   margin-left: 2rem;
   color: #0072a7;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 
   &:hover {
     color: #000;
@@ -1742,7 +1744,24 @@ main div h1 + h4 + form ~ a {
   }
 
   &::before {
-    content: "\ea52";
+    font-size: 2rem;
+    content: "\ea6b";
     display: inline-block;
+    font-family: "bcbs-icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-align: center;
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
