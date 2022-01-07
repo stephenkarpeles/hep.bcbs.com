@@ -877,9 +877,9 @@ header {
       color: var(--color-white);
       font-size: var(--font-size-base);
       line-height: var(--line-height-base);
-      font-family: var(--font-roman);
       width: 100%;
       padding-left: var(--spacer-15);
+      font-family: var(--font-roman);
       position: relative;
     }
 
@@ -1728,4 +1728,40 @@ main div h1 + h4 + form ~ a {
 
 #maternal {
   margin-top: -7.5rem;
+}
+
+/* Language Selector */
+.langLink {
+  margin-left: 2rem;
+  color: #0072a7;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  &::before {
+    font-size: 2rem;
+    content: "\ea6b";
+    display: inline-block;
+    font-family: "bcbs-icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-align: center;
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }

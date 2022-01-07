@@ -38,7 +38,8 @@
 
     &-text {
       font-size: var(--font-size-base-small);
-      color: #dedede;
+      /* color: #dedede; not accessible */
+      color: #fff;
       max-width: 460px;
     }
   }
