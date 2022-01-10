@@ -6,14 +6,14 @@
 
 const React = require("react")
 
-/**
- * Add the Google Optimize Script to Health Equity
- * @see https://medium.com/@pisanocaroline/optimizing-google-optimize-in-gatsby-js-e67d0a59bfa1
- */
 exports.onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
   setHeadComponents([
     // Add MotionPoint Script
-    <script src="/mp_linkcode.js" key="motionpoint-script"></script>,
+    <script
+      type="text/javascript"
+      key="motionpoint-script"
+      src="mp_linkcode.js"
+    ></script>,
     <script
       key="motionpoint-script-data"
       dangerouslySetInnerHTML={{
