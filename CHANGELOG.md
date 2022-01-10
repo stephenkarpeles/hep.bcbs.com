@@ -23,6 +23,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.12] - 2022-01-10
+### Changed
+- BCBSALLY-2270: Add MotionPoint scripts for Language Translation
+
 ## [0.1.11] - 2022-01-07
 ### Added
 - BCBSALLY-2270: Add MotionPoint scripts for Language Translation
@@ -110,7 +114,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.11...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.12...HEAD
+[0.1.11]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.11...0.1.12
 [0.1.10]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.10...0.1.11
 [0.1.9]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.9...0.1.10
 [0.1.8]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.8...0.1.9
