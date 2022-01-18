@@ -79,9 +79,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-schema-snapshot`,
       options: {
-        // include: {
-        //   types: [`node__hoa_insight`]
-        // },
+        path: `schema.gql`,
         update: process.env.GATSBY_UPDATE_SCHEMA_SNAPSHOT,
       },
     },
