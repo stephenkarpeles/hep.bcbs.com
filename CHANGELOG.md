@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
+- BCBSALLY-2418: Add `gatsby-plugin-schema-snapshot`
 
 ### Changed
 - Bump `engine.io` from `4.1.1` to `4.1.2`
@@ -25,10 +26,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
-
-## [0.1.15] - 2022-01-25
-### Added
-- BCBSALLY-2418: Add `gatsby-plugin-schema-snapshot`
 
 ## [0.1.13] - 2022-01-11
 ### Changed
