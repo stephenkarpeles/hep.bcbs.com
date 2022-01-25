@@ -26,6 +26,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.15] - 2022-01-25
+### Added
+- BCBSALLY-2418: Add `gatsby-plugin-schema-snapshot
+
 ## [0.1.13] - 2022-01-11
 ### Changed
 - BCBSALLY-2270: Modify placement of MP code.
