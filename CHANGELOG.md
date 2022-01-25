@@ -23,6 +23,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.14] - 2022-01-25
+### Changed
+- Bump `engine.io` from `4.1.1` to `4.1.2`
+- Bump `follow-redirects` from `1.14.5` to `1.14.7` 
+- Bump `nanoid` from `3.1.30` to `3.1.31`
+
 ## [0.1.13] - 2022-01-11
 ### Changed
 - BCBSALLY-2270: Modify placement of MP code.
