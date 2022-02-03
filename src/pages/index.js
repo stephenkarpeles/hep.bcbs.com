@@ -161,20 +161,31 @@ const IndexPage = props => {
             <div className="profiles-header">
               <div className="profiles-header-title">
                 <h2 style={{ color: "#0072A7" }}>Maternal Health</h2>
-                <p
-                  style={{
-                    maxWidth: 800,
-                    marginBottom: "3rem",
-                    fontSize: "1.125rem",
-                  }}
-                >
-                  See what we're doing to improve maternal health.
-                </p>
               </div>
               <div className="profiles-header-link">
                 <Link className="view-all" to="/maternal-health">
                   View All&nbsp;&nbsp;&rarr;
                 </Link>
+              </div>
+              <div
+                className="profiles-header-intro"
+                style={{
+                  marginBottom: "3rem",
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "1.125rem",
+                  }}
+                >
+                  We are deicated to ensuring that every mom gets the care she
+                  needs and that every baby has a healthy mom. Because your
+                  health should'nt depend on the color of your skinor the
+                  neighborhood you live in. Read more to learn what BCBS
+                  companies are doing to help local communities through greater
+                  access to doulas, food and nutrition services, mental health
+                  resources, and more.
+                </p>
               </div>
             </div>
           </div>
