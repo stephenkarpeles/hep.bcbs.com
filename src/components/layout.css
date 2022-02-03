@@ -1192,7 +1192,7 @@ header {
 
   &-header {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: baseline;
     justify-content: space-between;
 

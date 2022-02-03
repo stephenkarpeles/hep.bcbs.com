@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Added
 - BCBSALLY-2418: Add `gatsby-plugin-schema-snapshot`
+- BCBSALLY-2536: Update homepage text for Maternal Health section
 
 ### Changed
 - Bump `engine.io` from `4.1.1` to `4.1.2`
