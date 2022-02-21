@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
+- BCBSALLY-2542: Remove CSS generated text from VoiceSearch no longer in use
 
 ### Fixed
 

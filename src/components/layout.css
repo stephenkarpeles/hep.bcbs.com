@@ -1316,38 +1316,6 @@ header {
   } */
 }
 
-/* Algolia - Voice Search */
-.ais-VoiceSearch {
-  background-color: var(--color-light-gray);
-  height: 100%;
-
-  .mobile-search & {
-    height: 56px;
-  }
-
-  &-button {
-    color: var(--color-gray);
-    background: none;
-    border: none;
-    height: inherit;
-    padding: 0;
-
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    @media (--large-breakpoint-up) {
-      &::after {
-        content: "Search by Voice";
-        color: inherit;
-        font-size: var(--font-size-base-small);
-        display: block;
-      }
-    }
-  }
-}
-
 /* Algolia - Highlights */
 .ais-Highlight {
   display: block;
