@@ -55,6 +55,7 @@ function Newsletter() {
                       className="mc_fieldset gdprRequired mc-field-group"
                       name="interestgroup_field"
                     >
+                      <legend>GDPR Marketing Permissions</legend>
                       <label className="checkbox subfield" htmlFor="gdpr_31112">
                         <input
                           type="checkbox"

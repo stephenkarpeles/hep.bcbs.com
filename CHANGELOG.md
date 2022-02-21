@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Added
 - BCBSALLY-2545: add siteTitle prop to footer logo to generate alt attribute
+- BCBSALLY-2541: Add <legend> to fieldsets on MailChimp form
 
 ### Changed
 
