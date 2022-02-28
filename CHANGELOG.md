@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- Bump `node-fetch` from `2.6.1` to `2.6.7` 
 
 ### Deprecated
 
