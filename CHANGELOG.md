@@ -12,19 +12,28 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
-- BCBSALLY-2545: add siteTitle prop to footer logo to generate alt attribute
-- BCBSALLY-2541: Add <legend> to fieldsets on MailChimp form
 
 ### Changed
 
 ### Deprecated
 
 ### Removed
-- BCBSALLY-2542: Remove CSS generated text from VoiceSearch no longer in use
 
 ### Fixed
 
 ### Security
+
+## [0.1.15] - 2022-03-01
+### Added
+- BCBSALLY-2545: add siteTitle prop to footer logo to generate alt attribute
+- BCBSALLY-2541: Add <legend> to fieldsets on MailChimp form
+
+### Changed
+- Bump `browserslist` from `4.19.1` to `4.19.3`
+- Bump `babel-plugin-styled-components` from `2.0.2` to `2.0.3`
+
+### Removed
+- BCBSALLY-2542: Remove CSS generated text from VoiceSearch no longer in use
 
 ## [0.1.14] - 2022-02-14
 ### Added
@@ -131,17 +140,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.13...HEAD
-[0.1.12]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.12...0.1.13
-[0.1.11]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.11...0.1.12
-[0.1.10]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.10...0.1.11
-[0.1.9]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.9...0.1.10
-[0.1.8]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.8...0.1.9
-[0.1.7]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.7...0.1.8
-[0.1.6]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.6...0.1.7
-[0.1.5]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.5...0.1.6
-[0.1.4]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.4...0.1.5
-[0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.3...0.1.4
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.15...HEAD
+[0.1.15]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.14...0.1.15
+[0.1.14]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.13...0.1.14
+[0.1.13]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.12...0.1.13
+[0.1.12]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.11...0.1.12
+[0.1.11]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.10...0.1.11
+[0.1.10]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.9...0.1.10
+[0.1.9]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.8...0.1.9
+[0.1.8]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.7...0.1.8
+[0.1.7]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.6...0.1.7
+[0.1.6]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.5...0.1.6
+[0.1.5]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.4...0.1.5
+[0.1.4]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.0.0...0.1.1
