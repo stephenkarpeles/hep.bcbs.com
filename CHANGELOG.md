@@ -14,7 +14,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- Bump `node-fetch` from `2.6.1` to `2.6.7` 
 
 ### Deprecated
 
@@ -23,6 +22,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.16] - 2022-03-10
+### Changed
+- Bump `node-fetch` from `2.6.1` to `2.6.7` 
+- Bump `babel-plugin-styled-components` from `2.0.3` to `2.0.6`
+- Bump `postcss-mixins` from `9.0.1` to `9.0.2`
+- Bump `instantsearch.js` from `4.38.1` to `4.39.1`
+- Bump `gatsby-plugin-schema-snapshot` from `3.7.0` to `3.9.0`
+- Bump `postcss` from `8.4.6` to `8.4.8`
 
 ## [0.1.15] - 2022-03-01
 ### Added
@@ -141,7 +149,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.15...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.16...HEAD
+[0.1.16]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.15...0.1.16
 [0.1.15]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.14...0.1.15
 [0.1.14]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.13...0.1.14
 [0.1.13]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.12...0.1.13
