@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- BCBSALLY-2588: Text updates to Maternal Health section of homepage.
 
 ### Deprecated
 

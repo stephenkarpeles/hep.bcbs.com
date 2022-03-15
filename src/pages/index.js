@@ -178,9 +178,9 @@ const IndexPage = props => {
                     fontSize: "1.125rem",
                   }}
                 >
-                  We are deicated to ensuring that every mom gets the care she
+                  We are dedicated to ensuring that every mom gets the care she
                   needs and that every baby has a healthy mom. Because your
-                  health should'nt depend on the color of your skinor the
+                  health shouldn't depend on the color of your skin or the
                   neighborhood you live in. Read more to learn what BCBS
                   companies are doing to help local communities through greater
                   access to doulas, food and nutrition services, mental health
