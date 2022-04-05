@@ -1,9 +1,12 @@
 import React from "react"
 import "./newsletter.css"
 
-function Newsletter() {
+function Newsletter(props) {
   return (
-    <section className="newsletter" id="newsletter">
+    <section
+      className="newsletter"
+      id={props.index !== "1" ? `newsletter-${props.index}` : "newsletter"}
+    >
       <div className="inner-content">
         <div className="newsletter-lead">
           <div className="newsletter-lead-heading">Stay Connected</div>

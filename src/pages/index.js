@@ -235,10 +235,10 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <Newsletter />
+      <Newsletter index="1" />
       <AdvisoryBoard />
       <PressKitBanner />
-      <Newsletter />
+      <Newsletter index="2" />
     </>
   )
 }
