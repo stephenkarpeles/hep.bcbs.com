@@ -1745,6 +1745,7 @@ main div h1 + h4 + form ~ a {
     padding: 1rem 0;
 
     &-title {
+      font-size: 6rem;
       flex-basis: 4%;
     }
     &-content {
@@ -1752,6 +1753,87 @@ main div h1 + h4 + form ~ a {
     }
     &-img {
       flex-basis: 20%;
+    }
+  }
+
+  &-action-one {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-two {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-three {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-four {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-five {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-six {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-seven {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-eight {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-nine {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
+    }
+  }
+  &-action-ten {
+    &-title {
+    }
+    &-content {
+    }
+    &-img {
     }
   }
 }
