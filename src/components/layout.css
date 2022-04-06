@@ -1733,3 +1733,25 @@ main div h1 + h4 + form ~ a {
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
+/* Maternal Health Equity Actions */
+#mhea {
+}
+
+.mhea {
+  &-action {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem 0;
+
+    &-title {
+      flex-basis: 4%;
+    }
+    &-content {
+      flex-basis: 76%;
+    }
+    &-img {
+      flex-basis: 20%;
+    }
+  }
+}
