@@ -154,7 +154,7 @@ const MaternalHealthActions = props => {
               </div>
               <div className="mhea-action-img mhea-action-eight-img">
                 <StaticImage
-                  src={"../images/mhea/Doctor_consultation.png"}
+                  src={"../images/mhea/Doctor_collaborative.png"}
                   alt=""
                 />
               </div>

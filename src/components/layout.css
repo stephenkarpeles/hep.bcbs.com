@@ -1742,17 +1742,25 @@ main div h1 + h4 + form ~ a {
   &-action {
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
     padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #d97d2d;
 
     &-title {
-      font-size: 6rem;
-      flex-basis: 4%;
+      font-size: 10rem;
+      font-family: var(--font-condensed-light);
+      line-height: initial;
+      margin-right: 2rem;
     }
     &-content {
-      flex-basis: 76%;
+      font-size: 30px;
+      font-family: var(--font-roman);
+      line-height: initial;
+      padding-top: 0.5rem;
     }
     &-img {
-      flex-basis: 20%;
     }
   }
 
@@ -1762,6 +1770,7 @@ main div h1 + h4 + form ~ a {
     &-content {
     }
     &-img {
+      max-width: 14%;
     }
   }
   &-action-two {
@@ -1770,6 +1779,7 @@ main div h1 + h4 + form ~ a {
     &-content {
     }
     &-img {
+      max-width: 28%;
     }
   }
   &-action-three {
@@ -1786,6 +1796,7 @@ main div h1 + h4 + form ~ a {
     &-content {
     }
     &-img {
+      max-width: 42%;
     }
   }
   &-action-five {
@@ -1794,6 +1805,7 @@ main div h1 + h4 + form ~ a {
     &-content {
     }
     &-img {
+      max-width: 32%;
     }
   }
   &-action-six {
@@ -1810,6 +1822,7 @@ main div h1 + h4 + form ~ a {
     &-content {
     }
     &-img {
+      max-width: 28%;
     }
   }
   &-action-eight {
@@ -1818,6 +1831,7 @@ main div h1 + h4 + form ~ a {
     &-content {
     }
     &-img {
+      max-width: 52%;
     }
   }
   &-action-nine {
