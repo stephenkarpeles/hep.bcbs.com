@@ -67,7 +67,7 @@ const MaternalHealthActions = props => {
               <div className="mhea-action-content mhea-action-one-content">
                 Engage maternal voices and community stakeholders to craft,
                 build and sustain a holistic meaternal health program. Form
-                public and private partnershipsto address root causes of
+                public and private partnerships to address root causes of
                 disparities, inequalities and SODH.
               </div>
             </div>
