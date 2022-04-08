@@ -23,6 +23,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.19] - 2022-04-08
+### Changed
+- BCBSALLY-2606: Add SEO Image parameter
+- BCBSALLY-2606: Remove Algolia duplicates
+
 ## [0.1.18] - 2022-04-08
 ### Added
 - BCBSALLY-2606: Build Maternal Health Infographic
@@ -157,7 +162,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.18...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.19...HEAD
+[0.1.19]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.18...0.1.19
 [0.1.18]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.17...0.1.18
 [0.1.17]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.16...0.1.17
 [0.1.16]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.15...0.1.16
