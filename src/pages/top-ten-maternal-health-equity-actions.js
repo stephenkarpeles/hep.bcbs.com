@@ -40,7 +40,7 @@ const MaternalHealthActions = props => {
               <div className="pp-hero__meta-content">
                 <div className="pp-hero__category">Maternal Health</div>
                 <div className="pp-hero__date">
-                  <span>Published May 11, 2022</span>
+                  <span>Published April 11, 2022</span>
                 </div>
                 <div className="pp-hero__title">
                   <h1>Top Ten Maternal Health Equity Actions</h1>
