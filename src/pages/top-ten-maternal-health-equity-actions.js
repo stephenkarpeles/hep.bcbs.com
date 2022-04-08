@@ -57,7 +57,6 @@ const MaternalHealthActions = props => {
       <section className="mhea pp-main" id="meha">
         <Fade>
           <div className="inner-content">
-            <h2>Ten Actions to Advance Maternal Health Equity</h2>
             <p>
               One year ago, the Blue Cross Blue Shield Association set a bold
               goal to reduce racial disparities in maternal health by 50% in

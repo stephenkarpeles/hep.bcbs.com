@@ -1941,3 +1941,19 @@ main div h1 + h4 + form ~ a {
     }
   }
 }
+
+#infographic-banner {
+  .press-kit-banner-box h2,
+  .press-kit-banner-box p {
+    text-align: center;
+  }
+
+  .press-kit-banner-box a {
+    display: block;
+    text-align: center;
+  }
+
+  .press-kit-banner-box button {
+    white-space: nowrap;
+  }
+}
