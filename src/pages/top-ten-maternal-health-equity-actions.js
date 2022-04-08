@@ -7,7 +7,7 @@ import Sharing from "../components/Sharing/sharing"
 import Newsletter from "../components/Newsletter/Newsletter"
 
 // Images
-import backgroundImage from "../images/mhea/iStock-1165255501.jpg"
+import backgroundImage from "../images/mhea/iStock-459128749.jpg"
 import { StaticImage } from "gatsby-plugin-image"
 
 const MaternalHealthActions = props => {
@@ -40,13 +40,13 @@ const MaternalHealthActions = props => {
               <div className="pp-hero__meta-content">
                 <div className="pp-hero__category">Maternal Health</div>
                 <div className="pp-hero__date">
-                  <span>Published</span>
+                  <span>Published May 11, 2022</span>
                 </div>
                 <div className="pp-hero__title">
                   <h1>Top Ten Maternal Health Equity Actions</h1>
                 </div>
                 <div className="pp-hero__author">
-                  <span></span>
+                  <span>BCBS</span>
                 </div>
               </div>
             </div>
