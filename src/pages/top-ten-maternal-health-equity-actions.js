@@ -7,7 +7,7 @@ import Sharing from "../components/Sharing/sharing"
 import Newsletter from "../components/Newsletter/Newsletter"
 
 // Images
-import backgroundImage from "../images/mhea/iStock-459128749.jpg"
+import backgroundImage from "../images/mhea/iStock-1165255501.jpg"
 import { StaticImage } from "gatsby-plugin-image"
 
 const MaternalHealthActions = props => {
