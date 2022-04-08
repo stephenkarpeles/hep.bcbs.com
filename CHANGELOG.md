@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
-- BCBSALLY-2606: Build Maternal Health Infographic
 
 ### Changed
 
@@ -23,6 +22,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.18] - 2022-04-08
+### Added
+- BCBSALLY-2606: Build Maternal Health Infographic
 
 ## [0.1.17] - 2022-03-15
 ### Changed
@@ -154,7 +157,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.17...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.18...HEAD
+[0.1.18]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.17...0.1.18
 [0.1.17]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.16...0.1.17
 [0.1.16]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.15...0.1.16
 [0.1.15]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.14...0.1.15
