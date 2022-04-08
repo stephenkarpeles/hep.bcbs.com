@@ -1794,7 +1794,7 @@ main div h1 + h4 + form ~ a {
     &-content {}
 
     &-img {
-      margin: 0 3rem 1rem;
+      margin: 0 25% 1rem;
 
       @media (--medium-breakpoint-up) {
         margin: 0 0 0 1rem;
@@ -1871,7 +1871,7 @@ main div h1 + h4 + form ~ a {
       }
     }
     &-img {
-      margin: 0 3rem 1rem;
+      margin: 0 25% 1rem;
 
       @media (--medium-breakpoint-up) {
         margin: 0 0 0 1rem;
@@ -1932,7 +1932,7 @@ main div h1 + h4 + form ~ a {
     }
 
     &-img {
-      margin: 0 3rem 1rem;
+      margin: 0 25% 1rem;
 
       @media (--medium-breakpoint-up) {
         margin: 0 0 0 1rem;
