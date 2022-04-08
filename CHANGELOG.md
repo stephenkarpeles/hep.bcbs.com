@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
+- BCBSALLY-2606: Build Maternal Health Infographic
 
 ### Changed
 
