@@ -17,7 +17,7 @@ const MaternalHealthActions = props => {
     <div className="promotion-template">
       <SEO
         title="Top Ten Maternal Health Equity Actions"
-        description=""
+        description="One year ago, the Blue Cross Blue Shield Association set a bold goal to reduce racial disparities in maternal health by 50% in five years."
         image={
           "https://www.bcbs.com/the-health-of-america/healthequity/static/iStock-1165255501-92c51cf120a409d35b00d8bcbc9ac2d3.jpg"
         }
