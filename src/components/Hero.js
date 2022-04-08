@@ -51,8 +51,11 @@ function Hero() {
               >
                 View Latest Stories
               </Link>
-              <Link className="button button-outline" to="/strategy">
-                Read Our Strategy
+              <Link
+                className="button button-outline"
+                to="/improving-black-maternal-health-starts-listening"
+              >
+                Message from our CEO
               </Link>
             </div>
           </Fade>
