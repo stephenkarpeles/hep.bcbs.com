@@ -15,7 +15,13 @@ const MaternalHealthActions = props => {
 
   return (
     <div className="promotion-template">
-      <SEO title="Top Ten Maternal Health Equity Actions" description="" />
+      <SEO
+        title="Top Ten Maternal Health Equity Actions"
+        description=""
+        image={
+          "https://www.bcbs.com/the-health-of-america/healthequity/static/iStock-1165255501-92c51cf120a409d35b00d8bcbc9ac2d3.jpg"
+        }
+      />
 
       <Fade>
         <div className="pp-hero">
