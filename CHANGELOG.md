@@ -25,6 +25,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - BCBSALLY-2602: Fix article card link not containing text
 
 ### Security
+- BCBSALLY-2604: Bump `node-fetch` from `3.2.0` to `3.2.3`
+- BCBSALLY-2604: Bump `algoliasearch` from `4.12.1` to `4.13.0`
 
 ## [0.1.21] - 2022-04-20
 ### Security
