@@ -53,7 +53,7 @@ function Hero() {
               </Link>
               <Link
                 className="button button-outline"
-                to="/improving-black-maternal-health-starts-listening"
+                to="/taking-action-to-reduce-maternal-health-disparities"
               >
                 Message from our CEO
               </Link>
