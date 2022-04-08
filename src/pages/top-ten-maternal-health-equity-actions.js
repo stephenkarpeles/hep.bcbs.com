@@ -57,6 +57,31 @@ const MaternalHealthActions = props => {
       <section className="mhea pp-main" id="meha">
         <Fade>
           <div className="inner-content">
+            <h2>Ten Actions to Advance Maternal Health Equity</h2>
+            <p>
+              One year ago, the Blue Cross Blue Shield Association set a bold
+              goal to reduce racial disparities in maternal health by 50% in
+              five years. Over the last 12 months, we uncovered key insights to
+              inform our work ahead and drive similar action throughout the
+              maternal health ecosystem. Racial disparities in maternal health
+              span education levels, socioeconomic status, age and
+              geography—pointing to deeper-seated issues like underlying chronic
+              conditions, racial inequities and bias within the health care
+              system that must be addressed systemically and across a woman’s
+              life span—not just while she is pregnant. Meaningful actions must
+              combat the cultural, operational and structural barriers that have
+              created inequities that exist today, while also addressing
+              disparities in maternal health. Guided by the actions underway by
+              BCBS companies, we identified 10 tangible steps organizations can
+              adopt to improve maternal health and make a measurable difference
+              in health disparities. We alone cannot measurably impact the
+              health inequities women of color face today. And if the pandemic
+              has taught us anything, it’s that we cannot solve system-wide
+              problems in a vacuum—particularly when lives are at stake. We’re
+              calling upon leaders in the public and private sectors to adopt
+              these 10 actions, and join BCBS companies as we work toward a
+              shared vision of safer, equitable care for all mothers.
+            </p>
             <div className="mhea-action mhea-action-one">
               <StaticImage
                 className="mhea-action-img mhea-action-one-img"
