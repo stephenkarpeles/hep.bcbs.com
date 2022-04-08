@@ -27,6 +27,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Security
 - BCBSALLY-2604: Bump `node-fetch` from `3.2.0` to `3.2.3`
 - BCBSALLY-2604: Bump `algoliasearch` from `4.12.1` to `4.13.0`
+- BCBSALLY-2604: Bump `browserslist` from `4.19.3` to `4.20.2`
+- BCBSALLY-2604: Bump `postcss-merge-rules` from `5.0.6` to `5.1.1`
+- BCBSALLY-2604: Bump `instantsearch.js` from `4.39.1` to `4.40.3`
 
 ## [0.1.21] - 2022-04-20
 ### Security
