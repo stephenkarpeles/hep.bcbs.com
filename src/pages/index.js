@@ -235,7 +235,7 @@ const IndexPage = props => {
               hitsPerPage={6}
               clickAnalytics
               distinct
-              filters="topic:'Maternal Health' AND (NOT headline:'Congress can help save pregnant women and mothers of color' AND NOT headline:'Reporting racial disparities in healthcare quality spurs accountability' AND NOT headline:'Moving from Awareness to Action for a Healthier Beginning')"
+              filters="topic:'Maternal Health' AND (NOT headline:'Improving Black maternal health starts with listening' AND NOT headline:'Moving from Awareness to Action for a Healthier Beginning' AND NOT headline:'Congress can help save pregnant women and mothers of color')"
             />
 
             <Hits hitComponent={planResult} />
