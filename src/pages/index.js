@@ -118,6 +118,24 @@ const IndexPage = props => {
       />
       <Hero />
 
+      <section className="cta cta-infographic" style={{ marginTop: "4.5rem" }}>
+        <div className="inner-content">
+          <h3 className="cta-latest-title">
+            Top Ten Maternal Health Equity Actions
+          </h3>
+          <div className="cta-latest-description">
+            Over the last 12 months, we uncovered key insights to inform our
+            work ahead and drive similar action throughout the maternal health
+            ecosystem.
+          </div>
+          <Link to="/top-ten-maternal-health-equity-actions">
+            <button type="button" className="button button-basic">
+              View the Infographic
+            </button>
+          </Link>
+        </div>
+      </section>
+
       <section className="profiles" id="latest">
         <Fade>
           <div className="inner-content latest">
