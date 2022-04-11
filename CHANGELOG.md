@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- BCBSALLY-2606: Update css wiil-change property to resolve issues with React Reveal
 
 ### Deprecated
 
