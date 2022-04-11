@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 
 const heroImage =
-  "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero-04112022.jpg"
+  "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero.png"
 
 function Hero() {
   return (
