@@ -19,6 +19,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
+- BCBSALLY-2606: Remove css wiil-change property to resolve issues with React Reveal
+- BCBSALLY-2606: Remove React Reveal from Blog template
 
 ### Fixed
 

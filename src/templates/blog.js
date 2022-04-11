@@ -38,89 +38,83 @@ export default function BlogTemplate({ data }) {
         description={post.body.summary}
         image={post.relationships.field_he_featured_image.uri.url}
       />
-      <Fade>
-        <div className="pp-hero">
-          <div className="pp-hero__share">
-            <div className="pp-hero__share-content">
-              <h4>Share</h4>
-              <Sharing
-                title={post.title}
-                url={`https://www.bcbs.com/the-health-of-america/healthequity${alias}`}
-              />
-            </div>
+
+      <div className="pp-hero">
+        <div className="pp-hero__share">
+          <div className="pp-hero__share-content">
+            <h4>Share</h4>
+            <Sharing
+              title={post.title}
+              url={`https://www.bcbs.com/the-health-of-america/healthequity${alias}`}
+            />
           </div>
-          <div
-            className="pp-hero__image"
-            style={{
-              backgroundImage: `url(${backgroundImage})`,
-            }}
-          >
-            <div className="pp-hero__meta">
-              <div className="pp-hero__meta-content">
-                <div className="pp-hero__category">
-                  {post.relationships.field_topics
-                    .slice(0, 1)
-                    .map((field_topics, idx) => (
-                      <span key={idx}>{field_topics.name}</span>
-                    ))}
-                </div>
-                <div className="pp-hero__date">
-                  <span>Published {post.created}</span>
-                </div>
-                <div className="pp-hero__title">
-                  <h1>{post.title}</h1>
-                </div>
-                <div className="pp-hero__author">
-                  <span>{post.field_he_author}</span>
-                </div>
+        </div>
+        <div
+          className="pp-hero__image"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+          }}
+        >
+          <div className="pp-hero__meta">
+            <div className="pp-hero__meta-content">
+              <div className="pp-hero__category">
+                {post.relationships.field_topics
+                  .slice(0, 1)
+                  .map((field_topics, idx) => (
+                    <span key={idx}>{field_topics.name}</span>
+                  ))}
+              </div>
+              <div className="pp-hero__date">
+                <span>Published {post.created}</span>
+              </div>
+              <div className="pp-hero__title">
+                <h1>{post.title}</h1>
+              </div>
+              <div className="pp-hero__author">
+                <span>{post.field_he_author}</span>
               </div>
             </div>
           </div>
         </div>
-      </Fade>
+      </div>
 
       <div className="pp-main">
-        <Fade>
-          {related.length !== 0 && (
-            <div className="pp-related">
-              <h5 className="pp-related__title">Related</h5>
-              <ul className="pp-related__list">{related}</ul>
-            </div>
-          )}
-        </Fade>
-        <Fade>
-          <div className="pp-content">
-            <div className="pp-content__inner">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: post.body.value,
-                }}
-              />
-            </div>
+        {related.length !== 0 && (
+          <div className="pp-related">
+            <h5 className="pp-related__title">Related</h5>
+            <ul className="pp-related__list">{related}</ul>
           </div>
-        </Fade>
+        )}
+
+        <div className="pp-content">
+          <div className="pp-content__inner">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: post.body.value,
+              }}
+            />
+          </div>
+        </div>
       </div>
 
       {post.relationships.field_he_related_content?.length >= 1 && (
-        <Fade>
-          <div
-            className={`pp-explore ${
-              post.relationships.field_he_related_content?.length === 1
-                ? "pp-explore-single-card"
-                : ""
-            }`}
+        <div
+          className={`pp-explore ${
+            post.relationships.field_he_related_content?.length === 1
+              ? "pp-explore-single-card"
+              : ""
+          }`}
+        >
+          <h2>Explore more stories</h2>
+          <InstantSearch
+            searchClient={searchClient}
+            indexName="he_plan_profiles"
           >
-            <h2>Explore more stories</h2>
-            <InstantSearch
-              searchClient={searchClient}
-              indexName="he_plan_profiles"
-            >
-              <Configure hitsPerPage={2} distinct filters={filters} />
+            <Configure hitsPerPage={2} distinct filters={filters} />
 
-              <Hits hitComponent={planResult} />
-            </InstantSearch>
-          </div>
-        </Fade>
+            <Hits hitComponent={planResult} />
+          </InstantSearch>
+        </div>
       )}
     </div>
   )
