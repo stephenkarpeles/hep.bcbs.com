@@ -36,9 +36,8 @@ export default function BlogTemplate({ data }) {
       <SEO
         title={post.title}
         description={post.body.summary}
-        image={post.relationships.field_he_featured_image.uri.url}
+        image={backgroundImage}
       />
-
       <div className="pp-hero">
         <div className="pp-hero__share">
           <div className="pp-hero__share-content">
