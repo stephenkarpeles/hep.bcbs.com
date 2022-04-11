@@ -232,6 +232,7 @@
 .pp-content {
   width: calc(83vw - 200px);
   padding-right: 60px;
+  margin-left: auto;
 
   @media (--medium-breakpoint-down) {
     width: 100%;

@@ -63,7 +63,7 @@ const MaternalHealthActions = props => {
           <p>
             One year ago, the Blue Cross Blue Shield Association set a bold goal
             to reduce racial disparities in maternal health by 50% in five
-            years. Over the last 12 months, we uncovered key insights to inform
+            years. Over the past 12 months, we uncovered key insights to inform
             our work ahead and drive similar action throughout the maternal
             health ecosystem.
           </p>
@@ -107,7 +107,7 @@ const MaternalHealthActions = props => {
               Engage maternal voices and community stakeholders to craft, build
               and sustain a holistic maternal health program. Form public and
               private partnerships to address root causes of disparities,
-              inequalities and SDOH.
+              inequalities and Social Determinants of Health (SDOH).
             </div>
           </div>
           <div className="mhea-action mhea-action-two">
