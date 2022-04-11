@@ -6,6 +6,7 @@
 /* Plan Profiles */
 .pp-hero {
   display: flex;
+  will-change: opacity;
 
   @media (--medium-breakpoint-down) {
     flex-direction: column-reverse;
@@ -150,6 +151,7 @@
   padding-bottom: 70px;
   display: flex;
   justify-content: space-between;
+  will-change: opacity;
 
   @media (--medium-breakpoint-down) {
     flex-direction: column-reverse;
@@ -163,6 +165,7 @@
   padding-left: 8vw;
   padding-top: 20px;
   width: 300px;
+  will-change: opacity;
 
   @media (--medium-breakpoint-down) {
     width: 100%;
@@ -232,6 +235,7 @@
 .pp-content {
   width: calc(83vw - 200px);
   padding-right: 60px;
+  will-change: opacity;
 
   @media (--medium-breakpoint-down) {
     width: 100%;
@@ -369,6 +373,7 @@
   max-width: 100%;
   margin: 0 auto 50px;
   padding: 100px 60px 60px 60px;
+  will-change: opacity;
 
   @media (--medium-breakpoint-down) {
     padding: 50px 1rem;
