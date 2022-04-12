@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - BCBSALLY-2606: Update css wiil-change property to resolve issues with React Reveal
 - BCBSALLY-2607: Update Blog template to use absolute paths for SEO images
+- BCBSALLY-2613: Scale down the Top Ten MHEA to use the Promotion Template layout
 
 ### Deprecated
 
