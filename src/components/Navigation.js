@@ -39,6 +39,15 @@ function Navigation() {
             <AnchorLink
               onAnchorLinkClick={() => {}}
               // onKeyDown={}
+              to="/strategy"
+              className="navigation__anchor-link"
+              title="Strategy"
+            >
+              <span>Strategy</span>
+            </AnchorLink>
+            <AnchorLink
+              onAnchorLinkClick={() => {}}
+              // onKeyDown={}
               to="/press-kit"
               className="navigation__anchor-link"
               title="Press Kit"

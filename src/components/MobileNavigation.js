@@ -56,6 +56,18 @@ function Navigation() {
                 hideMobileNav()
               }}
               onKeyDown={removeMenuOpenClass}
+              to="/strategy"
+              className="navigation__anchor-link"
+              title="Strategy"
+            >
+              <span>Strategy</span>
+            </AnchorLink>
+            <AnchorLink
+              onAnchorLinkClick={() => {
+                removeMenuOpenClass()
+                hideMobileNav()
+              }}
+              onKeyDown={removeMenuOpenClass}
               to="/press-kit"
               className="navigation__anchor-link"
               title="Press Kit"

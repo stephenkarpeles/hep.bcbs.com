@@ -50,7 +50,7 @@ function Hero() {
               <Link
                 className="button"
                 to="/latest-stories"
-                style={{ marginRight: "1rem" }}
+                style={{ marginRight: "1rem", marginBottom: "1rem" }}
               >
                 View Latest Stories
               </Link>
