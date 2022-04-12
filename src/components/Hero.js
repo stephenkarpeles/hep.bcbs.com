@@ -40,26 +40,11 @@ function Hero() {
           id="intro"
           style={{ width: "100%" }}
         >
-          <Fade>
-            <div className="inner-content">
-              <h1 id="healthequity">Health Equity</h1>
-              <div className="subtitle">
-                Blue Cross and Blue Shield Companies Address the Nation's Crisis
-                in Racial Health Disparities
-              </div>
-              <Link
-                className="button"
-                to="/latest-stories"
-                style={{ marginRight: "1rem", marginBottom: "1rem" }}
-              >
-                View Latest Stories
-              </Link>
-              <Link
-                className="button button-outline"
-                to="/taking-action-to-reduce-maternal-health-disparities"
-              >
-                Message from our CEO
-              </Link>
+          <div className="inner-content">
+            <h1 id="healthequity">Health Equity</h1>
+            <div className="subtitle">
+              Blue Cross and Blue Shield Companies Address the Nation's Crisis
+              in Racial Health Disparities
             </div>
             <Link
               className="button"

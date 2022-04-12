@@ -105,12 +105,30 @@ const StrategyPage = props => {
         description="Blue Cross Blue Shield Association announces National Health Equity Strategy to confront the nation’s crisis in racial health disparities."
       />
       <section className="intro intro-light" id="intro">
-        <Fade>
-          <div className="max-container">
-            <h1 id="healthequity">National Health Equity Strategy</h1>
-            <div className="subtitle">
-              Blue Cross and Blue Shield Companies Confront the Nation’s Crisis
-              in Racial Health Disparities
+        <div className="max-container">
+          <h1 id="healthequity">National Health Equity Strategy</h1>
+          <div className="subtitle">
+            Blue Cross and Blue Shield Companies Confront the Nation’s Crisis in
+            Racial Health Disparities
+          </div>
+          <div className="intro--video">
+            <div className="intro--video-wrapper">
+              <iframe
+                loading="lazy"
+                width="640"
+                height="360"
+                src="https://www.youtube.com/embed/KNUblC8hLPg"
+                title="Youtube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+          <div className="intro--video-details">
+            <div className="intro--video-quote">
+              Your health shouldn’t depend on the color of your skin or the
+              neighborhood you live in.
             </div>
             <div className="intro--video-content">
               The crisis in racial disparities in our country’s health care is
