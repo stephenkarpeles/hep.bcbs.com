@@ -1,6 +1,5 @@
 // import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
-// import Slide from "react-reveal/Slide"
 // import "./Goal.css"
 
 // const Goal = () => {

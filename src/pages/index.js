@@ -5,7 +5,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
-import Fade from "react-reveal/Fade"
 
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
@@ -58,51 +57,49 @@ const planResult = ({ hit }) => {
   }
 
   return (
-    <Fade>
-      <div
-        data-insights-object-id={hit.objectID}
-        data-insights-position={hit.__position}
-        data-insights-query-id={hit.__queryID}
-        className={`plan-result-card ${
-          video_url ? "plan-result-card--has-video" : ""
-        }`}
-      >
-        {postSlug}
+    <div
+      data-insights-object-id={hit.objectID}
+      data-insights-position={hit.__position}
+      data-insights-query-id={hit.__queryID}
+      className={`plan-result-card ${
+        video_url ? "plan-result-card--has-video" : ""
+      }`}
+    >
+      {postSlug}
 
-        <div className="plan-result-card-plan">
-          {hit.img_url && !hit.video_url && (
-            <div className="plan-result-card-image">
-              <img
-                src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
-                alt=""
-              />
+      <div className="plan-result-card-plan">
+        {hit.img_url && !hit.video_url && (
+          <div className="plan-result-card-image">
+            <img
+              src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
+              alt=""
+            />
+          </div>
+        )}
+        {hit.video_url && (
+          <div className="plan-result-card-video">
+            <div className="plan-result-card-video__wrapper">
+              <iframe
+                loading="lazy"
+                width="960"
+                height="640"
+                src={video_url}
+                title="Youtube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
-          )}
-          {hit.video_url && (
-            <div className="plan-result-card-video">
-              <div className="plan-result-card-video__wrapper">
-                <iframe
-                  loading="lazy"
-                  width="960"
-                  height="640"
-                  src={video_url}
-                  title="Youtube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          )}
-          <div className="plan-result-card-company">{plans}</div>
-        </div>
-        <div className="plan-result-card-meta">
-          <div className="plan-result-card-category">{topic}</div>
-          <div className="plan-result-card-title">{headline}</div>
-          <div className="plan-result-card-read">{read_time} min read</div>
-        </div>
+          </div>
+        )}
+        <div className="plan-result-card-company">{plans}</div>
       </div>
-    </Fade>
+      <div className="plan-result-card-meta">
+        <div className="plan-result-card-category">{topic}</div>
+        <div className="plan-result-card-title">{headline}</div>
+        <div className="plan-result-card-read">{read_time} min read</div>
+      </div>
+    </div>
   )
 }
 
@@ -155,29 +152,27 @@ const IndexPage = props => {
       </section>
 
       <section className="profiles" id="latest">
-        <Fade>
-          <div className="inner-content latest">
-            <div className="profiles-header">
-              <div className="profiles-header-title">
-                <h2 style={{ color: "#0072A7" }}>Latest Stories</h2>
-                <p
-                  style={{
-                    maxWidth: 800,
-                    marginBottom: "3rem",
-                    fontSize: "1.125rem",
-                  }}
-                >
-                  See how we're actively working to address racial disparities.
-                </p>
-              </div>
-              <div className="profiles-header-link">
-                <Link className="view-all" to="/latest-stories">
-                  View All&nbsp;&nbsp;&rarr;
-                </Link>
-              </div>
+        <div className="inner-content latest">
+          <div className="profiles-header">
+            <div className="profiles-header-title">
+              <h2 style={{ color: "#0072A7" }}>Latest Stories</h2>
+              <p
+                style={{
+                  maxWidth: 800,
+                  marginBottom: "3rem",
+                  fontSize: "1.125rem",
+                }}
+              >
+                See how we're actively working to address racial disparities.
+              </p>
+            </div>
+            <div className="profiles-header-link">
+              <Link className="view-all" to="/latest-stories">
+                View All&nbsp;&nbsp;&rarr;
+              </Link>
             </div>
           </div>
-        </Fade>
+        </div>
         <div className="inner-content">
           <InstantSearch
             searchClient={searchClient}
@@ -192,40 +187,37 @@ const IndexPage = props => {
       </section>
 
       <section className="profiles" id="maternal">
-        <Fade>
-          <div className="inner-content maternal">
-            <div className="profiles-header">
-              <div className="profiles-header-title">
-                <h2 style={{ color: "#0072A7" }}>Maternal Health</h2>
-              </div>
-              <div className="profiles-header-link">
-                <Link className="view-all" to="/maternal-health">
-                  View All&nbsp;&nbsp;&rarr;
-                </Link>
-              </div>
-              <div
-                className="profiles-header-intro"
+        <div className="inner-content maternal">
+          <div className="profiles-header">
+            <div className="profiles-header-title">
+              <h2 style={{ color: "#0072A7" }}>Maternal Health</h2>
+            </div>
+            <div className="profiles-header-link">
+              <Link className="view-all" to="/maternal-health">
+                View All&nbsp;&nbsp;&rarr;
+              </Link>
+            </div>
+            <div
+              className="profiles-header-intro"
+              style={{
+                marginBottom: "3rem",
+              }}
+            >
+              <p
                 style={{
-                  marginBottom: "3rem",
+                  fontSize: "1.125rem",
                 }}
               >
-                <p
-                  style={{
-                    fontSize: "1.125rem",
-                  }}
-                >
-                  We are dedicated to ensuring that every mom gets the care she
-                  needs and that every baby has a healthy mom. Because your
-                  health shouldn't depend on the color of your skin or the
-                  neighborhood you live in. Read more to learn what BCBS
-                  companies are doing to help local communities through greater
-                  access to doulas, food and nutrition services, mental health
-                  resources, and more.
-                </p>
-              </div>
+                We are dedicated to ensuring that every mom gets the care she
+                needs and that every baby has a healthy mom. Because your health
+                shouldn't depend on the color of your skin or the neighborhood
+                you live in. Read more to learn what BCBS companies are doing to
+                help local communities through greater access to doulas, food
+                and nutrition services, mental health resources, and more.
+              </p>
             </div>
           </div>
-        </Fade>
+        </div>
         <div className="inner-content">
           <InstantSearch
             searchClient={searchClient}

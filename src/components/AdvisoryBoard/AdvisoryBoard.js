@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { withPrefix } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Fade from "react-reveal/Fade"
 import "./AdvisoryBoard.css"
 import imgCloseIcon from "../../images/icons/icon-close.svg"
 import imgRightArrowBlue from "../../images/icons/arrow-long-right.svg"
@@ -145,55 +144,53 @@ const AdvisoryBoard = ({ header }) => {
           <span>Close</span> <img src={imgCloseIcon} alt="Close" />
         </a>
         <div className="tab-content__grid">
-          <Fade>
-            <div className="tab-content__personal-info">
-              <div className="tab-content__personal-info-image">
-                {advisors.edges.map((advisor, idx) => {
-                  return active === idx ? (
-                    <>
-                      <GatsbyImage
-                        image={getImage(
-                          advisor.node.relationships.field_he_ap_featured_image
-                            .localFile.childImageSharp.gatsbyImageData
-                        )}
-                        alt=""
-                      />
-                    </>
-                  ) : (
-                    ""
-                  )
-                })}
-              </div>
-              <div className="tab-content__personal-info-company">
-                {advisors.edges.map((advisor, idx) => {
-                  return active === idx ? advisor.node.field_he_company : ""
-                })}
-              </div>
-              <div className="tab-content__personal-info-title">
-                {advisors.edges.map((advisor, idx) => {
-                  return active === idx ? advisor.node.field_he_position : ""
-                })}
-              </div>
-            </div>
-            <div className="tab-content__copy">
-              <h3>
-                {advisors.edges.map((advisor, idx) => {
-                  return active === idx ? advisor.node.field_he_lead : ""
-                })}
-              </h3>
+          <div className="tab-content__personal-info">
+            <div className="tab-content__personal-info-image">
               {advisors.edges.map((advisor, idx) => {
                 return active === idx ? (
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: advisor.node.body.value,
-                    }}
-                  ></div>
+                  <>
+                    <GatsbyImage
+                      image={getImage(
+                        advisor.node.relationships.field_he_ap_featured_image
+                          .localFile.childImageSharp.gatsbyImageData
+                      )}
+                      alt=""
+                    />
+                  </>
                 ) : (
                   ""
                 )
               })}
             </div>
-          </Fade>
+            <div className="tab-content__personal-info-company">
+              {advisors.edges.map((advisor, idx) => {
+                return active === idx ? advisor.node.field_he_company : ""
+              })}
+            </div>
+            <div className="tab-content__personal-info-title">
+              {advisors.edges.map((advisor, idx) => {
+                return active === idx ? advisor.node.field_he_position : ""
+              })}
+            </div>
+          </div>
+          <div className="tab-content__copy">
+            <h3>
+              {advisors.edges.map((advisor, idx) => {
+                return active === idx ? advisor.node.field_he_lead : ""
+              })}
+            </h3>
+            {advisors.edges.map((advisor, idx) => {
+              return active === idx ? (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: advisor.node.body.value,
+                  }}
+                ></div>
+              ) : (
+                ""
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 import * as React from "react"
 import { useState } from "react"
 import { Link } from "gatsby"
-import Fade from "react-reveal/Fade"
 import SEO from "../components/seo"
 import Sharing from "../components/Sharing/sharing"
 import Newsletter from "../components/Newsletter/Newsletter"

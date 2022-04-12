@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import Fade from "react-reveal/Fade"
 import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
 import Sharing from "../components/Sharing/sharing"

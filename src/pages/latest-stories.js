@@ -17,9 +17,6 @@ import {
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
-//import Zoom from 'react-reveal/Zoom';
-import Fade from "react-reveal/Fade"
-import Slide from "react-reveal/Slide"
 
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
@@ -69,51 +66,49 @@ const planResult = ({ hit }) => {
   }
 
   return (
-    <Fade>
-      <div
-        data-insights-object-id={hit.objectID}
-        data-insights-position={hit.__position}
-        data-insights-query-id={hit.__queryID}
-        className={`plan-result-card ${
-          video_url ? "plan-result-card--has-video" : ""
-        }`}
-      >
-        {postSlug}
+    <div
+      data-insights-object-id={hit.objectID}
+      data-insights-position={hit.__position}
+      data-insights-query-id={hit.__queryID}
+      className={`plan-result-card ${
+        video_url ? "plan-result-card--has-video" : ""
+      }`}
+    >
+      {postSlug}
 
-        <div className="plan-result-card-plan">
-          {hit.img_url && !hit.video_url && (
-            <div className="plan-result-card-image">
-              <img
-                src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
-                alt=""
-              />
+      <div className="plan-result-card-plan">
+        {hit.img_url && !hit.video_url && (
+          <div className="plan-result-card-image">
+            <img
+              src={`https://www.bcbs.com/sites/default/files/healthequity/images/${img_url}`}
+              alt=""
+            />
+          </div>
+        )}
+        {hit.video_url && (
+          <div className="plan-result-card-video">
+            <div className="plan-result-card-video__wrapper">
+              <iframe
+                loading="lazy"
+                width="960"
+                height="640"
+                src={video_url}
+                title="Youtube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
-          )}
-          {hit.video_url && (
-            <div className="plan-result-card-video">
-              <div className="plan-result-card-video__wrapper">
-                <iframe
-                  loading="lazy"
-                  width="960"
-                  height="640"
-                  src={video_url}
-                  title="Youtube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          )}
-          <div className="plan-result-card-company">{plans}</div>
-        </div>
-        <div className="plan-result-card-meta">
-          <div className="plan-result-card-category">{topic}</div>
-          <div className="plan-result-card-title">{headline}</div>
-          <div className="plan-result-card-read">{read_time} min read</div>
-        </div>
+          </div>
+        )}
+        <div className="plan-result-card-company">{plans}</div>
       </div>
-    </Fade>
+      <div className="plan-result-card-meta">
+        <div className="plan-result-card-category">{topic}</div>
+        <div className="plan-result-card-title">{headline}</div>
+        <div className="plan-result-card-read">{read_time} min read</div>
+      </div>
+    </div>
   )
 }
 
@@ -130,79 +125,77 @@ const LatestStories = props => {
       />
 
       <section className="profiles" id="community">
-        <Fade>
-          <div className="inner-content inner-content-filters">
-            <InstantSearch
-              searchClient={searchClient}
-              indexName="he_plan_profiles_latest"
-            >
-              <div className="latest-stories-results">
-                <h2 style={{ color: "#0072A7" }}>
-                  Showing Results for Latest Stories
-                </h2>
-                <p
-                  style={{
-                    maxWidth: 800,
-                    marginBottom: "3rem",
-                    fontSize: "1.125rem",
-                  }}
-                >
-                  <CustomStats />
-                </p>
-              </div>
+        <div className="inner-content inner-content-filters">
+          <InstantSearch
+            searchClient={searchClient}
+            indexName="he_plan_profiles_latest"
+          >
+            <div className="latest-stories-results">
+              <h2 style={{ color: "#0072A7" }}>
+                Showing Results for Latest Stories
+              </h2>
+              <p
+                style={{
+                  maxWidth: 800,
+                  marginBottom: "3rem",
+                  fontSize: "1.125rem",
+                }}
+              >
+                <CustomStats />
+              </p>
+            </div>
 
-              <Configure clickAnalytics distinct hitsPerPage={100} />
+            <Configure clickAnalytics distinct hitsPerPage={100} />
 
-              <div className="search-filters">
-                <div className="search-filters-label-main">Filter</div>
-                <div className="search-filters-refinement">
-                  {/* <div className="search-filters-label">
+            <div className="search-filters">
+              <div className="search-filters-label-main">Filter</div>
+              <div className="search-filters-refinement">
+                {/* <div className="search-filters-label">
                     What's Happening in my State
                   </div> */}
-                  <MenuSelect
-                    attribute="states"
-                    limit={50}
-                    translations={{
-                      seeAllOption: "All States",
-                    }}
-                  />
-                </div>
-
-                {/* <div className="search-filters-label">
-                    Maternal Health Topics
-                  </div> */}
-
-                {/* <RefinementList attribute="subtopics" limit={50} /> */}
-                <div className="search-filters-refinement">
-                  <MenuSelect
-                    attribute="topic"
-                    limit={50}
-                    translations={{
-                      seeAllOption: "All Topics",
-                    }}
-                  />
-                </div>
-                <div className="search-filters-refinement">
-                  <MenuSelect
-                    attribute="subtopics"
-                    limit={50}
-                    translations={{
-                      seeAllOption: "All Subtopics",
-                    }}
-                  />
-                </div>
-                <ClearRefinements
-                  clearsQuery
+                <MenuSelect
+                  attribute="states"
+                  limit={50}
                   translations={{
-                    reset: "Clear Filters",
+                    seeAllOption: "All States",
                   }}
                 />
               </div>
 
-              <Hits hitComponent={planResult} />
-            </InstantSearch>
-          </div>
-        </Fade>
+              {/* <div className="search-filters-label">
+                    Maternal Health Topics
+                  </div> */}
+
+              {/* <RefinementList attribute="subtopics" limit={50} /> */}
+              <div className="search-filters-refinement">
+                <MenuSelect
+                  attribute="topic"
+                  limit={50}
+                  translations={{
+                    seeAllOption: "All Topics",
+                  }}
+                />
+              </div>
+              <div className="search-filters-refinement">
+                <MenuSelect
+                  attribute="subtopics"
+                  limit={50}
+                  translations={{
+                    seeAllOption: "All Subtopics",
+                  }}
+                />
+              </div>
+              <ClearRefinements
+                clearsQuery
+                translations={{
+                  reset: "Clear Filters",
+                }}
+              />
+            </div>
+
+            <Hits hitComponent={planResult} />
+          </InstantSearch>
+        </div>
       </section>
 
       <Newsletter />
