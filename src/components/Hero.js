@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const heroImage =
-  "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero.png"
+  "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero-04112022.jpg"
 
 function Hero() {
   return (
@@ -35,12 +35,31 @@ function Hero() {
         }}
       >
         {/* Any content here will be centered in the component */}
-        <section className="intro" id="intro" style={{ width: "100%" }}>
-          <div className="inner-content">
-            <h1 id="healthequity">Health Equity</h1>
-            <div className="subtitle">
-              Blue Cross and Blue Shield Companies Address the Nation's Crisis
-              in Racial Health Disparities
+        <section
+          className="intro intro-dark"
+          id="intro"
+          style={{ width: "100%" }}
+        >
+          <Fade>
+            <div className="inner-content">
+              <h1 id="healthequity">Health Equity</h1>
+              <div className="subtitle">
+                Blue Cross and Blue Shield Companies Address the Nation's Crisis
+                in Racial Health Disparities
+              </div>
+              <Link
+                className="button"
+                to="/latest-stories"
+                style={{ marginRight: "1rem" }}
+              >
+                View Latest Stories
+              </Link>
+              <Link
+                className="button button-outline"
+                to="/taking-action-to-reduce-maternal-health-disparities"
+              >
+                Message from our CEO
+              </Link>
             </div>
             <Link
               className="button"

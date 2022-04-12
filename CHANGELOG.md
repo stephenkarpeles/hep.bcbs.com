@@ -12,18 +12,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
+- BCBSALLY-2616: Add light/dark theme to Hero(s) for use with light background images
+- BCBSALLY-2616: Add new homepage hero image
 
 ### Changed
-- BCBSALLY-2606: Update css wiil-change property to resolve issues with React Reveal
 - BCBSALLY-2607: Update Blog template to use absolute paths for SEO images
 - BCBSALLY-2613: Scale down the Top Ten MHEA to use the Promotion Template layout
+- BCBSALLY-2616: Update button styles to work with new light/dark themes
 
 ### Deprecated
 
 ### Removed
-- BCBSALLY-2606: Remove css wiil-change property to resolve issues with React Reveal
-- BCBSALLY-2606: Remove React Reveal from Blog template
 - BCBSALLY-2608: Remove React Reveal from project
+- BCBSALLY-2616: Remove duplicate posts from Maternal Health section
 
 ### Fixed
 

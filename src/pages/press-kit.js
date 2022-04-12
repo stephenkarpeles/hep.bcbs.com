@@ -19,7 +19,7 @@ const PressKitPage = props => {
         description="Access the latest press release, press tools and media contacts"
       />
 
-      <section className="intro-press" id="intro">
+      <section className="intro intro-light intro-press" id="intro">
         <div className="inner-content">
           <h1 id="press-kit">Press &amp; Media</h1>
           <div className="subtitle">
