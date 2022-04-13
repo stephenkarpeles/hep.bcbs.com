@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+/* This path must match an image uploaded to the File Browser in Drupal on the www-content.bcbs.com environment */
 const heroImage =
   "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero-04122022.jpg"
 
