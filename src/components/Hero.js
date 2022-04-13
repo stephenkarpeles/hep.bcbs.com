@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const heroImage =
-  "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero-04112022.jpg"
+  "https://www.bcbs.com/sites/default/files/healthequity/images/health-equity-hero-04122022.jpg"
 
 function Hero() {
   return (
