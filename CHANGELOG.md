@@ -12,6 +12,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.1.20] - 2022-04-14
+### Added
 - BCBSALLY-2616: Add light/dark theme to Hero(s) for use with light background images
 - BCBSALLY-2616: Add new homepage hero image
 
@@ -20,15 +33,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - BCBSALLY-2613: Scale down the Top Ten MHEA to use the Promotion Template layout
 - BCBSALLY-2616: Update button styles to work with new light/dark themes
 
-### Deprecated
-
 ### Removed
 - BCBSALLY-2608: Remove React Reveal from project
 - BCBSALLY-2616: Remove duplicate posts from Maternal Health section
-
-### Fixed
-
-### Security
 
 ## [0.1.19] - 2022-04-08
 ### Changed
@@ -169,7 +176,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.19...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.20...HEAD
+[0.1.20]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.19...0.1.20
 [0.1.19]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.18...0.1.19
 [0.1.18]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.17...0.1.18
 [0.1.17]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.16...0.1.17
