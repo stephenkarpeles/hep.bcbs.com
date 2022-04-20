@@ -23,6 +23,16 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.21] - 2022-04-20
+### Security
+- BCBSALLY-2604: Bump `algoliasearch` from `4.12.1` to `4.13.0`
+- BCBSALLY-2604: Bump `postcss-merge-rules` from `5.0.6` to `5.1.1`
+- BCBSALLY-2604: Bump `browserslist` from `4.19.3` to `4.20.2`
+- BCBSALLY-2604: Bump `node-fetch` from `3.2.0` to `3.2.3`
+- BCBSALLY-2604: Bump `minimist` from `1.2.5` to `1.2.6`
+- BCBSALLY-2604: Bump `moment` from `2.29.1` to `2.29.2`
+- BCBSALLY-2604: Bump `instantsearch.js` from `4.39.1` to `4.40.4`
+
 ## [0.1.20] - 2022-04-14
 ### Added
 - BCBSALLY-2616: Add light/dark theme to Hero(s) for use with light background images
@@ -52,12 +62,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [0.1.16] - 2022-03-10
 ### Changed
-- Bump `node-fetch` from `2.6.1` to `2.6.7` 
-- Bump `babel-plugin-styled-components` from `2.0.3` to `2.0.6`
-- Bump `postcss-mixins` from `9.0.1` to `9.0.2`
-- Bump `instantsearch.js` from `4.38.1` to `4.39.1`
-- Bump `gatsby-plugin-schema-snapshot` from `3.7.0` to `3.9.0`
-- Bump `postcss` from `8.4.6` to `8.4.8`
+- BCBSALLY-2604: Bump `node-fetch` from `2.6.1` to `2.6.7`
+- BCBSALLY-2604: Bump `babel-plugin-styled-components` from `2.0.3` to `2.0.6`
+- BCBSALLY-2604: Bump `postcss-mixins` from `9.0.1` to `9.0.2`
+- BCBSALLY-2604: Bump `instantsearch.js` from `4.38.1` to `4.39.1`
+- BCBSALLY-2604: Bump `gatsby-plugin-schema-snapshot` from `3.7.0` to `3.9.0`
+- BCBSALLY-2604: Bump `postcss` from `8.4.6` to `8.4.8`
 
 ## [0.1.15] - 2022-03-01
 ### Added
@@ -176,7 +186,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.20...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.21...HEAD
+[0.1.21]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.20...0.1.21
 [0.1.20]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.19...0.1.20
 [0.1.19]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.18...0.1.19
 [0.1.18]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.17...0.1.18
