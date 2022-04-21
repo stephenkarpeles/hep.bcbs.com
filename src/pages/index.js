@@ -90,16 +90,16 @@ const planResult = ({ hit }) => {
                 allowFullScreen
               ></iframe>
             </div>
-          )}
-          <div className="plan-result-card-company">{plans}</div>
-        </div>
-        <div className="plan-result-card-meta">
-          <div className="plan-result-card-category">{topic}</div>
-          <div className="plan-result-card-title" id={slug}>
-            {headline}
           </div>
-          <div className="plan-result-card-read">{read_time} min read</div>
+        )}
+        <div className="plan-result-card-company">{plans}</div>
+      </div>
+      <div className="plan-result-card-meta">
+        <div className="plan-result-card-category">{topic}</div>
+        <div className="plan-result-card-title" id={slug}>
+          {headline}
         </div>
+        <div className="plan-result-card-read">{read_time} min read</div>
       </div>
     </div>
   )
