@@ -17,7 +17,7 @@ export const planResult = ({ hit }) => {
       data-insights-query-id={hit.__queryID}
       className="plan-result-card"
     >
-      <Link to={`/${slug}/`}></Link>
+      <Link to={`/${slug}/`} aria-labelledby={slug}></Link>
       <div className="plan-result-card-plan">
         <div className="plan-result-card-image">
           <img
@@ -29,7 +29,9 @@ export const planResult = ({ hit }) => {
       </div>
       <div className="plan-result-card-meta">
         <div className="plan-result-card-category">{topic}</div>
-        <div className="plan-result-card-title">{headline}</div>
+        <div className="plan-result-card-title" id={slug}>
+          {headline}
+        </div>
         <div className="plan-result-card-excerpt">{teaser}</div>
         <div className="plan-result-card-read">{read_time} min read</div>
       </div>

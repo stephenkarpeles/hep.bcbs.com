@@ -53,7 +53,7 @@ const planResult = ({ hit }) => {
       />
     )
   } else {
-    postSlug = <Link to={`/${slug}/`}></Link>
+    postSlug = <Link to={`/${slug}/`} aria-labelledby={slug}></Link>
   }
 
   return (
@@ -96,7 +96,9 @@ const planResult = ({ hit }) => {
       </div>
       <div className="plan-result-card-meta">
         <div className="plan-result-card-category">{topic}</div>
-        <div className="plan-result-card-title">{headline}</div>
+        <div className="plan-result-card-title" id={slug}>
+          {headline}
+        </div>
         <div className="plan-result-card-read">{read_time} min read</div>
       </div>
     </div>
@@ -235,10 +237,10 @@ const IndexPage = props => {
         </div>
       </section>
 
-      <Newsletter />
+      <Newsletter index="1" />
       <AdvisoryBoard />
       <PressKitBanner />
-      <Newsletter />
+      <Newsletter index="2" />
     </>
   )
 }

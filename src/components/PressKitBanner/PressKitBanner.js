@@ -8,8 +8,8 @@ const PressKitBanner = () => (
       <div className="press-kit-banner-box">
         <h2>Press Kit</h2>
         <p>Access the latest press release, press tools and media contacts</p>
-        <Link to="/press-kit">
-          <button type="button" className="button button-basic">View Resources</button>
+        <Link to="/press-kit" className="button button-basic">
+          View Resources
         </Link>
       </div>
     </div>

@@ -20,6 +20,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- BCBSALLY-2602: Fix button element inside link element
+- BCBSALLY-2602: Fix repeated id on Newsletter component
+- BCBSALLY-2602: Fix article card link not containing text
 
 ### Security
 
