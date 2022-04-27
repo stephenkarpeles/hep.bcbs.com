@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
-- BCBSALLY-2634: Add new graphic and text to Top Ten Infographic page.
 
 ### Changed
 
@@ -23,6 +22,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.23] - 2022-04-27
+### Added
+- BCBSALLY-2634: Add new graphic and text to Top Ten Infographic page.
+
+### Removed
+- BCBSALLY-2634: Remove oldest Maternal Health article from the Latest Stories list
 
 ## [0.1.22] - 2022-04-27
 ### Added
@@ -191,7 +197,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.22...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.23...HEAD
+[0.1.23]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.22...0.1.23
 [0.1.22]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.21...0.1.22
 [0.1.21]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.20...0.1.21
 [0.1.20]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.19...0.1.20
