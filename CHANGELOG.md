@@ -12,7 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
-- BCBSALLY-2628: Add new HE content
+- BCBSALLY-2634: Add new graphic and text to Top Ten Infographic page.
 
 ### Changed
 
@@ -23,6 +23,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.22] - 2022-04-27
+### Added
+- BCBSALLY-2628: Add new HE content
 
 ## [0.1.21] - 2022-04-20
 ### Security
@@ -187,7 +191,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.21...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.22...HEAD
+[0.1.22]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.21...0.1.22
 [0.1.21]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.20...0.1.21
 [0.1.20]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.19...0.1.20
 [0.1.19]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.18...0.1.19

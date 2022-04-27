@@ -170,13 +170,13 @@ const MaternalHealthActions = props => {
             <div className="mhea-action mhea-action-six">
               <StaticImage
                 className="mhea-action-img mhea-action-six-img"
-                src={"../images/mhea/Pregnant_couple.png"}
+                src={"../images/mhea/number6-image.png"}
                 alt=""
               />
               <div className="mhea-action-title mhea-action-six-title">6</div>
               <div className="mhea-action-content mhea-action-six-content">
                 Expand benefit coverage to ensure postpartum care including
-                behavioral health care to 1-year post-delivery.
+                behavioral health care to one year post-delivery.
               </div>
             </div>
             <div className="mhea-action mhea-action-seven">
