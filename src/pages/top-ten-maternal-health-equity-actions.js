@@ -1,6 +1,4 @@
 import * as React from "react"
-import { useState } from "react"
-import { Link } from "gatsby"
 import SEO from "../components/seo"
 import Sharing from "../components/Sharing/sharing"
 import Newsletter from "../components/Newsletter/Newsletter"
@@ -13,8 +11,6 @@ import backgroundImage from "../images/mhea/iStock-1165255501.jpg"
 import { StaticImage } from "gatsby-plugin-image"
 
 const MaternalHealthActions = props => {
-  const [viewPortEntered, setViewPortEntered] = useState(false)
-
   return (
     <div className="promotion-template">
       <SEO

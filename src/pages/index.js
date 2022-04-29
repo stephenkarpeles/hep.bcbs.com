@@ -1,7 +1,5 @@
 import React from "react"
-import { useState } from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
@@ -10,9 +8,6 @@ import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
 import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
 import Hero from "../components/Hero"
-import Alert from "../components/Alert/Alert"
-import Goal from "../components/Goal/Goal"
-import Disparities from "../components/Disparities/Disparities"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/

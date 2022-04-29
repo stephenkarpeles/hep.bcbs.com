@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useState } from "react"
 import { Link } from "gatsby"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
@@ -98,8 +97,6 @@ const planResult = ({ hit }) => {
 }
 
 const StrategyPage = props => {
-  const [viewPortEntered, setViewPortEntered] = useState(false)
-
   return (
     <>
       <SEO

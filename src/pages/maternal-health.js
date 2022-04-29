@@ -1,27 +1,17 @@
 import * as React from "react"
-import { useState } from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import algoliasearch from "algoliasearch/lite"
 import {
   InstantSearch,
-  SearchBox,
   MenuSelect,
-  RefinementList,
   ClearRefinements,
   Hits,
   Configure,
-  Stats,
   connectStats,
 } from "react-instantsearch-dom"
-import CountUp from "react-countup"
-import VisibilitySensor from "react-visibility-sensor"
-import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
 
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
-import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
-import Alert from "../components/Alert/Alert"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -115,7 +105,6 @@ const planResult = ({ hit }) => {
 }
 
 const MaternalHealth = props => {
-  const [viewPortEntered, setViewPortEntered] = useState(false)
   const Stats = ({ nbHits }) => <span>Displaying {nbHits} results</span>
   const CustomStats = connectStats(Stats)
 
