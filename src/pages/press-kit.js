@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
 import FAQs from "../components/FAQ"
 import PressKit from "../components/PressKit/PressKit"
+import CTA from "../components/CTA/CTA"
 
 // styles
 import "./press-kit.css"
@@ -71,6 +72,17 @@ const PressKitPage = props => {
           </a>
         </div>
       </section>
+
+      <CTA
+        id="press-kit-banner"
+        title="Top Ten Maternal Health Equity Actions"
+        body="Over the last 12 months, we uncovered key insights to inform our
+              work ahead and drive similar action throughout the maternal health
+              ecosystem."
+        btnURL="/press-kit"
+        btnTitle="View the Infographic"
+        vertical
+      />
 
       <FAQs heading="National Strategy FAQ" />
 

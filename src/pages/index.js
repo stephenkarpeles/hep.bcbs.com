@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
 import PressKitBanner from "../components/PressKitBanner/PressKitBanner"
 import Hero from "../components/Hero"
+import CTA from "../components/CTA/CTA"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -147,6 +148,40 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
+
+      <CTA
+        id="press-kit-banner"
+        title="Top Ten Maternal Health Equity Actions"
+        body="Over the last 12 months, we uncovered key insights to inform our
+              work ahead and drive similar action throughout the maternal health
+              ecosystem."
+        btnURL="/press-kit"
+        btnTitle="View the Infographic"
+        dark
+      />
+
+      <CTA
+        id="press-kit-banner"
+        title="Top Ten Maternal Health Equity Actions"
+        body="Over the last 12 months, we uncovered key insights to inform our
+              work ahead and drive similar action throughout the maternal health
+              ecosystem."
+        btnURL="/press-kit"
+        btnTitle="View the Infographic"
+        vertical
+      />
+
+      <CTA
+        id="press-kit-banner"
+        title="Top Ten Maternal Health Equity Actions"
+        body="Over the last 12 months, we uncovered key insights to inform our
+              work ahead and drive similar action throughout the maternal health
+              ecosystem."
+        btnURL="/press-kit"
+        btnTitle="View the Infographic"
+        dark
+        vertical
+      />
 
       <section className="profiles" id="latest">
         <div className="inner-content latest">
