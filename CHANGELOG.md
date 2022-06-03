@@ -23,6 +23,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- BCBSALLY-2645: Bump `react-accessible-accordion` from `4.0.0` to `5.0.0`
 
 ## [0.1.23] - 2022-04-27
 ### Added
@@ -100,7 +101,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - Bump `engine.io` from `4.1.1` to `4.1.2`
-- Bump `follow-redirects` from `1.14.5` to `1.14.7` 
+- Bump `follow-redirects` from `1.14.5` to `1.14.7`
 - Bump `nanoid` from `3.1.30` to `3.1.31`
 
 ## [0.1.13] - 2022-01-11
