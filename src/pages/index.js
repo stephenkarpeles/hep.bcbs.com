@@ -113,74 +113,14 @@ const IndexPage = props => {
       />
       <Hero />
 
-      {/* <section className="cta cta-infographic" style={{ marginTop: "4.5rem" }}>
-        <div className="inner-content">
-          <h3 className="cta-latest-title">
-            Top Ten Maternal Health Equity Actions
-          </h3>
-          <div className="cta-latest-description">
-            Over the last 12 months, we uncovered key insights to inform our
-            work ahead and drive similar action throughout the maternal health
-            ecosystem.
-          </div>
-          <Link to="/top-ten-maternal-health-equity-actions">
-            <button type="button" className="button button-basic">
-              View the Infographic
-            </button>
-          </Link>
-        </div>
-      </section> */}
-
-      <section className="press-kit-banner" id="infographic-banner">
-        <div className="max-container">
-          <div className="press-kit-banner-box">
-            <h2>Top Ten Maternal Health Equity Actions</h2>
-            <p>
-              Over the last 12 months, we uncovered key insights to inform our
-              work ahead and drive similar action throughout the maternal health
-              ecosystem.
-            </p>
-            <Link to="/top-ten-maternal-health-equity-actions">
-              <button type="button" className="button button-basic">
-                View the Infographic
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <CTA
         id="press-kit-banner"
         title="Top Ten Maternal Health Equity Actions"
         body="Over the last 12 months, we uncovered key insights to inform our
               work ahead and drive similar action throughout the maternal health
               ecosystem."
-        btnURL="/press-kit"
-        btnTitle="View the Infographic"
-        dark
-      />
-
-      <CTA
-        id="press-kit-banner"
-        title="Top Ten Maternal Health Equity Actions"
-        body="Over the last 12 months, we uncovered key insights to inform our
-              work ahead and drive similar action throughout the maternal health
-              ecosystem."
-        btnURL="/press-kit"
-        btnTitle="View the Infographic"
-        vertical
-      />
-
-      <CTA
-        id="press-kit-banner"
-        title="Top Ten Maternal Health Equity Actions"
-        body="Over the last 12 months, we uncovered key insights to inform our
-              work ahead and drive similar action throughout the maternal health
-              ecosystem."
-        btnURL="/press-kit"
-        btnTitle="View the Infographic"
-        dark
-        vertical
+        linkURL="/top-ten-maternal-health-equity-actions"
+        linkTitle="View the Infographic"
       />
 
       <section className="profiles" id="latest">
@@ -269,7 +209,13 @@ const IndexPage = props => {
 
       <Newsletter index="1" />
       <AdvisoryBoard />
-      <PressKitBanner />
+      <CTA
+        id="press-kit-banner"
+        title="Press Kit"
+        body="Access the latest press release, press tools and media contacts"
+        linkURL="/press-kit"
+        linkTitle="View Resources"
+      />
       <Newsletter index="2" />
     </>
   )

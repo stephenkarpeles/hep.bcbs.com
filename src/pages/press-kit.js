@@ -53,49 +53,27 @@ const PressKitPage = props => {
         </div>
       </section>
 
-      <section className="cta cta-latest" id="cta-latest">
-        <div className="inner-content">
-          <h3 className="cta-latest-title">Read our latest press release</h3>
-          <div className="cta-latest-description">
-            Blue Cross Blue Shield Association Announces National Health Equity
-            Strategy to Confront the Nation’s Crisis in Racial Health
-            Disparities
-          </div>
-          <a
-            href="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button type="button" className="button button-basic">
-              Read More
-            </button>
-          </a>
-        </div>
-      </section>
-
       <CTA
-        id="press-kit-banner"
-        title="Top Ten Maternal Health Equity Actions"
-        body="Over the last 12 months, we uncovered key insights to inform our
-              work ahead and drive similar action throughout the maternal health
-              ecosystem."
-        btnURL="/press-kit"
-        btnTitle="View the Infographic"
+        id="press-release-banner"
+        title="Read our latest press release"
+        body="Blue Cross Blue Shield Association Announces National Health Equity Strategy to Confront the Nation’s Crisis in Racial Health Disparities"
+        linkURL="https://www.bcbs.com/press-releases/bcbsa-announces-national-health-equity-strategy-to-confront-nations-racial-health-disparities"
+        linkTitle="Read More"
         vertical
+        outside
       />
 
       <FAQs heading="National Strategy FAQ" />
 
-      <section className="cta cta-contact" id="cta-contact">
-        <div className="inner-content">
-          <h3>Get in touch with our communications team</h3>
-          <a href="mailto:press@bcbsa.com">
-            <button type="button" className="button button-basic">
-              Contact Press
-            </button>
-          </a>
-        </div>
-      </section>
+      <CTA
+        id="contact-press-banner"
+        title="Get in touch with our communications team"
+        body=""
+        linkURL="mailto:press@bcbsa.com"
+        linkTitle="Contact Press"
+        vertical
+        outside
+      />
 
       <Newsletter />
     </>

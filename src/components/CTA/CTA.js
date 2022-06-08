@@ -5,20 +5,29 @@ import "./CTA.css"
 
 /*
   Usage:
-  Can be passed title, body field, button properties, dark and vertical color
-  and layout options. Use the blank prop for external links.
+  Can be passed title, body field, link properties, dark and vertical color
+  and layout options. Use the outside prop for external links.
   <CTA
     title="Get in touch with our communcations team"
-    btnURL="mailto:press@bcbsa.com"
+    linkURL="mailto:press@bcbsa.com"
     body="Some string of text"
-    btnTitle="Contact Press"
+    linkTitle="Contact Press"
     dark
-    blank
+    outside
     vertical
   />
 */
 
-const CTA = ({ id, title, body, btnURL, btnTitle, blank, dark, vertical }) => (
+const CTA = ({
+  id,
+  title,
+  body,
+  linkURL,
+  linkTitle,
+  outside,
+  dark,
+  vertical,
+}) => (
   <section
     id={id}
     className={`cta ${vertical ? "cta-vertical" : "cta-horizontal"} ${
@@ -27,22 +36,26 @@ const CTA = ({ id, title, body, btnURL, btnTitle, blank, dark, vertical }) => (
   >
     <div className="max-container">
       <div className="cta-box">
-        <h2>{title}</h2>
-        <p>{body}</p>
-        {!!blank ? (
-          <a
-            href={btnURL}
-            target="_blank"
-            rel="noreferrer"
-            className="button button-basic"
-            aria-labelledby={btnTitle}
-          >
-            {btnTitle}
-          </a>
+        <h2 className="cta-box-heading">{title}</h2>
+        {!!body && <p className="cta-box-text">{body}</p>}
+        {!!outside ? (
+          <div class="cta-box-link">
+            <a
+              href={linkURL}
+              target="_blank"
+              rel="noreferrer"
+              className="button button-basic cta-box-button"
+              aria-labelledby={linkTitle}
+            >
+              {linkTitle}
+            </a>
+          </div>
         ) : (
-          <Link to={btnURL} className="button button-basic">
-            {btnTitle}
-          </Link>
+          <div class="cta-box-link">
+            <Link to={linkURL} className="button button-basic cta-box-button">
+              {linkTitle}
+            </Link>
+          </div>
         )}
       </div>
     </div>
@@ -53,9 +66,9 @@ CTA.defaultProps = {
   id: "",
   title: "",
   body: "",
-  btnURL: "",
-  btnTitle: "",
-  blank: false,
+  linkURL: "",
+  linkTitle: "",
+  outside: false,
   dark: false,
   vertical: false,
 }
@@ -64,9 +77,9 @@ CTA.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   body: PropTypes.string,
-  btnURL: PropTypes.string,
-  btnTitle: PropTypes.string,
-  blank: PropTypes.bool,
+  linkURL: PropTypes.string,
+  linkTitle: PropTypes.string,
+  outside: PropTypes.bool,
   dark: PropTypes.bool,
   vertical: PropTypes.bool,
 }
