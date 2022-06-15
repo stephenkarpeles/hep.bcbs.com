@@ -18,12 +18,25 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
-- BCBSALLY-2645: Remove unused code entries from the warning on `gatsby develop`
 
 ### Fixed
 
 ### Security
+
+## [0.1.24] - 2022-06-15
+### Added
+- BCBSALLY-2614: Refactor Presskit Component
+
+### Removed
+- BCBSALLY-2645: Remove unused code entries from the warning on `gatsby develop`
+
+### Security
 - BCBSALLY-2645: Bump `react-accessible-accordion` from `4.0.0` to `5.0.0`
+- BCBSALLY-2679: Bump `gatsby-plugin-schema-snapshot` from `3.9.0` to `3.15.0`
+- BCBSALLY-2679: Bump `devcert` from `1.2.0` to `1.2.1`
+- BCBSALLY-2679: Bump `react-instantsearch-dom` from `6.24.1` to `6.27.0`
+- BCBSALLY-2679: Bump `instantsearch.js` from `4.40.4` to `4.41.0`
+- BCBSALLY-2679: Bump `node-fetch` from `3.2.3` to `3.2.6`
 
 ## [0.1.23] - 2022-04-27
 ### Added
@@ -199,7 +212,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.23...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.24...HEAD
+[0.1.24]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.23...0.1.24
 [0.1.23]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.22...0.1.23
 [0.1.22]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.21...0.1.22
 [0.1.21]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.20...0.1.21
