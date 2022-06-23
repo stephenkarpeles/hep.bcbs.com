@@ -12,6 +12,7 @@ import {
 
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
+import ArticleCard from "../components/ArticleCard/ArticleCard"
 
 // TODO: Possibly add clean browser urls
 // @see https://www.algolia.com/doc/guides/building-search-ui/going-further/routing-urls/react/
@@ -251,7 +252,7 @@ const MaternalHealth = props => {
                 }}
               />
             </div>
-            <Hits hitComponent={planResult} />
+            <Hits hitComponent={ArticleCard} />
           </InstantSearch>
         </div>
       </section>

@@ -5,6 +5,7 @@ import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
 import Sharing from "../components/Sharing/sharing"
 import { getRelatedStories } from "../components/relatedHelper"
+import ArticleCard from "../components/ArticleCard/ArticleCard"
 
 // styles
 import "../components/pages.css"
@@ -109,7 +110,7 @@ export default function PromotionTemplate({ data }) {
           >
             <Configure hitsPerPage={2} distinct filters={filters} />
 
-            <Hits hitComponent={planResult} />
+            <Hits hitComponent={ArticleCard} />
           </InstantSearch>
         </div>
       )}

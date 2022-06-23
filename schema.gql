@@ -1,4 +1,4 @@
-### Type definitions saved at 2022-01-19T16:33:52.008Z ###
+### Type definitions saved at 2022-06-23T15:02:29.588Z ###
 
 type File implements Node @dontInfer {
   sourceInstanceName: String!
@@ -107,7 +107,7 @@ type SitePage implements Node @dontInfer {
   matchPath: String
 }
 
-type SitePlugin implements Node @derivedTypes @dontInfer {
+type SitePlugin implements Node @dontInfer {
   resolve: String
   name: String
   version: String
@@ -119,7 +119,7 @@ type SitePlugin implements Node @derivedTypes @dontInfer {
   packageJson: SitePluginPackageJson
 }
 
-type SitePluginPluginOptions @derivedTypes {
+type SitePluginPluginOptions {
   displayName: Boolean
   fileName: Boolean
   minify: Boolean
@@ -148,6 +148,7 @@ type SitePluginPluginOptions @derivedTypes {
   include_favicon: Boolean
   cacheDigest: String
   offset: Int
+  update: String
   id: String
   includeInDevelopment: Boolean
   defaultDataLayer: SitePluginPluginOptionsDefaultDataLayer
@@ -166,7 +167,7 @@ type SitePluginPluginOptions @derivedTypes {
   jsxPragma: String
 }
 
-type SitePluginPluginOptionsDefaultDataLayer @derivedTypes {
+type SitePluginPluginOptionsDefaultDataLayer {
   type: String
   value: SitePluginPluginOptionsDefaultDataLayerValue
 }
@@ -177,15 +178,15 @@ type SitePluginPluginOptionsDefaultDataLayerValue {
 }
 
 type SitePluginPluginOptionsFilters {
-  node__health_equity_disparities: String @proxy(from: "node--health_equity_disparities")
-  node__health_equity_press_kit: String @proxy(from: "node--health_equity_press_kit")
-  node__health_equity_blog: String @proxy(from: "node--health_equity_blog")
-  node__health_equity_promotion: String @proxy(from: "node--health_equity_promotion")
-  node__health_equity_plan_profile: String @proxy(from: "node--health_equity_plan_profile")
-  node__health_equity_advisory_panel: String @proxy(from: "node--health_equity_advisory_panel")
+  node__health_equity_disparities: String @proxy(from: "node--health_equity_disparities", fromNode: false)
+  node__health_equity_press_kit: String @proxy(from: "node--health_equity_press_kit", fromNode: false)
+  node__health_equity_blog: String @proxy(from: "node--health_equity_blog", fromNode: false)
+  node__health_equity_promotion: String @proxy(from: "node--health_equity_promotion", fromNode: false)
+  node__health_equity_plan_profile: String @proxy(from: "node--health_equity_plan_profile", fromNode: false)
+  node__health_equity_advisory_panel: String @proxy(from: "node--health_equity_advisory_panel", fromNode: false)
 }
 
-type SitePluginPackageJson @derivedTypes {
+type SitePluginPackageJson {
   name: String
   description: String
   version: String
@@ -392,7 +393,7 @@ type ImageSharpResize {
   originalName: String
 }
 
-type ImageSharp implements Node @childOf(types: ["File"]) @dontInfer {
+type ImageSharp implements Node @childOf(mimeTypes: [], types: ["File"]) @dontInfer {
   fixed(width: Int, height: Int, base64Width: Int, jpegProgressive: Boolean = true, pngCompressionSpeed: Int = 4, grayscale: Boolean = false, duotone: DuotoneGradient, traceSVG: Potrace, quality: Int, jpegQuality: Int, pngQuality: Int, webpQuality: Int, toFormat: ImageFormat = AUTO, toFormatBase64: ImageFormat = AUTO, cropFocus: ImageCropFocus = ATTENTION, fit: ImageFit = COVER, background: String = "rgba(0,0,0,1)", rotate: Int = 0, trim: Float = 0): ImageSharpFixed
   fluid(
     maxWidth: Int
@@ -545,7 +546,7 @@ union heRelatedContentUnion = node__health_equity_plan_profile | node__health_eq
 
 union hoaRelatedContentUnion = node__hoa_insight | node__hoa_page | node__podcast | node__video | node__health_america_page | node__page | node__press_release | node__bcbs_covid_article
 
-type node__health_equity_promotion implements Node @derivedTypes @dontInfer {
+type node__health_equity_promotion implements Node @dontInfer {
   field_he_author: String
   relationships: node__health_equity_promotionRelationships
   drupal_id: String
@@ -561,7 +562,6 @@ type node__health_equity_promotion implements Node @derivedTypes @dontInfer {
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__health_equity_promotionMetatag_normalized]
   path: node__health_equity_promotionPath
   rh_action: String
   rh_redirect_response: Int
@@ -570,7 +570,13 @@ type node__health_equity_promotion implements Node @derivedTypes @dontInfer {
   content_translation_outdated: Boolean
   body: node__health_equity_promotionBody
   field_he_reading_time: String
+  node_type: node__health_equity_promotionNode_type
+  revision_uid: node__health_equity_promotionRevision_uid
+  uid: node__health_equity_promotionUid
+  field_bcbs_plan: [node__health_equity_promotionField_bcbs_plan]
   field_he_featured_image: node__health_equity_promotionField_he_featured_image
+  field_states: [node__health_equity_promotionField_states]
+  field_topics: [node__health_equity_promotionField_topics]
 }
 
 type node__health_equity_promotionRelationships {
@@ -586,7 +592,7 @@ type node__health_equity_promotionRelationships {
   node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
 }
 
-type node_type__node_type implements Node @derivedTypes @dontInfer {
+type node_type__node_type implements Node @dontInfer {
   drupal_id: String
   langcode: String
   status: Boolean
@@ -606,7 +612,7 @@ type node_type__node_typeDependencies {
   module: [String]
 }
 
-type node_type__node_typeThird_party_settings @derivedTypes {
+type node_type__node_typeThird_party_settings {
   menu_ui: node_type__node_typeThird_party_settingsMenu_ui
 }
 
@@ -635,7 +641,7 @@ type node_type__node_typeRelationships {
   node__video: [node__video] @link(by: "id", from: "node__video___NODE")
 }
 
-type node__bcbs_covid_article implements Node @derivedTypes @dontInfer {
+type node__bcbs_covid_article implements Node @dontInfer {
   drupal_id: String
   drupal_internal__nid: Int
   drupal_internal__vid: Int
@@ -649,7 +655,6 @@ type node__bcbs_covid_article implements Node @derivedTypes @dontInfer {
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__bcbs_covid_articleMetatag_normalized]
   path: node__bcbs_covid_articlePath
   rh_action: String
   rh_redirect: String
@@ -657,28 +662,28 @@ type node__bcbs_covid_article implements Node @derivedTypes @dontInfer {
   rh_redirect_fallback_action: String
   content_translation_source: String
   content_translation_outdated: Boolean
-  field_meta_tags: node__bcbs_covid_articleField_meta_tags
   body: node__bcbs_covid_articleBody
+  field_meta_tags: node__bcbs_covid_articleField_meta_tags
   relationships: node__bcbs_covid_articleRelationships
+  node_type: node__bcbs_covid_articleNode_type
+  revision_uid: node__bcbs_covid_articleRevision_uid
+  uid: node__bcbs_covid_articleUid
+  field_bcbs_plan: [node__bcbs_covid_articleField_bcbs_plan]
   field_featured_image: node__bcbs_covid_articleField_featured_image
   field_states: [node__bcbs_covid_articleField_states]
-}
-
-type node__bcbs_covid_articleMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__bcbs_covid_articleMetatag_normalizedAttributes
-}
-
-type node__bcbs_covid_articleMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
 }
 
 type node__bcbs_covid_articlePath {
   alias: String
   pid: Int
   langcode: String
+}
+
+type node__bcbs_covid_articleBody {
+  value: String
+  format: String
+  processed: String
+  summary: String
 }
 
 type node__bcbs_covid_articleField_meta_tags {
@@ -689,22 +694,15 @@ type node__bcbs_covid_articleField_meta_tags {
   twitter_cards_image: String
 }
 
-type node__bcbs_covid_articleBody {
-  value: String
-  format: String
-  processed: String
-  summary: String
-}
-
 type node__bcbs_covid_articleRelationships {
   node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
   revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
   uid: user__user @link(by: "id", from: "uid___NODE")
-  field_states: [taxonomy_term__states] @link(by: "id", from: "field_states___NODE")
   field_bcbs_plan: [taxonomy_term__bcbs_plan] @link(by: "id", from: "field_bcbs_plan___NODE")
+  field_states: [taxonomy_term__states] @link(by: "id", from: "field_states___NODE")
 }
 
-type user__user implements Node @derivedTypes @dontInfer {
+type user__user implements Node @dontInfer {
   drupal_id: String
   display_name: String
   relationships: user__userRelationships
@@ -726,14 +724,14 @@ type user__userRelationships {
   node__page: [node__page] @link(by: "id", from: "node__page___NODE")
   node__video: [node__video] @link(by: "id", from: "node__video___NODE")
   node__podcast: [node__podcast] @link(by: "id", from: "node__podcast___NODE")
-  node__health_equity_disparities: [node__health_equity_disparities] @link(by: "id", from: "node__health_equity_disparities___NODE")
   file__file: [file__file] @link(by: "id", from: "file__file___NODE")
+  node__health_equity_disparities: [node__health_equity_disparities] @link(by: "id", from: "node__health_equity_disparities___NODE")
   node__health_equity_press_kit: [node__health_equity_press_kit] @link(by: "id", from: "node__health_equity_press_kit___NODE")
   node__health_equity_faqs: [node__health_equity_faqs] @link(by: "id", from: "node__health_equity_faqs___NODE")
   node__health_equity_advisory_panel: [node__health_equity_advisory_panel] @link(by: "id", from: "node__health_equity_advisory_panel___NODE")
 }
 
-type block_content__basic implements Node @derivedTypes @dontInfer {
+type block_content__basic implements Node @dontInfer {
   drupal_id: String
   drupal_internal__id: Int
   drupal_internal__revision_id: Int
@@ -751,9 +749,12 @@ type block_content__basic implements Node @derivedTypes @dontInfer {
   content_translation_created: Date @dateformat
   body: block_content__basicBody
   relationships: block_content__basicRelationships
+  block_content_type: block_content__basicBlock_content_type
+  revision_user: block_content__basicRevision_user
+  content_translation_uid: block_content__basicContent_translation_uid
 }
 
-type block_content__basicMetatag_normalized @derivedTypes {
+type block_content__basicMetatag_normalized {
   tag: String
   attributes: block_content__basicMetatag_normalizedAttributes
 }
@@ -775,7 +776,19 @@ type block_content__basicRelationships {
   content_translation_uid: user__user @link(by: "id", from: "content_translation_uid___NODE")
 }
 
-type block_content__section_header implements Node @derivedTypes @dontInfer {
+type block_content__basicBlock_content_type {
+  drupal_internal__target_id: String
+}
+
+type block_content__basicRevision_user {
+  drupal_internal__target_id: Int
+}
+
+type block_content__basicContent_translation_uid {
+  drupal_internal__target_id: Int
+}
+
+type block_content__section_header implements Node @dontInfer {
   drupal_id: String
   drupal_internal__id: Int
   drupal_internal__revision_id: Int
@@ -787,28 +800,27 @@ type block_content__section_header implements Node @derivedTypes @dontInfer {
   reusable: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [block_content__section_headerMetatag_normalized]
   content_translation_source: String
   content_translation_outdated: Boolean
   content_translation_created: Date @dateformat
   relationships: block_content__section_headerRelationships
-}
-
-type block_content__section_headerMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: block_content__section_headerMetatag_normalizedAttributes
-}
-
-type block_content__section_headerMetatag_normalizedAttributes {
-  name: String
-  content: String
+  block_content_type: block_content__section_headerBlock_content_type
+  content_translation_uid: block_content__section_headerContent_translation_uid
 }
 
 type block_content__section_headerRelationships {
   content_translation_uid: user__user @link(by: "id", from: "content_translation_uid___NODE")
 }
 
-type node__press_release implements Node @derivedTypes @dontInfer {
+type block_content__section_headerBlock_content_type {
+  drupal_internal__target_id: String
+}
+
+type block_content__section_headerContent_translation_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__press_release implements Node @dontInfer {
   drupal_id: String
   drupal_internal__nid: Int
   drupal_internal__vid: Int
@@ -822,44 +834,29 @@ type node__press_release implements Node @derivedTypes @dontInfer {
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__press_releaseMetatag_normalized]
   path: node__press_releasePath
   rh_action: String
   rh_redirect_response: Int
   rh_redirect_fallback_action: String
   content_translation_source: String
   content_translation_outdated: Boolean
+  body: node__press_releaseBody
   field_field_press_release_import: Date @dateformat
   field_meta_tags: node__press_releaseField_meta_tags
   field_sub_title: String
-  body: node__press_releaseBody
   relationships: node__press_releaseRelationships
+  node_type: node__press_releaseNode_type
   revision_uid: node__press_releaseRevision_uid
+  uid: node__press_releaseUid
+  field_bcbs_plan: [node__press_releaseField_bcbs_plan]
+  field_topics: [node__press_releaseField_topics]
   field_file_attachments: [node__press_releaseField_file_attachments]
-}
-
-type node__press_releaseMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__press_releaseMetatag_normalizedAttributes
-}
-
-type node__press_releaseMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
-  rel: String
-  href: String
 }
 
 type node__press_releasePath {
   alias: String
   pid: Int
   langcode: String
-}
-
-type node__press_releaseField_meta_tags {
-  description: String
-  shortlink: String
 }
 
 type node__press_releaseBody {
@@ -869,73 +866,137 @@ type node__press_releaseBody {
   summary: String
 }
 
+type node__press_releaseField_meta_tags {
+  description: String
+  shortlink: String
+}
+
 type node__press_releaseRelationships {
   node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
   revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
   uid: user__user @link(by: "id", from: "uid___NODE")
-  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
   field_bcbs_plan: [taxonomy_term__bcbs_plan] @link(by: "id", from: "field_bcbs_plan___NODE")
+  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
   node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
 }
 
-type taxonomy_term__topic implements Node @derivedTypes @dontInfer {
+type taxonomy_term__bcbs_plan implements Node @dontInfer {
   drupal_id: String
   drupal_internal__tid: Int
   drupal_internal__revision_id: Int
   langcode: String
-  revision_created: Date @dateformat
   status: Boolean
   name: String
-  description: taxonomy_term__topicDescription
   weight: Int
   changed: Date @dateformat
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [taxonomy_term__topicMetatag_normalized]
   rh_action: String
   rh_redirect_response: Int
-  rh_redirect_fallback_action: String
-  field_long_description: taxonomy_term__topicField_long_description
-  relationships: taxonomy_term__topicRelationships
+  field_more_news_text: taxonomy_term__bcbs_planField_more_news_text
+  relationships: taxonomy_term__bcbs_planRelationships
+  vid: taxonomy_term__bcbs_planVid
 }
 
-type taxonomy_term__topicDescription {
+type taxonomy_term__bcbs_planField_more_news_text {
   value: String
   format: String
   processed: String
+  summary: String
 }
 
-type taxonomy_term__topicMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: taxonomy_term__topicMetatag_normalizedAttributes
-}
-
-type taxonomy_term__topicMetatag_normalizedAttributes {
-  name: String
-  content: String
-}
-
-type taxonomy_term__topicField_long_description {
-  value: String
-  format: String
-  processed: String
-}
-
-type taxonomy_term__topicRelationships {
-  node__video: [node__video] @link(by: "id", from: "node__video___NODE")
-  node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
-  node__hoa_insight: [node__hoa_insight] @link(by: "id", from: "node__hoa_insight___NODE")
-  node__hoa_page: [node__hoa_page] @link(by: "id", from: "node__hoa_page___NODE")
-  node__hoa_topic: [node__hoa_topic] @link(by: "id", from: "node__hoa_topic___NODE")
-  node__health_equity_disparities: [node__health_equity_disparities] @link(by: "id", from: "node__health_equity_disparities___NODE")
-  node__press_release: [node__press_release] @link(by: "id", from: "node__press_release___NODE")
-  node__podcast: [node__podcast] @link(by: "id", from: "node__podcast___NODE")
-  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
+type taxonomy_term__bcbs_planRelationships {
   node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  node__press_release: [node__press_release] @link(by: "id", from: "node__press_release___NODE")
+  parent: [taxonomy_term__bcbs_plan] @link(by: "id", from: "parent___NODE")
+  node__bcbs_covid_article: [node__bcbs_covid_article] @link(by: "id", from: "node__bcbs_covid_article___NODE")
+  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
+  taxonomy_term__bcbs_plan: [taxonomy_term__bcbs_plan] @link(by: "id", from: "taxonomy_term__bcbs_plan___NODE")
   node__health_equity_promotion: [node__health_equity_promotion] @link(by: "id", from: "node__health_equity_promotion___NODE")
 }
 
-type node__video implements Node @derivedTypes @dontInfer {
+type node__health_equity_plan_profile implements Node @dontInfer {
+  title: String
+  relationships: node__health_equity_plan_profileRelationships
+  drupal_id: String
+  drupal_internal__nid: Int
+  drupal_internal__vid: Int
+  langcode: String
+  revision_timestamp: Date @dateformat
+  revision_log: String
+  status: Boolean
+  created: Date @dateformat
+  changed: Date @dateformat
+  promote: Boolean
+  sticky: Boolean
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  path: node__health_equity_plan_profilePath
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  content_translation_source: String
+  content_translation_outdated: Boolean
+  body: node__health_equity_plan_profileBody
+  field_he_author: String
+  field_he_reading_time: String
+  node_type: node__health_equity_plan_profileNode_type
+  revision_uid: node__health_equity_plan_profileRevision_uid
+  uid: node__health_equity_plan_profileUid
+  field_bcbs_plan: [node__health_equity_plan_profileField_bcbs_plan]
+  field_he_featured_image: node__health_equity_plan_profileField_he_featured_image
+  field_he_hoa_related_content: [node__health_equity_plan_profileField_he_hoa_related_content]
+  field_he_related_content: [node__health_equity_plan_profileField_he_related_content]
+  field_states: [node__health_equity_plan_profileField_states]
+  field_topics: [node__health_equity_plan_profileField_topics]
+}
+
+type node__health_equity_plan_profileRelationships {
+  field_he_related_content: [heRelatedContentUnion] @link(by: "id", from: "field_he_related_content___NODE")
+  field_he_hoa_related_content: [hoaRelatedContentUnion] @link(by: "id", from: "field_he_hoa_related_content___NODE")
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_bcbs_plan: [taxonomy_term__bcbs_plan] @link(by: "id", from: "field_bcbs_plan___NODE")
+  field_he_featured_image: file__file @link(by: "id", from: "field_he_featured_image___NODE")
+  field_states: [taxonomy_term__states] @link(by: "id", from: "field_states___NODE")
+  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
+  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
+}
+
+type file__file implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__fid: Int
+  langcode: String
+  filename: String
+  uri: file__fileUri
+  filemime: String
+  filesize: Int
+  status: Boolean
+  created: Date @dateformat
+  changed: Date @dateformat
+  relationships: file__fileRelationships
+  uid: file__fileUid
+  localFile: File @link(by: "id", from: "localFile___NODE")
+}
+
+type file__fileUri {
+  value: String
+  url: String
+}
+
+type file__fileRelationships {
+  node__health_equity_advisory_panel: [node__health_equity_advisory_panel] @link(by: "id", from: "node__health_equity_advisory_panel___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
+  node__health_equity_disparities: [node__health_equity_disparities] @link(by: "id", from: "node__health_equity_disparities___NODE")
+  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  node__health_equity_press_kit: [node__health_equity_press_kit] @link(by: "id", from: "node__health_equity_press_kit___NODE")
+  node__health_equity_promotion: [node__health_equity_promotion] @link(by: "id", from: "node__health_equity_promotion___NODE")
+}
+
+type node__health_equity_advisory_panel implements Node @dontInfer {
   drupal_id: String
   drupal_internal__nid: Int
   drupal_internal__vid: Int
@@ -949,7 +1010,147 @@ type node__video implements Node @derivedTypes @dontInfer {
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__videoMetatag_normalized]
+  path: node__health_equity_advisory_panelPath
+  content_translation_source: String
+  content_translation_outdated: Boolean
+  body: node__health_equity_advisory_panelBody
+  field_he_company: String
+  field_he_lead: String
+  field_he_position: String
+  relationships: node__health_equity_advisory_panelRelationships
+  node_type: node__health_equity_advisory_panelNode_type
+  revision_uid: node__health_equity_advisory_panelRevision_uid
+  uid: node__health_equity_advisory_panelUid
+  field_he_ap_featured_image: node__health_equity_advisory_panelField_he_ap_featured_image
+}
+
+type node__health_equity_advisory_panelPath {
+  langcode: String
+}
+
+type node__health_equity_advisory_panelBody {
+  value: String
+  format: String
+  processed: String
+  summary: String
+}
+
+type node__health_equity_advisory_panelRelationships {
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_he_ap_featured_image: file__file @link(by: "id", from: "field_he_ap_featured_image___NODE")
+}
+
+type node__health_equity_advisory_panelNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__health_equity_advisory_panelRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_advisory_panelUid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_advisory_panelField_he_ap_featured_image {
+  alt: String
+  title: String
+  width: Int
+  height: Int
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_blog implements Node @dontInfer {
+  relationships: node__health_equity_blogRelationships
+  drupal_id: String
+  drupal_internal__nid: Int
+  drupal_internal__vid: Int
+  langcode: String
+  revision_timestamp: Date @dateformat
+  status: Boolean
+  title: String
+  created: Date @dateformat
+  changed: Date @dateformat
+  promote: Boolean
+  sticky: Boolean
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  path: node__health_equity_blogPath
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  content_translation_source: String
+  content_translation_outdated: Boolean
+  body: node__health_equity_blogBody
+  field_he_author: String
+  field_he_reading_time: String
+  node_type: node__health_equity_blogNode_type
+  revision_uid: node__health_equity_blogRevision_uid
+  uid: node__health_equity_blogUid
+  field_bcbs_plan: [node__health_equity_blogField_bcbs_plan]
+  field_he_featured_image: node__health_equity_blogField_he_featured_image
+  field_he_hoa_related_content: [node__health_equity_blogField_he_hoa_related_content]
+  field_he_related_content: [node__health_equity_blogField_he_related_content]
+  field_states: [node__health_equity_blogField_states]
+  field_topics: [node__health_equity_blogField_topics]
+}
+
+type node__health_equity_blogRelationships {
+  field_he_related_content: [heRelatedContentUnion] @link(by: "id", from: "field_he_related_content___NODE")
+  field_he_hoa_related_content: [hoaRelatedContentUnion] @link(by: "id", from: "field_he_hoa_related_content___NODE")
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_bcbs_plan: [taxonomy_term__bcbs_plan] @link(by: "id", from: "field_bcbs_plan___NODE")
+  field_he_featured_image: file__file @link(by: "id", from: "field_he_featured_image___NODE")
+  field_states: [taxonomy_term__states] @link(by: "id", from: "field_states___NODE")
+  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
+  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
+}
+
+type taxonomy_term__states implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__tid: Int
+  drupal_internal__revision_id: Int
+  langcode: String
+  status: Boolean
+  name: String
+  weight: Int
+  changed: Date @dateformat
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  rh_action: String
+  rh_redirect_response: Int
+  relationships: taxonomy_term__statesRelationships
+  vid: taxonomy_term__statesVid
+}
+
+type taxonomy_term__statesRelationships {
+  node__bcbs_covid_article: [node__bcbs_covid_article] @link(by: "id", from: "node__bcbs_covid_article___NODE")
+  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  node__video: [node__video] @link(by: "id", from: "node__video___NODE")
+  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
+  node__health_equity_promotion: [node__health_equity_promotion] @link(by: "id", from: "node__health_equity_promotion___NODE")
+  node__podcast: [node__podcast] @link(by: "id", from: "node__podcast___NODE")
+}
+
+type node__video implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__nid: Int
+  drupal_internal__vid: Int
+  langcode: String
+  revision_timestamp: Date @dateformat
+  status: Boolean
+  title: String
+  created: Date @dateformat
+  changed: Date @dateformat
+  promote: Boolean
+  sticky: Boolean
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
   path: node__videoPath
   rh_action: String
   rh_redirect_response: Int
@@ -960,19 +1161,15 @@ type node__video implements Node @derivedTypes @dontInfer {
   field_published: Date @dateformat
   field_video_url: String
   relationships: node__videoRelationships
-  field_featured_image: node__videoField_featured_image
+  node_type: node__videoNode_type
+  revision_uid: node__videoRevision_uid
+  uid: node__videoUid
+  field_series: node__videoField_series
+  field_tags: node__videoField_tags
+  field_hoa_content: node__videoField_hoa_content
+  field_topics: [node__videoField_topics]
   field_states: [node__videoField_states]
-}
-
-type node__videoMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__videoMetatag_normalizedAttributes
-}
-
-type node__videoMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
+  field_featured_image: node__videoField_featured_image
 }
 
 type node__videoPath {
@@ -1005,7 +1202,131 @@ type node__videoRelationships {
   field_hoa_content: taxonomy_term__the_health_of_america @link(by: "id", from: "field_hoa_content___NODE")
 }
 
-type taxonomy_term__states implements Node @derivedTypes @dontInfer {
+type taxonomy_term__topic implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__tid: Int
+  drupal_internal__revision_id: Int
+  langcode: String
+  revision_created: Date @dateformat
+  status: Boolean
+  name: String
+  description: taxonomy_term__topicDescription
+  weight: Int
+  changed: Date @dateformat
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  field_long_description: taxonomy_term__topicField_long_description
+  relationships: taxonomy_term__topicRelationships
+  vid: taxonomy_term__topicVid
+}
+
+type taxonomy_term__topicDescription {
+  value: String
+  format: String
+  processed: String
+}
+
+type taxonomy_term__topicField_long_description {
+  value: String
+  format: String
+  processed: String
+}
+
+type taxonomy_term__topicRelationships {
+  node__video: [node__video] @link(by: "id", from: "node__video___NODE")
+  node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
+  node__hoa_insight: [node__hoa_insight] @link(by: "id", from: "node__hoa_insight___NODE")
+  node__hoa_page: [node__hoa_page] @link(by: "id", from: "node__hoa_page___NODE")
+  node__hoa_topic: [node__hoa_topic] @link(by: "id", from: "node__hoa_topic___NODE")
+  node__health_equity_disparities: [node__health_equity_disparities] @link(by: "id", from: "node__health_equity_disparities___NODE")
+  node__press_release: [node__press_release] @link(by: "id", from: "node__press_release___NODE")
+  node__podcast: [node__podcast] @link(by: "id", from: "node__podcast___NODE")
+  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
+  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  node__health_equity_promotion: [node__health_equity_promotion] @link(by: "id", from: "node__health_equity_promotion___NODE")
+}
+
+type node__health_america_page implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__nid: Int
+  drupal_internal__vid: Int
+  langcode: String
+  revision_timestamp: Date @dateformat
+  status: Boolean
+  title: String
+  created: Date @dateformat
+  changed: Date @dateformat
+  promote: Boolean
+  sticky: Boolean
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  path: node__health_america_pagePath
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  content_translation_source: String
+  content_translation_outdated: Boolean
+  body: node__health_america_pageBody
+  field_exclude_from_list: Boolean
+  field_meta_tags: node__health_america_pageField_meta_tags
+  field_sub_title: String
+  relationships: node__health_america_pageRelationships
+  node_type: node__health_america_pageNode_type
+  revision_uid: node__health_america_pageRevision_uid
+  uid: node__health_america_pageUid
+  field_featured_image: node__health_america_pageField_featured_image
+  field_file_attachments: [node__health_america_pageField_file_attachments]
+  field_hoa_content: node__health_america_pageField_hoa_content
+  field_related_pr: node__health_america_pageField_related_pr
+  field_topics: [node__health_america_pageField_topics]
+  field_appendix_data: [node__health_america_pageField_appendix_data]
+  field_download_infographic: [node__health_america_pageField_download_infographic]
+  field_curated_featured_content: [node__health_america_pageField_curated_featured_content]
+}
+
+type node__health_america_pagePath {
+  alias: String
+  pid: Int
+  langcode: String
+}
+
+type node__health_america_pageBody {
+  value: String
+  format: String
+  processed: String
+  summary: String
+}
+
+type node__health_america_pageField_meta_tags {
+  keywords: String
+  abstract: String
+  description: String
+  title: String
+  news_keywords: String
+  article_tag: String
+  twitter_cards_image: String
+}
+
+type node__health_america_pageRelationships {
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_curated_featured_content: [node__health_america_pagenode__podcastUnion] @link(by: "id", from: "field_curated_featured_content___NODE")
+  field_hoa_content: taxonomy_term__the_health_of_america @link(by: "id", from: "field_hoa_content___NODE")
+  field_related_pr: node__press_release @link(by: "id", from: "field_related_pr___NODE")
+  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
+  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  node__hoa_insight: [node__hoa_insight] @link(by: "id", from: "node__hoa_insight___NODE")
+  node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
+  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
+}
+
+union node__health_america_pagenode__podcastUnion = node__health_america_page | node__podcast
+
+type taxonomy_term__the_health_of_america implements Node @dontInfer {
   drupal_id: String
   drupal_internal__tid: Int
   drupal_internal__revision_id: Int
@@ -1016,34 +1337,20 @@ type taxonomy_term__states implements Node @derivedTypes @dontInfer {
   changed: Date @dateformat
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [taxonomy_term__statesMetatag_normalized]
   rh_action: String
   rh_redirect_response: Int
-  relationships: taxonomy_term__statesRelationships
+  relationships: taxonomy_term__the_health_of_americaRelationships
+  vid: taxonomy_term__the_health_of_americaVid
 }
 
-type taxonomy_term__statesMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: taxonomy_term__statesMetatag_normalizedAttributes
-}
-
-type taxonomy_term__statesMetatag_normalizedAttributes {
-  name: String
-  content: String
-}
-
-type taxonomy_term__statesRelationships {
-  node__bcbs_covid_article: [node__bcbs_covid_article] @link(by: "id", from: "node__bcbs_covid_article___NODE")
-  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
-  node__video: [node__video] @link(by: "id", from: "node__video___NODE")
-  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
-  node__health_equity_promotion: [node__health_equity_promotion] @link(by: "id", from: "node__health_equity_promotion___NODE")
+type taxonomy_term__the_health_of_americaRelationships {
+  node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
+  node__page: [node__page] @link(by: "id", from: "node__page___NODE")
   node__podcast: [node__podcast] @link(by: "id", from: "node__podcast___NODE")
+  node__video: [node__video] @link(by: "id", from: "node__video___NODE")
 }
 
-type node__health_equity_plan_profile implements Node @derivedTypes @dontInfer {
-  title: String
-  relationships: node__health_equity_plan_profileRelationships
+type node__page implements Node @dontInfer {
   drupal_id: String
   drupal_internal__nid: Int
   drupal_internal__vid: Int
@@ -1051,250 +1358,121 @@ type node__health_equity_plan_profile implements Node @derivedTypes @dontInfer {
   revision_timestamp: Date @dateformat
   revision_log: String
   status: Boolean
+  title: String
   created: Date @dateformat
   changed: Date @dateformat
   promote: Boolean
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__health_equity_plan_profileMetatag_normalized]
-  path: node__health_equity_plan_profilePath
+  metatag_normalized: [node__pageMetatag_normalized]
+  path: node__pagePath
   rh_action: String
   rh_redirect_response: Int
   rh_redirect_fallback_action: String
   content_translation_source: String
   content_translation_outdated: Boolean
-  field_he_author: String
-  field_he_reading_time: String
-  body: node__health_equity_plan_profileBody
-  field_he_featured_image: node__health_equity_plan_profileField_he_featured_image
+  body: node__pageBody
+  field_add_service_marks: String
+  field_featured_image_visibility: Boolean
+  field_meta_tags: node__pageField_meta_tags
+  relationships: node__pageRelationships
+  node_type: node__pageNode_type
+  revision_uid: node__pageRevision_uid
+  uid: node__pageUid
+  field_featured_image: node__pageField_featured_image
+  field_file_attachments: [node__pageField_file_attachments]
+  field_hoa_content: node__pageField_hoa_content
 }
 
-type node__health_equity_plan_profileRelationships {
-  field_he_related_content: [heRelatedContentUnion] @link(by: "id", from: "field_he_related_content___NODE")
-  field_he_hoa_related_content: [hoaRelatedContentUnion] @link(by: "id", from: "field_he_hoa_related_content___NODE")
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_he_featured_image: file__file @link(by: "id", from: "field_he_featured_image___NODE")
-  field_states: [taxonomy_term__states] @link(by: "id", from: "field_states___NODE")
-  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
-  field_bcbs_plan: [taxonomy_term__bcbs_plan] @link(by: "id", from: "field_bcbs_plan___NODE")
-  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
-  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
-}
-
-type file__file implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__fid: Int
-  langcode: String
-  filename: String
-  uri: file__fileUri
-  filemime: String
-  filesize: Int
-  status: Boolean
-  created: Date @dateformat
-  changed: Date @dateformat
-  relationships: file__fileRelationships
-  localFile: File @link(by: "id", from: "localFile___NODE")
-}
-
-type file__fileUri {
-  value: String
-  url: String
-}
-
-type file__fileRelationships {
-  node__health_equity_advisory_panel: [node__health_equity_advisory_panel] @link(by: "id", from: "node__health_equity_advisory_panel___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
-  node__health_equity_disparities: [node__health_equity_disparities] @link(by: "id", from: "node__health_equity_disparities___NODE")
-  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
-  node__health_equity_press_kit: [node__health_equity_press_kit] @link(by: "id", from: "node__health_equity_press_kit___NODE")
-  node__health_equity_promotion: [node__health_equity_promotion] @link(by: "id", from: "node__health_equity_promotion___NODE")
-}
-
-type node__health_equity_advisory_panel implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__nid: Int
-  drupal_internal__vid: Int
-  langcode: String
-  revision_timestamp: Date @dateformat
-  status: Boolean
-  title: String
-  created: Date @dateformat
-  changed: Date @dateformat
-  promote: Boolean
-  sticky: Boolean
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [node__health_equity_advisory_panelMetatag_normalized]
-  path: node__health_equity_advisory_panelPath
-  content_translation_source: String
-  content_translation_outdated: Boolean
-  body: node__health_equity_advisory_panelBody
-  field_he_company: String
-  field_he_lead: String
-  field_he_position: String
-  relationships: node__health_equity_advisory_panelRelationships
-  field_he_ap_featured_image: node__health_equity_advisory_panelField_he_ap_featured_image
-}
-
-type node__health_equity_advisory_panelMetatag_normalized @derivedTypes {
+type node__pageMetatag_normalized {
   tag: String
-  attributes: node__health_equity_advisory_panelMetatag_normalizedAttributes
+  attributes: node__pageMetatag_normalizedAttributes
 }
 
-type node__health_equity_advisory_panelMetatag_normalizedAttributes {
+type node__pageMetatag_normalizedAttributes {
   name: String
   content: String
   property: String
+  rel: String
+  href: String
 }
 
-type node__health_equity_advisory_panelPath {
-  langcode: String
-}
-
-type node__health_equity_advisory_panelBody {
-  value: String
-  format: String
-  processed: String
-  summary: String
-}
-
-type node__health_equity_advisory_panelRelationships {
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_he_ap_featured_image: file__file @link(by: "id", from: "field_he_ap_featured_image___NODE")
-}
-
-type node__health_equity_advisory_panelField_he_ap_featured_image {
-  alt: String
-  title: String
-  width: Int
-  height: Int
-}
-
-type node__health_equity_blog implements Node @derivedTypes @dontInfer {
-  relationships: node__health_equity_blogRelationships
-  drupal_id: String
-  drupal_internal__nid: Int
-  drupal_internal__vid: Int
-  langcode: String
-  revision_timestamp: Date @dateformat
-  status: Boolean
-  title: String
-  created: Date @dateformat
-  changed: Date @dateformat
-  promote: Boolean
-  sticky: Boolean
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [node__health_equity_blogMetatag_normalized]
-  path: node__health_equity_blogPath
-  rh_action: String
-  rh_redirect_response: Int
-  rh_redirect_fallback_action: String
-  content_translation_source: String
-  content_translation_outdated: Boolean
-  body: node__health_equity_blogBody
-  field_he_author: String
-  field_he_reading_time: String
-  field_he_featured_image: node__health_equity_blogField_he_featured_image
-}
-
-type node__health_equity_blogRelationships {
-  field_he_related_content: [heRelatedContentUnion] @link(by: "id", from: "field_he_related_content___NODE")
-  field_he_hoa_related_content: [hoaRelatedContentUnion] @link(by: "id", from: "field_he_hoa_related_content___NODE")
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_bcbs_plan: [taxonomy_term__bcbs_plan] @link(by: "id", from: "field_bcbs_plan___NODE")
-  field_he_featured_image: file__file @link(by: "id", from: "field_he_featured_image___NODE")
-  field_states: [taxonomy_term__states] @link(by: "id", from: "field_states___NODE")
-  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
-  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
-  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
-}
-
-type taxonomy_term__bcbs_plan implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__tid: Int
-  drupal_internal__revision_id: Int
-  langcode: String
-  status: Boolean
-  name: String
-  weight: Int
-  changed: Date @dateformat
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [taxonomy_term__bcbs_planMetatag_normalized]
-  rh_action: String
-  rh_redirect_response: Int
-  field_more_news_text: taxonomy_term__bcbs_planField_more_news_text
-  relationships: taxonomy_term__bcbs_planRelationships
-}
-
-type taxonomy_term__bcbs_planMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: taxonomy_term__bcbs_planMetatag_normalizedAttributes
-}
-
-type taxonomy_term__bcbs_planMetatag_normalizedAttributes {
-  name: String
-  content: String
-}
-
-type taxonomy_term__bcbs_planField_more_news_text {
-  value: String
-  format: String
-  processed: String
-  summary: String
-}
-
-type taxonomy_term__bcbs_planRelationships {
-  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
-  node__press_release: [node__press_release] @link(by: "id", from: "node__press_release___NODE")
-  parent: [taxonomy_term__bcbs_plan] @link(by: "id", from: "parent___NODE")
-  node__bcbs_covid_article: [node__bcbs_covid_article] @link(by: "id", from: "node__bcbs_covid_article___NODE")
-  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
-  taxonomy_term__bcbs_plan: [taxonomy_term__bcbs_plan] @link(by: "id", from: "taxonomy_term__bcbs_plan___NODE")
-  node__health_equity_promotion: [node__health_equity_promotion] @link(by: "id", from: "node__health_equity_promotion___NODE")
-}
-
-type node__health_equity_blogMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__health_equity_blogMetatag_normalizedAttributes
-}
-
-type node__health_equity_blogMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
-}
-
-type node__health_equity_blogPath {
+type node__pagePath {
   alias: String
   pid: Int
   langcode: String
 }
 
-type node__health_equity_blogBody {
+type node__pageBody {
   value: String
   format: String
   processed: String
   summary: String
 }
 
-type node__health_equity_blogField_he_featured_image {
+type node__pageField_meta_tags {
+  keywords: String
+  title: String
+  description: String
+  abstract: String
+  robots: String
+  image_src: String
+  referrer: String
+  rights: String
+  og_description: String
+  og_image_secure_url: String
+  og_image: String
+  twitter_cards_type: String
+  og_image_url: String
+  twitter_cards_description: String
+  twitter_cards_title: String
+  twitter_cards_image: String
+  og_title: String
+  twitter_cards_image_alt: String
+  twitter_cards_image_height: String
+  twitter_cards_image_width: Date @dateformat
+  og_image_alt: String
+}
+
+type node__pageRelationships {
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_hoa_content: taxonomy_term__the_health_of_america @link(by: "id", from: "field_hoa_content___NODE")
+}
+
+type node__pageNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__pageRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__pageUid {
+  drupal_internal__target_id: Int
+}
+
+type node__pageField_featured_image {
   alt: String
   title: String
   width: Int
   height: Int
+  drupal_internal__target_id: Int
 }
 
-type node__health_equity_disparities implements Node @derivedTypes @dontInfer {
+type node__pageField_file_attachments {
+  display: Boolean
+  description: String
+  drupal_internal__target_id: Int
+}
+
+type node__pageField_hoa_content {
+  drupal_internal__target_id: Int
+}
+
+type node__podcast implements Node @dontInfer {
   drupal_id: String
   drupal_internal__nid: Int
   drupal_internal__vid: Int
@@ -1308,7 +1486,364 @@ type node__health_equity_disparities implements Node @derivedTypes @dontInfer {
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__health_equity_disparitiesMetatag_normalized]
+  path: node__podcastPath
+  rh_action: String
+  rh_redirect_response: Int
+  content_translation_source: String
+  content_translation_outdated: Boolean
+  body: node__podcastBody
+  relationships: node__podcastRelationships
+  node_type: node__podcastNode_type
+  revision_uid: node__podcastRevision_uid
+  uid: node__podcastUid
+  field_featured_image: node__podcastField_featured_image
+  field_hoa_content: node__podcastField_hoa_content
+  field_podcast: [node__podcastField_podcast]
+  field_states: [node__podcastField_states]
+  field_topics: [node__podcastField_topics]
+}
+
+type node__podcastPath {
+  alias: String
+  pid: Int
+  langcode: String
+}
+
+type node__podcastBody {
+  value: String
+  format: String
+  processed: String
+  summary: String
+}
+
+type node__podcastRelationships {
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_hoa_content: taxonomy_term__the_health_of_america @link(by: "id", from: "field_hoa_content___NODE")
+  field_states: [taxonomy_term__states] @link(by: "id", from: "field_states___NODE")
+  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
+  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
+}
+
+type node__podcastNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__podcastRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__podcastUid {
+  drupal_internal__target_id: Int
+}
+
+type node__podcastField_featured_image {
+  alt: String
+  title: String
+  width: Int
+  height: Int
+  drupal_internal__target_id: Int
+}
+
+type node__podcastField_hoa_content {
+  drupal_internal__target_id: Int
+}
+
+type node__podcastField_podcast {
+  display: Boolean
+  description: String
+  drupal_internal__target_id: Int
+}
+
+type node__podcastField_states {
+  drupal_internal__target_id: Int
+}
+
+type node__podcastField_topics {
+  drupal_internal__target_id: Int
+}
+
+type taxonomy_term__the_health_of_americaVid {
+  drupal_internal__target_id: String
+}
+
+type node__hoa_insight implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__nid: Int
+  drupal_internal__vid: Int
+  langcode: String
+  revision_timestamp: Date @dateformat
+  status: Boolean
+  title: String
+  created: Date @dateformat
+  changed: Date @dateformat
+  promote: Boolean
+  sticky: Boolean
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  path: node__hoa_insightPath
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  content_translation_source: String
+  content_translation_outdated: Boolean
+  body: node__hoa_insightBody
+  field_exclude_from_list: Boolean
+  field_sub_title: String
+  relationships: node__hoa_insightRelationships
+  node_type: node__hoa_insightNode_type
+  revision_uid: node__hoa_insightRevision_uid
+  uid: node__hoa_insightUid
+  field_download_infographic: [node__hoa_insightField_download_infographic]
+  field_featured_image: node__hoa_insightField_featured_image
+  field_topics: [node__hoa_insightField_topics]
+  field_related_report: node__hoa_insightField_related_report
+}
+
+type node__hoa_insightPath {
+  alias: String
+  pid: Int
+  langcode: String
+}
+
+type node__hoa_insightBody {
+  value: String
+  format: String
+  processed: String
+  summary: String
+}
+
+type node__hoa_insightRelationships {
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
+  field_related_report: node__health_america_page @link(by: "id", from: "field_related_report___NODE")
+}
+
+type node__hoa_insightNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__hoa_insightRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_insightUid {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_insightField_download_infographic {
+  display: Boolean
+  description: String
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_insightField_featured_image {
+  alt: String
+  title: String
+  width: Int
+  height: Int
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_insightField_topics {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_insightField_related_report {
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__health_america_pageRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageUid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageField_featured_image {
+  alt: String
+  title: String
+  width: Int
+  height: Int
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageField_file_attachments {
+  display: Boolean
+  description: String
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageField_hoa_content {
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageField_related_pr {
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageField_topics {
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageField_appendix_data {
+  display: Boolean
+  description: String
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageField_download_infographic {
+  display: Boolean
+  description: String
+  drupal_internal__target_id: Int
+}
+
+type node__health_america_pageField_curated_featured_content {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_page implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__nid: Int
+  drupal_internal__vid: Int
+  langcode: String
+  revision_timestamp: Date @dateformat
+  status: Boolean
+  title: String
+  created: Date @dateformat
+  changed: Date @dateformat
+  promote: Boolean
+  sticky: Boolean
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  path: node__hoa_pagePath
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  content_translation_source: String
+  content_translation_outdated: Boolean
+  field_featured_image_visibility: Boolean
+  relationships: node__hoa_pageRelationships
+  node_type: node__hoa_pageNode_type
+  revision_uid: node__hoa_pageRevision_uid
+  uid: node__hoa_pageUid
+  field_topics: [node__hoa_pageField_topics]
+}
+
+type node__hoa_pagePath {
+  alias: String
+  pid: Int
+  langcode: String
+}
+
+type node__hoa_pageRelationships {
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
+}
+
+type node__hoa_pageNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__hoa_pageRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_pageUid {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_pageField_topics {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_topic implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__nid: Int
+  drupal_internal__vid: Int
+  langcode: String
+  revision_timestamp: Date @dateformat
+  status: Boolean
+  title: String
+  created: Date @dateformat
+  changed: Date @dateformat
+  promote: Boolean
+  sticky: Boolean
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  path: node__hoa_topicPath
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  content_translation_source: String
+  content_translation_outdated: Boolean
+  field_topic_news: [node__hoa_topicField_topic_news]
+  relationships: node__hoa_topicRelationships
+  node_type: node__hoa_topicNode_type
+  revision_uid: node__hoa_topicRevision_uid
+  uid: node__hoa_topicUid
+  field_topic: node__hoa_topicField_topic
+}
+
+type node__hoa_topicPath {
+  alias: String
+  pid: Int
+  langcode: String
+}
+
+type node__hoa_topicField_topic_news {
+  uri: String
+  title: String
+}
+
+type node__hoa_topicRelationships {
+  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
+  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
+  uid: user__user @link(by: "id", from: "uid___NODE")
+  field_topic: taxonomy_term__topic @link(by: "id", from: "field_topic___NODE")
+}
+
+type node__hoa_topicNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__hoa_topicRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_topicUid {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_topicField_topic {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_disparities implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__nid: Int
+  drupal_internal__vid: Int
+  langcode: String
+  revision_timestamp: Date @dateformat
+  status: Boolean
+  title: String
+  created: Date @dateformat
+  changed: Date @dateformat
+  promote: Boolean
+  sticky: Boolean
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
   path: node__health_equity_disparitiesPath
   rh_action: String
   rh_redirect_response: Int
@@ -1320,18 +1855,11 @@ type node__health_equity_disparities implements Node @derivedTypes @dontInfer {
   field_he_statistic: String
   field_he_statistic_text: String
   relationships: node__health_equity_disparitiesRelationships
+  node_type: node__health_equity_disparitiesNode_type
+  revision_uid: node__health_equity_disparitiesRevision_uid
+  uid: node__health_equity_disparitiesUid
   field_he_dis_featured_image: node__health_equity_disparitiesField_he_dis_featured_image
-}
-
-type node__health_equity_disparitiesMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__health_equity_disparitiesMetatag_normalizedAttributes
-}
-
-type node__health_equity_disparitiesMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
+  field_topics: [node__health_equity_disparitiesField_topics]
 }
 
 type node__health_equity_disparitiesPath {
@@ -1359,14 +1887,133 @@ type node__health_equity_disparitiesRelationships {
   field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
 }
 
+type node__health_equity_disparitiesNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__health_equity_disparitiesRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_disparitiesUid {
+  drupal_internal__target_id: Int
+}
+
 type node__health_equity_disparitiesField_he_dis_featured_image {
   alt: String
   title: String
   width: Int
   height: Int
+  drupal_internal__target_id: Int
 }
 
-type node__health_equity_press_kit implements Node @derivedTypes @dontInfer {
+type node__health_equity_disparitiesField_topics {
+  drupal_internal__target_id: Int
+}
+
+type taxonomy_term__topicVid {
+  drupal_internal__target_id: String
+}
+
+type node__videoNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__videoRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__videoUid {
+  drupal_internal__target_id: Int
+}
+
+type node__videoField_series {
+  drupal_internal__target_id: Int
+}
+
+type node__videoField_tags {
+  drupal_internal__target_id: Int
+}
+
+type node__videoField_hoa_content {
+  drupal_internal__target_id: Int
+}
+
+type node__videoField_topics {
+  drupal_internal__target_id: Int
+}
+
+type node__videoField_states {
+  drupal_internal__target_id: Int
+  arity: Int
+}
+
+type node__videoField_featured_image {
+  alt: String
+  title: String
+  width: Int
+  height: Int
+  drupal_internal__target_id: Int
+}
+
+type taxonomy_term__statesVid {
+  drupal_internal__target_id: String
+}
+
+type node__health_equity_blogPath {
+  alias: String
+  pid: Int
+  langcode: String
+}
+
+type node__health_equity_blogBody {
+  value: String
+  format: String
+  processed: String
+  summary: String
+}
+
+type node__health_equity_blogNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__health_equity_blogRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_blogUid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_blogField_bcbs_plan {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_blogField_he_featured_image {
+  alt: String
+  title: String
+  width: Int
+  height: Int
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_blogField_he_hoa_related_content {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_blogField_he_related_content {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_blogField_states {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_blogField_topics {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_press_kit implements Node @dontInfer {
   drupal_id: String
   drupal_internal__nid: Int
   drupal_internal__vid: Int
@@ -1380,7 +2027,6 @@ type node__health_equity_press_kit implements Node @derivedTypes @dontInfer {
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__health_equity_press_kitMetatag_normalized]
   path: node__health_equity_press_kitPath
   rh_action: String
   rh_redirect_response: Int
@@ -1390,18 +2036,10 @@ type node__health_equity_press_kit implements Node @derivedTypes @dontInfer {
   body: node__health_equity_press_kitBody
   field_he_title_category: String
   relationships: node__health_equity_press_kitRelationships
+  node_type: node__health_equity_press_kitNode_type
+  revision_uid: node__health_equity_press_kitRevision_uid
+  uid: node__health_equity_press_kitUid
   field_he_pk_download: node__health_equity_press_kitField_he_pk_download
-}
-
-type node__health_equity_press_kitMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__health_equity_press_kitMetatag_normalizedAttributes
-}
-
-type node__health_equity_press_kitMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
 }
 
 type node__health_equity_press_kitPath {
@@ -1422,20 +2060,26 @@ type node__health_equity_press_kitRelationships {
   field_he_pk_download: file__file @link(by: "id", from: "field_he_pk_download___NODE")
 }
 
+type node__health_equity_press_kitNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__health_equity_press_kitRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_press_kitUid {
+  drupal_internal__target_id: Int
+}
+
 type node__health_equity_press_kitField_he_pk_download {
   display: Boolean
   description: String
+  drupal_internal__target_id: Int
 }
 
-type node__health_equity_plan_profileMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__health_equity_plan_profileMetatag_normalizedAttributes
-}
-
-type node__health_equity_plan_profileMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
+type file__fileUid {
+  drupal_internal__target_id: Int
 }
 
 type node__health_equity_plan_profilePath {
@@ -1451,511 +2095,65 @@ type node__health_equity_plan_profileBody {
   summary: String
 }
 
+type node__health_equity_plan_profileNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__health_equity_plan_profileRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_plan_profileUid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_plan_profileField_bcbs_plan {
+  drupal_internal__target_id: Int
+}
+
 type node__health_equity_plan_profileField_he_featured_image {
   alt: String
   title: String
   width: Int
   height: Int
+  drupal_internal__target_id: Int
 }
 
-type node__podcast implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__nid: Int
-  drupal_internal__vid: Int
-  langcode: String
-  revision_timestamp: Date @dateformat
-  status: Boolean
-  title: String
-  created: Date @dateformat
-  changed: Date @dateformat
-  promote: Boolean
-  sticky: Boolean
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [node__podcastMetatag_normalized]
-  path: node__podcastPath
-  rh_action: String
-  rh_redirect_response: Int
-  content_translation_source: String
-  content_translation_outdated: Boolean
-  body: node__podcastBody
-  relationships: node__podcastRelationships
-  field_featured_image: node__podcastField_featured_image
-  field_podcast: [node__podcastField_podcast]
+type node__health_equity_plan_profileField_he_hoa_related_content {
+  drupal_internal__target_id: Int
 }
 
-type node__podcastMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__podcastMetatag_normalizedAttributes
+type node__health_equity_plan_profileField_he_related_content {
+  drupal_internal__target_id: Int
 }
 
-type node__podcastMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
-}
-
-type node__podcastPath {
-  alias: String
-  pid: Int
-  langcode: String
-}
-
-type node__podcastBody {
-  value: String
-  format: String
-  processed: String
-  summary: String
-}
-
-type node__podcastRelationships {
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_hoa_content: taxonomy_term__the_health_of_america @link(by: "id", from: "field_hoa_content___NODE")
-  field_states: [taxonomy_term__states] @link(by: "id", from: "field_states___NODE")
-  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
-  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
-  node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
-}
-
-type taxonomy_term__the_health_of_america implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__tid: Int
-  drupal_internal__revision_id: Int
-  langcode: String
-  status: Boolean
-  name: String
-  weight: Int
-  changed: Date @dateformat
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [taxonomy_term__the_health_of_americaMetatag_normalized]
-  rh_action: String
-  rh_redirect_response: Int
-  relationships: taxonomy_term__the_health_of_americaRelationships
-}
-
-type taxonomy_term__the_health_of_americaMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: taxonomy_term__the_health_of_americaMetatag_normalizedAttributes
-}
-
-type taxonomy_term__the_health_of_americaMetatag_normalizedAttributes {
-  name: String
-  content: String
-}
-
-type taxonomy_term__the_health_of_americaRelationships {
-  node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
-  node__page: [node__page] @link(by: "id", from: "node__page___NODE")
-  node__podcast: [node__podcast] @link(by: "id", from: "node__podcast___NODE")
-  node__video: [node__video] @link(by: "id", from: "node__video___NODE")
-}
-
-type node__health_america_page implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__nid: Int
-  drupal_internal__vid: Int
-  langcode: String
-  revision_timestamp: Date @dateformat
-  status: Boolean
-  title: String
-  created: Date @dateformat
-  changed: Date @dateformat
-  promote: Boolean
-  sticky: Boolean
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [node__health_america_pageMetatag_normalized]
-  path: node__health_america_pagePath
-  rh_action: String
-  rh_redirect_response: Int
-  content_translation_source: String
-  content_translation_outdated: Boolean
-  body: node__health_america_pageBody
-  field_exclude_from_list: Boolean
-  field_meta_tags: node__health_america_pageField_meta_tags
-  field_sub_title: String
-  relationships: node__health_america_pageRelationships
-  field_featured_image: node__health_america_pageField_featured_image
-  field_file_attachments: [node__health_america_pageField_file_attachments]
-  field_appendix_data: [node__health_america_pageField_appendix_data]
-  field_download_infographic: [node__health_america_pageField_download_infographic]
-}
-
-type node__health_america_pageMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__health_america_pageMetatag_normalizedAttributes
-}
-
-type node__health_america_pageMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
-}
-
-type node__health_america_pagePath {
-  alias: String
-  pid: Int
-  langcode: String
-}
-
-type node__health_america_pageBody {
-  value: String
-  format: String
-  processed: String
-  summary: String
-}
-
-type node__health_america_pageField_meta_tags {
-  keywords: String
-  abstract: String
-  description: String
-}
-
-type node__health_america_pageRelationships {
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_curated_featured_content: [node__health_america_pagenode__podcastUnion] @link(by: "id", from: "field_curated_featured_content___NODE")
-  field_hoa_content: taxonomy_term__the_health_of_america @link(by: "id", from: "field_hoa_content___NODE")
-  field_related_pr: node__press_release @link(by: "id", from: "field_related_pr___NODE")
-  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
-  node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
-  node__hoa_insight: [node__hoa_insight] @link(by: "id", from: "node__hoa_insight___NODE")
-  node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
-  node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
-}
-
-union node__health_america_pagenode__podcastUnion = node__health_america_page | node__podcast
-
-type node__hoa_insight implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__nid: Int
-  drupal_internal__vid: Int
-  langcode: String
-  revision_timestamp: Date @dateformat
-  status: Boolean
-  title: String
-  created: Date @dateformat
-  changed: Date @dateformat
-  promote: Boolean
-  sticky: Boolean
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [node__hoa_insightMetatag_normalized]
-  path: node__hoa_insightPath
-  rh_action: String
-  rh_redirect_response: Int
-  rh_redirect_fallback_action: String
-  content_translation_source: String
-  content_translation_outdated: Boolean
-  field_exclude_from_list: Boolean
-  field_sub_title: String
-  body: node__hoa_insightBody
-  relationships: node__hoa_insightRelationships
-  field_download_infographic: [node__hoa_insightField_download_infographic]
-  field_featured_image: node__hoa_insightField_featured_image
-}
-
-type node__hoa_insightMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__hoa_insightMetatag_normalizedAttributes
-}
-
-type node__hoa_insightMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
-}
-
-type node__hoa_insightPath {
-  alias: String
-  pid: Int
-  langcode: String
-}
-
-type node__hoa_insightBody {
-  value: String
-  format: String
-  processed: String
-  summary: String
-}
-
-type node__hoa_insightRelationships {
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
-  field_related_report: node__health_america_page @link(by: "id", from: "field_related_report___NODE")
-}
-
-type node__hoa_insightField_download_infographic {
-  display: Boolean
-  description: String
-}
-
-type node__hoa_insightField_featured_image {
-  alt: String
-  title: String
-  width: Int
-  height: Int
-}
-
-type node__health_america_pageField_featured_image {
-  alt: String
-  title: String
-  width: Int
-  height: Int
-}
-
-type node__health_america_pageField_file_attachments {
-  display: Boolean
-  description: String
-}
-
-type node__health_america_pageField_appendix_data {
-  display: Boolean
-  description: String
-}
-
-type node__health_america_pageField_download_infographic {
-  display: Boolean
-  description: String
-}
-
-type node__page implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__nid: Int
-  drupal_internal__vid: Int
-  langcode: String
-  revision_timestamp: Date @dateformat
-  revision_log: String
-  status: Boolean
-  title: String
-  created: Date @dateformat
-  changed: Date @dateformat
-  promote: Boolean
-  sticky: Boolean
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [node__pageMetatag_normalized]
-  path: node__pagePath
-  rh_action: String
-  rh_redirect_response: Int
-  rh_redirect_fallback_action: String
-  content_translation_source: String
-  content_translation_outdated: Boolean
-  field_add_service_marks: String
-  field_featured_image_visibility: Boolean
-  field_meta_tags: node__pageField_meta_tags
-  body: node__pageBody
-  relationships: node__pageRelationships
-  field_featured_image: node__pageField_featured_image
-  field_file_attachments: [node__pageField_file_attachments]
-}
-
-type node__pageMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__pageMetatag_normalizedAttributes
-}
-
-type node__pageMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
-  rel: String
-  href: String
-}
-
-type node__pagePath {
-  alias: String
-  pid: Int
-  langcode: String
-}
-
-type node__pageField_meta_tags {
-  keywords: String
-  title: String
-  description: String
-  abstract: String
-  robots: String
-  image_src: String
-  referrer: String
-  rights: String
-  og_description: String
-  og_image_secure_url: String
-  og_image: String
-  twitter_cards_type: String
-  og_image_url: String
-  twitter_cards_description: String
-  twitter_cards_title: String
-  twitter_cards_image: String
-  og_image_width: Date @dateformat
-  og_image_height: String
-  twitter_cards_site: String
-  twitter_cards_page_url: String
-  twitter_cards_image_height: String
-  twitter_cards_image_width: Date @dateformat
-  og_title: String
-  twitter_cards_image_alt: String
-  og_image_alt: String
-}
-
-type node__pageBody {
-  value: String
-  format: String
-  processed: String
-  summary: String
-}
-
-type node__pageRelationships {
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_hoa_content: taxonomy_term__the_health_of_america @link(by: "id", from: "field_hoa_content___NODE")
-}
-
-type node__pageField_featured_image {
-  alt: String
-  title: String
-  width: Int
-  height: Int
-}
-
-type node__pageField_file_attachments {
-  display: Boolean
-  description: String
-}
-
-type node__podcastField_featured_image {
-  alt: String
-  title: String
-  width: Int
-  height: Int
-}
-
-type node__podcastField_podcast {
-  display: Boolean
-  description: String
-}
-
-type node__videoField_featured_image {
-  alt: String
-  title: String
-  width: Int
-  height: Int
-}
-
-type node__videoField_states {
+type node__health_equity_plan_profileField_states {
+  drupal_internal__target_id: Int
   arity: Int
 }
 
-type node__hoa_page implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__nid: Int
-  drupal_internal__vid: Int
-  langcode: String
-  revision_timestamp: Date @dateformat
-  status: Boolean
-  title: String
-  created: Date @dateformat
-  changed: Date @dateformat
-  promote: Boolean
-  sticky: Boolean
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [node__hoa_pageMetatag_normalized]
-  path: node__hoa_pagePath
-  rh_action: String
-  rh_redirect_response: Int
-  content_translation_source: String
-  content_translation_outdated: Boolean
-  field_featured_image_visibility: Boolean
-  relationships: node__hoa_pageRelationships
+type node__health_equity_plan_profileField_topics {
+  drupal_internal__target_id: Int
 }
 
-type node__hoa_pageMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__hoa_pageMetatag_normalizedAttributes
+type taxonomy_term__bcbs_planVid {
+  drupal_internal__target_id: String
 }
 
-type node__hoa_pageMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
+type node__press_releaseNode_type {
+  drupal_internal__target_id: String
 }
 
-type node__hoa_pagePath {
-  alias: String
-  pid: Int
-  langcode: String
-}
-
-type node__hoa_pageRelationships {
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
-}
-
-type node__hoa_topic implements Node @derivedTypes @dontInfer {
-  drupal_id: String
-  drupal_internal__nid: Int
-  drupal_internal__vid: Int
-  langcode: String
-  revision_timestamp: Date @dateformat
-  status: Boolean
-  title: String
-  created: Date @dateformat
-  changed: Date @dateformat
-  promote: Boolean
-  sticky: Boolean
-  default_langcode: Boolean
-  revision_translation_affected: Boolean
-  metatag_normalized: [node__hoa_topicMetatag_normalized]
-  rh_action: String
-  rh_redirect_response: Int
-  rh_redirect_fallback_action: String
-  content_translation_source: String
-  content_translation_outdated: Boolean
-  field_topic_news: [node__hoa_topicField_topic_news]
-  relationships: node__hoa_topicRelationships
-}
-
-type node__hoa_topicMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__hoa_topicMetatag_normalizedAttributes
-}
-
-type node__hoa_topicMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
-}
-
-type node__hoa_topicField_topic_news {
-  uri: String
-  title: String
-}
-
-type node__hoa_topicRelationships {
-  node_type: node_type__node_type @link(by: "id", from: "node_type___NODE")
-  revision_uid: user__user @link(by: "id", from: "revision_uid___NODE")
-  uid: user__user @link(by: "id", from: "uid___NODE")
-  field_topic: taxonomy_term__topic @link(by: "id", from: "field_topic___NODE")
-}
-
-type node__press_releaseRevision_uid @derivedTypes {
+type node__press_releaseRevision_uid {
+  drupal_internal__target_id: Int
   links: node__press_releaseRevision_uidLinks
 }
 
-type node__press_releaseRevision_uidLinks @derivedTypes {
+type node__press_releaseRevision_uidLinks {
   help: node__press_releaseRevision_uidLinksHelp
 }
 
-type node__press_releaseRevision_uidLinksHelp @derivedTypes {
+type node__press_releaseRevision_uidLinksHelp {
   href: String
   meta: node__press_releaseRevision_uidLinksHelpMeta
 }
@@ -1964,12 +2162,25 @@ type node__press_releaseRevision_uidLinksHelpMeta {
   about: String
 }
 
+type node__press_releaseUid {
+  drupal_internal__target_id: Int
+}
+
+type node__press_releaseField_bcbs_plan {
+  drupal_internal__target_id: Int
+}
+
+type node__press_releaseField_topics {
+  drupal_internal__target_id: Int
+}
+
 type node__press_releaseField_file_attachments {
   display: Boolean
   description: String
+  drupal_internal__target_id: Int
 }
 
-type node__hoa_homepage implements Node @derivedTypes @dontInfer {
+type node__hoa_homepage implements Node @dontInfer {
   drupal_id: String
   drupal_internal__nid: Int
   drupal_internal__vid: Int
@@ -1983,23 +2194,22 @@ type node__hoa_homepage implements Node @derivedTypes @dontInfer {
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__hoa_homepageMetatag_normalized]
+  path: node__hoa_homepagePath
   rh_action: String
   rh_redirect_response: Int
+  rh_redirect_fallback_action: String
   content_translation_source: String
   content_translation_outdated: Boolean
   relationships: node__hoa_homepageRelationships
+  node_type: node__hoa_homepageNode_type
+  revision_uid: node__hoa_homepageRevision_uid
+  uid: node__hoa_homepageUid
 }
 
-type node__hoa_homepageMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__hoa_homepageMetatag_normalizedAttributes
-}
-
-type node__hoa_homepageMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
+type node__hoa_homepagePath {
+  alias: String
+  pid: Int
+  langcode: String
 }
 
 type node__hoa_homepageRelationships {
@@ -2008,7 +2218,19 @@ type node__hoa_homepageRelationships {
   uid: user__user @link(by: "id", from: "uid___NODE")
 }
 
-type node__health_equity_faqs implements Node @derivedTypes @dontInfer {
+type node__hoa_homepageNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__hoa_homepageRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__hoa_homepageUid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_faqs implements Node @dontInfer {
   drupal_id: String
   drupal_internal__nid: Int
   drupal_internal__vid: Int
@@ -2022,23 +2244,14 @@ type node__health_equity_faqs implements Node @derivedTypes @dontInfer {
   sticky: Boolean
   default_langcode: Boolean
   revision_translation_affected: Boolean
-  metatag_normalized: [node__health_equity_faqsMetatag_normalized]
   path: node__health_equity_faqsPath
   content_translation_source: String
   content_translation_outdated: Boolean
   body: node__health_equity_faqsBody
   relationships: node__health_equity_faqsRelationships
-}
-
-type node__health_equity_faqsMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__health_equity_faqsMetatag_normalizedAttributes
-}
-
-type node__health_equity_faqsMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
+  node_type: node__health_equity_faqsNode_type
+  revision_uid: node__health_equity_faqsRevision_uid
+  uid: node__health_equity_faqsUid
 }
 
 type node__health_equity_faqsPath {
@@ -2058,26 +2271,45 @@ type node__health_equity_faqsRelationships {
   uid: user__user @link(by: "id", from: "uid___NODE")
 }
 
+type node__health_equity_faqsNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__health_equity_faqsRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_faqsUid {
+  drupal_internal__target_id: Int
+}
+
+type node__bcbs_covid_articleNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__bcbs_covid_articleRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__bcbs_covid_articleUid {
+  drupal_internal__target_id: Int
+}
+
+type node__bcbs_covid_articleField_bcbs_plan {
+  drupal_internal__target_id: Int
+}
+
 type node__bcbs_covid_articleField_featured_image {
   alt: String
   title: String
   width: Int
   height: Int
+  drupal_internal__target_id: Int
 }
 
 type node__bcbs_covid_articleField_states {
+  drupal_internal__target_id: Int
   arity: Int
-}
-
-type node__health_equity_promotionMetatag_normalized @derivedTypes {
-  tag: String
-  attributes: node__health_equity_promotionMetatag_normalizedAttributes
-}
-
-type node__health_equity_promotionMetatag_normalizedAttributes {
-  name: String
-  content: String
-  property: String
 }
 
 type node__health_equity_promotionPath {
@@ -2093,11 +2325,147 @@ type node__health_equity_promotionBody {
   summary: String
 }
 
+type node__health_equity_promotionNode_type {
+  drupal_internal__target_id: String
+}
+
+type node__health_equity_promotionRevision_uid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_promotionUid {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_promotionField_bcbs_plan {
+  drupal_internal__target_id: Int
+}
+
 type node__health_equity_promotionField_he_featured_image {
   alt: String
   title: String
   width: Int
   height: Int
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_promotionField_states {
+  drupal_internal__target_id: Int
+}
+
+type node__health_equity_promotionField_topics {
+  drupal_internal__target_id: Int
+}
+
+type taxonomy_term__sbh_length_filter implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__tid: Int
+  drupal_internal__revision_id: Int
+  langcode: String
+  revision_created: Date @dateformat
+  status: Boolean
+  name: String
+  weight: Int
+  changed: Date @dateformat
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  metatag_normalized: [taxonomy_term__sbh_length_filterMetatag_normalized]
+  path: taxonomy_term__sbh_length_filterPath
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  vid: taxonomy_term__sbh_length_filterVid
+}
+
+type taxonomy_term__sbh_length_filterMetatag_normalized {
+  tag: String
+  attributes: taxonomy_term__sbh_length_filterMetatag_normalizedAttributes
+}
+
+type taxonomy_term__sbh_length_filterMetatag_normalizedAttributes {
+  name: String
+  content: String
+}
+
+type taxonomy_term__sbh_length_filterPath {
+  langcode: String
+}
+
+type taxonomy_term__sbh_length_filterVid {
+  drupal_internal__target_id: String
+}
+
+type taxonomy_term__sbh_content_filter implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__tid: Int
+  drupal_internal__revision_id: Int
+  langcode: String
+  revision_created: Date @dateformat
+  status: Boolean
+  name: String
+  weight: Int
+  changed: Date @dateformat
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  metatag_normalized: [taxonomy_term__sbh_content_filterMetatag_normalized]
+  path: taxonomy_term__sbh_content_filterPath
+  rh_action: String
+  rh_redirect_response: Int
+  rh_redirect_fallback_action: String
+  vid: taxonomy_term__sbh_content_filterVid
+}
+
+type taxonomy_term__sbh_content_filterMetatag_normalized {
+  tag: String
+  attributes: taxonomy_term__sbh_content_filterMetatag_normalizedAttributes
+}
+
+type taxonomy_term__sbh_content_filterMetatag_normalizedAttributes {
+  name: String
+  content: String
+}
+
+type taxonomy_term__sbh_content_filterPath {
+  langcode: String
+}
+
+type taxonomy_term__sbh_content_filterVid {
+  drupal_internal__target_id: String
+}
+
+type path_file_entity__path_file_entity implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__id: Int
+  langcode: String
+  name: String
+  path: path_file_entity__path_file_entityPath
+  status: Boolean
+  created: Date @dateformat
+  changed: Date @dateformat
+  metatag_normalized: [path_file_entity__path_file_entityMetatag_normalized]
+  fid: path_file_entity__path_file_entityFid
+}
+
+type path_file_entity__path_file_entityPath {
+  alias: String
+  pid: Int
+  langcode: String
+}
+
+type path_file_entity__path_file_entityMetatag_normalized {
+  tag: String
+  attributes: path_file_entity__path_file_entityMetatag_normalizedAttributes
+}
+
+type path_file_entity__path_file_entityMetatag_normalizedAttributes {
+  name: String
+  content: String
+}
+
+type path_file_entity__path_file_entityFid {
+  display: Boolean
+  description: String
+  drupal_internal__target_id: Int
 }
 
 type menu__menu implements Node @dontInfer {
@@ -2123,7 +2491,7 @@ type contact_form__contact_form implements Node @dontInfer {
   redirect: String
 }
 
-type block__block implements Node @derivedTypes @dontInfer {
+type block__block implements Node @dontInfer {
   drupal_id: String
   langcode: String
   status: Boolean
@@ -2148,42 +2516,88 @@ type block__blockDependencies {
 type block__blockSettings {
   id: String
   label: String
-  provider: String
   label_display: String
-  level: Int
-  depth: Int
+  provider: String
   expand_all_items: Boolean
   use_site_logo: Boolean
   use_site_name: Boolean
   use_site_slogan: Boolean
   primary: Boolean
   secondary: Boolean
-  views_label: String
-  items_per_page: String
   status: Boolean
   info: String
   view_mode: String
+  views_label: String
+  items_per_page: String
   follow: Boolean
   follow_parent: String
+  label_link: Boolean
+  label_type: String
   parent: String
   suggestion: String
-  label_type: String
-  label_link: Boolean
-  expand: Boolean
+  menu_type: String
+  style: String
+  arrow: Int
+  shadow: Int
+  speed: String
+  delay: String
+  slide: String
+  supposition: Int
+  hoverintent: Int
+  touch: String
+  touchbh: String
+  touchbp: String
+  touchua: String
+  touchual: String
+  touchuam: String
+  small: String
+  smallbp: String
+  smallua: String
+  smallual: String
+  smalluam: String
+  smallact: String
+  smallset: String
+  smallasa: Int
+  smallcmc: Int
+  smallecm: String
+  smallchc: Int
+  smallech: String
+  smallicm: String
+  smallich: String
+  smallamt: String
+  smallabt: String
+  supersubs: Int
+  minwidth: String
+  maxwidth: String
+  multicolumn: Int
+  multicolumn_depth: String
+  multicolumn_levels: String
+  pathlevels: String
+  expanded: Int
+  clone_parent: Int
+  hide_linkdescription: Int
+  add_linkdescription: Int
+  link_depth_class: Int
+  custom_list_class: String
+  custom_item_class: String
+  custom_link_class: String
+  webform_id: String
+  default_data: String
+  redirect: Boolean
   search_api_page: String
 }
 
-type block__blockVisibility @derivedTypes {
+type block__blockVisibility {
   request_path: block__blockVisibilityRequest_path
 }
 
 type block__blockVisibilityRequest_path {
   id: String
-  pages: String
   negate: Boolean
+  pages: String
 }
 
-type block__blockThird_party_settings @derivedTypes {
+type block__blockThird_party_settings {
   block_class: block__blockThird_party_settingsBlock_class
 }
 

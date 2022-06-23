@@ -17,6 +17,7 @@ import {
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
 import AdvisoryBoard from "../components/AdvisoryBoard/AdvisoryBoard"
+import ArticleCard from "../components/ArticleCard/ArticleCard"
 
 import SEO from "../components/seo"
 import Newsletter from "../components/Newsletter/Newsletter"
@@ -195,7 +196,7 @@ const LatestStories = props => {
               />
             </div>
 
-            <Hits hitComponent={planResult} />
+            <Hits hitComponent={ArticleCard} />
           </InstantSearch>
         </div>
       </section>
