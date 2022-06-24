@@ -39,7 +39,7 @@ const CTA = ({
         <h2 className="cta-box-heading">{title}</h2>
         {!!body && <p className="cta-box-text">{body}</p>}
         {!!outside ? (
-          <div class="cta-box-link">
+          <div className="cta-box-link">
             <a
               href={linkURL}
               target="_blank"
@@ -51,7 +51,7 @@ const CTA = ({
             </a>
           </div>
         ) : (
-          <div class="cta-box-link">
+          <div className="cta-box-link">
             <Link to={linkURL} className="button button-basic cta-box-button">
               {linkTitle}
             </Link>
