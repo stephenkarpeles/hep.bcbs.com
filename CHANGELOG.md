@@ -23,6 +23,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.25] - 2022-06-28
+### Added
+- BCBSALLY-2416: Refactor Reult Card Component
+
+### Security
+- BCBSALLY-2679: Bump immer from 9.0.12 to 9.0.15
+- BCBSALLY-2679: Bump ws from 8.6.0 to 8.8.0
+- BCBSALLY-2679: Bump @pmmmwh/react-refresh-webpack-plugin from 0.5.5 to 0.5.7
+- BCBSALLY-2679: Bump react-refresh from 0.11.0 to 0.14.0
+- BCBSALLY-2679: Bump jpeg-js from 0.4.3 to 0.4.4
+
 ## [0.1.24] - 2022-06-15
 ### Added
 - BCBSALLY-2614: Refactor Presskit Component
@@ -212,7 +223,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.24...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.25...HEAD
+[0.1.25]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.24...0.1.25
 [0.1.24]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.23...0.1.24
 [0.1.23]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.22...0.1.23
 [0.1.22]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.21...0.1.22
