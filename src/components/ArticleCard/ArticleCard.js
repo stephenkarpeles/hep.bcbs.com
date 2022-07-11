@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
+import "./ArticleCard.css"
 
 const ArticleCard = ({ hit }) => {
   const {
