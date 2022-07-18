@@ -1,4 +1,4 @@
-### Type definitions saved at 2022-06-23T15:02:29.588Z ###
+### Type definitions saved at 2022-07-18T19:11:24.790Z ###
 
 type File implements Node @dontInfer {
   sourceInstanceName: String!
@@ -76,8 +76,6 @@ type Directory implements Node @dontInfer {
 type Site implements Node @dontInfer {
   buildTime: Date @dateformat
   siteMetadata: SiteSiteMetadata
-  port: Int
-  host: String
   pathPrefix: String
   polyfill: Boolean
 }
@@ -849,8 +847,8 @@ type node__press_release implements Node @dontInfer {
   revision_uid: node__press_releaseRevision_uid
   uid: node__press_releaseUid
   field_bcbs_plan: [node__press_releaseField_bcbs_plan]
-  field_topics: [node__press_releaseField_topics]
   field_file_attachments: [node__press_releaseField_file_attachments]
+  field_topics: [node__press_releaseField_topics]
 }
 
 type node__press_releasePath {
@@ -868,7 +866,6 @@ type node__press_releaseBody {
 
 type node__press_releaseField_meta_tags {
   description: String
-  shortlink: String
 }
 
 type node__press_releaseRelationships {
@@ -1316,9 +1313,9 @@ type node__health_america_pageRelationships {
   uid: user__user @link(by: "id", from: "uid___NODE")
   field_curated_featured_content: [node__health_america_pagenode__podcastUnion] @link(by: "id", from: "field_curated_featured_content___NODE")
   field_hoa_content: taxonomy_term__the_health_of_america @link(by: "id", from: "field_hoa_content___NODE")
-  field_related_pr: node__press_release @link(by: "id", from: "field_related_pr___NODE")
   field_topics: [taxonomy_term__topic] @link(by: "id", from: "field_topics___NODE")
   node__health_equity_plan_profile: [node__health_equity_plan_profile] @link(by: "id", from: "node__health_equity_plan_profile___NODE")
+  field_related_pr: node__press_release @link(by: "id", from: "field_related_pr___NODE")
   node__hoa_insight: [node__hoa_insight] @link(by: "id", from: "node__hoa_insight___NODE")
   node__health_america_page: [node__health_america_page] @link(by: "id", from: "node__health_america_page___NODE")
   node__health_equity_blog: [node__health_equity_blog] @link(by: "id", from: "node__health_equity_blog___NODE")
@@ -2146,20 +2143,6 @@ type node__press_releaseNode_type {
 
 type node__press_releaseRevision_uid {
   drupal_internal__target_id: Int
-  links: node__press_releaseRevision_uidLinks
-}
-
-type node__press_releaseRevision_uidLinks {
-  help: node__press_releaseRevision_uidLinksHelp
-}
-
-type node__press_releaseRevision_uidLinksHelp {
-  href: String
-  meta: node__press_releaseRevision_uidLinksHelpMeta
-}
-
-type node__press_releaseRevision_uidLinksHelpMeta {
-  about: String
 }
 
 type node__press_releaseUid {
@@ -2170,13 +2153,13 @@ type node__press_releaseField_bcbs_plan {
   drupal_internal__target_id: Int
 }
 
-type node__press_releaseField_topics {
-  drupal_internal__target_id: Int
-}
-
 type node__press_releaseField_file_attachments {
   display: Boolean
   description: String
+  drupal_internal__target_id: Int
+}
+
+type node__press_releaseField_topics {
   drupal_internal__target_id: Int
 }
 
@@ -2468,6 +2451,22 @@ type path_file_entity__path_file_entityFid {
   drupal_internal__target_id: Int
 }
 
+type paragraph__paragraph_iframe implements Node @dontInfer {
+  drupal_id: String
+  drupal_internal__id: Int
+  drupal_internal__revision_id: Int
+  langcode: String
+  status: Boolean
+  created: Date @dateformat
+  parent_id: String
+  parent_type: String
+  parent_field_name: String
+  default_langcode: Boolean
+  revision_translation_affected: Boolean
+  content_translation_source: String
+  content_translation_outdated: Boolean
+}
+
 type menu__menu implements Node @dontInfer {
   drupal_id: String
   label: String
@@ -2527,14 +2526,14 @@ type block__blockSettings {
   status: Boolean
   info: String
   view_mode: String
-  views_label: String
-  items_per_page: String
+  search_api_page: String
   follow: Boolean
   follow_parent: String
   label_link: Boolean
   label_type: String
   parent: String
   suggestion: String
+  views_label: String
   menu_type: String
   style: String
   arrow: Int
@@ -2584,7 +2583,7 @@ type block__blockSettings {
   webform_id: String
   default_data: String
   redirect: Boolean
-  search_api_page: String
+  items_per_page: String
 }
 
 type block__blockVisibility {

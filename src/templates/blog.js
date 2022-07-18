@@ -3,12 +3,13 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { InstantSearch, Hits, Configure } from "react-instantsearch-dom"
 import { searchClient, planResult } from "../components/Algolia"
-import Sharing from "../components/Sharing/sharing"
 import { getRelatedStories } from "../components/relatedHelper"
 import ArticleCard from "../components/ArticleCard/ArticleCard"
+import PlanProfileHero from "../components/PlanProfileHero/PlanProfileHero"
 
 // styles
 import "../components/pages.css"
+import "../components/PlanProfileHero/PlanProfileHero.css"
 
 // TODOs
 // confirm working algolia
@@ -38,44 +39,8 @@ export default function BlogTemplate({ data }) {
         description={post.body.summary}
         image={backgroundImage}
       />
-      <div className="pp-hero">
-        <div className="pp-hero__share">
-          <div className="pp-hero__share-content">
-            <h4>Share</h4>
-            <Sharing
-              title={post.title}
-              url={`https://www.bcbs.com/the-health-of-america/healthequity${alias}`}
-            />
-          </div>
-        </div>
-        <div
-          className="pp-hero__image"
-          style={{
-            backgroundImage: `url(${backgroundImage})`,
-          }}
-        >
-          <div className="pp-hero__meta">
-            <div className="pp-hero__meta-content">
-              <div className="pp-hero__category">
-                {post.relationships.field_topics
-                  .slice(0, 1)
-                  .map((field_topics, idx) => (
-                    <span key={idx}>{field_topics.name}</span>
-                  ))}
-              </div>
-              <div className="pp-hero__date">
-                <span>Published {post.created}</span>
-              </div>
-              <div className="pp-hero__title">
-                <h1>{post.title}</h1>
-              </div>
-              <div className="pp-hero__author">
-                <span>{post.field_he_author}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      <PlanProfileHero data={post}/>
 
       <div className="pp-main">
         {related.length !== 0 && (
