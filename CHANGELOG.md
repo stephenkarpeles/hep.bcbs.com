@@ -22,6 +22,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- BCBSALLY-2705: Bump parse-url from 6.0.0 to 6.0.2
 
 ## [0.1.25] - 2022-06-28
 ### Added
