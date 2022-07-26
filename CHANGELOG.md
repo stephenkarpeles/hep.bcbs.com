@@ -27,6 +27,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - BCBSALLY-2705: Bump terser 5.12.1 to 5.14.2
 - BCBSALLY-2705: Bump styled-components 5.3.3 to 5.3.5
 - BCBSALLY-2705: Bump postcss-mixins from 9.0.2 to 9.0.3
+- BCBSALLY-2705: Bump prettier from 2.6.2 to 2.7.1
 
 ## [0.1.25] - 2022-06-28
 ### Added
