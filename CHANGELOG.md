@@ -26,6 +26,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - BCBSALLY-2705: Bump moment from 2.29.2 to 2.29.4
 - BCBSALLY-2705: Bump terser 5.12.1 to 5.14.2
 - BCBSALLY-2705: Bump styled-components 5.3.3 to 5.3.5
+- BCBSALLY-2705: Bump postcss-mixins from 9.0.2 to 9.0.3
 
 ## [0.1.25] - 2022-06-28
 ### Added
@@ -37,7 +38,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - BCBSALLY-2679: Bump @pmmmwh/react-refresh-webpack-plugin from 0.5.5 to 0.5.7
 - BCBSALLY-2679: Bump react-refresh from 0.11.0 to 0.14.0
 - BCBSALLY-2679: Bump jpeg-js from 0.4.3 to 0.4.4
-- BCBSALLY-2705: Bump styled-components from 5.3.3 to 5.3.5
 
 ## [0.1.24] - 2022-06-15
 ### Added
