@@ -22,6 +22,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.26] - 2022-07-26
+### Changed
+- BCBSALLY-2708: Move article card CSS into component
+
+### Security
 - BCBSALLY-2705: Bump parse-url from 6.0.0 to 6.0.2
 - BCBSALLY-2705: Bump moment from 2.29.2 to 2.29.4
 - BCBSALLY-2705: Bump terser 5.12.1 to 5.14.2
@@ -229,7 +235,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.25...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.26...HEAD
+[0.1.26]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.25...0.1.26
 [0.1.25]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.24...0.1.25
 [0.1.24]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.23...0.1.24
 [0.1.23]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.22...0.1.23
