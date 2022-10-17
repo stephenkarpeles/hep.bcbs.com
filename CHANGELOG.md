@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 
 ### Added
-- BCBSALLY-2778: Update Implicit Bias Content
 
 ### Changed
 
@@ -23,6 +22,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.1.27] - 2022-10-17
+### Added
+- BCBSALLY-2778: Update Implicit Bias Content
 
 ## [0.1.26] - 2022-07-26
 ### Changed
@@ -236,7 +239,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Test Release
 
-[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.26...HEAD
+[unreleased]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.27...HEAD
+[0.1.27]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.26...0.1.27
 [0.1.26]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.25...0.1.26
 [0.1.25]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.24...0.1.25
 [0.1.24]: https://github.com/BCBSADigital/hep.bcbs.com/compare/0.1.23...0.1.24
