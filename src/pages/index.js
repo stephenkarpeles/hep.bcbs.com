@@ -116,7 +116,7 @@ const IndexPage = props => {
               hitsPerPage={6}
               clickAnalytics
               distinct
-              filters="topic:'Maternal Health' AND (NOT headline:'Improving Black maternal health starts with listening' AND NOT headline:'Moving from Awareness to Action for a Healthier Beginning' AND NOT headline:'Congress can help save pregnant women and mothers of color' AND NOT headline:'Data show community-based doulas improve outcomes for Black mothers' AND NOT headline:'PowerMom Diversifies Maternal Health Research' AND NOT headline: 'Setting the standard: addressing health disparities with better data')"
+              filters="topic:'Maternal Health' AND (NOT headline:'Implicit bias hurts maternal health. This training can help' AND NOT headline:'Setting the standard: addressing health disparities with better data' AND NOT headline:'PowerMom Diversifies Maternal Health Research' AND NOT headline:'Data show community-based doulas improve outcomes for Black mothers' AND NOT headline:'Improving Black maternal health starts with listening' AND NOT headline:'Moving from Awareness to Action for a Healthier Beginning')"
             />
 
             <Hits hitComponent={ArticleCard} />
