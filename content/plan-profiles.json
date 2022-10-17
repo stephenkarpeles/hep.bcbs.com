@@ -1019,8 +1019,10 @@
     "slug": "implicit-bias-hurts-maternal-health-training-can-help",
     "img_url": "Implicit_Bias_hero.jpg",
     "video_url": "",
-    "topic": "Provider Education",
-    "subtopics": [],
+    "topic": "Maternal Health",
+    "subtopics": [
+      "Provider Education and Training"
+    ],
     "feature": "true",
     "read_time": "2",
     "post_date": "2022-10-12",
